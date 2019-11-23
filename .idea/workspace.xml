@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e302addThreeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e302addThreeNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e303algebreSolve2m2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e303algebreSolve2m2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e304randomMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e304randomMonth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e305FindFutureDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e305FindFutureDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e306BMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e306BMI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e307montaryUnits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e307montaryUnits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e308SortThreeIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e308SortThreeIntegers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e309checkISBN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e309checkISBN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e310additionQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e310additionQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e311findNumberOfDaysInMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e311findNumberOfDaysInMonth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e312palindromeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e312palindromeInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e313computeTaxes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e313computeTaxes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e314headsOrTails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e314headsOrTails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e315Lottery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e315Lottery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e316RandomPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e316RandomPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e317scissorRockPaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e317scissorRockPaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e318CostOfShipping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e318CostOfShipping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e319ComputeThePerimeterOfATriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e319ComputeThePerimeterOfATriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e320windChillTemperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e320windChillTemperature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e321dayOfTheWeek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e321dayOfTheWeek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e322pointInACircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e322pointInACircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e323pointInARectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e323pointInARectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e324pickACard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e324pickACard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e325IntersectingPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e325IntersectingPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/e326UseAndOrOp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/e326UseAndOrOp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Exercise_03/s.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/s.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/op03/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Test.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,7 +136,7 @@
       <workItem from="978558983718" duration="655000" />
       <workItem from="1574061726728" duration="1987000" />
       <workItem from="1574401275655" duration="706000" />
-      <workItem from="1574492812010" duration="4298000" />
+      <workItem from="1574492812010" duration="4858000" />
     </task>
     <servers />
   </component>
