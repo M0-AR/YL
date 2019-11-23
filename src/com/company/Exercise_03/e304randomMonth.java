@@ -1,4 +1,4 @@
-package com.company.op03.Exercise_03;
+package com.company.Exercise_03;
 
 public class e304randomMonth {
     public static void main(String[] args) {

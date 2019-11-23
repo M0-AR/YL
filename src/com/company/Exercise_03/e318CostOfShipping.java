@@ -1,4 +1,4 @@
-package com.company.op03.Exercise_03;
+package com.company.Exercise_03;
 /*
 (Cost of shipping) A shipping company uses the following function to calculate
 the cost (in dollars) of shipping based on the weight of the package (in
