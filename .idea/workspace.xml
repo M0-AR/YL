@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/op03/e316RandomPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/op03/e319ComputeThePerimeterOfATriangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/op03/e321dayOfTheWeek.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/op03/e325IntersectingPoint.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/op03/e326UseAndOrOp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/META-INF/YL.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e302addThreeNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e303algebreSolve2m2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e304randomMonth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e305FindFutureDates.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e306BMI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e307montaryUnits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e308SortThreeIntegers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e309checkISBN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e310additionQuiz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e311findNumberOfDaysInMonth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e312palindromeInteger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e313computeTaxes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e314headsOrTails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/e315Lottery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e302addThreeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e302addThreeNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e303algebreSolve2m2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e303algebreSolve2m2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e304randomMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e304randomMonth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e305FindFutureDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e305FindFutureDates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e306BMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e306BMI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e307montaryUnits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e307montaryUnits.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e308SortThreeIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e308SortThreeIntegers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e309checkISBN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e309checkISBN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e310additionQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e310additionQuiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e311findNumberOfDaysInMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e311findNumberOfDaysInMonth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e312palindromeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e312palindromeInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e313computeTaxes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e313computeTaxes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e314headsOrTails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e314headsOrTails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e315Lottery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/op03/e315Lottery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/e316RandomPoint.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -146,7 +110,7 @@
       <workItem from="978558983718" duration="655000" />
       <workItem from="1574061726728" duration="1987000" />
       <workItem from="1574401275655" duration="706000" />
-      <workItem from="1574492812010" duration="3202000" />
+      <workItem from="1574492812010" duration="4004000" />
     </task>
     <servers />
   </component>
