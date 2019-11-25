@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_27/GeometryPointsInTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_27/GeometryPointsInTriangle.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,6 +12,9 @@
   </component>
   <component name="CoverageViewManager">
     <option name="myElementSize" value="15" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="YL" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -127,7 +129,7 @@
       <workItem from="1574401275655" duration="706000" />
       <workItem from="1574492812010" duration="5002000" />
       <workItem from="1574603682065" duration="2325000" />
-      <workItem from="1574667337196" duration="377000" />
+      <workItem from="1574667337196" duration="792000" />
     </task>
     <servers />
   </component>
