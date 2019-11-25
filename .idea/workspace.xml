@@ -2,36 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_27/GeometryPointsInTriangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/Exercise_03/Exercise_03_27/PointsInTriangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/Exercise_03/test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e302addThreeNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e303algebreSolve2m2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e304randomMonth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e305FindFutureDates.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e306BMI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e307montaryUnits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e308SortThreeIntegers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e309checkISBN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e310additionQuiz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e311findNumberOfDaysInMonth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e312palindromeInteger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e313computeTaxes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e314headsOrTails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e315Lottery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e316RandomPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e317scissorRockPaper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e318CostOfShipping.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e319ComputeThePerimeterOfATriangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e320windChillTemperature.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e321dayOfTheWeek.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e322pointInACircle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e323pointInARectangle.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e324pickACard.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e325IntersectingPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/op03/e326UseAndOrOp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +126,8 @@
       <workItem from="1574061726728" duration="1987000" />
       <workItem from="1574401275655" duration="706000" />
       <workItem from="1574492812010" duration="5002000" />
-      <workItem from="1574603682065" duration="2128000" />
+      <workItem from="1574603682065" duration="2325000" />
+      <workItem from="1574667337196" duration="377000" />
     </task>
     <servers />
   </component>
