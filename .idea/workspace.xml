@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_27/GeometryPointsInTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_27/GeometryPointsInTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,13 +46,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GeometryPointsInTriangle">
+  <component name="RunManager" selected="Application.GeometryTwoRectangles">
     <configuration name="GeometryPointsInTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Exercise_03._27.GeometryPointsInTriangle" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.company.Exercise_03._27.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GeometryTwoRectangles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Exercise_03._28.GeometryTwoRectangles" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Exercise_03._28.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -83,6 +97,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.GeometryTwoRectangles" />
         <item itemvalue="Application.GeometryPointsInTriangle" />
         <item itemvalue="Application.PointsInTriangle" />
         <item itemvalue="Application.Main" />
@@ -129,7 +144,8 @@
       <workItem from="1574401275655" duration="706000" />
       <workItem from="1574492812010" duration="5002000" />
       <workItem from="1574603682065" duration="2325000" />
-      <workItem from="1574667337196" duration="792000" />
+      <workItem from="1574667337196" duration="875000" />
+      <workItem from="1574753378449" duration="1294000" />
     </task>
     <servers />
   </component>
