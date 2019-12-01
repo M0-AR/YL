@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_29/TwoCircles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e320windChillTemperature.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e321dayOfTheWeek.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e322pointInACircle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e323pointInARectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e324pickACard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e325IntersectingPoint.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e326UseAndOrOp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e320windChillTemperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_20/e320windChillTemperature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e321dayOfTheWeek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_21/e321dayOfTheWeek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e322pointInACircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_22/e322pointInACircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e323pointInARectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_23/e323pointInARectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e324pickACard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_24/e324pickACard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e325IntersectingPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_25/e325IntersectingPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e326UseAndOrOp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_26/e326UseAndOrOp.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +34,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -46,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GeometryTwoRectangles">
+  <component name="RunManager" selected="Application.TwoCircles">
     <configuration name="GeometryPointsInTriangle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Exercise_03._27.GeometryPointsInTriangle" />
       <module name="YL" />
@@ -95,8 +110,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TwoCircles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Exercise_03._29.TwoCircles" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.Exercise_03._29.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TwoCircles" />
         <item itemvalue="Application.GeometryTwoRectangles" />
         <item itemvalue="Application.GeometryPointsInTriangle" />
         <item itemvalue="Application.PointsInTriangle" />
@@ -145,7 +174,9 @@
       <workItem from="1574492812010" duration="5002000" />
       <workItem from="1574603682065" duration="2325000" />
       <workItem from="1574667337196" duration="875000" />
-      <workItem from="1574753378449" duration="1294000" />
+      <workItem from="1574753378449" duration="1559000" />
+      <workItem from="1574862213700" duration="22000" />
+      <workItem from="1575179758961" duration="1889000" />
     </task>
     <servers />
   </component>
