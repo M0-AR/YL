@@ -1,4 +1,4 @@
-package com.company.Exercise_03;
+package com.company.Exercise_03._21;
 /*
 (Science: day of the week) Zeller’s congruence is an algorithm developed by
 Christian Zeller to calculate the day of the week.
