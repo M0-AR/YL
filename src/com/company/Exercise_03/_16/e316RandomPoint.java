@@ -1,4 +1,4 @@
-package com.company.Exercise_03;
+package com.company.Exercise_03._16;
 
 /**********************************************************************************
  * (Random point) Write a program that displays a random coordinate in a rectangle.

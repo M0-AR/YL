@@ -3,7 +3,7 @@ package com.company.Exercise_03._29;
 import java.util.Scanner;
 
 public class TwoCircles {
-    public static void main(String[] args) { // Check github
+    public static void main(String[] args) { // Check github and write the text
         Scanner scan = new Scanner( System.in );
 
         // Prompt the user to enter circle1's center x-, y-coordinates, and radius:

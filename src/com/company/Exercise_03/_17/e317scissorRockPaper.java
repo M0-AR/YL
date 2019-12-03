@@ -1,4 +1,4 @@
-package com.company.Exercise_03;
+package com.company.Exercise_03._17;
 /*
 (Game: scissor, rock, paper) Write a program that plays the popular scissor-rockpaper
 game. (A scissor can cut a paper, a rock can knock a scissor, and a paper can
