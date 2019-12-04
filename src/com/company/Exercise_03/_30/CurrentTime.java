@@ -4,7 +4,7 @@ package com.company.Exercise_03._30;
  */
 import java.util.Scanner;
 
-public class CurrentTime {
+public class CurrentTime { // gitHUb
     public static void main(String[] args) {
         Scanner scan = new Scanner( System.in );
 
