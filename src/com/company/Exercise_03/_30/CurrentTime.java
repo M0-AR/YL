@@ -23,17 +23,20 @@ public class CurrentTime { // gitHUb
 //        System.out.println(currentMinutes);
 
         long hours = minutes / 60;
-        long currentHours = (hours + timeZone) % 24;
+        long currentHours = hours % 24;
+        currentHours += timeZone;
 //        System.out.println(currentHours);
 
+
+//        Display results method 1.
         System.out.print("Current time is " + (currentHours % 12)  + ":" + currentMinutes + ":" + currentSeconds);
-
-
-
         if (currentHours < 12){
             System.out.println(" AM");
         }else {
             System.out.println(" PM");
         }
+//        Display results method 1.
+        System.out.println("Current time is " +((currentHours > 12) ? currentHours - 12 : currentHours) + ":" + currentMinutes + ":"
+                + currentSeconds +((currentHours > 12) ? " PM": " AM")  ) ;
     }
 }

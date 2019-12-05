@@ -2,7 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_31/CurrencyExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_30/CurrentTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_30/CurrentTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e302addThreeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_02/e302addThreeNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e303algebreSolve2m2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_03/e303algebreSolve2m2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e304randomMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_04/e304randomMonth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e305FindFutureDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_05/e305FindFutureDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e306BMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_06/e306BMI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e307montaryUnits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_07/e307montaryUnits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e308SortThreeIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_08/e308SortThreeIntegers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/e309checkISBN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_09/e309checkISBN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/s.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -170,7 +182,8 @@
       <workItem from="1574862213700" duration="22000" />
       <workItem from="1575179758961" duration="1951000" />
       <workItem from="1575359750462" duration="1610000" />
-      <workItem from="1575444222262" duration="2365000" />
+      <workItem from="1575444222262" duration="2385000" />
+      <workItem from="1575523124508" duration="896000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -200,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575446618636</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Organize">
+      <created>1575446649330</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575446649330</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
