@@ -1,4 +1,4 @@
-package com.company.Exercise_03;
+package com.company.Exercise_03._03;
 import java.util.Scanner;
 
 class e303algebreSolve2m2 {
