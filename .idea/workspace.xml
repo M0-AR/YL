@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="Organize + Half of the assigment">
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_02/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_03/_32/PointPosition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e302addThreeNumbers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e303algebreSolve2m2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e304randomMonth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e305FindFutureDates.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e306BMI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e307montaryUnits.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e308SortThreeIntegers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e309checkISBN.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e310additionQuiz.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e311findNumberOfDaysInMonth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e312palindromeInteger.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e313computeTaxes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/e314headsOrTails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/s.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_31/CurrencyExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Exercise_03/_31/CurrencyExchange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/_27/GeometryPointsInTriangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/YL/com/company/Exercise_03/_28/GeometryTwoRectangles.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_02/_07/FindTheNumberOfYears.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_02/_07/FindTheNumberOfYears.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_02/e302addThreeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_02/e302addThreeNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_03/e303algebreSolve2m2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_03/e303algebreSolve2m2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_04/e304randomMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_04/e304randomMonth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_05/e305FindFutureDates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_05/e305FindFutureDates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_06/e306BMI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_06/e306BMI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_07/e307montaryUnits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_07/e307montaryUnits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_08/e308SortThreeIntegers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_08/e308SortThreeIntegers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_09/e309checkISBN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_09/e309checkISBN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_10/e310additionQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_10/e310additionQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_11/e311findNumberOfDaysInMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_11/e311findNumberOfDaysInMonth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_12/e312palindromeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_12/e312palindromeInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_13/e313computeTaxes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_13/e313computeTaxes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_14/e314headsOrTails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_14/e314headsOrTails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_15/e315Lottery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_15/e315Lottery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_16/e316RandomPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_16/e316RandomPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_17/e317scissorRockPaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_17/e317scissorRockPaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_18/e318CostOfShipping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_18/e318CostOfShipping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_19/e319ComputeThePerimeterOfATriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_19/e319ComputeThePerimeterOfATriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_20/e320windChillTemperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_20/e320windChillTemperature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_21/e321dayOfTheWeek.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_21/e321dayOfTheWeek.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_22/e322pointInACircle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_22/e322pointInACircle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_23/e323pointInARectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_23/e323pointInARectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_24/e324pickACard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_24/e324pickACard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_25/e325IntersectingPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_25/e325IntersectingPoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_26/e326UseAndOrOp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_26/e326UseAndOrOp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_27/GeometryPointsInTriangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_27/GeometryPointsInTriangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_28/GeometryTwoRectangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_28/GeometryTwoRectangles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_29/TwoCircles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_29/TwoCircles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_30/CurrentTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_30/CurrentTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Exercise_03/_31/CurrencyExchange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_31/CurrencyExchange.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,13 +85,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CurrencyExchange">
+  <component name="RunManager" selected="Application.PointPosition">
     <configuration name="CurrencyExchange" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Exercise_03._31.CurrencyExchange" />
+      <option name="MAIN_CLASS_NAME" value="Exercise_03._31.CurrencyExchange" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Exercise_03._31.*" />
+          <option name="PATTERN" value="Exercise_03._31.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -81,11 +100,11 @@
       </method>
     </configuration>
     <configuration name="CurrentTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Exercise_03._30.CurrentTime" />
+      <option name="MAIN_CLASS_NAME" value="Exercise_03._30.CurrentTime" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Exercise_03._30.*" />
+          <option name="PATTERN" value="Exercise_03._30.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -94,11 +113,11 @@
       </method>
     </configuration>
     <configuration name="FindTheNumberOfYears" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Exercise_02._07.FindTheNumberOfYears" />
+      <option name="MAIN_CLASS_NAME" value="_07.FindTheNumberOfYears" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Exercise_02._07.*" />
+          <option name="PATTERN" value="_07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,12 +125,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GeometryTwoRectangles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Exercise_03._28.GeometryTwoRectangles" />
+    <configuration name="PointPosition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_03._32.PointPosition" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Exercise_03._28.*" />
+          <option name="PATTERN" value="Exercise_03._32.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -120,11 +139,11 @@
       </method>
     </configuration>
     <configuration name="TwoCircles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Exercise_03._29.TwoCircles" />
+      <option name="MAIN_CLASS_NAME" value="Exercise_03._29.TwoCircles" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.Exercise_03._29.*" />
+          <option name="PATTERN" value="Exercise_03._29.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PointPosition" />
         <item itemvalue="Application.CurrencyExchange" />
         <item itemvalue="Application.CurrentTime" />
         <item itemvalue="Application.FindTheNumberOfYears" />
         <item itemvalue="Application.TwoCircles" />
-        <item itemvalue="Application.GeometryTwoRectangles" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +208,8 @@
       <workItem from="1575359750462" duration="1610000" />
       <workItem from="1575444222262" duration="2385000" />
       <workItem from="1575523124508" duration="1016000" />
-      <workItem from="1575703749272" duration="1289000" />
+      <workItem from="1575703749272" duration="1379000" />
+      <workItem from="1575880047371" duration="2483000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -233,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575525588683</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="currency exchange">
+      <created>1575705233020</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1575705233020</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +285,8 @@
     <MESSAGE value="Current time 12-hour clock." />
     <MESSAGE value="Organize" />
     <MESSAGE value="Organize + Half of the assigment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Organize + Half of the assigment" />
+    <MESSAGE value="currency exchange" />
+    <option name="LAST_COMMIT_MESSAGE" value="currency exchange" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/YL$Main.ic" NAME="Main Coverage Results" MODIFIED="1572685132843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
