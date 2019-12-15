@@ -3,7 +3,7 @@ package Exercise_03._33;
 import java.util.Scanner;
 
 public class CompareCosts {
-    public static void main(String[] args) { // github output repeating
+    public static void main(String[] args) {
         Scanner scan = new Scanner( System.in );
 
         // Prompt the user to enter weight and price
@@ -18,8 +18,8 @@ public class CompareCosts {
         double package2 = weight2 / price2;
 
         // Display the result
-        System.out.println("Package " + ((package2 < package1) ? "2":
-           (package2 > package1) ? "1": "Two packages have the same price.") + " has a better price.");
+        System.out.println(((package2 < package1) ? "Package 2 has a better price.":
+           (package2 > package1) ? "Package 1 has a better price.": "Two packages have the same price."));
 
     }
 }
