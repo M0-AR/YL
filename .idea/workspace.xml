@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_04/_4_5/_01GuessingBirthdays.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_04/_4_5/_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_04/_4_5/_02FormatDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_04/_01/AreaOfAPentagon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_04/t.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,6 +42,11 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/BookExercise/_04/_4_5" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -51,13 +59,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._01GuessingBirthdays">
-    <configuration name="CompareCosts" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_03._33.CompareCosts" />
+  <component name="RunManager" selected="Application.AreaOfAPentagon">
+    <configuration name="AreaOfAPentagon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_04._01.AreaOfAPentagon" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_03._33.*" />
+          <option name="PATTERN" value="Exercise_04._01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,12 +86,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PointPosition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_03._32.PointPosition" />
+    <configuration name="_01GuessingBirthdays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._04._4_5._01GuessingBirthdays" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_03._32.*" />
+          <option name="PATTERN" value="BookExercise._04._4_5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,8 +99,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_01GuessingBirthdays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._04._4_5._01GuessingBirthdays" />
+    <configuration name="_02FormatDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._04._4_5._02FormatDemo" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
@@ -119,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AreaOfAPentagon" />
+        <item itemvalue="Application._02FormatDemo" />
         <item itemvalue="Application._01GuessingBirthdays" />
         <item itemvalue="Application._4_20" />
         <item itemvalue="Application.PointOnLineSegment" />
-        <item itemvalue="Application.CompareCosts" />
-        <item itemvalue="Application.PointPosition" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +187,10 @@
       <workItem from="1575963194208" duration="1768000" />
       <workItem from="1576427815215" duration="1443000" />
       <workItem from="1576528423589" duration="964000" />
-      <workItem from="1577180222498" duration="2519000" />
+      <workItem from="1577180222498" duration="2726000" />
+      <workItem from="1577261318259" duration="179000" />
+      <workItem from="1577691662503" duration="1101000" />
+      <workItem from="1577871832311" duration="669000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -265,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577182056353</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="GuessingBirthdays">
+      <created>1577183527201</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1577183527201</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +314,8 @@
     <MESSAGE value="PointOnLineSegment" />
     <MESSAGE value="PointOnLineSegment not complete" />
     <MESSAGE value="Characters and String" />
-    <option name="LAST_COMMIT_MESSAGE" value="Characters and String" />
+    <MESSAGE value="GuessingBirthdays" />
+    <option name="LAST_COMMIT_MESSAGE" value="GuessingBirthdays" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/YL$Main.ic" NAME="Main Coverage Results" MODIFIED="1572685132843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
