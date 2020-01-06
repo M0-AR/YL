@@ -1,5 +1,10 @@
 package Exercise_04._04;
-
+/*
+(Geometry: area of a hexagon) The area of a hexagon can be computed using the
+following formula (s is the length of a side):
+Write a program that prompts the user to enter the side of a hexagon and displays
+its area.
+*/
 import java.util.Scanner;
 
 public class AreaOfAHexagon {
