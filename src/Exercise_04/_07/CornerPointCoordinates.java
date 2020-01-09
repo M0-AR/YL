@@ -1,7 +1,7 @@
 package Exercise_04._07;
 
 public class CornerPointCoordinates {
-    public static void main(String[] args) { //github
+    public static void main(String[] args) { //TODO need con
         double perimeter = 100.52;
 
         // Prompt the user to enter the radius of the bounding circle
