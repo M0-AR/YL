@@ -2,7 +2,7 @@ package Exercise_03._34;
 
 import java.util.Scanner;
 
-public class PointOnLineSegment {// I don't understand it
+public class PointOnLineSegment {//TODO I don't understand it
     public static void main(String[] args) {
         Scanner scan = new Scanner( System.in );
 

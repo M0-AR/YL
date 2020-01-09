@@ -8,7 +8,7 @@ distance between two cities. Divide the polygon into two triangles and use the
 formula in Programming Exercise 2.19 to compute the area of a triangle.)
 */
 
-public class EstimateAreas {// need to con
+public class EstimateAreas {//TODO need to con
     public static void main(String[] args) {
 
         final double atlantaX = 33.7489954;
