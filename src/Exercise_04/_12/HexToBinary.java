@@ -1,5 +1,8 @@
 package Exercise_04._12;
-
+/*
+(Hex to binary) Write a program that prompts the user to enter a hex digit and
+displays its corresponding binary number.
+*/
 import java.util.Scanner;
 
 public class HexToBinary {
