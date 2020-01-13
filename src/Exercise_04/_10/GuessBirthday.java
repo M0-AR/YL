@@ -1,9 +1,13 @@
 package Exercise_04._10;
-
+/*
+(Guess birthday) Rewrite Listing 4.3, GuessBirthday.java, to prompt the user to
+enter the character Y for Yes and N for No rather than entering 1 for Yes and 0
+for No.
+*/
 import java.util.Scanner;
 
 public class GuessBirthday {
-    public static void main(String[] args) { // g and y
+    public static void main(String[] args) {
         String set1 =
                 " 1  3  5  7\n" +
                         " 9 11 13 15\n" +
@@ -45,7 +49,7 @@ public class GuessBirthday {
         System.out.print("\nEnter N for No and Y for Yes: ");
         char answer = input.next().charAt( 0 );
 
-        if (answer == 'Y'  || answer == 'y')
+        if (Character.toUpperCase( answer )  == 'Y')
             day += 1;
 
         // Prompt the user to answer questions
@@ -54,7 +58,7 @@ public class GuessBirthday {
         System.out.print("\nEnter N for No and Y for Yes: ");
         answer = input.next().charAt( 0 );
 
-        if (answer == 'Y'  || answer == 'y')
+        if (Character.toUpperCase( answer )  == 'Y')
             day += 2;
 
         // Prompt the user to answer questions
@@ -63,7 +67,7 @@ public class GuessBirthday {
         System.out.print("\nEnter N for No and Y for Yes: ");
         answer = input.next().charAt( 0 );
 
-        if (answer == 'Y'  || answer == 'y')
+        if (Character.toUpperCase( answer )  == 'Y')
             day += 4;
 
         // Prompt the user to answer questions
@@ -72,7 +76,7 @@ public class GuessBirthday {
         System.out.print("\nEnter N for No and Y for Yes: ");
         answer = input.next().charAt( 0 );
 
-        if (answer == 'Y'  || answer == 'y')
+        if (Character.toUpperCase( answer )  == 'Y')
             day += 8;
 
         // Prompt the user to answer questions
@@ -81,7 +85,7 @@ public class GuessBirthday {
         System.out.print("\nEnter N for No and Y for Yes: ");
         answer = input.next().charAt( 0 );
 
-        if (answer == 'Y'  || answer == 'y')
+        if (Character.toUpperCase( answer )  == 'Y')
             day += 16;
 
         System.out.println("\nYour birthday is " + day + "!");
