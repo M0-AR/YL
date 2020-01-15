@@ -1,5 +1,8 @@
 package Exercise_04._13;
-
+/*
+(Vowel or consonant?) Write a program that prompts the user to enter a letter and
+check whether the letter is a vowel or consonant.
+*/
 import java.util.Scanner;
 
 public class VowelOrConsonant {
@@ -10,6 +13,7 @@ public class VowelOrConsonant {
         System.out.print("Enter a letter: ");
         char letter = scanner.next().charAt( 0 );
 
+        // or if (Character.isLetter(letter))
         if (Character.toLowerCase( letter ) >='a'&& Character.toLowerCase( letter )<='z' ){
             switch (Character.toLowerCase( letter )){
                 case 'a':
