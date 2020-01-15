@@ -1,5 +1,9 @@
 package Exercise_04._14;
-
+/*
+(Convert letter grade to number) Write a program that prompts the user to enter a
+letter grade A, B, C, D, or F and displays its corresponding numeric value 4, 3, 2,
+1, or 0.
+*/
 import java.util.Scanner;
 
 public class ConvertLetterGradeToNumber { // g and y
@@ -8,7 +12,7 @@ public class ConvertLetterGradeToNumber { // g and y
 
         // Prompt the user to enter a letter grade
         System.out.print("Enter a letter grade: ");
-        char letter = scanner.next().charAt( 0 );
+        char letter = Character.toUpperCase( scanner.next().charAt( 0 ) );
 
 
         // Display Output
