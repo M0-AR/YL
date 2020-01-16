@@ -8,23 +8,34 @@ number.
 import java.util.Scanner;
 
 public class PhoneKeyPads {
-    public static void main(String[] args) { // con g
+    public static void main(String[] args) { //done
         Scanner scanner = new Scanner( System.in );
 
         // Prompt the user to enter a letter
         System.out.print("Enter a letter: ");
         char letter = scanner.next().charAt( 0 );
 
+        // Display its corresponding number
         int number = 0;
-        switch (Character.toLowerCase( letter )){
-            case 'a': number = 1;
-            case 'b': number = 1;
-            case 'c': number = 1;//.....
-        }
-
-
-        // Display result
-        System.out.println("The Corresponding number is " + number);
-
+        if(Character.isLetter( letter )){
+            if (letter >= 'w')
+                number = 9;
+            else if (letter >= 'T')
+                number = 8;
+            else if (letter >= 'P')
+                number = 7;
+            else if (letter >= 'M')
+                number = 6;
+            else if (letter >= 'J')
+                number = 5;
+            else if (letter >= 'G')
+                number = 4;
+            else if (letter >= 'D')
+                number = 3;
+            else if (letter >= 'A')
+                number = 2;
+            System.out.println("The corresponding number is " + number);
+        }else
+            System.out.println(letter + " is an invalid input");
     }
 }
