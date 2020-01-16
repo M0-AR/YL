@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_04/_19/CheckISBN_10.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_04/_20/ProcessAString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_04/_21/CheckSSN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_04/_22/CheckSubstring.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_04/_23/Payroll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_15/PhoneKeyPads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_15/PhoneKeyPads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_16/RandomCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_16/RandomCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_17/DaysOfAMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_17/DaysOfAMonth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_18/StudentMajorAndStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_18/StudentMajorAndStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_19/CheckISBN_10.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_19/CheckISBN_10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_20/ProcessAString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_20/ProcessAString.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,13 +64,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ProcessAString">
-    <configuration name="ConvertLetterGradeToNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_04._14.ConvertLetterGradeToNumber" />
+  <component name="RunManager" selected="Application.CheckSubstring">
+    <configuration name="CheckSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_04._22.CheckSubstring" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_04._14.*" />
+          <option name="PATTERN" value="Exercise_04._22.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ProcessAString" />
+        <item itemvalue="Application.CheckSubstring" />
         <item itemvalue="Application.StudentMajorAndStatus" />
+        <item itemvalue="Application.ProcessAString" />
         <item itemvalue="Application.DaysOfAMonth" />
         <item itemvalue="Application.RandomCharacter" />
-        <item itemvalue="Application.ConvertLetterGradeToNumber" />
       </list>
     </recent_temporary>
   </component>
@@ -198,7 +205,8 @@
       <workItem from="1578816821578" duration="4664000" />
       <workItem from="1578948378543" duration="1819000" />
       <workItem from="1579115537492" duration="3848000" />
-      <workItem from="1579153259347" duration="422000" />
+      <workItem from="1579153259347" duration="506000" />
+      <workItem from="1579200471271" duration="2760000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -361,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579119080610</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="20">
+      <created>1579153754956</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1579153754956</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +417,8 @@
     <MESSAGE value="GuessBirthday, DecimalToHex and HexToBinary" />
     <MESSAGE value="13 and 14" />
     <MESSAGE value="15, 16, 17 and 18" />
-    <option name="LAST_COMMIT_MESSAGE" value="15, 16, 17 and 18" />
+    <MESSAGE value="20" />
+    <option name="LAST_COMMIT_MESSAGE" value="20" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/YL$Main.ic" NAME="Main Coverage Results" MODIFIED="1572685132843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
