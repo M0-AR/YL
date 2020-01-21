@@ -1,7 +1,11 @@
 package Exercise_04._25;
-
+/*
+(Generate vehicle plate numbers) Assume a vehicle plate number consists of three
+uppercase letters followed by four digits. Write a program to generate a plate
+number.
+*/
 public class GenerateVehiclePlateNumbers {
-    public static void main(String[] args) { // g
+    public static void main(String[] args) {
         String vehiclePlate = "";
 
         int threeUppercaseLetters = 3;
