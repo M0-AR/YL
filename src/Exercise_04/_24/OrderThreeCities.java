@@ -1,5 +1,8 @@
 package Exercise_04._24;
-
+/*
+(Order three cities) Write a program that prompts the user to enter three cities and
+displays them in ascending order.
+*/
 import java.util.Scanner;
 
 public class OrderThreeCities { // g and y
