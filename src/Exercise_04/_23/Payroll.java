@@ -1,9 +1,18 @@
 package Exercise_04._23;
+/*
+(Financial application: payroll) Write a program that reads the following information
+and prints a payroll statement:
+Employee’s name (e.g., Smith)
+Number of hours worked in a week (e.g., 10)
+Hourly pay rate (e.g., 9.75)
+Federal tax withholding rate (e.g., 20%)
+State tax withholding rate (e.g., 9%)
+*/
 
 import java.util.Scanner;
 
 public class Payroll {
-    public static void main(String[] args) {// y and how much comma in answer
+    public static void main(String[] args) {
         Scanner scanner = new Scanner( System.in );
 
         // Prompt the user to enter employee's information
@@ -19,15 +28,18 @@ public class Payroll {
         double stateTax = scanner.nextDouble();
 
         // Compute and display the result
-        System.out.println( "Employee Name: " + name );
-        System.out.println( "HoursWorked: " + hoursPerWeek );
-        System.out.printf( "Pay Rate: $" + hourlyPayRate );
-        System.out.println( "Gross Pay: " + hoursPerWeek * hourlyPayRate );
-        System.out.println( "Deductions: " );
-        System.out.println( "   Federal withholding (" + federalTax * 100 + "%): $" + (hourlyPayRate * hoursPerWeek) * 0.2 );
-        System.out.println( "   State withholding (" + stateTax * 100 + "%): $" + (hourlyPayRate * hoursPerWeek) * 0.09 );
-        double totalDeduction = ((hourlyPayRate * hoursPerWeek) * federalTax + (hourlyPayRate * hoursPerWeek) * stateTax);
-        System.out.println( "   Total Deduction: $" + totalDeduction );
-        System.out.println( "Net Pay: $" + ((hoursPerWeek * hourlyPayRate) - totalDeduction) );
+        double grossPay, federal, state, totalDeduction;
+        System.out.println(
+                "Employee Name: " + name +
+                        "\nHoursWorked: " + hoursPerWeek +
+                        "\nPay Rate: $" + hourlyPayRate +
+                        "\nGross PAy: " + (grossPay = hoursPerWeek * hourlyPayRate) +
+                        "\nDeductions:\n    Federal withholding (" + federalTax * 100 + "%): $" +
+                        (federal = grossPay * federalTax) +
+                        "\n    State withholding (" + stateTax * 100 + "%): $" +
+                        (state = grossPay * stateTax) +
+                        "\n    Total Deduction: $" + (totalDeduction = federal + state)+
+                        "Net Pay: $" + (grossPay - totalDeduction)
+        );
     }
 }
