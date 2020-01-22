@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_04/_26/MonetaryUnits.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_24/OrderThreeCities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_24/OrderThreeCities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_25/GenerateVehiclePlateNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_25/GenerateVehiclePlateNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_26/MonetaryUnits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_26/MonetaryUnits.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,6 +51,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
@@ -218,7 +217,8 @@
       <workItem from="1579336325871" duration="1902000" />
       <workItem from="1579339095011" duration="31000" />
       <workItem from="1579504425192" duration="3889000" />
-      <workItem from="1579591943833" duration="2699000" />
+      <workItem from="1579591943833" duration="2969000" />
+      <workItem from="1579678594299" duration="1439000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -423,7 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579593054099</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="MonetaryUnits 04-26 need to be continued">
+      <created>1579594932996</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1579594932996</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -443,7 +450,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Current time 12-hour clock." />
     <MESSAGE value="Organize" />
     <MESSAGE value="Organize + Half of the assigment" />
     <MESSAGE value="currency exchange" />
@@ -468,7 +474,24 @@
     <MESSAGE value="23, 24 and 25" />
     <MESSAGE value="Payroll 04-23" />
     <MESSAGE value="OrderThreeCities 04-24" />
-    <option name="LAST_COMMIT_MESSAGE" value="OrderThreeCities 04-24" />
+    <MESSAGE value="MonetaryUnits 04-26 need to be continued" />
+    <option name="LAST_COMMIT_MESSAGE" value="MonetaryUnits 04-26 need to be continued" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_04/_26/MonetaryUnits.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_04/_26/MonetaryUnits.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/YL$Main.ic" NAME="Main Coverage Results" MODIFIED="1572685132843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
