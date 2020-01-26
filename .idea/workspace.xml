@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_05/MultiplicationTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_04/_26/MonetaryUnits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_26/MonetaryUnits.java" afterDir="false" />
     </list>
@@ -71,20 +72,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MonetaryUnits">
-    <configuration name="CheckSubstring" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_04._22.CheckSubstring" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_04._22.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MultiplicationTable">
     <configuration name="GenerateVehiclePlateNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_04._25.GenerateVehiclePlateNumbers" />
       <module name="YL" />
@@ -104,6 +92,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Exercise_04._26.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultiplicationTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._05.MultiplicationTable" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BookExercise._05.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MultiplicationTable" />
         <item itemvalue="Application.MonetaryUnits" />
         <item itemvalue="Application.GenerateVehiclePlateNumbers" />
         <item itemvalue="Application.OrderThreeCities" />
         <item itemvalue="Application.Payroll" />
-        <item itemvalue="Application.CheckSubstring" />
       </list>
     </recent_temporary>
   </component>
@@ -218,7 +219,9 @@
       <workItem from="1579339095011" duration="31000" />
       <workItem from="1579504425192" duration="3889000" />
       <workItem from="1579591943833" duration="2969000" />
-      <workItem from="1579678594299" duration="1439000" />
+      <workItem from="1579678594299" duration="1634000" />
+      <workItem from="1579769861592" duration="242000" />
+      <workItem from="1580028966599" duration="460000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -430,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579594932996</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="MonetaryUnits 04-26 &#10;substring and indexOf">
+      <created>1579680215294</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1579680215294</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,7 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Organize" />
     <MESSAGE value="Organize + Half of the assigment" />
     <MESSAGE value="currency exchange" />
     <MESSAGE value="Point position" />
@@ -475,20 +484,16 @@
     <MESSAGE value="Payroll 04-23" />
     <MESSAGE value="OrderThreeCities 04-24" />
     <MESSAGE value="MonetaryUnits 04-26 need to be continued" />
-    <option name="LAST_COMMIT_MESSAGE" value="MonetaryUnits 04-26 need to be continued" />
+    <MESSAGE value="MonetaryUnits 04-26 &#10;substring and indexOf" />
+    <option name="LAST_COMMIT_MESSAGE" value="MonetaryUnits 04-26 &#10;substring and indexOf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Exercise_04/_26/MonetaryUnits.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Exercise_04/_26/MonetaryUnits.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/BookExercise/_05/MultiplicationTable.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
