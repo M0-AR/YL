@@ -31,6 +31,14 @@ public class MonetaryUnits {
                     amountString.substring( 0, decimalPosition ) + fractionPart );
         }
 
+        //--------------- OR
+//        String numberOfOneDollars = amountString.substring( 0, amountString.indexOf( '.' ) );
+//        int cents = Integer.parseInt(amountString.substring( amountString.indexOf( '.' ) +1));
+// Find the number of quarters
+//        int numberOfQuarters = cents / 25;
+//        cents %= 25;......
+
+
         // Convert the amount into cents
         int remainingAmount = amount;
 
