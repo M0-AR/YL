@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_05/Dec2Hex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_05/GreatestCommonDivisor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_05/PrimeNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_01/CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/t.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/ComputingTwoSquareOrMore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/ComputingXSquareOrMore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/Factorial.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_02/AdditionsQuiz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_03/KilogramsToPounds.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_01/CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_01/CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,13 +77,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers">
-    <configuration name="CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._01.CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers" />
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="AdditionsQuiz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._02.AdditionsQuiz" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._01.*" />
+          <option name="PATTERN" value="Exercise_05._02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -89,12 +91,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Dec2Hex" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._05.Dec2Hex" />
+    <configuration name="ComputingXSquareOrMore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._18.ComputingXSquareOrMore" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookExercise._05.*" />
+          <option name="PATTERN" value="BookExercise._18.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GreatestCommonDivisor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._05.GreatestCommonDivisor" />
+    <configuration name="Factorial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._18.Factorial" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookExercise._05.*" />
+          <option name="PATTERN" value="BookExercise._18.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultiplicationTable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._05.MultiplicationTable" />
+    <configuration name="KilogramsToPounds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._03.KilogramsToPounds" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookExercise._05.*" />
+          <option name="PATTERN" value="Exercise_05._03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimeNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._05.PrimeNumber" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._18.Test" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookExercise._05.*" />
+          <option name="PATTERN" value="BookExercise._18.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,11 +145,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers" />
-        <item itemvalue="Application.PrimeNumber" />
-        <item itemvalue="Application.Dec2Hex" />
-        <item itemvalue="Application.GreatestCommonDivisor" />
-        <item itemvalue="Application.MultiplicationTable" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.KilogramsToPounds" />
+        <item itemvalue="Application.AdditionsQuiz" />
+        <item itemvalue="Application.Factorial" />
+        <item itemvalue="Application.ComputingXSquareOrMore" />
       </list>
     </recent_temporary>
   </component>
@@ -226,7 +228,7 @@
       <workItem from="1579769861592" duration="242000" />
       <workItem from="1580028966599" duration="538000" />
       <workItem from="1580110116019" duration="1186000" />
-      <workItem from="1580283380455" duration="2706000" />
+      <workItem from="1580283380455" duration="11328000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -452,7 +454,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580055660307</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Dec2Hex, GreatestCommonDivisor, PrimeNumber and CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers">
+      <created>1580286790581</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1580286790581</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -472,7 +481,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="currency exchange" />
     <MESSAGE value="Point position" />
     <MESSAGE value="CompareCosts" />
     <MESSAGE value="PointOnLineSegment" />
@@ -497,7 +505,8 @@
     <MESSAGE value="MonetaryUnits 04-26 need to be continued" />
     <MESSAGE value="MonetaryUnits 04-26 &#10;substring and indexOf" />
     <MESSAGE value="MonetaryUnits 04-26 &#10;and for loop" />
-    <option name="LAST_COMMIT_MESSAGE" value="MonetaryUnits 04-26 &#10;and for loop" />
+    <MESSAGE value="Dec2Hex, GreatestCommonDivisor, PrimeNumber and CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dec2Hex, GreatestCommonDivisor, PrimeNumber and CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -516,6 +525,11 @@
           <url>file://$PROJECT_DIR$/src/BookExercise/_05/PrimeNumber.java</url>
           <line>12</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/BookExercise/_18/Test.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
