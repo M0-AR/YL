@@ -2,24 +2,25 @@ package BookExercise._18;
 
 public class Sort {
     public static void main(String[] args) {
-        double[] e = {1,4,5,2,0.4,22};
+        int[] e = {1, 4, 5, 2, 22};
         sort( e );
 
-        for (double v : e) {
-            System.out.print(v+" ");
+        for (int v : e) {
+            System.out.print( v + " " );
         }
+        System.out.println(recursiveBinarySearch( e, 5 )); // 1
     }
 
-    public static void sort(double[] list) {
+    public static void sort(int[] list) {
         sort( list, 0, list.length - 1 );
     }
 
-    private static void sort(double[] list, int low, int high) {
+    private static void sort(int[] list, int low, int high) {
 
         if (low < high) {
             // Find the smallest number and its index in list[low .. high]
-           int indexOfMin = low;
-           double min = list[low];
+            int indexOfMin = low;
+            int min = list[low];
             for (int i = low + 1; i <= high; i++) {
                 if (list[i] < min) {
                     min = list[i];
@@ -28,12 +29,32 @@ public class Sort {
             }
 
 
-        // Swap the smallest in list[low .. high] with list[low]
-        list[indexOfMin] = list[low];
-        list[low] = min;
+            // Swap the smallest in list[low .. high] with list[low]
+            list[indexOfMin] = list[low];
+            list[low] = min;
 
-        // Sort the remaining list[low+1 .. high]
-        sort( list, low + 1, high );
+            // Sort the remaining list[low+1 .. high]
+            sort( list, low + 1, high );
         }
+    }
+
+    public static int recursiveBinarySearch(int[] list, int key) {
+        int low = 0;
+        int high = list.length - 1;
+        return recursiveBinarySearch( list, key, low, high );
+    }
+
+    public static int recursiveBinarySearch(int[] list, int key, int low, int high) {
+        if (low > high) {
+            return -1;
+        }
+        int mid = (low + high) / 2;
+
+        if (key > list[mid])
+            return recursiveBinarySearch( list, key, mid + 1, high );
+        else if (key == list[mid])
+            return mid; // The index of the array
+        else // key < list[mid]
+            return recursiveBinarySearch( list, key, low, mid - 1 );
     }
 }

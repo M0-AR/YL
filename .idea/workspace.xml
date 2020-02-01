@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/Sort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_04/MileToKilometers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_05/KilogramsToPoundsAndPoundsToKilograms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_06/MilesToKilometersAndKilometersToMiles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_07/ComputeFutureTuition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_02/AdditionsQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_02/AdditionsQuiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_03/KilogramsToPounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_03/KilogramsToPounds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/t.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BookExercise/_18/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookExercise/_18/Sort.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ComputeFutureTuition">
+  <component name="RunManager" selected="Application.Sort">
     <configuration name="ComputeFutureTuition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_05._07.ComputeFutureTuition" />
       <module name="YL" />
@@ -146,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Sort" />
         <item itemvalue="Application.ComputeFutureTuition" />
         <item itemvalue="Application.MilesToKilometersAndKilometersToMiles" />
         <item itemvalue="Application.KilogramsToPoundsAndPoundsToKilograms" />
         <item itemvalue="Application.MileToKilometers" />
-        <item itemvalue="Application.Sort" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +223,7 @@
       <workItem from="1580028966599" duration="538000" />
       <workItem from="1580110116019" duration="1186000" />
       <workItem from="1580283380455" duration="11750000" />
-      <workItem from="1580464918832" duration="6514000" />
+      <workItem from="1580464918832" duration="8196000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -470,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580381246294</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="MilesToKilometersAndKilometersToMiles and ComputeFutureTuition">
+      <created>1580568635533</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1580568635533</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="CompareCosts" />
     <MESSAGE value="PointOnLineSegment" />
     <MESSAGE value="PointOnLineSegment not complete" />
     <MESSAGE value="Characters and String" />
@@ -515,7 +514,8 @@
     <MESSAGE value="MonetaryUnits 04-26 &#10;and for loop" />
     <MESSAGE value="Dec2Hex, GreatestCommonDivisor, PrimeNumber and CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers" />
     <MESSAGE value="AdditionsQuiz, KilogramsToPounds and  Recursion" />
-    <option name="LAST_COMMIT_MESSAGE" value="AdditionsQuiz, KilogramsToPounds and  Recursion" />
+    <MESSAGE value="MilesToKilometersAndKilometersToMiles and ComputeFutureTuition" />
+    <option name="LAST_COMMIT_MESSAGE" value="MilesToKilometersAndKilometersToMiles and ComputeFutureTuition" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -542,8 +542,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/BookExercise/_18/Sort.java</url>
-          <line>5</line>
-          <option name="timeStamp" value="12" />
+          <line>10</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
