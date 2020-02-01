@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/ComputingTwoSquareOrMore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/ComputingXSquareOrMore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/Factorial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_02/AdditionsQuiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_03/KilogramsToPounds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/Sort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_04/MileToKilometers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_05/KilogramsToPoundsAndPoundsToKilograms.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_06/MilesToKilometersAndKilometersToMiles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_07/ComputeFutureTuition.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_01/CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_01/CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_02/AdditionsQuiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_02/AdditionsQuiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_03/KilogramsToPounds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_03/KilogramsToPounds.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/t.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,13 +78,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="AdditionsQuiz" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._02.AdditionsQuiz" />
+  <component name="RunManager" selected="Application.ComputeFutureTuition">
+    <configuration name="ComputeFutureTuition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._07.ComputeFutureTuition" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._02.*" />
+          <option name="PATTERN" value="Exercise_05._07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComputingXSquareOrMore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._18.ComputingXSquareOrMore" />
+    <configuration name="KilogramsToPoundsAndPoundsToKilograms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._05.KilogramsToPoundsAndPoundsToKilograms" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookExercise._18.*" />
+          <option name="PATTERN" value="Exercise_05._05.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Factorial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._18.Factorial" />
+    <configuration name="MileToKilometers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._04.MileToKilometers" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookExercise._18.*" />
+          <option name="PATTERN" value="Exercise_05._04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KilogramsToPounds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._03.KilogramsToPounds" />
+    <configuration name="MilesToKilometersAndKilometersToMiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._06.MilesToKilometersAndKilometersToMiles" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._03.*" />
+          <option name="PATTERN" value="Exercise_05._06.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,8 +131,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._18.Test" />
+    <configuration name="Sort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._18.Sort" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
@@ -145,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.KilogramsToPounds" />
-        <item itemvalue="Application.AdditionsQuiz" />
-        <item itemvalue="Application.Factorial" />
-        <item itemvalue="Application.ComputingXSquareOrMore" />
+        <item itemvalue="Application.ComputeFutureTuition" />
+        <item itemvalue="Application.MilesToKilometersAndKilometersToMiles" />
+        <item itemvalue="Application.KilogramsToPoundsAndPoundsToKilograms" />
+        <item itemvalue="Application.MileToKilometers" />
+        <item itemvalue="Application.Sort" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +229,8 @@
       <workItem from="1579769861592" duration="242000" />
       <workItem from="1580028966599" duration="538000" />
       <workItem from="1580110116019" duration="1186000" />
-      <workItem from="1580283380455" duration="11328000" />
+      <workItem from="1580283380455" duration="11750000" />
+      <workItem from="1580464918832" duration="6514000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -461,7 +463,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580286790581</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="AdditionsQuiz, KilogramsToPounds and  Recursion">
+      <created>1580381246294</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1580381246294</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,7 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Point position" />
     <MESSAGE value="CompareCosts" />
     <MESSAGE value="PointOnLineSegment" />
     <MESSAGE value="PointOnLineSegment not complete" />
@@ -506,7 +514,8 @@
     <MESSAGE value="MonetaryUnits 04-26 &#10;substring and indexOf" />
     <MESSAGE value="MonetaryUnits 04-26 &#10;and for loop" />
     <MESSAGE value="Dec2Hex, GreatestCommonDivisor, PrimeNumber and CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dec2Hex, GreatestCommonDivisor, PrimeNumber and CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers" />
+    <MESSAGE value="AdditionsQuiz, KilogramsToPounds and  Recursion" />
+    <option name="LAST_COMMIT_MESSAGE" value="AdditionsQuiz, KilogramsToPounds and  Recursion" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -530,6 +539,11 @@
           <url>file://$PROJECT_DIR$/src/BookExercise/_18/Test.java</url>
           <line>9</line>
           <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/BookExercise/_18/Sort.java</url>
+          <line>5</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
