@@ -1,5 +1,9 @@
 package Exercise_05._02;
-
+/*
+(Repeat additions) Listing 5.4, SubtractionQuizLoop.java, generates five random
+subtraction questions. Revise the program to generate ten random addition questions
+for two integers between 1 and 15. Display the correct count and test time.
+*/
 import java.util.Scanner;
 
 public class AdditionsQuiz { // github and y
@@ -13,12 +17,16 @@ public class AdditionsQuiz { // github and y
         long startTime = System.currentTimeMillis();
 
         while (countOfQuestions < NUMBER_OF_QUESTIONS) {
-            // Generate to random numbers
+            // 1. Generate two random numbers
             int randomNumber1 = (int) (Math.random() * 15 + 1);
             int randomNumber2 = (int) (Math.random() * 15 + 1);
-            // Prompt the user to answer the questions
+
+
+            // 2. Prompt the user to answer the questions
             System.out.println( "What is " + randomNumber1 + " + " + randomNumber2 + " = ?" );
             int answer = input.nextInt();
+
+            // 3. Grade the answer and display the result
             if (answer == (randomNumber1 + randomNumber2)) {
                 System.out.println("You are correct!");
                 countRightAnswers++;
@@ -26,14 +34,14 @@ public class AdditionsQuiz { // github and y
                 System.out.println("Your answer is wrong.\n" + randomNumber1 + " + " + randomNumber2 + " = " + (randomNumber1+randomNumber2));
             }
 
+            // Increase the count
             countOfQuestions++;
+
+
             output += "\n" + randomNumber1 + " + " + randomNumber2 + " = " + answer + ((randomNumber1 + randomNumber2 == answer)? " correct": " wrong");
         }
-
-
         long endTime = System.currentTimeMillis();
         long testTime = endTime - startTime;
-
         System.out.println("Correct count is " + countRightAnswers + "\nTest time is " + testTime/1000 + " seconds\n" + output);
 
     }
