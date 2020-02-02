@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/DirectorySize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_08/FindTheHighestScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_09/FindTheTwoHighestScores.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookExercise/_18/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookExercise/_18/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_06/MilesToKilometersAndKilometersToMiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_06/MilesToKilometersAndKilometersToMiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_07/ComputeFutureTuition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_07/ComputeFutureTuition.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Sort">
+  <component name="RunManager" selected="Application.DirectorySize">
     <configuration name="ComputeFutureTuition" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_05._07.ComputeFutureTuition" />
       <module name="YL" />
@@ -85,12 +89,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KilogramsToPoundsAndPoundsToKilograms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._05.KilogramsToPoundsAndPoundsToKilograms" />
+    <configuration name="DirectorySize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._18.DirectorySize" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._05.*" />
+          <option name="PATTERN" value="BookExercise._18.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -98,12 +102,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MileToKilometers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._04.MileToKilometers" />
+    <configuration name="FindTheHighestScore" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._08.FindTheHighestScore" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._04.*" />
+          <option name="PATTERN" value="Exercise_05._08.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MilesToKilometersAndKilometersToMiles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._06.MilesToKilometersAndKilometersToMiles" />
+    <configuration name="FindTheTwoHighestScores" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._09.FindTheTwoHighestScores" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._06.*" />
+          <option name="PATTERN" value="Exercise_05._09.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Sort" />
+        <item itemvalue="Application.DirectorySize" />
+        <item itemvalue="Application.FindTheTwoHighestScores" />
+        <item itemvalue="Application.FindTheHighestScore" />
         <item itemvalue="Application.ComputeFutureTuition" />
-        <item itemvalue="Application.MilesToKilometersAndKilometersToMiles" />
-        <item itemvalue="Application.KilogramsToPoundsAndPoundsToKilograms" />
-        <item itemvalue="Application.MileToKilometers" />
+        <item itemvalue="Application.Sort" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +227,9 @@
       <workItem from="1580028966599" duration="538000" />
       <workItem from="1580110116019" duration="1186000" />
       <workItem from="1580283380455" duration="11750000" />
-      <workItem from="1580464918832" duration="8196000" />
+      <workItem from="1580464918832" duration="8233000" />
+      <workItem from="1580590071606" duration="44000" />
+      <workItem from="1580628706042" duration="4887000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -470,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580568635533</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="recursiveBinarySearch">
+      <created>1580579306252</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1580579306252</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -490,7 +503,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PointOnLineSegment" />
     <MESSAGE value="PointOnLineSegment not complete" />
     <MESSAGE value="Characters and String" />
     <MESSAGE value="GuessingBirthdays" />
@@ -515,7 +527,8 @@
     <MESSAGE value="Dec2Hex, GreatestCommonDivisor, PrimeNumber and CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers" />
     <MESSAGE value="AdditionsQuiz, KilogramsToPounds and  Recursion" />
     <MESSAGE value="MilesToKilometersAndKilometersToMiles and ComputeFutureTuition" />
-    <option name="LAST_COMMIT_MESSAGE" value="MilesToKilometersAndKilometersToMiles and ComputeFutureTuition" />
+    <MESSAGE value="recursiveBinarySearch" />
+    <option name="LAST_COMMIT_MESSAGE" value="recursiveBinarySearch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -544,6 +557,11 @@
           <url>file://$PROJECT_DIR$/src/BookExercise/_18/Sort.java</url>
           <line>10</line>
           <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/BookExercise/_18/DirectorySize.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
