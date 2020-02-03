@@ -19,7 +19,7 @@ public class DirectorySize {
 
         if (file.isDirectory()){
             File[] files = file.listFiles();
-            for (int i = 0; i <files.length ; i++) {
+            for (int i = 0; files != null && i <files.length ; i++) {
                 size += getSize( files[i] );
             }
         }else{
