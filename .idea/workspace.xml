@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_18/TowerOfHanoi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_10/FindNumbersDivisibleBy5And6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_11/FindNumbersDivisibleBy5Or6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_12/FindTheSmallestNSuchThatNSquareGreaterThan12000.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_13/FindTheLargestNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_14/ComputeTheGreatestCommonDivisor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookExercise/_18/DirectorySize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookExercise/_18/DirectorySize.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_08/FindTheHighestScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_08/FindTheHighestScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_09/FindTheTwoHighestScores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_09/FindTheTwoHighestScores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_10/FindNumbersDivisibleBy5And6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_10/FindNumbersDivisibleBy5And6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_11/FindNumbersDivisibleBy5Or6.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_11/FindNumbersDivisibleBy5Or6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_12/FindTheSmallestNSuchThatNSquareGreaterThan12000.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_12/FindTheSmallestNSuchThatNSquareGreaterThan12000.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,26 +75,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TowerOfHanoi">
-    <configuration name="DirectorySize" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._18.DirectorySize" />
+  <component name="RunManager" selected="Application.ComputeTheGreatestCommonDivisor">
+    <configuration name="ComputeTheGreatestCommonDivisor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._14.ComputeTheGreatestCommonDivisor" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookExercise._18.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FindNumbersDivisibleBy5And6" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._10.FindNumbersDivisibleBy5And6" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_05._10.*" />
+          <option name="PATTERN" value="Exercise_05._14.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +102,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindTheTwoHighestScores" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._09.FindTheTwoHighestScores" />
+    <configuration name="FindTheLargestNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._13.FindTheLargestNumber" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._09.*" />
+          <option name="PATTERN" value="Exercise_05._13.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindTheSmallestNSuchThatNSquareGreaterThan12000" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._12.FindTheSmallestNSuchThatNSquareGreaterThan12000" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_05._12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TowerOfHanoi" />
+        <item itemvalue="Application.ComputeTheGreatestCommonDivisor" />
+        <item itemvalue="Application.FindTheLargestNumber" />
+        <item itemvalue="Application.FindTheSmallestNSuchThatNSquareGreaterThan12000" />
         <item itemvalue="Application.FindNumbersDivisibleBy5Or6" />
-        <item itemvalue="Application.FindNumbersDivisibleBy5And6" />
-        <item itemvalue="Application.DirectorySize" />
-        <item itemvalue="Application.FindTheTwoHighestScores" />
+        <item itemvalue="Application.TowerOfHanoi" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +231,8 @@
       <workItem from="1580590071606" duration="44000" />
       <workItem from="1580628706042" duration="5164000" />
       <workItem from="1580713262922" duration="6404000" />
-      <workItem from="1580732022523" duration="131000" />
+      <workItem from="1580732022523" duration="213000" />
+      <workItem from="1581145750151" duration="3030000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -494,7 +493,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580635092578</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="1- Check if correct and improving them: FindTheTwoHighestScores and FindNumbersDivisibleBy5And6 &#10;2- More assigment: FindNumbersDivisibleBy5Or6 and FindTheSmallestNSuchThatNSquareGreaterThan12000&#10;3- Recursion: TowerOfHanoi">
+      <created>1580739662092</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1580739662093</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -514,7 +520,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Characters and String" />
     <MESSAGE value="GuessingBirthdays" />
     <MESSAGE value="AreaOfPentagon" />
     <MESSAGE value="AreaOfPentagon, GreatCircleDistance and EstimateAreas" />
@@ -539,7 +544,8 @@
     <MESSAGE value="MilesToKilometersAndKilometersToMiles and ComputeFutureTuition" />
     <MESSAGE value="recursiveBinarySearch" />
     <MESSAGE value="1- Check if correct and improving them: MilesToKilometersAndKilometersToMiles and ComputeFutureTuition &#10;2- More assigment: FindTheHighestScore and FindTheTwoHighestScores&#10;3- Recursion: DirectorySize" />
-    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: MilesToKilometersAndKilometersToMiles and ComputeFutureTuition &#10;2- More assigment: FindTheHighestScore and FindTheTwoHighestScores&#10;3- Recursion: DirectorySize" />
+    <MESSAGE value="1- Check if correct and improving them: FindTheTwoHighestScores and FindNumbersDivisibleBy5And6 &#10;2- More assigment: FindNumbersDivisibleBy5Or6 and FindTheSmallestNSuchThatNSquareGreaterThan12000&#10;3- Recursion: TowerOfHanoi" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: FindTheTwoHighestScores and FindNumbersDivisibleBy5And6 &#10;2- More assigment: FindNumbersDivisibleBy5Or6 and FindTheSmallestNSuchThatNSquareGreaterThan12000&#10;3- Recursion: TowerOfHanoi" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -573,6 +579,16 @@
           <url>file://$PROJECT_DIR$/src/BookExercise/_18/TowerOfHanoi.java</url>
           <line>12</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_05/_11/FindNumbersDivisibleBy5Or6.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_05/_14/ComputeTheGreatestCommonDivisor.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
