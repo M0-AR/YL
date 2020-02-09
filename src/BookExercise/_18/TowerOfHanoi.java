@@ -7,7 +7,8 @@ public class TowerOfHanoi {
         Scanner input = new Scanner( System.in );
 
         System.out.println("Enter number of disks: ");
-        int n = input.nextInt();
+//        int n = input.nextInt();
+        int n = 3;
 
         // Find the solution recursively
         moveDisks(n, 'A', 'B', 'C');
