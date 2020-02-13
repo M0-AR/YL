@@ -5,7 +5,7 @@ package Exercise_05._17;
 */
 import java.util.Scanner;
 
-public class DisplayPyramid { // g
+public class DisplayPyramid {
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
 

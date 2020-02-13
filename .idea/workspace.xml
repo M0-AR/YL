@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_18/DisplayFourPatternsUsingLoops.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_19/DisplayNumbersInAPyramidPattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_19/DisplayPrimeNumbers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_15/ASCIICharacterTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_15/ASCIICharacterTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_16/FindFactorsOfInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_16/FindFactorsOfInteger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_05/_17/DisplayPyramid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_17/DisplayPyramid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_18/DisplayFourPatternsUsingLoops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_18/DisplayFourPatternsUsingLoops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_19/DisplayNumbersInAPyramidPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_19/DisplayNumbersInAPyramidPattern.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_20/DisplayPrimeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_20/DisplayPrimeNumbers.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -235,7 +233,8 @@
       <workItem from="1580732022523" duration="213000" />
       <workItem from="1581145750151" duration="4803000" />
       <workItem from="1581234995853" duration="5459000" />
-      <workItem from="1581317929872" duration="6605000" />
+      <workItem from="1581317929872" duration="7155000" />
+      <workItem from="1581620894843" duration="5571000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -517,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581241497219</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="1- Check if correct and improving them: ASCIICharacterTable, FindFactorsOfInteger  and DisplayPyramid&#10;2- More assigment: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers">
+      <created>1581325110525</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1581325110525</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +543,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AreaOfPentagon, GreatCircleDistance and EstimateAreas" />
     <MESSAGE value="AreaOfHexagon, AreaOfARegularPolygon and EstimateAreas" />
     <MESSAGE value="RandomPointsOnACircle" />
     <MESSAGE value="FindTheCharacterOfAnASCIICode and FindTheUnicodeOfACharacter" />
@@ -562,7 +567,8 @@
     <MESSAGE value="1- Check if correct and improving them: FindTheTwoHighestScores and FindNumbersDivisibleBy5And6 &#10;2- More assigment: FindNumbersDivisibleBy5Or6 and FindTheSmallestNSuchThatNSquareGreaterThan12000&#10;3- Recursion: TowerOfHanoi" />
     <MESSAGE value="1- Check if correct and improving them: FindNumbersDivisibleBy5And6 and FindNumbersDivisibleBy5Or6 &#10;2- More assigment: FindTheSmallestNSuchThatNSquareGreaterThan12000 , FindTheLargestNumber and ComputeTheGreatestCommonDivisor&#10;3- Recursion: TowerOfHanoi" />
     <MESSAGE value="1- Check if correct and improving them: FindTheLargestNumber and ComputeTheGreatestCommonDivisor &#10;2- More assigment: ASCIICharacterTable , FindFactorsOfInteger and DisplayPyramid" />
-    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: FindTheLargestNumber and ComputeTheGreatestCommonDivisor &#10;2- More assigment: ASCIICharacterTable , FindFactorsOfInteger and DisplayPyramid" />
+    <MESSAGE value="1- Check if correct and improving them: ASCIICharacterTable, FindFactorsOfInteger  and DisplayPyramid&#10;2- More assigment: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: ASCIICharacterTable, FindFactorsOfInteger  and DisplayPyramid&#10;2- More assigment: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -608,9 +614,9 @@
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Exercise_05/_18/DisplayFourPatternsUsingLoops.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/src/Exercise_05/_20/DisplayPrimeNumbers.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
