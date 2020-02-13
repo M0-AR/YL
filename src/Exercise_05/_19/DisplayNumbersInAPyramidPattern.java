@@ -1,18 +1,17 @@
 package Exercise_05._19;
 
-public class DisplayNumbersInAPyramidPattern { // Todo con
+public class DisplayNumbersInAPyramidPattern { // g
     public static void main(String[] args) {
 
-        for (int i = 1; i <= 8 ; i++) {
-            for (int j = i; j < 8  ; j++) {
-                System.out.print("  ");
-            }
-            for (int j = 0; j < i ; j++) {
-                if (j == 0)
-                    System.out.print( 1 + "  " );
-                else
-                    System.out.print( (int)Math.pow( 2, j ) + "  ");
-            }
+        int spaces = 35; // Take care of spaces before numbers
+
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < spaces; System.out.print( " " ), j++) ;
+            spaces -= 5;
+            // Take care of left numbers
+            for (int j = 0; j <= i; System.out.printf( "%5d", (int) Math.pow( 2, j ) ), j++) ;
+            if (i >= 1) // // Take care of right numbers
+                for (int j = i - 1; j >= 0; System.out.printf( "%5d", (int) Math.pow( 2, j ) ), j--) ;
             System.out.println();
         }
     }

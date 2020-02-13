@@ -12,7 +12,7 @@ public class DisplayFourPatternsUsingLoops {
             System.out.println();
         }
 
-        // 1. Pattern B
+        // 2. Pattern B
         System.out.println("Pattern B");
         for (int i = 6; i >= 1 ; i--) {
             for (int j = 1; j <= i; j++) {
@@ -21,28 +21,32 @@ public class DisplayFourPatternsUsingLoops {
             System.out.println();
         }
 
-        // 1. Pattern C
+        int spaces = 0; // Take care of spaces before and after numbers in C and D patterns
+
+
+        // 3. Pattern C
         System.out.println("Pattern C");
         for (int i = 1; i <= 6 ; i++) {
-            for (int j = 5; j >= i; j--) {
+            for (int j = 10; j > spaces; j--) {
                 System.out.print(" ");
             }
+            spaces += 2;
             for (int j = i; j >=1 ; j--) {
-                System.out.print( j );
+                System.out.print( j + " " );
             }
             System.out.println();
         }
 
-        // 1. Pattern D
+        // 4. Pattern D
         System.out.println("Pattern D");
         for (int i = 6; i >=1  ; i--) {
-            for (int j = i; j <=5 ; j++) {
+            spaces-=2;
+            for (int j = 10; j < spaces ; j++) {
                 System.out.print( " " );
             }
             for (int j = 1; j <=i ; j++) {
-                System.out.print( j );
+                System.out.print( j + " ");
             }
-
             System.out.println();
         }
 

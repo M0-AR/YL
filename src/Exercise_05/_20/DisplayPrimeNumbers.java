@@ -1,14 +1,29 @@
 package Exercise_05._20;
 
 public class DisplayPrimeNumbers {
-    public static void main(String[] args) { // g and y
+    public static void main(String[] args) { // g
+        int number = 2; // A number to be tested for primeness
+        boolean isPrime = true; // If the current number is prime
 
-        int primeNumbers = 2;
-        System.out.print(primeNumbers + " " + (primeNumbers+1) + " ");
-        while (primeNumbers < 1000) {
-            if (primeNumbers % 2 != 0 && primeNumbers % 3 != 0)
-                System.out.print(primeNumbers +  " " );
-            primeNumbers++;
+        while (number <= 1000) {
+
+            isPrime = true;
+
+            // If the number is prime, set isPrime to false
+            for (int divisor = 2; divisor <= number / 2; divisor++) {
+                if (number % divisor == 0){
+                    isPrime = false;
+                    break;
+                }
+            }
+
+            if (isPrime) // Print the prime number
+                System.out.print( number  + " ");
+
+            number++;
         }
     }
+
+
+
 }
