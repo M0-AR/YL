@@ -1,6 +1,10 @@
 package Exercise_05._19;
+/*
+(Display numbers in a pyramid pattern) Write a nested for loop that prints the
+following output:
+*/
 
-public class DisplayNumbersInAPyramidPattern { // g
+public class DisplayNumbersInAPyramidPattern {
     public static void main(String[] args) {
 
         int spaces = 35; // Take care of spaces before numbers
