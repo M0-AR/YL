@@ -3,7 +3,7 @@ package Exercise_05._22;
 import java.util.Scanner;
 
 public class LoanAmortization {
-    public static void main(String[] args) { // github and g
+    public static void main(String[] args) { // github
         Scanner input = new Scanner( System.in );
         double loanAmount;
         double  interestRate;
@@ -28,10 +28,9 @@ public class LoanAmortization {
         System.out.println( "Total Payment: " + (int)(monthlyRepayment * 12 * numOfYears * 100) / 100.0 + "\n");
 
         System.out.println("Payment!\tInterest\tPrincipal\tBalance");
-
-        for (int i = 1; i <=numOfYears ; i++) {
+        for (int i = 1; i <=numOfYears * 12; i++) {
             interest = (int) (monthlyInterestRate * balance * 100) / 100.0;
-            principal = (int) ((monthlyInterestRate - interest )* 100) / 100.0;
+            principal = (int) ((monthlyRepayment - interest )* 100) / 100.0;
             balance = (int) ((balance - principal )* 100) / 100.0;
             System.out.println(i + "\t\t" + interest + "\t\t" + principal + "\t\t" + balance);
 

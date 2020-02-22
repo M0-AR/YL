@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_21/CompareLoansWithVariousInterestRates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_22/LoanAmortization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_14/_01MyJavaFx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_23/DemonstrateCancellationErrors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_24/SumASeries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_19/DisplayNumbersInAPyramidPattern.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_19/DisplayNumbersInAPyramidPattern.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_20/DisplayPrimeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_20/DisplayPrimeNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_22/LoanAmortization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_22/LoanAmortization.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LoanAmortization">
+  <component name="RunManager" selected="Application._01MyJavaFx">
     <configuration name="CompareLoansWithVariousInterestRates" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_05._21.CompareLoansWithVariousInterestRates" />
       <module name="YL" />
@@ -88,38 +89,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DisplayFourPatternsUsingLoops" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._18.DisplayFourPatternsUsingLoops" />
+    <configuration name="DemonstrateCancellationErrors" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._23.DemonstrateCancellationErrors" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._18.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DisplayNumbersInAPyramidPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._19.DisplayNumbersInAPyramidPattern" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_05._20.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DisplayPrimeNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._20.DisplayPrimeNumbers" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_05._20.*" />
+          <option name="PATTERN" value="Exercise_05._23.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,13 +115,39 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SumASeries" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._24.SumASeries" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_05._24.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="_01MyJavaFx" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._14._01MyJavaFx" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="BookExercise._14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application._01MyJavaFx" />
+        <item itemvalue="Application.DemonstrateCancellationErrors" />
+        <item itemvalue="Application.SumASeries" />
         <item itemvalue="Application.LoanAmortization" />
         <item itemvalue="Application.CompareLoansWithVariousInterestRates" />
-        <item itemvalue="Application.DisplayPrimeNumbers" />
-        <item itemvalue="Application.DisplayNumbersInAPyramidPattern" />
-        <item itemvalue="Application.DisplayFourPatternsUsingLoops" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +239,9 @@
       <workItem from="1582002837084" duration="1139000" />
       <workItem from="1582107118473" duration="170000" />
       <workItem from="1582176528972" duration="659000" />
-      <workItem from="1582264109690" duration="1128000" />
+      <workItem from="1582264109690" duration="1191000" />
+      <workItem from="1582356706087" duration="1640000" />
+      <workItem from="1582358687437" duration="1293000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -534,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581626620036</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="1- Check if correct and improving them: &#10;2- More assigment: LoanAmortization">
+      <created>1582265289314</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1582265289314</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -554,7 +564,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="RandomPointsOnACircle" />
     <MESSAGE value="FindTheCharacterOfAnASCIICode and FindTheUnicodeOfACharacter" />
     <MESSAGE value="TODO" />
     <MESSAGE value="GuessBirthday, DecimalToHex and HexToBinary" />
@@ -579,7 +588,8 @@
     <MESSAGE value="1- Check if correct and improving them: FindTheLargestNumber and ComputeTheGreatestCommonDivisor &#10;2- More assigment: ASCIICharacterTable , FindFactorsOfInteger and DisplayPyramid" />
     <MESSAGE value="1- Check if correct and improving them: ASCIICharacterTable, FindFactorsOfInteger  and DisplayPyramid&#10;2- More assigment: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers" />
     <MESSAGE value="1- Check if correct and improving them: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers&#10;2- More assigment:" />
-    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers&#10;2- More assigment:" />
+    <MESSAGE value="1- Check if correct and improving them: &#10;2- More assigment: LoanAmortization" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: &#10;2- More assigment: LoanAmortization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
