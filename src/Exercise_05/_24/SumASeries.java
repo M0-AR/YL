@@ -1,14 +1,13 @@
 package Exercise_05._24;
 
-public class SumASeries {
+public class SumASeries {// github and y
     public static void main(String[] args) {
+        double sum = 0;
 
-        System.out.println((double) (1/3 + 2/2));
-//        double d = 0;
-//        double d1 = 1/3;
-//        for (int i = 0; i < 97 ; i++) {
-//            d += d1;
-//            d1 += 2/2;
-//        }
+        for (int i = 1; i <= 97 ; i+=2) {
+            sum += 1.0 * i / (i + 2);
+        }
+
+        System.out.println("Sum is " + sum);
     }
 }

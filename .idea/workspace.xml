@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_14/_01MyJavaFx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_23/DemonstrateCancellationErrors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_24/SumASeries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_25/ComputePi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_26/Compute_e.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_27/DisplayLeapYears.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_05/_22/LoanAmortization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_22/LoanAmortization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_24/SumASeries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_24/SumASeries.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +52,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -75,13 +76,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application._01MyJavaFx">
-    <configuration name="CompareLoansWithVariousInterestRates" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._21.CompareLoansWithVariousInterestRates" />
+  <component name="RunManager" selected="Application.DisplayLeapYears">
+    <configuration name="Compute_e" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._26.Compute_e" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._21.*" />
+          <option name="PATTERN" value="Exercise_05._26.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoanAmortization" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._22.LoanAmortization" />
+    <configuration name="DisplayLeapYears" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._27.DisplayLeapYears" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._22.*" />
+          <option name="PATTERN" value="Exercise_05._27.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DisplayLeapYears" />
+        <item itemvalue="Application.Compute_e" />
+        <item itemvalue="Application.SumASeries" />
         <item itemvalue="Application._01MyJavaFx" />
         <item itemvalue="Application.DemonstrateCancellationErrors" />
-        <item itemvalue="Application.SumASeries" />
-        <item itemvalue="Application.LoanAmortization" />
-        <item itemvalue="Application.CompareLoansWithVariousInterestRates" />
       </list>
     </recent_temporary>
   </component>
@@ -241,7 +242,8 @@
       <workItem from="1582176528972" duration="659000" />
       <workItem from="1582264109690" duration="1191000" />
       <workItem from="1582356706087" duration="1640000" />
-      <workItem from="1582358687437" duration="1293000" />
+      <workItem from="1582358687437" duration="1610000" />
+      <workItem from="1582439868136" duration="5723000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -544,7 +546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582265289314</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="1- Check if correct and improving them: &#10;2- More assigment: DemonstrateCancellationErrors&#10;3- JavaFX">
+      <created>1582361224730</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1582361224730</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -564,7 +573,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="FindTheCharacterOfAnASCIICode and FindTheUnicodeOfACharacter" />
     <MESSAGE value="TODO" />
     <MESSAGE value="GuessBirthday, DecimalToHex and HexToBinary" />
     <MESSAGE value="13 and 14" />
@@ -589,7 +597,8 @@
     <MESSAGE value="1- Check if correct and improving them: ASCIICharacterTable, FindFactorsOfInteger  and DisplayPyramid&#10;2- More assigment: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers" />
     <MESSAGE value="1- Check if correct and improving them: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers&#10;2- More assigment:" />
     <MESSAGE value="1- Check if correct and improving them: &#10;2- More assigment: LoanAmortization" />
-    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: &#10;2- More assigment: LoanAmortization" />
+    <MESSAGE value="1- Check if correct and improving them: &#10;2- More assigment: DemonstrateCancellationErrors&#10;3- JavaFX" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: &#10;2- More assigment: DemonstrateCancellationErrors&#10;3- JavaFX" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -633,6 +642,11 @@
           <url>file://$PROJECT_DIR$/src/Exercise_05/_14/ComputeTheGreatestCommonDivisor.java</url>
           <line>25</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_05/_27/DisplayLeapYears.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
