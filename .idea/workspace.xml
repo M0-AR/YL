@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="1- Check if correct and improving them: ComputePi, Compute_e and DisplayLeapYears&#10;2- More assigment: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; -&gt; Circle">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_31/ComputeCDValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_32/LotteryGame.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_33/PerfectNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_34/ScissorRockPaper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_28/DisplayFirstDaysOfEachMonth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_28/DisplayFirstDaysOfEachMonth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_29/DisplayCalendars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_29/DisplayCalendars.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_05/_30/CompoundValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_30/CompoundValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_31/ComputeCDValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_31/ComputeCDValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_32/LotteryGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_32/LotteryGame.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,7 +76,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ComputeCDValue">
+  <component name="RunManager" selected="Application.ScissorRockPaper">
     <configuration name="CompoundValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_05._30.CompoundValue" />
       <module name="YL" />
@@ -103,12 +103,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComputePi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._25.ComputePi" />
+    <configuration name="LotteryGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._32.LotteryGame" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._25.*" />
+          <option name="PATTERN" value="Exercise_05._32.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +116,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DisplayCalendars" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._29.DisplayCalendars" />
+    <configuration name="PerfectNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._33.PerfectNumber" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._29.*" />
+          <option name="PATTERN" value="Exercise_05._33.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +129,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DisplayFirstDaysOfEachMonth" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._28.DisplayFirstDaysOfEachMonth" />
+    <configuration name="ScissorRockPaper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._34.ScissorRockPaper" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._28.*" />
+          <option name="PATTERN" value="Exercise_05._34.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ScissorRockPaper" />
+        <item itemvalue="Application.PerfectNumber" />
+        <item itemvalue="Application.LotteryGame" />
         <item itemvalue="Application.ComputeCDValue" />
         <item itemvalue="Application.CompoundValue" />
-        <item itemvalue="Application.DisplayCalendars" />
-        <item itemvalue="Application.DisplayFirstDaysOfEachMonth" />
-        <item itemvalue="Application.ComputePi" />
       </list>
     </recent_temporary>
   </component>
@@ -245,7 +245,8 @@
       <workItem from="1582358687437" duration="1610000" />
       <workItem from="1582439868136" duration="5912000" />
       <workItem from="1582523716220" duration="6933000" />
-      <workItem from="1582610841632" duration="4498000" />
+      <workItem from="1582610841632" duration="4614000" />
+      <workItem from="1582707796014" duration="3852000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -569,7 +570,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582568474796</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree">
+      <created>1582615730488</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1582615730488</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +597,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="13 and 14" />
     <MESSAGE value="15, 16, 17 and 18" />
     <MESSAGE value="20" />
     <MESSAGE value="21, 22 and 23" />
@@ -614,7 +621,8 @@
     <MESSAGE value="1- Check if correct and improving them: &#10;2- More assigment: DemonstrateCancellationErrors&#10;3- JavaFX" />
     <MESSAGE value="1- Check if correct and improving them: SumASeries&#10;2- More assigment: ComputePi, Compute_e and DisplayLeapYears&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Shape" />
     <MESSAGE value="1- Check if correct and improving them: ComputePi, Compute_e and DisplayLeapYears&#10;2- More assigment: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; -&gt; Circle" />
-    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: ComputePi, Compute_e and DisplayLeapYears&#10;2- More assigment: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; -&gt; Circle" />
+    <MESSAGE value="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
