@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_33/PerfectNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_34/ScissorRockPaper.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_35/Summation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_36/CheckingISBN.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_37/DecimalToBinary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_30/CompoundValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_30/CompoundValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_31/ComputeCDValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_31/ComputeCDValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_03/_09/e309checkISBN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_09/e309checkISBN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_05/_32/LotteryGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_32/LotteryGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_33/PerfectNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_33/PerfectNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_34/ScissorRockPaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_34/ScissorRockPaper.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -76,13 +79,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ScissorRockPaper">
-    <configuration name="CompoundValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._30.CompoundValue" />
+  <component name="RunManager" selected="Application.DecimalToOctal">
+    <configuration name="DecimalToBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._37.DecimalToBinary" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._30.*" />
+          <option name="PATTERN" value="Exercise_05._37.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -90,25 +93,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComputeCDValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._31.ComputeCDValue" />
+    <configuration name="DecimalToOctal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._38.DecimalToOctal" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._31.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LotteryGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._32.LotteryGame" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_05._32.*" />
+          <option name="PATTERN" value="Exercise_05._38.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,13 +132,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Summation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._35.Summation" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_05._35.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ScissorRockPaper" />
+        <item itemvalue="Application.DecimalToOctal" />
+        <item itemvalue="Application.DecimalToBinary" />
+        <item itemvalue="Application.Summation" />
         <item itemvalue="Application.PerfectNumber" />
-        <item itemvalue="Application.LotteryGame" />
-        <item itemvalue="Application.ComputeCDValue" />
-        <item itemvalue="Application.CompoundValue" />
+        <item itemvalue="Application.ScissorRockPaper" />
       </list>
     </recent_temporary>
   </component>
@@ -246,7 +249,9 @@
       <workItem from="1582439868136" duration="5912000" />
       <workItem from="1582523716220" duration="6933000" />
       <workItem from="1582610841632" duration="4614000" />
-      <workItem from="1582707796014" duration="3852000" />
+      <workItem from="1582707796014" duration="4607000" />
+      <workItem from="1582713790166" duration="15000" />
+      <workItem from="1582876993839" duration="5679000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -577,7 +582,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582615730488</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper">
+      <created>1582712917718</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1582712917719</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +609,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="15, 16, 17 and 18" />
     <MESSAGE value="20" />
     <MESSAGE value="21, 22 and 23" />
     <MESSAGE value="21 and 22" />
@@ -622,7 +633,8 @@
     <MESSAGE value="1- Check if correct and improving them: SumASeries&#10;2- More assigment: ComputePi, Compute_e and DisplayLeapYears&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Shape" />
     <MESSAGE value="1- Check if correct and improving them: ComputePi, Compute_e and DisplayLeapYears&#10;2- More assigment: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; -&gt; Circle" />
     <MESSAGE value="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree" />
-    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree" />
+    <MESSAGE value="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -671,6 +683,11 @@
           <url>file://$PROJECT_DIR$/src/Exercise_05/_27/DisplayLeapYears.java</url>
           <line>15</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
