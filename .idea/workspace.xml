@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_35/Summation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_36/CheckingISBN.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_37/DecimalToBinary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_39/FindSalesAmount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_40/HeadsOrTails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_41/OccurrenceOfMaxNumbers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_03/_09/e309checkISBN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_03/_09/e309checkISBN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_32/LotteryGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_32/LotteryGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_33/PerfectNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_33/PerfectNumber.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_34/ScissorRockPaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_34/ScissorRockPaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_35/Summation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_35/Summation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_36/CheckingISBN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_36/CheckingISBN.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_37/DecimalToBinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_37/DecimalToBinary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.DecimalToOctal">
+  <component name="RunManager" selected="Application.OccurrenceOfMaxNumbers">
     <configuration name="DecimalToBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_05._37.DecimalToBinary" />
       <module name="YL" />
@@ -106,12 +105,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PerfectNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._33.PerfectNumber" />
+    <configuration name="FindSalesAmount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._39.FindSalesAmount" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._33.*" />
+          <option name="PATTERN" value="Exercise_05._39.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,12 +118,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScissorRockPaper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._34.ScissorRockPaper" />
+    <configuration name="HeadsOrTails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._40.HeadsOrTails" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._34.*" />
+          <option name="PATTERN" value="Exercise_05._40.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,12 +131,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Summation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._35.Summation" />
+    <configuration name="OccurrenceOfMaxNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._41.OccurrenceOfMaxNumbers" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._35.*" />
+          <option name="PATTERN" value="Exercise_05._41.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.OccurrenceOfMaxNumbers" />
+        <item itemvalue="Application.HeadsOrTails" />
+        <item itemvalue="Application.FindSalesAmount" />
         <item itemvalue="Application.DecimalToOctal" />
         <item itemvalue="Application.DecimalToBinary" />
-        <item itemvalue="Application.Summation" />
-        <item itemvalue="Application.PerfectNumber" />
-        <item itemvalue="Application.ScissorRockPaper" />
       </list>
     </recent_temporary>
   </component>
@@ -251,7 +250,8 @@
       <workItem from="1582610841632" duration="4614000" />
       <workItem from="1582707796014" duration="4607000" />
       <workItem from="1582713790166" duration="15000" />
-      <workItem from="1582876993839" duration="5679000" />
+      <workItem from="1582876993839" duration="5870000" />
+      <workItem from="1582956898437" duration="5195000" />
     </task>
     <task id="LOCAL-00001" summary="TwoCircles">
       <created>1575181948285</created>
@@ -589,7 +589,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582712917719</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="1- Check if correct and improving them: LotteryGame, PerfectNumber and ScissorRockPaper &#10;2- More assigment: Summation, DecimalToBinary and DecimalToOctal&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle and font">
+      <created>1582883824252</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1582883824252</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -609,7 +616,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="20" />
     <MESSAGE value="21, 22 and 23" />
     <MESSAGE value="21 and 22" />
     <MESSAGE value="23, 24 and 25" />
@@ -634,7 +640,8 @@
     <MESSAGE value="1- Check if correct and improving them: ComputePi, Compute_e and DisplayLeapYears&#10;2- More assigment: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; -&gt; Circle" />
     <MESSAGE value="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree" />
     <MESSAGE value="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper" />
-    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper" />
+    <MESSAGE value="1- Check if correct and improving them: LotteryGame, PerfectNumber and ScissorRockPaper &#10;2- More assigment: Summation, DecimalToBinary and DecimalToOctal&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle and font" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: LotteryGame, PerfectNumber and ScissorRockPaper &#10;2- More assigment: Summation, DecimalToBinary and DecimalToOctal&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle and font" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -686,8 +693,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java</url>
-          <line>20</line>
+          <line>10</line>
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_05/_39/FindSalesAmount.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
