@@ -14,15 +14,13 @@ public class DecimalToBinary {
         String binary = "";
 
         // Convert decimal to binary
-        while (decimal != 0) {
-            if (decimal % 2 == 0)
-                binary = "0" + binary;
-            else
-                binary = "1" + binary;
-            decimal /= 2;
+        int i = decimal;
+        while (i != 0) {
+            binary = (i % 2) + binary;
+            i /= 2;
         }
 
         // Display result
-        System.out.println(binary);
+        System.out.println("The binary value of the decimal \"" + decimal + "\" is: " + binary);
     }
 }
