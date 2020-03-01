@@ -6,7 +6,7 @@ integer and displays its corresponding octal value. Don’t use Java’s Integer
 */
 import java.util.Scanner;
 
-public class DecimalToOctal { // github and y
+public class DecimalToOctal {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 

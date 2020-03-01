@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_39/FindSalesAmount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_40/HeadsOrTails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_41/OccurrenceOfMaxNumbers.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_42/FindSalesAmount.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_43/Combinations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_44/Bit_level_operations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_45/ComputeMeanAndStandardDeviation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_35/Summation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_35/Summation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_36/CheckingISBN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_36/CheckingISBN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_37/DecimalToBinary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_37/DecimalToBinary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_39/FindSalesAmount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_39/FindSalesAmount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_40/HeadsOrTails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_40/HeadsOrTails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_41/OccurrenceOfMaxNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_41/OccurrenceOfMaxNumbers.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -78,13 +79,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.OccurrenceOfMaxNumbers">
-    <configuration name="DecimalToBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._37.DecimalToBinary" />
+  <component name="RunManager" selected="Application.ComputeMeanAndStandardDeviation">
+    <configuration name="Bit_level_operations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._44.Bit_level_operations" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._37.*" />
+          <option name="PATTERN" value="Exercise_05._44.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -92,12 +93,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DecimalToOctal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._38.DecimalToOctal" />
+    <configuration name="Combinations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._43.Combinations" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._38.*" />
+          <option name="PATTERN" value="Exercise_05._43.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComputeMeanAndStandardDeviation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._45.ComputeMeanAndStandardDeviation" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_05._45.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FindSalesAmount (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._42.FindSalesAmount" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_05._42.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,39 +145,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HeadsOrTails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._40.HeadsOrTails" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_05._40.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OccurrenceOfMaxNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._41.OccurrenceOfMaxNumbers" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_05._41.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.OccurrenceOfMaxNumbers" />
-        <item itemvalue="Application.HeadsOrTails" />
+        <item itemvalue="Application.ComputeMeanAndStandardDeviation" />
+        <item itemvalue="Application.Bit_level_operations" />
+        <item itemvalue="Application.Combinations" />
         <item itemvalue="Application.FindSalesAmount" />
-        <item itemvalue="Application.DecimalToOctal" />
-        <item itemvalue="Application.DecimalToBinary" />
+        <item itemvalue="Application.FindSalesAmount (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -251,14 +252,8 @@
       <workItem from="1582707796014" duration="4607000" />
       <workItem from="1582713790166" duration="15000" />
       <workItem from="1582876993839" duration="5870000" />
-      <workItem from="1582956898437" duration="5195000" />
-    </task>
-    <task id="LOCAL-00001" summary="TwoCircles">
-      <created>1575181948285</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1575181948285</updated>
+      <workItem from="1582956898437" duration="5246000" />
+      <workItem from="1583052421190" duration="5800000" />
     </task>
     <task id="LOCAL-00002" summary="Find the number of years">
       <created>1575361574150</created>
@@ -596,7 +591,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582883824252</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; ImageView -&gt; image">
+      <created>1582968803946</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1582968803946</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -616,7 +618,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21, 22 and 23" />
     <MESSAGE value="21 and 22" />
     <MESSAGE value="23, 24 and 25" />
     <MESSAGE value="Payroll 04-23" />
@@ -641,7 +642,8 @@
     <MESSAGE value="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree" />
     <MESSAGE value="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper" />
     <MESSAGE value="1- Check if correct and improving them: LotteryGame, PerfectNumber and ScissorRockPaper &#10;2- More assigment: Summation, DecimalToBinary and DecimalToOctal&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle and font" />
-    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: LotteryGame, PerfectNumber and ScissorRockPaper &#10;2- More assigment: Summation, DecimalToBinary and DecimalToOctal&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle and font" />
+    <MESSAGE value="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; ImageView -&gt; image" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; ImageView -&gt; image" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -695,11 +697,6 @@
           <url>file://$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java</url>
           <line>10</line>
           <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Exercise_05/_39/FindSalesAmount.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
