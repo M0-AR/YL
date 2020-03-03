@@ -2,15 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_42/FindSalesAmount.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_43/Combinations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_44/Bit_level_operations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_45/ComputeMeanAndStandardDeviation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_46/ReverseAString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_47/CheckISBN_13.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_48/ProcessString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_49/CountVowelsAndConsonants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_50/CountUpperCaseLetters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_05/_51/LongestCommonPrefix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_39/FindSalesAmount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_39/FindSalesAmount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_40/HeadsOrTails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_40/HeadsOrTails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_41/OccurrenceOfMaxNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_41/OccurrenceOfMaxNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_42/FindSalesAmount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_42/FindSalesAmount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_43/Combinations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_43/Combinations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_44/Bit_level_operations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_44/Bit_level_operations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_05/_45/ComputeMeanAndStandardDeviation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_05/_45/ComputeMeanAndStandardDeviation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,13 +81,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ComputeMeanAndStandardDeviation">
-    <configuration name="Bit_level_operations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._44.Bit_level_operations" />
+  <component name="RunManager" selected="Application.CountUpperCaseLetters">
+    <configuration name="CheckISBN_13" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._47.CheckISBN_13" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._44.*" />
+          <option name="PATTERN" value="Exercise_05._47.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -93,12 +95,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Combinations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._43.Combinations" />
+    <configuration name="CountUpperCaseLetters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._50.CountUpperCaseLetters" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._43.*" />
+          <option name="PATTERN" value="Exercise_05._50.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -106,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComputeMeanAndStandardDeviation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._45.ComputeMeanAndStandardDeviation" />
+    <configuration name="CountVowelsAndConsonants" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._49.CountVowelsAndConsonants" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._45.*" />
+          <option name="PATTERN" value="Exercise_05._49.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindSalesAmount (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._42.FindSalesAmount" />
+    <configuration name="ProcessString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._48.ProcessString" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._42.*" />
+          <option name="PATTERN" value="Exercise_05._48.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,12 +134,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindSalesAmount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_05._39.FindSalesAmount" />
+    <configuration name="ReverseAString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_05._46.ReverseAString" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_05._39.*" />
+          <option name="PATTERN" value="Exercise_05._46.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ComputeMeanAndStandardDeviation" />
-        <item itemvalue="Application.Bit_level_operations" />
-        <item itemvalue="Application.Combinations" />
-        <item itemvalue="Application.FindSalesAmount" />
-        <item itemvalue="Application.FindSalesAmount (1)" />
+        <item itemvalue="Application.CountUpperCaseLetters" />
+        <item itemvalue="Application.CountVowelsAndConsonants" />
+        <item itemvalue="Application.ProcessString" />
+        <item itemvalue="Application.CheckISBN_13" />
+        <item itemvalue="Application.ReverseAString" />
       </list>
     </recent_temporary>
   </component>
@@ -253,14 +255,8 @@
       <workItem from="1582713790166" duration="15000" />
       <workItem from="1582876993839" duration="5870000" />
       <workItem from="1582956898437" duration="5246000" />
-      <workItem from="1583052421190" duration="5800000" />
-    </task>
-    <task id="LOCAL-00002" summary="Find the number of years">
-      <created>1575361574150</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1575361574150</updated>
+      <workItem from="1583052421190" duration="6101000" />
+      <workItem from="1583215882119" duration="3975000" />
     </task>
     <task id="LOCAL-00003" summary="Current time 12-hour clock.">
       <created>1575446411538</created>
@@ -598,7 +594,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582968803946</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="1- Check if correct and improving them:FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;2- More assigment: FindSalesAmount, Combinations, Bit_level_operations and ComputeMeanAndStandardDeviation">
+      <created>1583058401257</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1583058401258</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -618,7 +621,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="21 and 22" />
     <MESSAGE value="23, 24 and 25" />
     <MESSAGE value="Payroll 04-23" />
     <MESSAGE value="OrderThreeCities 04-24" />
@@ -643,7 +645,8 @@
     <MESSAGE value="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper" />
     <MESSAGE value="1- Check if correct and improving them: LotteryGame, PerfectNumber and ScissorRockPaper &#10;2- More assigment: Summation, DecimalToBinary and DecimalToOctal&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle and font" />
     <MESSAGE value="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; ImageView -&gt; image" />
-    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; ImageView -&gt; image" />
+    <MESSAGE value="1- Check if correct and improving them:FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;2- More assigment: FindSalesAmount, Combinations, Bit_level_operations and ComputeMeanAndStandardDeviation" />
+    <option name="LAST_COMMIT_MESSAGE" value="1- Check if correct and improving them:FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;2- More assigment: FindSalesAmount, Combinations, Bit_level_operations and ComputeMeanAndStandardDeviation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
