@@ -1,9 +1,12 @@
 package Exercise_05._51;
-
+/*
+(Longest common prefix) Write a program that prompts the user to enter two
+strings and displays the largest common prefix of the two strings.
+*/
 import java.util.Scanner;
 
 public class LongestCommonPrefix {
-    public static void main(String[] args) { // github
+    public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
 
         // Prompt the user to enter two string
@@ -15,6 +18,7 @@ public class LongestCommonPrefix {
         String s2 = input.nextLine();
 
 
+        // Method one
         String [] s11 = s1.split( " " );
         String [] s22 = s2.split( " " );
 
