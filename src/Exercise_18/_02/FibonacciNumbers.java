@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class FibonacciNumbers {
     /** Main method */
-    public static void main(String[] args) { // github and y
+    public static void main(String[] args) {
         // Create a Scanner
         Scanner input = new Scanner(System.in);
         System.out.print("Enter an index for the Fibonacci number: ");

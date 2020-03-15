@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_03/GreatestCommonDivisor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_04/SumSeries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_05/SumSeries01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_06/SumSeries02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_07/FibonacciSeries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_08/IntegerReversely.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_09/StringReversely.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_10/OccurrencesOfCharacterInString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_01/Factorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_01/Factorial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_18/_02/FibonacciNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_02/FibonacciNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_03/GreatestCommonDivisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_03/GreatestCommonDivisor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_04/SumSeries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_04/SumSeries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_05/SumSeries01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_05/SumSeries01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_06/SumSeries02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_06/SumSeries02.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,13 +80,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SumSeries02">
-    <configuration name="Factorial" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_18._01.Factorial" />
+  <component name="RunManager" selected="Application.OccurrencesOfCharacterInString">
+    <configuration name="FibonacciNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_18._02.FibonacciNumbers" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_18._01.*" />
+          <option name="PATTERN" value="Exercise_18._02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GreatestCommonDivisor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_18._03.GreatestCommonDivisor" />
+    <configuration name="FibonacciSeries" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_18._07.FibonacciSeries" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_18._03.*" />
+          <option name="PATTERN" value="Exercise_18._07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -104,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumSeries" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_18._04.SumSeries" />
+    <configuration name="IntegerReversely" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_18._08.IntegerReversely" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_18._04.*" />
+          <option name="PATTERN" value="Exercise_18._08.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -117,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumSeries01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_18._05.SumSeries01" />
+    <configuration name="OccurrencesOfCharacterInString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_18._10.OccurrencesOfCharacterInString" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_18._05.*" />
+          <option name="PATTERN" value="Exercise_18._10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -130,12 +133,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumSeries02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_18._06.SumSeries02" />
+    <configuration name="StringReversely" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_18._09.StringReversely" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_18._06.*" />
+          <option name="PATTERN" value="Exercise_18._09.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SumSeries02" />
-        <item itemvalue="Application.SumSeries01" />
-        <item itemvalue="Application.SumSeries" />
-        <item itemvalue="Application.GreatestCommonDivisor" />
-        <item itemvalue="Application.Factorial" />
+        <item itemvalue="Application.OccurrencesOfCharacterInString" />
+        <item itemvalue="Application.StringReversely" />
+        <item itemvalue="Application.IntegerReversely" />
+        <item itemvalue="Application.FibonacciSeries" />
+        <item itemvalue="Application.FibonacciNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -255,14 +258,8 @@
       <workItem from="1583215882119" duration="4082000" />
       <workItem from="1583305363102" duration="2017000" />
       <workItem from="1583841836637" duration="3272000" />
-      <workItem from="1583997094117" duration="3089000" />
-    </task>
-    <task id="LOCAL-00006" summary="Organize + Half of the assigment">
-      <created>1575525588683</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1575525588683</updated>
+      <workItem from="1583997094117" duration="3117000" />
+      <workItem from="1584254609103" duration="4641000" />
     </task>
     <task id="LOCAL-00007" summary="currency exchange">
       <created>1575705233020</created>
@@ -600,7 +597,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583853887220</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="1- Check if correct and improving: Factorial and FibonacciNumbers&#10;2- More assigment: GreatestCommonDivisor, SumSeries, SumSeries01 and SumSeries02">
+      <created>1584000500511</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1584000500511</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -699,6 +703,11 @@
           <url>file://$PROJECT_DIR$/src/Exercise_05/_38/DecimalToOctal.java</url>
           <line>10</line>
           <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_18/_10/OccurrencesOfCharacterInString.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="35" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
