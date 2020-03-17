@@ -32,9 +32,9 @@ public interface Graph<V> {
     boolean addEdge(int u, int v);
 
     /** Obtains a depth-first search tree starting from v */
-//    AbstractGraph<V>.Tree dfs(int v); todo
+    AbstractGraph<V>.Tree dfs(int v);
 
     /** Obtains a breadth-first search tree starting from v */
-//    AbstractGraph<V>.Tree bfs(int v); todo
+    AbstractGraph<V>.Tree bfs(int v);
 
 }

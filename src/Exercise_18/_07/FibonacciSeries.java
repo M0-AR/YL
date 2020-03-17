@@ -1,8 +1,12 @@
 package Exercise_18._07;
-
+/*********************************************************************************
+ * (Fibonacci series) Modify Listing 18.2, ComputeFibonacci.java, so that the     *
+ * program finds the number of times the fib method is called. (Hint: Use a       *
+ * static variable and increment it every time the method is called.)             *
+ *********************************************************************************/
 import java.util.Scanner;
 
-public class FibonacciSeries { // github
+public class FibonacciSeries {
     static int count = 0;
     /**
      * Main method
