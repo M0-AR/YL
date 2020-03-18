@@ -17,7 +17,7 @@ public class FindLargestNumberInArray {
     }
 
     public static int largestNumberInArray(int[]n , int i, int  j){
-        // Base case when i reach the last element so return it
+        // Base case to reach last element and come back
         if (i == j)
             return n[i];
         return Math.max( n[i], largestNumberInArray( n, i+1, j ) );

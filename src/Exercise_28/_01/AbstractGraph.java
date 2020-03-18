@@ -96,7 +96,7 @@ public class AbstractGraph<V> implements Graph<V> {
             return searchOrder.size();
         }
 
-        // Return the path of vertices from a vertex to the root
+        /** Return the path of vertices from a vertex to the root */
         public List<V> getPath(int index){
             ArrayList<V> path = new ArrayList<>(  );
 
@@ -108,7 +108,27 @@ public class AbstractGraph<V> implements Graph<V> {
             return path;
         }
 
-        // Todo from here
+        /** Print a path from the root to vertex v */
+        public void printPath(int index){
+            List<V> path = getPath( index );
+            System.out.println("A path from " + vertices.get( root ) + " to " +
+                    vertices.get( index ) + ": ");
+            for (int i = path.size(); i >=0 ; i--)
+                System.out.print( path.get( i ) + " " );
+
+        }
+
+        /** Print the hole tree*/
+        public void printTree(){
+            System.out.println("Root is: " + vertices.get( root ));
+            System.out.print("Edges: ");
+            for (int i = 0; i < parent.length ; i++)
+                if (parent[i] != -1)
+                    // Display an edge
+                    System.out.print("(" + vertices.get( parent[i] ) + ", " +
+                            vertices.get( i ) + ") ");
+            System.out.println();
+        }
     }
 
     /** Edge inner class inside the AbstractGraph class */
