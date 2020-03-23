@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_04/DisplayIntegerReversed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_05/SortThreeNumbers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_06/DisplayPatterns.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_07/ComputeFutureInvestmentValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_14/FindNumberOfUppercaseLettersInString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_15/OccurrencesOfSpecifiedCharacterInString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_16/FindNumberOfUppercaseLettersInArray.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger , PalindromeInteger, DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns , ComputeFutureInvestmentValue, CelsiusAndFahrenheit, FeetAndMeters, isPrime&#10;2- More assigment:">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_08/CelsiusAndFahrenheit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_09/FeetAndMeters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_10/isPrime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_11/ComputeCommissions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_12/DisplayCharacters.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_13/SumSeries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_17/OccurrencesOfCharacterInArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_18/TowerOfHanoi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_19/SierpinskiTriangle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_01/PentagonalNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_01/PentagonalNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_02/SumDigitsInInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_02/SumDigitsInInteger.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_06/_03/PalindromeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_03/PalindromeInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/t.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_11/SumDigitsUsingRecursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_11/SumDigitsUsingRecursion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_12/PrintCharactersInStringReversely.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_12/PrintCharactersInStringReversely.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_04/DisplayIntegerReversed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_04/DisplayIntegerReversed.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_05/SortThreeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_05/SortThreeNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_06/DisplayPatterns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_06/DisplayPatterns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_07/ComputeFutureInvestmentValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_07/ComputeFutureInvestmentValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_18/_13/FindLargestNumberInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_13/FindLargestNumberInArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_28/_01/AbstractGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_28/_01/AbstractGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_14/FindNumberOfUppercaseLettersInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_14/FindNumberOfUppercaseLettersInString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_15/OccurrencesOfSpecifiedCharacterInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_15/OccurrencesOfSpecifiedCharacterInString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_16/FindNumberOfUppercaseLettersInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_16/FindNumberOfUppercaseLettersInArray.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,13 +90,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.FindNumberOfUppercaseLettersInArray">
-    <configuration name="ComputeFutureInvestmentValue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_06._07.ComputeFutureInvestmentValue" />
+  <component name="RunManager" selected="Application.SumSeries">
+    <configuration name="ComputeCommissions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._11.ComputeCommissions" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_06._07.*" />
+          <option name="PATTERN" value="Exercise_06._11.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -102,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindNumberOfUppercaseLettersInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_18._16.FindNumberOfUppercaseLettersInArray" />
+    <configuration name="DisplayCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._12.DisplayCharacters" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_18._16.*" />
+          <option name="PATTERN" value="Exercise_06._12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FindNumberOfUppercaseLettersInString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_18._14.FindNumberOfUppercaseLettersInString" />
+    <configuration name="FeetAndMeters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._09.FeetAndMeters" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_18._14.*" />
+          <option name="PATTERN" value="Exercise_06._09.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -128,12 +130,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OccurrencesOfSpecifiedCharacterInString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_18._15.OccurrencesOfSpecifiedCharacterInString" />
+    <configuration name="SumSeries" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._13.SumSeries" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_18._15.*" />
+          <option name="PATTERN" value="Exercise_06._13.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,12 +143,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumDigitsUsingRecursion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_18._11.SumDigitsUsingRecursion" />
+    <configuration name="isPrime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._10.isPrime" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_18._11.*" />
+          <option name="PATTERN" value="Exercise_06._10.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -156,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FindNumberOfUppercaseLettersInArray" />
-        <item itemvalue="Application.OccurrencesOfSpecifiedCharacterInString" />
-        <item itemvalue="Application.FindNumberOfUppercaseLettersInString" />
-        <item itemvalue="Application.SumDigitsUsingRecursion" />
-        <item itemvalue="Application.ComputeFutureInvestmentValue" />
+        <item itemvalue="Application.SumSeries" />
+        <item itemvalue="Application.DisplayCharacters" />
+        <item itemvalue="Application.ComputeCommissions" />
+        <item itemvalue="Application.isPrime" />
+        <item itemvalue="Application.FeetAndMeters" />
       </list>
     </recent_temporary>
   </component>
@@ -269,14 +271,9 @@
       <workItem from="1583997094117" duration="3117000" />
       <workItem from="1584254609103" duration="7779000" />
       <workItem from="1584431310993" duration="10055000" />
-      <workItem from="1584509114805" duration="11133000" />
-    </task>
-    <task id="LOCAL-00010" summary="PointOnLineSegment">
-      <created>1576429013281</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1576429013281</updated>
+      <workItem from="1584509114805" duration="11332000" />
+      <workItem from="1584681744331" duration="9953000" />
+      <workItem from="1584949200278" duration="3597000" />
     </task>
     <task id="LOCAL-00011" summary="PointOnLineSegment not complete">
       <created>1576529429226</created>
@@ -614,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584458252585</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns and&#10;ComputeFutureInvestmentValue&#10;&#10;Recursion:&#10;1- Check if correct and improving: SumDigitsUsingRecursion, PrintCharactersInStringReversely and   FindLargestNumberInArray&#10;2- More assigment: &#10;FindNumberOfUppercaseLettersInString, OccurrencesOfSpecifiedCharacterInString and FindNumberOfUppercaseLettersInArray&#10;Graph:&#10;1- AbstractGraph and Graph">
+      <created>1584525502326</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1584525502326</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,7 +638,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AdditionsQuiz, KilogramsToPounds and  Recursion" />
     <MESSAGE value="MilesToKilometersAndKilometersToMiles and ComputeFutureTuition" />
     <MESSAGE value="recursiveBinarySearch" />
     <MESSAGE value="1- Check if correct and improving them: MilesToKilometersAndKilometersToMiles and ComputeFutureTuition &#10;2- More assigment: FindTheHighestScore and FindTheTwoHighestScores&#10;3- Recursion: DirectorySize" />
@@ -659,7 +662,8 @@
     <MESSAGE value="1- Check if correct and improving: GreatestCommonDivisor, SumSeries, SumSeries01 and SumSeries02&#10;2- More assigment: FibonacciSeries, IntegerReversely, StringReversely and OccurrencesOfCharacterInString" />
     <MESSAGE value="&#10;3-  TestGraphIfConnected" />
     <MESSAGE value="Recursion:&#10;1- Check if correct and improving: FibonacciSeries, IntegerReversely, StringReversely and OccurrencesOfCharacterInString&#10;2- More assigment: SumDigitsUsingRecursion, PrintCharactersInStringReversely(Not totally understand what to do) and &#10;FindLargestNumberInArray&#10;Method:&#10;1- Check if correct and improving: PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;&#10;Graph:&#10;1- AbstractGraph and Graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Recursion:&#10;1- Check if correct and improving: FibonacciSeries, IntegerReversely, StringReversely and OccurrencesOfCharacterInString&#10;2- More assigment: SumDigitsUsingRecursion, PrintCharactersInStringReversely(Not totally understand what to do) and &#10;FindLargestNumberInArray&#10;Method:&#10;1- Check if correct and improving: PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;&#10;Graph:&#10;1- AbstractGraph and Graph" />
+    <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns and&#10;ComputeFutureInvestmentValue&#10;&#10;Recursion:&#10;1- Check if correct and improving: SumDigitsUsingRecursion, PrintCharactersInStringReversely and   FindLargestNumberInArray&#10;2- More assigment: &#10;FindNumberOfUppercaseLettersInString, OccurrencesOfSpecifiedCharacterInString and FindNumberOfUppercaseLettersInArray&#10;Graph:&#10;1- AbstractGraph and Graph" />
+    <option name="LAST_COMMIT_MESSAGE" value="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns and&#10;ComputeFutureInvestmentValue&#10;&#10;Recursion:&#10;1- Check if correct and improving: SumDigitsUsingRecursion, PrintCharactersInStringReversely and   FindLargestNumberInArray&#10;2- More assigment: &#10;FindNumberOfUppercaseLettersInString, OccurrencesOfSpecifiedCharacterInString and FindNumberOfUppercaseLettersInArray&#10;Graph:&#10;1- AbstractGraph and Graph" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -720,14 +724,9 @@
           <option name="timeStamp" value="42" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Exercise_18/_15/OccurrencesOfSpecifiedCharacterInString.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Exercise_18/_16/FindNumberOfUppercaseLettersInArray.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="44" />
+          <url>file://$PROJECT_DIR$/src/BookExercise/_19/SuperWildCardDemo.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

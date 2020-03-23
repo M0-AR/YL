@@ -1,8 +1,14 @@
 package Exercise_18._15;
-
+/**********************************************************************************
+ * (Occurrences of a specified character in a string) Rewrite Programming Exercise *
+ * 18.10 using a helper method to pass the substring high index to the method.     *
+ * The helper method header is:                                                    *
+ *                                                                                 *
+ * public static int count(String str, char a, int high)                           *
+ **********************************************************************************/
 import java.util.Scanner;
 
-public class OccurrencesOfSpecifiedCharacterInString {// github
+public class OccurrencesOfSpecifiedCharacterInString {
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
         System.out.print( "Enter a string: " );
@@ -19,10 +25,11 @@ public class OccurrencesOfSpecifiedCharacterInString {// github
     }
 
     public static int count(String str, char a,int high){
-        int number = 0;
-        if (high > 0){
-            number = count( str.substring( 1 ), a, high-1 ) + ((str.charAt( 0 ) == a) ? 1:0);
+        // Base case
+        if (high <= 0){
+            return 0;
         }
-        return number;
+        return count( str.substring( 1 ), a, high-1 ) +
+                                    ((str.charAt( 0 ) == a) ? 1:0);
     }
 }

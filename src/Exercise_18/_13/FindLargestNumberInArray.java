@@ -1,5 +1,10 @@
 package Exercise_18._13;
 
+/*********************************************************************************
+ * (Find the largest number in an array) Write a recursive method that returns    *
+ * the largest integer in an array. Write a test program that prompts the user to *
+ * enter a list of eight integers and displays the largest element.               *
+ *********************************************************************************/
 import java.util.Scanner;
 
 public class FindLargestNumberInArray {
