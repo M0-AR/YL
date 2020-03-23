@@ -1,21 +1,27 @@
 package Exercise_18._16;
 
-public class FindNumberOfUppercaseLettersInArray {// github and y
+import java.util.Scanner;
+
+public class FindNumberOfUppercaseLettersInArray {
+
     public static void main(String[] args) {
-        char[] m = {'a', 'A', 'b', 'B'};
-        System.out.println(count( m ));
+        System.out.print("Enter a string: ");
+        Scanner input = new Scanner(System.in);
+        String s = input.nextLine();
+        char[] items = s.toCharArray();
+        System.out.println("The number of uppercase letters is " +
+                count(items));
     }
 
-    public static int count(char[] chars){
-        return count(chars, 0);
+    public static int count(char[] chars) {
+        return count( chars, chars.length - 1 );
     }
 
-    public static int count(char[] chars, int high){
-        // Counting the number of uppercase letters
-        int number = 0;
-        if (high < chars.length){
-            number = count( chars, ++high )+((Character.isUpperCase( chars[high-1] ))?1:0);
+    public static int count(char[] chars, int high) {
+        // Base case
+        if (high < 0) {
+            return 0;
         }
-        return number;
+        return count( chars, high - 1 ) + ((Character.isUpperCase( chars[high] )) ? 1 : 0);
     }
 }

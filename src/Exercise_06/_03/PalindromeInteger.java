@@ -11,7 +11,7 @@ user to enter an integer and reports whether the integer is a palindrome.
 */
 import java.util.Scanner;
 
-public class PalindromeInteger { // github
+public class PalindromeInteger {
     public static void main(String[] args) {
         Scanner input = new Scanner( System.in );
         // Prompt the user to enter an integer
