@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger , PalindromeInteger, DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns , ComputeFutureInvestmentValue, CelsiusAndFahrenheit, FeetAndMeters, isPrime&#10;2- More assigment:">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_08/CelsiusAndFahrenheit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_09/FeetAndMeters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_10/isPrime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_11/ComputeCommissions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_12/DisplayCharacters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_13/SumSeries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_17/OccurrencesOfCharacterInArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_18/TowerOfHanoi.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_18/_19/SierpinskiTriangle.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_32/ThreadPools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_14/EstimatePi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_15/PrintTaxTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_16/NumberOfDaysInYear.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_20/_01/DisplayWordsInAscendingAlphabeticalOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_20/t.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_03/PalindromeInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_03/PalindromeInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_04/DisplayIntegerReversed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_04/DisplayIntegerReversed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_05/SortThreeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_05/SortThreeNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_06/DisplayPatterns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_06/DisplayPatterns.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_07/ComputeFutureInvestmentValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_07/ComputeFutureInvestmentValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_13/FindLargestNumberInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_13/FindLargestNumberInArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_14/FindNumberOfUppercaseLettersInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_14/FindNumberOfUppercaseLettersInString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_15/OccurrencesOfSpecifiedCharacterInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_15/OccurrencesOfSpecifiedCharacterInString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_18/_16/FindNumberOfUppercaseLettersInArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_18/_16/FindNumberOfUppercaseLettersInArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_11/ComputeCommissions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_11/ComputeCommissions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_12/DisplayCharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_12/DisplayCharacters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_13/SumSeries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_13/SumSeries.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,20 +81,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SumSeries">
-    <configuration name="ComputeCommissions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_06._11.ComputeCommissions" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_06._11.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.ThreadPools">
     <configuration name="DisplayCharacters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_06._12.DisplayCharacters" />
       <module name="YL" />
@@ -117,12 +95,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FeetAndMeters" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_06._09.FeetAndMeters" />
+    <configuration name="EstimatePi" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._14.EstimatePi" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_06._09.*" />
+          <option name="PATTERN" value="Exercise_06._14.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NumberOfDaysInYear" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._16.NumberOfDaysInYear" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_06._16.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -143,12 +134,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="isPrime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_06._10.isPrime" />
+    <configuration name="ThreadPools" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._32.ThreadPools" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_06._10.*" />
+          <option name="PATTERN" value="BookExercise._32.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ThreadPools" />
+        <item itemvalue="Application.NumberOfDaysInYear" />
+        <item itemvalue="Application.EstimatePi" />
         <item itemvalue="Application.SumSeries" />
         <item itemvalue="Application.DisplayCharacters" />
-        <item itemvalue="Application.ComputeCommissions" />
-        <item itemvalue="Application.isPrime" />
-        <item itemvalue="Application.FeetAndMeters" />
       </list>
     </recent_temporary>
   </component>
@@ -273,14 +264,8 @@
       <workItem from="1584431310993" duration="10055000" />
       <workItem from="1584509114805" duration="11332000" />
       <workItem from="1584681744331" duration="9953000" />
-      <workItem from="1584949200278" duration="3597000" />
-    </task>
-    <task id="LOCAL-00011" summary="PointOnLineSegment not complete">
-      <created>1576529429226</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1576529429226</updated>
+      <workItem from="1584949200278" duration="3861000" />
+      <workItem from="1585040761849" duration="5862000" />
     </task>
     <task id="LOCAL-00012" summary="Characters and String">
       <created>1577182056353</created>
@@ -618,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584525502326</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger , PalindromeInteger, DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns , ComputeFutureInvestmentValue, CelsiusAndFahrenheit, FeetAndMeters, isPrime&#10;2- More assigment:&#10;ComputeCommissions, DisplayCharacters and SumSeries">
+      <created>1584953078974</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1584953078975</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,7 +630,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="MilesToKilometersAndKilometersToMiles and ComputeFutureTuition" />
     <MESSAGE value="recursiveBinarySearch" />
     <MESSAGE value="1- Check if correct and improving them: MilesToKilometersAndKilometersToMiles and ComputeFutureTuition &#10;2- More assigment: FindTheHighestScore and FindTheTwoHighestScores&#10;3- Recursion: DirectorySize" />
     <MESSAGE value="1- Check if correct and improving them: FindTheTwoHighestScores and FindNumbersDivisibleBy5And6 &#10;2- More assigment: FindNumbersDivisibleBy5Or6 and FindTheSmallestNSuchThatNSquareGreaterThan12000&#10;3- Recursion: TowerOfHanoi" />
@@ -663,7 +654,8 @@
     <MESSAGE value="&#10;3-  TestGraphIfConnected" />
     <MESSAGE value="Recursion:&#10;1- Check if correct and improving: FibonacciSeries, IntegerReversely, StringReversely and OccurrencesOfCharacterInString&#10;2- More assigment: SumDigitsUsingRecursion, PrintCharactersInStringReversely(Not totally understand what to do) and &#10;FindLargestNumberInArray&#10;Method:&#10;1- Check if correct and improving: PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;&#10;Graph:&#10;1- AbstractGraph and Graph" />
     <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns and&#10;ComputeFutureInvestmentValue&#10;&#10;Recursion:&#10;1- Check if correct and improving: SumDigitsUsingRecursion, PrintCharactersInStringReversely and   FindLargestNumberInArray&#10;2- More assigment: &#10;FindNumberOfUppercaseLettersInString, OccurrencesOfSpecifiedCharacterInString and FindNumberOfUppercaseLettersInArray&#10;Graph:&#10;1- AbstractGraph and Graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns and&#10;ComputeFutureInvestmentValue&#10;&#10;Recursion:&#10;1- Check if correct and improving: SumDigitsUsingRecursion, PrintCharactersInStringReversely and   FindLargestNumberInArray&#10;2- More assigment: &#10;FindNumberOfUppercaseLettersInString, OccurrencesOfSpecifiedCharacterInString and FindNumberOfUppercaseLettersInArray&#10;Graph:&#10;1- AbstractGraph and Graph" />
+    <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger , PalindromeInteger, DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns , ComputeFutureInvestmentValue, CelsiusAndFahrenheit, FeetAndMeters, isPrime&#10;2- More assigment:&#10;ComputeCommissions, DisplayCharacters and SumSeries" />
+    <option name="LAST_COMMIT_MESSAGE" value="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger , PalindromeInteger, DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns , ComputeFutureInvestmentValue, CelsiusAndFahrenheit, FeetAndMeters, isPrime&#10;2- More assigment:&#10;ComputeCommissions, DisplayCharacters and SumSeries" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
