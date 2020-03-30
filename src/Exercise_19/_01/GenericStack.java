@@ -1,4 +1,4 @@
-package Exercise_06.Exercise_19._01;
+package Exercise_19._01;
 
 public class GenericStack<E> {
     private E[] list;
@@ -38,13 +38,20 @@ public class GenericStack<E> {
         return (this.size == -1);
     }
 
-    public void doublesArraySize(){
-        E[] temp = (E[]) list;
-        list = (E[]) new Object[size*2+1];
 
-        for (int i = 0; i <temp.length; i++) {
-            list[i] = temp[i];
-        }
+
+    /** Create a new array which double the size of the existing array
+     * and copy the elements from the existing array to the new array */
+    public void doublesArraySize(){
+        E[] temp = list;
+        list = (E[]) new Object[size*2+1];
+        // Method 1: Copy the elements
+        System.arraycopy( temp, 0,  list, 0, temp.length);
+
+//        Method 2: Copy the elements
+//        for (int i = 0; i <temp.length; i++) {
+//            list[i] = temp[i];
+//        }
 
     }
 
