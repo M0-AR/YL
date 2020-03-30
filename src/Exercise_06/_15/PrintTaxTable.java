@@ -17,34 +17,105 @@ Income                   or Qualifying       Separate       a House
 Hint: round the tax into integers using Math.round (i.e., Math
 .round(computeTax(status, taxableIncome)).
 */
-public class PrintTaxTable {// s.91 y and github
+public class PrintTaxTable {// from github
     public static void main(String[] args) {
-        System.out.println(Math.round( computeTax( 0, 50000 )) );
-        System.out.println(computeTax( 1, 50000 ));
-        System.out.println(computeTax( 2, 50000 ));
-        System.out.println(computeTax( 3, 50000 ));
+        // Print tax table
+        double from = 50000;        // Start table taxable income range at $50,000
+        double to = 60000;        // End table taxable income range at $60,000
+        double interval = 50;    // Increase each row by $50
+
+        // Print header
+        System.out.println(
+                "\nTaxable      Single      Married Joint       Married        Head of\n" +
+                        "Income                   or Qualifying       Separate       a House\n" +
+                        "                         Widow(er)\n" +
+                        "---------------------------------------------------------------------" );
+        // Print Data
+        for (double taxableIncome = from;
+             taxableIncome <= to; taxableIncome += interval) {
+            System.out.printf( "%-13.0f", taxableIncome );
+            System.out.printf( "%-12d", Math.round( computeTax( 0, taxableIncome ) ) );
+            System.out.printf( "%-20d", Math.round( computeTax( 1, taxableIncome ) ) );
+            System.out.printf( "%-15d", Math.round( computeTax( 2, taxableIncome ) ) );
+            System.out.printf( "%-10d\n", Math.round( computeTax( 3, taxableIncome ) ) );
+        }
     }
-
     public static double computeTax(int status, double taxableIncome){
-        double percent = 0;
-        switch (status){
-            case 0: percent = ((taxableIncome <= 8350)? 0.1: (taxableIncome <= 33950)?  0.15
-                    :(taxableIncome <= 82250)? 0.25: (taxableIncome <= 171550)? 0.28
-                    :(taxableIncome <= 372950)? 0.33: 0.35) ;break;
+        double tax, 				// Total tax
+                taxRate,			// Tax rate
+                incomeTaxed, 		// Taxed income
+                incomeUntaxed, 	// Untaxed income
+                taxAt15Pecent, 	// Minimum marginal amount of 15% tax bracket
+                taxAt25Pecent, 	// Minimum marginal amount of 25% tax bracket
+                taxAt28Pecent, 	// Minimum marginal amount of 28% tax bracket
+                taxAt33Pecent, 	// Minimum marginal amount of 33% tax bracket
+                taxAt35Pecent;	// Minimum marginal amount of 35% tax bracket
 
-            case 1: percent = ((taxableIncome <= 16700)? 0.1: (taxableIncome <= 67900)?  0.15
-                    :(taxableIncome <= 137050)? 0.25: (taxableIncome <= 208850)? 0.28
-                    :(taxableIncome <= 372950)? 0.33: 0.35) ;break;
+        // Initialize variables to 0
+        taxAt15Pecent = taxAt25Pecent = taxAt28Pecent = taxAt33Pecent =
+                taxAt35Pecent = incomeUntaxed = taxRate = tax = 0.0;
 
-            case 2: percent = ((taxableIncome <= 8350)? 0.1: (taxableIncome <= 33950)?  0.15
-                    :(taxableIncome <= 68525)? 0.25: (taxableIncome <= 104425)? 0.28
-                    :(taxableIncome <= 186475)? 0.33: 0.35) ;break;
+        switch (status) { // Get minimum taxableIncome for tax brackets
+            case 0 : // Single
+                taxAt15Pecent = 8351;
+                taxAt25Pecent = 33951;
+                taxAt28Pecent = 82251;
+                taxAt33Pecent = 171551;
+                taxAt35Pecent = 372951; break;
 
-            case 3: percent = ((taxableIncome <= 11950)? 0.1: (taxableIncome <= 45500)?  0.15
-                    :(taxableIncome <= 117450)? 0.25: (taxableIncome <= 190200)? 0.28
-                    :(taxableIncome <= 372950)? 0.33: 0.35) ;break;
+            case 1 : // Married Joint or Qualifying Widow(er)
+                taxAt15Pecent = 16701;
+                taxAt25Pecent = 67901;
+                taxAt28Pecent = 137051;
+                taxAt33Pecent = 208851;
+                taxAt35Pecent = 372951; break;
+
+            case 2 : // Married Filing Separately
+                taxAt15Pecent = 8351;
+                taxAt25Pecent = 33951;
+                taxAt28Pecent = 68526;
+                taxAt33Pecent = 104426;
+                taxAt35Pecent = 186476; break;
+
+            case 3 : // Head of house
+                taxAt15Pecent = 11951;
+                taxAt25Pecent = 45501;
+                taxAt28Pecent = 117451;
+                taxAt33Pecent = 190201;
+                taxAt35Pecent = 372951;
         }
 
-        return percent * taxableIncome;
+        // Compute tax
+        while (taxableIncome >= taxAt15Pecent) {
+
+            // Compute tax rate and untaxed income
+            if (taxableIncome >= taxAt35Pecent) {
+                taxRate = 0.35;
+                incomeUntaxed = taxAt35Pecent - 1;
+            }
+            else if (taxableIncome >= taxAt33Pecent) {
+                taxRate = 0.33;
+                incomeUntaxed = taxAt33Pecent - 1;
+            }
+            else if (taxableIncome >= taxAt28Pecent) {
+                taxRate = 0.28;
+                incomeUntaxed = taxAt28Pecent - 1;
+            }
+            else if (taxableIncome >= taxAt25Pecent) {
+                taxRate = 0.25;
+                incomeUntaxed = taxAt25Pecent -1;
+            }
+            else if (taxableIncome >= taxAt15Pecent) {
+                taxRate = 0.15;
+                incomeUntaxed = taxAt15Pecent - 1;
+            }
+
+            // Accumulate tax for income above the 10% tax bracket
+            tax += (incomeTaxed = taxableIncome - incomeUntaxed) * taxRate;
+            taxableIncome -= incomeTaxed;	// Update taxable income
+        }
+
+        // Accumulate tax for income in the 10% tax bracket
+        return tax += taxableIncome * 0.10;
     }
 }

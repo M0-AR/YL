@@ -3,7 +3,7 @@ package BookExercise._32;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-
+/**To avoid the problem with output use synchronized in method or in run method*/
 public class AccountWithoutSync {
     private static Account account = new Account();
 
@@ -27,7 +27,12 @@ public class AccountWithoutSync {
     // A thread for adding a penny to the account
     private static class AddAPennyTask implements Runnable {
         public void run() {
-            account.deposit(1);
+//            account.deposit(1);
+            /** Synchronized:   If the object is already locked by
+             another thread, the thread is blocked until the lock is released */
+            synchronized (account) {
+                account.deposit(1);
+            }
         }
     }
 
@@ -39,7 +44,11 @@ public class AccountWithoutSync {
             return balance;
         }
 
-        public void deposit(int amount) {
+        /** Synchronized the method mean there is only one thread can have an access to the method*/
+        // public synchronized void deposit(int amount) { to fix the problem
+
+        /** Multiple threads have an access to this method */
+        public  void deposit(int amount) {
             int newBalance = balance + amount;
 
 
