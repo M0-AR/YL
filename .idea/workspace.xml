@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_19/Triangles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_20/CountTheLettersInString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_21/PhoneKeypads.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_01/DisplayImages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_14/t.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_19/_02/GenericStackUsingInheritance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_22/ApproximateTheSquareRoot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_23/OccurrencesOfASpecifiedCharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_24/DisplayCurrentDateAndTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_25/ConvertToHoursMinutesSeconds.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_02/TicTacToe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_19/_03/DistinctElementsInArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookExercise/_32/AccountWithoutSync.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookExercise/_32/AccountWithoutSync.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/Exercise_19/_01/GenericStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_01/GenericStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/Exercise_19/_01/RevisingListing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_01/RevisingListing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/Exercise_19/t.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_15/PrintTaxTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_15/PrintTaxTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_17/DisplayMatrixOf0sAnd1s.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_17/DisplayMatrixOf0sAnd1s.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_18/CheckPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_18/CheckPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_19/Triangles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_19/Triangles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_20/CountTheLettersInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_20/CountTheLettersInString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_21/PhoneKeypads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_21/PhoneKeypads.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_01/DisplayImages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_01/DisplayImages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_19/_02/GenericStackUsingInheritance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_02/GenericStackUsingInheritance.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +59,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JAVA" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="CassandraQL&#10;JAVA" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -87,13 +85,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.AccountWithoutSync">
-    <configuration name="AccountWithoutSync" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._32.AccountWithoutSync" />
+  <component name="RunManager" selected="Application.DistinctElementsInArrayList">
+    <configuration name="ConvertToHoursMinutesSeconds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._25.ConvertToHoursMinutesSeconds" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="BookExercise._32.*" />
+          <option name="PATTERN" value="Exercise_06._25.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,12 +112,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_19._02.Main" />
+    <configuration name="DistinctElementsInArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_19._03.DistinctElementsInArrayList" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_19._02.*" />
+          <option name="PATTERN" value="Exercise_19._03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,12 +125,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PhoneKeypads" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_06._21.PhoneKeypads" />
+    <configuration name="OccurrencesOfASpecifiedCharacter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._23.OccurrencesOfASpecifiedCharacter" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_06._21.*" />
+          <option name="PATTERN" value="Exercise_06._23.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,12 +138,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RevisingListing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_19._01.RevisingListing" />
+    <configuration name="TicTacToe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_14._02.TicTacToe" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_19._01.*" />
+          <option name="PATTERN" value="Exercise_14._02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AccountWithoutSync" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Application.RevisingListing" />
+        <item itemvalue="Application.DistinctElementsInArrayList" />
+        <item itemvalue="Application.TicTacToe" />
         <item itemvalue="Application.DisplayImages" />
-        <item itemvalue="Application.PhoneKeypads" />
+        <item itemvalue="Application.ConvertToHoursMinutesSeconds" />
+        <item itemvalue="Application.OccurrencesOfASpecifiedCharacter" />
       </list>
     </recent_temporary>
   </component>
@@ -273,14 +271,10 @@
       <workItem from="1584949200278" duration="3861000" />
       <workItem from="1585040761849" duration="6517000" />
       <workItem from="1585285006944" duration="8927000" />
-      <workItem from="1585543849822" duration="11979000" />
-    </task>
-    <task id="LOCAL-00014" summary="AreaOfPentagon">
-      <created>1577874104109</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1577874104109</updated>
+      <workItem from="1585543849822" duration="12214000" />
+      <workItem from="1585648158964" duration="1655000" />
+      <workItem from="1585658026451" duration="377000" />
+      <workItem from="1585716773914" duration="4879000" />
     </task>
     <task id="LOCAL-00015" summary="AreaOfPentagon, GreatCircleDistance and EstimateAreas">
       <created>1577954400645</created>
@@ -618,7 +612,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585314687415</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary=" - Method:&#10; 1 - PrintTaxTable DisplayMatrixOf0sAnd1s and CheckPassword&#10;  &#10; 2- More assigment:Triangles, CountTheLettersInString and PhoneKeypads&#10;  &#10;&#10; - GenericStackUsingInheritance &#10; &#10; - Just learned: &#10; AccountWithoutSync&#10;  Synchronized: To avoid the problem with output use synchronized in method or in run method">
+      <created>1585565282763</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1585565282763</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -638,7 +639,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1- Check if correct and improving them: FindNumbersDivisibleBy5And6 and FindNumbersDivisibleBy5Or6 &#10;2- More assigment: FindTheSmallestNSuchThatNSquareGreaterThan12000 , FindTheLargestNumber and ComputeTheGreatestCommonDivisor&#10;3- Recursion: TowerOfHanoi" />
     <MESSAGE value="1- Check if correct and improving them: FindTheLargestNumber and ComputeTheGreatestCommonDivisor &#10;2- More assigment: ASCIICharacterTable , FindFactorsOfInteger and DisplayPyramid" />
     <MESSAGE value="1- Check if correct and improving them: ASCIICharacterTable, FindFactorsOfInteger  and DisplayPyramid&#10;2- More assigment: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers" />
     <MESSAGE value="1- Check if correct and improving them: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers&#10;2- More assigment:" />
@@ -663,7 +663,8 @@
     <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;ComputeCommissions, DisplayCharacters and SumSeries&#10;2- More assigment:&#10;EstimatePi and NumberOfDaysInYear" />
     <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;EstimatePi and NumberOfDaysInYear&#10;  &#10;2- More assigment:&#10; - PrintTaxTable, DisplayMatrixOf0sAnd1s and CheckPassword &#10;&#10; -  GenericStack" />
     <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;EstimatePi and NumberOfDaysInYear&#10;  &#10;2- More assigment:&#10; - PrintTaxTable, DisplayMatrixOf0sAnd1s and CheckPassword &#10;&#10; -  GenericStack &#10; &#10; 3- Just learned: &#10; AccountWithoutSync" />
-    <option name="LAST_COMMIT_MESSAGE" value="Method:&#10;1- Check if correct and improving: &#10;EstimatePi and NumberOfDaysInYear&#10;  &#10;2- More assigment:&#10; - PrintTaxTable, DisplayMatrixOf0sAnd1s and CheckPassword &#10;&#10; -  GenericStack &#10; &#10; 3- Just learned: &#10; AccountWithoutSync" />
+    <MESSAGE value=" - Method:&#10; 1 - PrintTaxTable DisplayMatrixOf0sAnd1s and CheckPassword&#10;  &#10; 2- More assigment:Triangles, CountTheLettersInString and PhoneKeypads&#10;  &#10;&#10; - GenericStackUsingInheritance &#10; &#10; - Just learned: &#10; AccountWithoutSync&#10;  Synchronized: To avoid the problem with output use synchronized in method or in run method" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - PrintTaxTable DisplayMatrixOf0sAnd1s and CheckPassword&#10;  &#10; 2- More assigment:Triangles, CountTheLettersInString and PhoneKeypads&#10;  &#10;&#10; - GenericStackUsingInheritance &#10; &#10; - Just learned: &#10; AccountWithoutSync&#10;  Synchronized: To avoid the problem with output use synchronized in method or in run method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -732,6 +733,11 @@
           <url>file://$PROJECT_DIR$/src/Exercise_19/_01/RevisingListing.java</url>
           <line>10</line>
           <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_06/_25/ConvertToHoursMinutesSeconds.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

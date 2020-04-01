@@ -13,26 +13,29 @@ public class GenericStackUsingInheritance<E> extends java.util.ArrayList<E> {
         return size();
     }
 
+    /** Return the element at the top of the stack */
     public Object peek(){
         return get( getSize()-1 );
     }
 
+    /* Return and remove the element
+     * on the top of the stack */
     public Object pop(){
         Object o = get( getSize() -1 );
         remove( getSize() -1 );
         return o;
     }
 
-    public Object push(E o){
+    /** Push and element on to the stack */
+    public void push(E o){
         add( o );
-        return o;
     }
 
     public int search(Object o){
         return indexOf( o );
     }
 
-    @Override
+    @Override // Override the string method in the ArrayList class
     public String toString() {
         return "stack: " + toString();
     }
