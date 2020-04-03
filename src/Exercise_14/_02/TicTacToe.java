@@ -1,4 +1,10 @@
 package Exercise_14._02;
+
+/**********************************************************************************
+ * (Tic-tac-toe board) Write a program that displays a tic-tac-toe board, as shown *
+ * in Figure 14.43b. A cell may be X, O, or empty. What to display at each cell is *
+ * randomly decided. The X and O are images in the files x.gif and o.gif.          *
+ ***********************************************************************************/
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -29,6 +35,7 @@ public class TicTacToe extends Application{
             }
         }
 
+        // Create a scene and place it in the stage
         Scene scene = new Scene( pane );
         stage.setScene( scene );
         stage.setTitle( "Tic Tac Toe" );
