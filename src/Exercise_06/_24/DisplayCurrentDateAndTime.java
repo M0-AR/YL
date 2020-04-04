@@ -1,5 +1,10 @@
 package Exercise_06._24;
-
+/*
+(Display current date and time) Listing 2.7, ShowCurrentTime.java, displays the
+current time. Improve this example to display the current date and time. The calendar
+example in Listing 6.12, PrintCalendar.java, should give you some ideas on
+how to find the year, month, and day.
+*/
 // Current date and time is 4/3/2020 6:34:12 GMT
 public class DisplayCurrentDateAndTime {
     public static void main(String[] args) { // current days is incorrect github and yl
@@ -46,7 +51,7 @@ public class DisplayCurrentDateAndTime {
 
         // Obtain Day
         int currentDay = totalNumbOfDaysInTheYear -
-                getNumOfDaysInMonth( currentYear, currentMonth - 1  );
+                getTotalDaysInMonth( currentYear, currentMonth - 1  );
 
         // Display results
         String output = "Current date and time is " +
@@ -79,7 +84,7 @@ public class DisplayCurrentDateAndTime {
 
         // Add days from Jan to the month
         for (int i = 1; i <= month; i++)
-            total += getNumOfDaysInMonth(year, i);
+            total = total +  getNumOfDaysInMonth(year, i);
 
         return total;
     }

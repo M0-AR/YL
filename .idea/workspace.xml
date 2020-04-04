@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_26/PalindromicPrime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_27/Emirp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_03/DisplayThreeCards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_19/_04/GenericLinearSearch.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment=" - Method:&#10; 1 - Review: DisplayCurrentDateAndTime, PalindromicPrime and Emirp&#10;  &#10; 2- More assigment:&#10;  MersennePrime, TwinPrimes and &#10;  Craps50%&#10;  &#10; - Javafx&#10;  1- Review: DisplayThreeCards &#10;  2- More assigment:&#10;  ColorAndFont&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: DistinctElementsInArrayList&#10;   2- More assigment: GenericLinearSearch">
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_32/ThreadCooperation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_34/FindGradeUsingPreparedStatement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_28/MersennePrime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_29/TwinPrimes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_30/Craps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_04/ColorAndFont.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_19/_05/MaximumElementInArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_23/OccurrencesOfASpecifiedCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_23/OccurrencesOfASpecifiedCharacter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_06/_24/DisplayCurrentDateAndTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_24/DisplayCurrentDateAndTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_25/ConvertToHoursMinutesSeconds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_25/ConvertToHoursMinutesSeconds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_02/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_02/TicTacToe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_14/t.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_19/_03/DistinctElementsInArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_03/DistinctElementsInArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_26/PalindromicPrime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_26/PalindromicPrime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_27/Emirp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_27/Emirp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_03/DisplayThreeCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_03/DisplayThreeCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_19/_04/GenericLinearSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_04/GenericLinearSearch.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,13 +86,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.GenericLinearSearch">
-    <configuration name="ConvertToHoursMinutesSeconds" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_06._25.ConvertToHoursMinutesSeconds" />
+  <component name="RunManager" selected="Application.MaximumElementInArray">
+    <configuration name="ColorAndFont" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_14._04.ColorAndFont" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_06._25.*" />
+          <option name="PATTERN" value="Exercise_14._04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -111,12 +113,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Emirp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_06._27.Emirp" />
+    <configuration name="FindGradeUsingPreparedStatement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._34.FindGradeUsingPreparedStatement" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_06._27.*" />
+          <option name="PATTERN" value="BookExercise._34.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -124,12 +126,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericLinearSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_19._04.GenericLinearSearch" />
+    <configuration name="MaximumElementInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_19._05.MaximumElementInArray" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_19._04.*" />
+          <option name="PATTERN" value="Exercise_19._05.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -137,12 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PalindromicPrime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_06._26.PalindromicPrime" />
+    <configuration name="ThreadCooperation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._32.ThreadCooperation" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_06._26.*" />
+          <option name="PATTERN" value="BookExercise._32.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,11 +154,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GenericLinearSearch" />
+        <item itemvalue="Application.MaximumElementInArray" />
+        <item itemvalue="Application.FindGradeUsingPreparedStatement" />
+        <item itemvalue="Application.ThreadCooperation" />
+        <item itemvalue="Application.ColorAndFont" />
         <item itemvalue="Application.DisplayThreeCards" />
-        <item itemvalue="Application.Emirp" />
-        <item itemvalue="Application.PalindromicPrime" />
-        <item itemvalue="Application.ConvertToHoursMinutesSeconds" />
       </list>
     </recent_temporary>
   </component>
@@ -274,14 +276,8 @@
       <workItem from="1585648158964" duration="1655000" />
       <workItem from="1585658026451" duration="377000" />
       <workItem from="1585716773914" duration="5306000" />
-      <workItem from="1585895414938" duration="9647000" />
-    </task>
-    <task id="LOCAL-00016" summary="AreaOfHexagon, AreaOfARegularPolygon and EstimateAreas">
-      <created>1578231026953</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1578231026953</updated>
+      <workItem from="1585895414938" duration="9808000" />
+      <workItem from="1585975183130" duration="9034000" />
     </task>
     <task id="LOCAL-00017" summary="RandomPointsOnACircle">
       <created>1578342874543</created>
@@ -619,7 +615,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585735094072</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary=" - Method:&#10; 1 - Review: ApproximateTheSquareRoot, ApproximateTheSquareRoot and ConvertToHoursMinutesSeconds&#10;  &#10; 2- More assigment:&#10;  DisplayCurrentDateAndTime, PalindromicPrime and Emirp&#10;  &#10; - Javafx&#10;  1- Review: TicTacToe &#10;  2- More assigment:&#10;  DisplayThreeCards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: DistinctElementsInArrayList&#10;   2- More assigment: GenericLinearSearch">
+      <created>1585914353150</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1585914353151</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -639,7 +642,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1- Check if correct and improving them: ASCIICharacterTable, FindFactorsOfInteger  and DisplayPyramid&#10;2- More assigment: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers" />
     <MESSAGE value="1- Check if correct and improving them: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers&#10;2- More assigment:" />
     <MESSAGE value="1- Check if correct and improving them: &#10;2- More assigment: LoanAmortization" />
     <MESSAGE value="1- Check if correct and improving them: &#10;2- More assigment: DemonstrateCancellationErrors&#10;3- JavaFX" />
@@ -664,7 +666,8 @@
     <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;EstimatePi and NumberOfDaysInYear&#10;  &#10;2- More assigment:&#10; - PrintTaxTable, DisplayMatrixOf0sAnd1s and CheckPassword &#10;&#10; -  GenericStack &#10; &#10; 3- Just learned: &#10; AccountWithoutSync" />
     <MESSAGE value=" - Method:&#10; 1 - PrintTaxTable DisplayMatrixOf0sAnd1s and CheckPassword&#10;  &#10; 2- More assigment:Triangles, CountTheLettersInString and PhoneKeypads&#10;  &#10;&#10; - GenericStackUsingInheritance &#10; &#10; - Just learned: &#10; AccountWithoutSync&#10;  Synchronized: To avoid the problem with output use synchronized in method or in run method" />
     <MESSAGE value=" - Method:&#10; 1 - Review: Triangles, CountTheLettersInString and PhoneKeypads&#10;  &#10; 2- More assigment:&#10;  ApproximateTheSquareRoot, ApproximateTheSquareRoot and ConvertToHoursMinutesSeconds&#10;  &#10; - Javafx&#10;  1- Review: DisplayImages &#10;  2- More assigment:&#10;  TicTacToe&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericStackUsingInheritance&#10;   2- More assigment: DistinctElementsInArrayList&#10;   &#10;   &#10; - Just learned: &#10; AccountWithoutSync&#10;  Synchronized: We can use Lock interface and ReentrantLock class instead of type synchronized in a method to have a look on thread til the thread be done" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review: Triangles, CountTheLettersInString and PhoneKeypads&#10;  &#10; 2- More assigment:&#10;  ApproximateTheSquareRoot, ApproximateTheSquareRoot and ConvertToHoursMinutesSeconds&#10;  &#10; - Javafx&#10;  1- Review: DisplayImages &#10;  2- More assigment:&#10;  TicTacToe&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericStackUsingInheritance&#10;   2- More assigment: DistinctElementsInArrayList&#10;   &#10;   &#10; - Just learned: &#10; AccountWithoutSync&#10;  Synchronized: We can use Lock interface and ReentrantLock class instead of type synchronized in a method to have a look on thread til the thread be done" />
+    <MESSAGE value=" - Method:&#10; 1 - Review: ApproximateTheSquareRoot, ApproximateTheSquareRoot and ConvertToHoursMinutesSeconds&#10;  &#10; 2- More assigment:&#10;  DisplayCurrentDateAndTime, PalindromicPrime and Emirp&#10;  &#10; - Javafx&#10;  1- Review: TicTacToe &#10;  2- More assigment:&#10;  DisplayThreeCards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: DistinctElementsInArrayList&#10;   2- More assigment: GenericLinearSearch" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review: ApproximateTheSquareRoot, ApproximateTheSquareRoot and ConvertToHoursMinutesSeconds&#10;  &#10; 2- More assigment:&#10;  DisplayCurrentDateAndTime, PalindromicPrime and Emirp&#10;  &#10; - Javafx&#10;  1- Review: TicTacToe &#10;  2- More assigment:&#10;  DisplayThreeCards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: DistinctElementsInArrayList&#10;   2- More assigment: GenericLinearSearch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -733,6 +736,16 @@
           <url>file://$PROJECT_DIR$/src/Exercise_19/_01/RevisingListing.java</url>
           <line>10</line>
           <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_06/_24/DisplayCurrentDateAndTime.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/BookExercise/_32/ThreadCooperation.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,6 +1,15 @@
 package Exercise_06._27;
-
-public class Emirp { // github
+/*
+(Emirp) An emirp (prime spelled backward) is a nonpalindromic prime number
+whose reversal is also a prime. For example, 17 is a prime and 71 is a prime, so 17
+and 71 are emirps. Write a program that displays the first 100 emirps. Display 10
+numbers per line, separated by exactly one space, as follows:
+13 17 31 37 71 73 79 97 107 113
+149 157 167 179 199 311 337 347 359 389
+...
+*/
+public class Emirp {
+    static  int NUMBERS_PER_LINE = 10;
     public static void main(String[] args) {
         display();
     }
@@ -9,17 +18,13 @@ public class Emirp { // github
      * Display fist 100 numbers of palindromic prime numbers
      */
     public static void display() {
-        int palindromicPrime = 1;
+        int count = 0; // Counts the number of emirps
         int number = 2;
-        while (palindromicPrime != 100) {
+        while (count != 100) {
 
             if (primeSpelledBackward( number ) && isPrime( number ) && !palindromicNumber(number)) {
-                System.out.print( number + " " );
-                palindromicPrime++;
-
-                // Display new line
-                if (palindromicPrime % 10 == 0)
-                    System.out.println();
+                System.out.print( (count % NUMBERS_PER_LINE == 0 )? number + "\n": number + " " );
+                count++;
             }
             number++;
         }
