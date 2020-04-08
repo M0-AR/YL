@@ -1,5 +1,11 @@
 package Exercise_19._05;
 
+/*********************************************************************************
+ * (Maximum element in an array) Implement the following method that returns the  *
+ * maximum element in an array.                                                   *
+ *                                                                                *
+ * public static <E extends Comparable<E>> E max(E[] list)                        *
+ *********************************************************************************/
 import java.util.Scanner;
 
 public class MaximumElementInArray { // github
