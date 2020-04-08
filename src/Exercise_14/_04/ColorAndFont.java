@@ -1,4 +1,9 @@
 package Exercise_14._04;
+/*********************************************************************************
+ * (Color and font) Write a program that displays five texts vertically, as shown *
+ * in Figure 14.44a. Set a random color and opacity for each text and set the     *
+ * font of each text to Times Roman, bold, italic, and 22 pixels.                 *
+ *********************************************************************************/
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.geometry.Pos;
@@ -14,6 +19,7 @@ public class ColorAndFont extends Application { // github
 
     @Override // Override the start method in the Application class
     public void start(Stage primaryStage){
+        // Creat a HBox
         HBox pane = new HBox(  );
         pane.setAlignment( Pos.CENTER );
 
@@ -21,6 +27,7 @@ public class ColorAndFont extends Application { // github
                 FontPosture.ITALIC, 22 );
 
         for (int i = 0; i < 5; i++) {
+            // Create a text and set its properties
             Text text = new Text( "Java" );
             text.setRotate( 90 );
             text.setFont( font );
@@ -28,6 +35,7 @@ public class ColorAndFont extends Application { // github
             pane.getChildren().add( text );
         }
 
+        // Create a scene and place it in the stage
         Scene scene = new Scene( pane, 200, 100 );
         primaryStage.setTitle( "Exercise14_04" );
         primaryStage.setScene( scene );

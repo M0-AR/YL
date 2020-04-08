@@ -1,46 +1,52 @@
 package Exercise_06._30;
-
+/*
+(Game: craps) Craps is a popular dice game played in casinos. Write a program
+to play a variation of the game, as follows:
+Roll two dice. Each die has six faces representing values 1, 2, …, and 6, respectively.
+Check the sum of the two dice. If the sum is 2, 3, or 12 (called craps), you
+lose; if the sum is 7 or 11 (called natural), you win; if the sum is another value
+(i.e., 4, 5, 6, 8, 9, or 10), a point is established. Continue to roll the dice until either
+a 7 or the same point value is rolled. If 7 is rolled, you lose. Otherwise, you win.
+Your program acts as a single player.
+*/
 public class Craps {
-    public static void main(String[] args) { // con
+    public static void main(String[] args) {
+        int previousDices, currentDices;
 
-        int dice1 = 0, dice2 = 0;
-        int previousDices = 0, currentDices;
-        int count = 1;
+        currentDices = getDice();
+
+        if (currentDices == 7 || currentDices == 11) {
+            System.out.println("You win");
+            System.exit(1);
+        }
+        else if (currentDices == 2 || currentDices == 3 || currentDices == 12) {
+            System.out.println("You lose");
+            System.exit(2);
+        }
+
+        previousDices = currentDices;
+        System.out.println("point is " + previousDices);
         while (true) {
-            previousDices = dice1 + dice2;
-            dice1 = (int) (Math.random() * 6) + 1;
-            dice2 = (int) (Math.random() * 6) + 1;
-
-            System.out.println( "You rolled " + dice1 + " + " + dice2
-                    + " = " + (dice1 + dice2) );
-            if (isWin( dice1, dice2 ) && count < 2) {
-                System.out.println( "You win" );
+            currentDices = getDice();
+            if (currentDices == 7){
+                System.out.println("You lose");
+                break;
+            }else if (currentDices == previousDices){
+                System.out.println("You win");
                 break;
             }
-
-            if (isLose( dice1, dice2 ) && count < 2) {
-                System.out.println( "You win" );
-                break;
-            }
-
-//            if ()
-
-
-            count++;
-
         }
     }
 
 
-    static boolean isWin(int dice1, int dice2) {
-        if (dice1 + dice2 == 7 || dice1 + dice2 == 11)
-            return true;
-        return false;
-    }
+    public static int getDice() {
+        int dice1 = (int) (Math.random() * 6) + 1;
+        int dice2 = (int) (Math.random() * 6) + 1;
 
-    static boolean isLose(int dice1, int dice2) {
-        if (dice1 + dice2 == 2 || dice1 + dice2 == 3 || dice1 + dice2 == 12)
-            return true;
-        return false;
+        System.out.println( "You rolled " + dice1 + " + " + dice2
+                + " = " + (dice1 + dice2) );
+
+        return dice1 + dice2;
+
     }
 }
