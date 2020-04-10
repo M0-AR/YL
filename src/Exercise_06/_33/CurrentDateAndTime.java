@@ -1,7 +1,7 @@
 package Exercise_06._33;
 
-public class CurrentDateAndTime { // 24
-    public static void main(String[] args) {
+public class CurrentDateAndTime {
+    public static void main(String[] args) { // Fix the problem
         // Obtain the current time in millis seconds
         long currentMillisSeconds = System.currentTimeMillis();
 
@@ -25,7 +25,7 @@ public class CurrentDateAndTime { // 24
 
         // Obtain the total days
         int totalDays = (int) (hours / 24);
-        //if (currentHours > 0) totalDays++; //todo
+        if (currentHours > 0) totalDays++; //todo
 
         int currentYear = 2000;
         do {
@@ -35,14 +35,63 @@ public class CurrentDateAndTime { // 24
 
         // Obtain month
         int totalNumbOfDaysInTheYear = totalDays -
-                getTotalDaysInYears( currentYear - 1 ); // todo why -1
+                getTotalDaysInYears( currentYear - 1 );
 
-        // con
+        int currentMonth = 0;
+        do {
+            currentMonth++;
+        } while (getTotalDaysInMonth( currentYear, currentMonth )
+                < totalNumbOfDaysInTheYear);
 
+
+        int currentDays = totalNumbOfDaysInTheYear -
+                getTotalDaysInMonth( currentYear, currentMonth - 1 );
+
+        // Display results
+        String output = "Current date and time is " +
+                currentMonth + "/" + currentDays + "/" + currentYear + " " +
+                currentHours + ":" + currentMinutes + ":" + currentSeconds + " GMT";
+
+        System.out.println(output);
+    }
+
+    /**
+     * Get the total number of days from Jan 1 to the month in the year
+     */
+    public static int getTotalDaysInMonth(int year, int month) {
+        int total = 0;
+
+        // Add days for Jan to current month
+        for (int i = 1; i <= month; i++)
+            total += getNumOfDaysInMonth( year, i );
+
+        return total;
+    }
+
+    /**
+     * Get the number of days in a month
+     */
+    public static int getNumOfDaysInMonth(int year, int month) {
+        if (month == 1 || month == 3 || month == 5 || month == 7 ||
+                month == 8 || month == 10 || month == 12)
+            return 31;
+
+        if (month == 4 || month == 6 || month == 9 || month == 11)
+            return 30;
+
+        if (month == 2)
+            if (isLeapYear( year ))
+                return 29;
+            else
+                return 28;
+
+        return 0; // If month is incorrect.
     }
 
 
-    /** Get the total number of days from Jan 1, 1970 to the specified year*/
+    /**
+     * Get the total number of days from Jan 1, 1970 to the specified year
+     */
     public static int getTotalDaysInYears(int year) {
         int total = 0;
 
@@ -53,7 +102,7 @@ public class CurrentDateAndTime { // 24
             else
                 total += 355;
 
-            return total;
+        return total;
     }
 
 

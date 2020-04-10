@@ -7,7 +7,7 @@ how to find the year, month, and day.
 */
 // Current date and time is 4/3/2020 6:34:12 GMT
 public class DisplayCurrentDateAndTime {
-    public static void main(String[] args) { // current days is incorrect github and yl
+    public static void main(String[] args) {
         // Obtain the total milliseconds since the midnight, Jan 1, 1970
         long totalMilliSeconds = System.currentTimeMillis();
 
