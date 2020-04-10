@@ -2,13 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_32/ConsumerProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_06/DisplayCheckerBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_07/DisplayRandom0Or1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_19/_07/GenericBinarySearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_32/ConsumerProducerUsingBlockingQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_19/_08/ShuffleArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_24/DisplayCurrentDateAndTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_24/DisplayCurrentDateAndTime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_06/_33/CurrentDateAndTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_33/CurrentDateAndTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_19/_06/MaximumElementInTwoDimensionalArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_06/MaximumElementInTwoDimensionalArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_06/DisplayCheckerBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_06/DisplayCheckerBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_07/DisplayRandom0Or1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_07/DisplayRandom0Or1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_19/_07/GenericBinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_07/GenericBinarySearch.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,9 +81,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ConsumerProducer">
-    <configuration name="ConsumerProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BookExercise._32.ConsumerProducer" />
+  <component name="RunManager" selected="Application.ConsumerProducerUsingBlockingQueue">
+    <configuration name="ConsumerProducerUsingBlockingQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="BookExercise._32.ConsumerProducerUsingBlockingQueue" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
@@ -120,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericBinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_19._07.GenericBinarySearch" />
+    <configuration name="DisplayRandom0Or1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_14._07.DisplayRandom0Or1" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_19._07.*" />
+          <option name="PATTERN" value="Exercise_14._07.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,12 +134,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MaximumElementInTwoDimensionalArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_19._06.MaximumElementInTwoDimensionalArray" />
+    <configuration name="ShuffleArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_19._08.ShuffleArrayList" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_19._06.*" />
+          <option name="PATTERN" value="Exercise_19._08.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -148,9 +149,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ConsumerProducer" />
-        <item itemvalue="Application.GenericBinarySearch" />
-        <item itemvalue="Application.MaximumElementInTwoDimensionalArray" />
+        <item itemvalue="Application.ConsumerProducerUsingBlockingQueue" />
+        <item itemvalue="Application.ShuffleArrayList" />
+        <item itemvalue="Application.DisplayRandom0Or1" />
         <item itemvalue="Application.DisplayCheckerBoard" />
         <item itemvalue="Application.CurrentDateAndTime" />
       </list>
@@ -277,14 +278,8 @@
       <workItem from="1586165316529" duration="169000" />
       <workItem from="1586267465881" duration="2619000" />
       <workItem from="1586271300622" duration="5076000" />
-      <workItem from="1586418279299" duration="4891000" />
-    </task>
-    <task id="LOCAL-00019" summary="FindTheCharacterOfAnASCIICode and FindTheUnicodeOfACharacter">
-      <created>1578604454578</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1578604454578</updated>
+      <workItem from="1586418279299" duration="5084000" />
+      <workItem from="1586492848208" duration="4007000" />
     </task>
     <task id="LOCAL-00020" summary="TODO">
       <created>1578604487915</created>
@@ -622,7 +617,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586363542540</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary=" - Method:&#10; 1 - Review: &#10; CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime75%&#10;  &#10; - Javafx&#10;  1- Review: CharactersAroundCircle &#10;  2- More assigment: &#10;DisplayCheckerBoard and DisplayRandom0Or1_20%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInTwoDimensionalArray&#10;   2- More assigment: &#10;   GenericBinarySearch&#10;   &#10; - Thread &#10; &#10; - DataBase">
+      <created>1586444118851</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1586444118854</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -642,7 +644,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1- Check if correct and improving them: &#10;2- More assigment: DemonstrateCancellationErrors&#10;3- JavaFX" />
     <MESSAGE value="1- Check if correct and improving them: SumASeries&#10;2- More assigment: ComputePi, Compute_e and DisplayLeapYears&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Shape" />
     <MESSAGE value="1- Check if correct and improving them: ComputePi, Compute_e and DisplayLeapYears&#10;2- More assigment: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; -&gt; Circle" />
     <MESSAGE value="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree" />
@@ -667,7 +668,8 @@
     <MESSAGE value=" - Method:&#10; 1 - Review: ApproximateTheSquareRoot, ApproximateTheSquareRoot and ConvertToHoursMinutesSeconds&#10;  &#10; 2- More assigment:&#10;  DisplayCurrentDateAndTime, PalindromicPrime and Emirp&#10;  &#10; - Javafx&#10;  1- Review: TicTacToe &#10;  2- More assigment:&#10;  DisplayThreeCards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: DistinctElementsInArrayList&#10;   2- More assigment: GenericLinearSearch" />
     <MESSAGE value=" - Method:&#10; 1 - Review: DisplayCurrentDateAndTime, PalindromicPrime and Emirp&#10;  &#10; 2- More assigment:&#10;  MersennePrime, TwinPrimes and &#10;  Craps50%&#10;  &#10; - Javafx&#10;  1- Review: DisplayThreeCards &#10;  2- More assigment:&#10;  ColorAndFont&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericLinearSearch&#10;   2- More assigment: MaximumElementInArray&#10;   &#10; - Thread &#10; ThreadCooperation&#10; &#10; - DataBase &#10; FindGradeUsingPreparedStatement" />
     <MESSAGE value=" - Method:&#10; 1 - Review:  MersennePrime, TwinPrimes and Craps&#10;  &#10; 2- More assigment: CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10; &#10;  &#10; - Javafx&#10;  1- Review: ColorAndFont &#10;  2- More assigment: CharactersAroundCircle&#10;&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInArray&#10;   2- More assigment: MaximumElementInTwoDimensionalArray&#10;   &#10; - Thread &#10; Consumer Producer&#10; &#10; - DataBase &#10; Callable Statement" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review:  MersennePrime, TwinPrimes and Craps&#10;  &#10; 2- More assigment: CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10; &#10;  &#10; - Javafx&#10;  1- Review: ColorAndFont &#10;  2- More assigment: CharactersAroundCircle&#10;&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInArray&#10;   2- More assigment: MaximumElementInTwoDimensionalArray&#10;   &#10; - Thread &#10; Consumer Producer&#10; &#10; - DataBase &#10; Callable Statement" />
+    <MESSAGE value=" - Method:&#10; 1 - Review: &#10; CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime75%&#10;  &#10; - Javafx&#10;  1- Review: CharactersAroundCircle &#10;  2- More assigment: &#10;DisplayCheckerBoard and DisplayRandom0Or1_20%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInTwoDimensionalArray&#10;   2- More assigment: &#10;   GenericBinarySearch&#10;   &#10; - Thread &#10; &#10; - DataBase" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review: &#10; CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime75%&#10;  &#10; - Javafx&#10;  1- Review: CharactersAroundCircle &#10;  2- More assigment: &#10;DisplayCheckerBoard and DisplayRandom0Or1_20%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInTwoDimensionalArray&#10;   2- More assigment: &#10;   GenericBinarySearch&#10;   &#10; - Thread &#10; &#10; - DataBase" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -746,6 +748,11 @@
           <url>file://$PROJECT_DIR$/src/BookExercise/_32/ThreadCooperation.java</url>
           <line>23</line>
           <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_06/_33/CurrentDateAndTime.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
