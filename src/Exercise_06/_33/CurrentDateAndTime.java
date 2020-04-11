@@ -1,7 +1,7 @@
 package Exercise_06._33;
 
 public class CurrentDateAndTime {
-    public static void main(String[] args) { // Fix the problem
+    public static void main(String[] args) {
         // Obtain the current time in millis seconds
         long currentMillisSeconds = System.currentTimeMillis();
 
@@ -15,17 +15,18 @@ public class CurrentDateAndTime {
         long minutes = seconds / 60;
 
         // Obtain the current time in minutes
-        int currentMinutes = (int) (seconds % 60);
+        int currentMinutes = (int) (minutes % 60);
 
         // Obtain the total time in hours
         long hours = minutes / 60;
 
         // Obtain the current time in hours
-        int currentHours = (int) (minutes % 24);
+        int currentHours = (int) (hours % 24);
 
         // Obtain the total days
         int totalDays = (int) (hours / 24);
-        if (currentHours > 0) totalDays++; //todo
+        if (currentHours > 0) totalDays++;
+
 
         int currentYear = 2000;
         do {
@@ -98,12 +99,13 @@ public class CurrentDateAndTime {
         // Get the total days from 1970 to the current year
         for (int i = 1970; i <= year; i++)
             if (isLeapYear( i ))
-                total += 366;
+                total += + 366;
             else
-                total += 355;
+                total += + 365;
 
         return total;
     }
+
 
 
     public static boolean isLeapYear(int year) {
