@@ -1,5 +1,9 @@
 package Exercise_19._08;
-
+/*********************************************************************************
+ * (Shuffle ArrayList) Write the following method that shuffles an ArrayList:     *
+ *                                                                                *
+ * public static <E> void shuffle(ArrayList<E> list)                              *
+ *********************************************************************************/
 import java.util.ArrayList;
 
 public class ShuffleArrayList {
@@ -10,7 +14,7 @@ public class ShuffleArrayList {
             numbers.add( i );
 
         shuffle( numbers );
-        // Display index of key
+        // Display the array after shuffle
         System.out.println("The array after shuffle : " + numbers);
     }
 
