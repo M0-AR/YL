@@ -22,17 +22,21 @@ import java.util.ArrayList;
 public class DisplayThreeCards extends Application {
 
     public void start(Stage stage) {
+
         /////////////////////////////////////////////
-        // Method 1:
+        // Method a_1:
         int[] n = new int[52];
         for (int i = 1; i <= 52; i++)
             n[i - 1] = i;
         shuffle( n );
-        // Method 2:
+        // Method a_2:
         ArrayList<Integer> cards = getCards();
         /////////////////////////////////////////////
+
+
+        //////////////////////////////////////////////////////////////////////////////////////////
         // Add nodes to pane
-        // Method 1:
+        // Method b_1:
         Image imageCard1 = new Image( "file:/Users/mohammad/IdeaProjects/YL/src/image/card/" + n[0] + ".png" );
         Image imageCard2 = new Image( "file:/Users/mohammad/IdeaProjects/YL/src/image/card/" + n[1] + ".png" );
         Image imageCard3 = new Image( "file:/Users/mohammad/IdeaProjects/YL/src/image/card/" + n[2] + ".png" );
@@ -45,12 +49,12 @@ public class DisplayThreeCards extends Application {
         gridPane.add( new ImageView( imageCard2 ), 1, 0 );
         gridPane.add( new ImageView( imageCard3 ), 2, 0 );
 
-        // Method 2:
+        // Method b_2:
         HBox pane = new HBox( 5 );
         pane.setPadding( new Insets(5,5,5,5) );
         for (int i = 0; i <3 ; i++)
             pane.getChildren().add( new ImageView( new Image( "file:/Users/mohammad/IdeaProjects/YL/src/image/card/" + n[i] + ".png") ) );
-        /////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////
 
 
 
