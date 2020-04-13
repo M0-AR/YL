@@ -25,7 +25,7 @@ public class PrintCalendar {
         printMonthTitle(year, month);
 
         // Print the body of the calendar
-//        printMonthBody(year, month);
+        printMonthBody(year, month);
     }
 
     /** Print the month title, e.g., May, 1999*/
@@ -55,6 +55,40 @@ public class PrintCalendar {
         }
         return monthName;
     }
+
+    /** Print month body */
+    static void printMonthBody(int year, int month){
+        // Get start day of the week for the first date in the month
+        int startDay = getStartDay(year, month);
+
+        // Get number of days in month
+        int numberOfDaysInMonth = 2;// getNumberOfDaysInMOnth(year, month);todo
+
+        // Pad space before the first day of the month
+        int i = 0;
+        for (int j = 0; j < startDay ; j++)
+            System.out.print( "    " );
+
+        for (int j = 0; j <= numberOfDaysInMonth; j++) {
+            if(i<10)
+                System.out.print( "   " );
+            else
+                System.out.print( "  " );
+
+            if ((i + startDay) % 7 == 0)
+                System.out.println();
+        }
+
+        System.out.println();
+    }
+
+
+    /** Get the start day of month/1/year */
+    static int getStartDay(int year, int month){
+//        return getDayOfWeek(year, month, 1);
+        return 0;// todo
+    }
+
 
 
 }

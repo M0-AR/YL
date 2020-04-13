@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_01/AssignGrades.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_08/Display54Cards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_19/_10/LargestElementInArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_02/ReverseNumbersEntered.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_03/CountOccurrenceOfNumber.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_09/CreateFourFans.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_19/_11/ComplexMatrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_34/_01/AccessAndUpdateStaffTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_06/_34/PrintCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_34/PrintCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_03/DisplayThreeCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_03/DisplayThreeCards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_07/DisplayRandom0Or1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_07/DisplayRandom0Or1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_19/_09/SortArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_09/SortArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_08/Display54Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_08/Display54Cards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_19/_10/LargestElementInArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_10/LargestElementInArrayList.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,13 +82,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LargestElementInArrayList">
-    <configuration name="AssignGrades" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._01.AssignGrades" />
+  <component name="RunManager" selected="Application.Display54Cards">
+    <configuration name="CountOccurrenceOfNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._03.CountOccurrenceOfNumber" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_07._01.*" />
+          <option name="PATTERN" value="Exercise_07._03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -108,12 +109,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DisplayRandom0Or1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_14._07.DisplayRandom0Or1" />
+    <configuration name="Exercise_07_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._03.Exercise_07_03" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_14._07.*" />
+          <option name="PATTERN" value="Exercise_07._03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,12 +135,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_19._09.SortArrayList" />
+    <configuration name="ReverseNumbersEntered" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._02.ReverseNumbersEntered" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_19._09.*" />
+          <option name="PATTERN" value="Exercise_07._02.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LargestElementInArrayList" />
-        <item itemvalue="Application.SortArrayList" />
         <item itemvalue="Application.Display54Cards" />
-        <item itemvalue="Application.DisplayRandom0Or1" />
-        <item itemvalue="Application.AssignGrades" />
+        <item itemvalue="Application.CountOccurrenceOfNumber" />
+        <item itemvalue="Application.Exercise_07_03" />
+        <item itemvalue="Application.ReverseNumbersEntered" />
+        <item itemvalue="Application.LargestElementInArrayList" />
       </list>
     </recent_temporary>
   </component>
@@ -281,14 +282,8 @@
       <workItem from="1586418279299" duration="5084000" />
       <workItem from="1586492848208" duration="4152000" />
       <workItem from="1586583672050" duration="4175000" />
-      <workItem from="1586664990616" duration="7677000" />
-    </task>
-    <task id="LOCAL-00022" summary="13 and 14">
-      <created>1578950200542</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1578950200542</updated>
+      <workItem from="1586664990616" duration="7992000" />
+      <workItem from="1586751241946" duration="4802000" />
     </task>
     <task id="LOCAL-00023" summary="15, 16, 17 and 18">
       <created>1579119080610</created>
@@ -626,7 +621,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586593016504</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar50%&#10; &#10; - Array &#10; 1- Review: &#10; 2- More assigment: AssignGrades&#10;  &#10; - Javafx&#10;  1- Review:   DisplayRandom0Or1&#10;  2- More assigment: Display54Cards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: SortArrayList&#10;   2- More assigment: LargestElementInArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Avoiding Deadlocks&#10; New:  Thread States&#10; &#10; - DataBase&#10; Review: Database Metadata&#10; New:  Chapter Summary">
+      <created>1586677293199</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1586677293200</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,7 +648,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree" />
     <MESSAGE value="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper" />
     <MESSAGE value="1- Check if correct and improving them: LotteryGame, PerfectNumber and ScissorRockPaper &#10;2- More assigment: Summation, DecimalToBinary and DecimalToOctal&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle and font" />
     <MESSAGE value="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; ImageView -&gt; image" />
@@ -671,7 +672,8 @@
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10; CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime75%&#10;  &#10; - Javafx&#10;  1- Review: CharactersAroundCircle &#10;  2- More assigment: &#10;DisplayCheckerBoard and DisplayRandom0Or1_20%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInTwoDimensionalArray&#10;   2- More assigment: &#10;   GenericBinarySearch&#10;   &#10; - Thread &#10; &#10; - DataBase" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime&#10;  &#10; - Javafx&#10;  1- Review: DisplayCheckerBoard &#10;  2- More assigment: &#10; DisplayRandom0Or1 70%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericBinarySearch&#10;   2- More assigment: ShuffleArrayList&#10;   &#10;   &#10; - Thread &#10; Semaphore&#10; &#10; - DataBase&#10; Metadata" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: PrintCalendar25%&#10; &#10;  &#10; - Javafx&#10;  1- Review:  &#10;  2- More assigment: &#10; DisplayRandom0Or1_100%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: ShuffleArrayList&#10;   2- More assigment: SortArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Semaphore&#10; New: Avoiding&#10; &#10; - DataBase&#10; Review: Metadata" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: PrintCalendar25%&#10; &#10;  &#10; - Javafx&#10;  1- Review:  &#10;  2- More assigment: &#10; DisplayRandom0Or1_100%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: ShuffleArrayList&#10;   2- More assigment: SortArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Semaphore&#10; New: Avoiding&#10; &#10; - DataBase&#10; Review: Metadata" />
+    <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar50%&#10; &#10; - Array &#10; 1- Review: &#10; 2- More assigment: AssignGrades&#10;  &#10; - Javafx&#10;  1- Review:   DisplayRandom0Or1&#10;  2- More assigment: Display54Cards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: SortArrayList&#10;   2- More assigment: LargestElementInArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Avoiding Deadlocks&#10; New:  Thread States&#10; &#10; - DataBase&#10; Review: Database Metadata&#10; New:  Chapter Summary" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar50%&#10; &#10; - Array &#10; 1- Review: &#10; 2- More assigment: AssignGrades&#10;  &#10; - Javafx&#10;  1- Review:   DisplayRandom0Or1&#10;  2- More assigment: Display54Cards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: SortArrayList&#10;   2- More assigment: LargestElementInArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Avoiding Deadlocks&#10; New:  Thread States&#10; &#10; - DataBase&#10; Review: Database Metadata&#10; New:  Chapter Summary" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
