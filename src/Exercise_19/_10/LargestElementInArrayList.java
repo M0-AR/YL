@@ -1,5 +1,10 @@
 package Exercise_19._10;
-
+/*********************************************************************************
+ * (Largest element in ArrayList) Write the following method that returns the     *
+ * largest element in an ArrayList:                                               *
+ *                                                                                *
+ * public static <E extends Comparable<E>> E max(ArrayList<E> list)               *
+ *********************************************************************************/
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -27,11 +32,11 @@ public class LargestElementInArrayList { // Yl and github
         for (double i = 1.0; i <= 10; i++)
             doubleList.add( Math.random() );
 
-        // Find max and display result
-        System.out.println(max( stringList ));
-        System.out.println(max( numbers ));
-        System.out.println(max( charList  ));
-        System.out.println(max( doubleList ));
+        // Find max and display results
+        System.out.println("Maximum String object: " + max( stringList ));
+        System.out.println("Maximum Integer object: " + max( numbers ));
+        System.out.println("Maximum Character object: " + max( charList  ));
+        System.out.println("Maximum Double object: " + max( doubleList ));
     }
 
     /** Find the maximum element in the list */
