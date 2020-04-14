@@ -1,8 +1,9 @@
 package Exercise_07._02;
-
-import java.util.Arrays;
+/*
+(Reverse the numbers entered) Write a program that reads ten integers and displays
+them in the reverse of the order in which they were read.
+*/
 import java.util.Scanner;
-
 public class ReverseNumbersEntered {
     public static void main(String[] args) {
         // Create a scanner
