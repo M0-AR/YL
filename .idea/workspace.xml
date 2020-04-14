@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_02/ReverseNumbersEntered.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_03/CountOccurrenceOfNumber.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_09/CreateFourFans.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_19/_11/ComplexMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_34/_01/AccessAndUpdateStaffTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Exercise17_01.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_35/AreaOfPentagon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_36/AreaOfRegularPolygon.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_04/AnalyzeScores.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_17/_01/CreateTextFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_06/_34/PrintCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_34/PrintCalendar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_08/Display54Cards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_08/Display54Cards.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_19/_10/LargestElementInArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_19/_10/LargestElementInArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_01/AssignGrades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_01/AssignGrades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_02/ReverseNumbersEntered.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_02/ReverseNumbersEntered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_03/CountOccurrenceOfNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_03/CountOccurrenceOfNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_09/CreateFourFans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_09/CreateFourFans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_34/_01/AccessAndUpdateStaffTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_34/_01/AccessAndUpdateStaffTable.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +54,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1RXcZoFKnHcL0MPLRWWUxo4nvyI" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -82,13 +88,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Display54Cards">
-    <configuration name="CountOccurrenceOfNumber" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._03.CountOccurrenceOfNumber" />
+  <component name="RunManager" selected="Application.CreateTextFile">
+    <configuration name="AnalyzeScores" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._04.AnalyzeScores" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_07._03.*" />
+          <option name="PATTERN" value="Exercise_07._04.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -96,12 +102,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Display54Cards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_14._08.Display54Cards" />
+    <configuration name="AreaOfRegularPolygon" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_06._36.AreaOfRegularPolygon" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_14._08.*" />
+          <option name="PATTERN" value="Exercise_06._36.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -109,12 +115,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Exercise_07_03" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._03.Exercise_07_03" />
+    <configuration name="AssignGrades" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._01.AssignGrades" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_07._03.*" />
+          <option name="PATTERN" value="Exercise_07._01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -122,12 +128,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LargestElementInArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_19._10.LargestElementInArrayList" />
+    <configuration name="CreateFourFans" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_14._09.CreateFourFans" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_19._10.*" />
+          <option name="PATTERN" value="Exercise_14._09.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -135,12 +141,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseNumbersEntered" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._02.ReverseNumbersEntered" />
+    <configuration name="CreateTextFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_17._01.CreateTextFile" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_07._02.*" />
+          <option name="PATTERN" value="Exercise_17._01.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -150,11 +156,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Display54Cards" />
-        <item itemvalue="Application.CountOccurrenceOfNumber" />
-        <item itemvalue="Application.Exercise_07_03" />
-        <item itemvalue="Application.ReverseNumbersEntered" />
-        <item itemvalue="Application.LargestElementInArrayList" />
+        <item itemvalue="Application.CreateTextFile" />
+        <item itemvalue="Application.CreateFourFans" />
+        <item itemvalue="Application.AnalyzeScores" />
+        <item itemvalue="Application.AssignGrades" />
+        <item itemvalue="Application.AreaOfRegularPolygon" />
       </list>
     </recent_temporary>
   </component>
@@ -283,14 +289,8 @@
       <workItem from="1586492848208" duration="4152000" />
       <workItem from="1586583672050" duration="4175000" />
       <workItem from="1586664990616" duration="7992000" />
-      <workItem from="1586751241946" duration="4802000" />
-    </task>
-    <task id="LOCAL-00023" summary="15, 16, 17 and 18">
-      <created>1579119080610</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1579119080610</updated>
+      <workItem from="1586751241946" duration="5233000" />
+      <workItem from="1586845911730" duration="5958000" />
     </task>
     <task id="LOCAL-00024" summary="20">
       <created>1579153754956</created>
@@ -628,7 +628,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586677293200</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar75%&#10; &#10; - Array &#10; 1- Review: AssignGrades&#10; 2- More assigment: &#10;ReverseNumbersEntered and CountOccurrenceOfNumber&#10;&#10; - Javafx&#10;  1- Review:   Display54Cards&#10;  2- More assigment: CreateFourFans25%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: LargestElementInArrayList&#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review: Thread States&#10; New:  Synchronized Collections">
+      <created>1586758125443</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1586758125445</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +655,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="1- Check if correct and improving them: LotteryGame, PerfectNumber and ScissorRockPaper &#10;2- More assigment: Summation, DecimalToBinary and DecimalToOctal&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle and font" />
     <MESSAGE value="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; ImageView -&gt; image" />
     <MESSAGE value="1- Check if correct and improving them:FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;2- More assigment: FindSalesAmount, Combinations, Bit_level_operations and ComputeMeanAndStandardDeviation" />
@@ -673,7 +680,8 @@
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime&#10;  &#10; - Javafx&#10;  1- Review: DisplayCheckerBoard &#10;  2- More assigment: &#10; DisplayRandom0Or1 70%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericBinarySearch&#10;   2- More assigment: ShuffleArrayList&#10;   &#10;   &#10; - Thread &#10; Semaphore&#10; &#10; - DataBase&#10; Metadata" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: PrintCalendar25%&#10; &#10;  &#10; - Javafx&#10;  1- Review:  &#10;  2- More assigment: &#10; DisplayRandom0Or1_100%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: ShuffleArrayList&#10;   2- More assigment: SortArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Semaphore&#10; New: Avoiding&#10; &#10; - DataBase&#10; Review: Metadata" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar50%&#10; &#10; - Array &#10; 1- Review: &#10; 2- More assigment: AssignGrades&#10;  &#10; - Javafx&#10;  1- Review:   DisplayRandom0Or1&#10;  2- More assigment: Display54Cards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: SortArrayList&#10;   2- More assigment: LargestElementInArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Avoiding Deadlocks&#10; New:  Thread States&#10; &#10; - DataBase&#10; Review: Database Metadata&#10; New:  Chapter Summary" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar50%&#10; &#10; - Array &#10; 1- Review: &#10; 2- More assigment: AssignGrades&#10;  &#10; - Javafx&#10;  1- Review:   DisplayRandom0Or1&#10;  2- More assigment: Display54Cards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: SortArrayList&#10;   2- More assigment: LargestElementInArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Avoiding Deadlocks&#10; New:  Thread States&#10; &#10; - DataBase&#10; Review: Database Metadata&#10; New:  Chapter Summary" />
+    <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar75%&#10; &#10; - Array &#10; 1- Review: AssignGrades&#10; 2- More assigment: &#10;ReverseNumbersEntered and CountOccurrenceOfNumber&#10;&#10; - Javafx&#10;  1- Review:   Display54Cards&#10;  2- More assigment: CreateFourFans25%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: LargestElementInArrayList&#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review: Thread States&#10; New:  Synchronized Collections" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar75%&#10; &#10; - Array &#10; 1- Review: AssignGrades&#10; 2- More assigment: &#10;ReverseNumbersEntered and CountOccurrenceOfNumber&#10;&#10; - Javafx&#10;  1- Review:   Display54Cards&#10;  2- More assigment: CreateFourFans25%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: LargestElementInArrayList&#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review: Thread States&#10; New:  Synchronized Collections" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

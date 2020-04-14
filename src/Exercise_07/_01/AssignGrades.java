@@ -1,5 +1,16 @@
 package Exercise_07._01;
-
+/*
+(Assign grades) Write a program that reads student scores, gets the best score,
+and then assigns grades based on the following scheme:
+Grade is A if score is >= best - 10;
+Grade is B if score is >= best - 20;
+Grade is C if score is >= best - 30;
+Grade is D if score is >= best - 40;
+Grade is F otherwise.
+The program prompts the user to enter the total number of students, then prompts
+the user to enter all of the scores, and concludes by displaying the grades. Here
+is a sample run:
+*/
 import java.util.Scanner;
 
 public class AssignGrades {
@@ -24,16 +35,22 @@ public class AssignGrades {
         printGrades(scores);
     }
 
+    /** Return the highest score */
+    public static int max ( int [] scores){
+        int max = scores[0];
+
+        // Find the maximum value in the array
+        for (int i = 1; i < scores.length; i++)
+            if (max < scores[i])
+                max = scores[i];
+
+            return max;
+    }
 
     /** Print grades according to the user input */
     static void printGrades(int[] scores){
         // To store the maximum value
-        int max = 0;
-
-        // Find the maximum value in the array
-        for (int i = 0; i < scores.length; i++)
-            if (max < scores[i])
-                max = scores[i];
+        int max = max( scores);
 
         // Print print the right grade,
         // For each score in the scores array
