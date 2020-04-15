@@ -1,5 +1,10 @@
 package Exercise_07._04;
-
+/**
+(Analyze scores) Write a program that reads an unspecified number of scores and
+determines how many scores are above or equal to the average and how many
+scores are below the average. Enter a negative number to signify the end of the
+input. Assume that the maximum number of scores is 100.
+*/
 import java.util.Scanner;
 
 public class AnalyzeScores {
@@ -13,11 +18,16 @@ public class AnalyzeScores {
          double averageOfScores = 0;
 
         do {
+            System.out.print("Enter a new score: ");
+
             scores[count] = input.nextInt();
+
             if (scores[count] > 0)
                 averageOfScores += scores[count];
+
         }while (scores[count++] > 0);
 
+        System.out.println("Count is " + count);
         // Calculate the average
         averageOfScores /= count-1;
 
