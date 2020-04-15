@@ -1,5 +1,8 @@
 package Exercise_14._09;
-
+/*********************************************************************************
+ * (Create four fans) Write a program that places four fans in a GridPane with    *
+ * two rows and two columns, as shown in Figure 14.45b.                           *
+ *********************************************************************************/
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -43,7 +46,7 @@ public class CreateFourFans extends Application { // github and con debugging
 
         // Create a scene and place it in the stage
         Scene scene = new Scene(gridPane);
-        stage.setTitle("Exercise14_08"); // Set the stage title
+        stage.setTitle("Exercise14_09"); // Set the stage title
         stage.setScene(scene); // Place the scene in the stage
         stage.show(); // Display the stage
     }
