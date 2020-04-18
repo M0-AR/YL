@@ -1,5 +1,11 @@
 package Exercise_07._05;
-
+/**
+(Print distinct numbers) Write a program that reads in ten numbers and displays
+the number of distinct numbers and the distinct numbers separated by exactly one
+space (i.e., if a number appears multiple times, it is displayed only once). (Hint:
+Read a number and store it to an array if it is new. If the number is already in the
+array, ignore it.) After the input, the array contains the distinct numbers.
+*/
 import java.util.Scanner;
 
 public class PrintDistinctNumbers {
@@ -8,32 +14,43 @@ public class PrintDistinctNumbers {
         Scanner input = new Scanner( System.in );
 
         // Create an array
-        int[] distinct = new int[10];
+        int[] distinctNumbers = new int[10];
+        int number;
+
+        // Number of distinct numbers
+        int count = 0;
 
         // Prompt the user to enter 10 numbers
         System.out.print( "Enter 10 numbers: " );
-        for (int i = 0; i < distinct.length; i++)
-            distinct[i] = input.nextInt();
+        for (int i = 0; i < distinctNumbers.length; i++){
+            number = input.nextInt();
 
-        distinctNumbers( distinct );
+            // Check if distinct!
+            if (isDistinct(distinctNumbers, number))
+                distinctNumbers[count++] = number;
+
+        }
+
+
+        displayResult( distinctNumbers, count );
+    }
+
+    /** Return true if the number is not in the array */
+    public static boolean isDistinct(int[] array, int n){
+        for (int i : array)
+            if (i == n)
+                return false;
+
+        return true;
     }
 
 
-    static void distinctNumbers(int[] distinct) {
-        String s = "";
-
-        for (int i = 0; i < distinct.length ; i++)
-            if(!s.contains( distinct[i] + "" ))
-                s += distinct[i] + " ";
-
-        String[] ch = s.split( " " );
-
+    static void displayResult(int[] distinct, int length) {
         // Display result
-        System.out.println("The number of distinct numbers is " + ch.length);
-        System.out.print("The distinct numbers are: " );
-        for (String ch1 : ch) {
-            System.out.print( ch1 + " " );
-        }
-
+        System.out.print("The number of distinct numbers is " + length
+                                    + "\nThe distinct numbers are: ");
+        for (int i : distinct)
+            if (i > 0)
+                System.out.print( i + " " );
     }
 }

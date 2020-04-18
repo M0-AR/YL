@@ -1,5 +1,11 @@
 package Exercise_14._10;
-
+/*********************************************************************************
+ * (Display a cylinder) Write a program that draws a cylinder, as shown in        *
+ * Figure 14.45b. You can use the following method to set the dashed stroke for   *
+ * an arc:                                                                        *
+ *                                                                                *
+ *     arc.getStrokeDashArray().addAll(6.0, 21.0);                                *
+ *********************************************************************************/
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
@@ -32,7 +38,7 @@ class MyCylinder extends Pane{
         ellipse.setFill( Color.WHITE );
         ellipse.setStroke( Color.BLACK );
 
-        // To add the below halve of ellipse by dashing the line
+        // To add the below halve of ellipse (dashing line)
         Arc arc1 = new Arc(centerX, 140, radiusX, 20, 0, 180);
         arc1.setFill(Color.WHITE);
         arc1.setStroke(Color.BLACK);

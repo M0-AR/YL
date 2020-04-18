@@ -4,7 +4,7 @@ package Exercise_04._16;
 using the Math.random() method.
 */
 public class RandomCharacter {
-    public static void main(String[] args) {// done
+    public static void main(String[] args) {
 
         char ch = (char) (Math.random() * 26 + 'A');
 

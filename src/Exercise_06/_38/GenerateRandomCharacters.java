@@ -1,11 +1,12 @@
 package Exercise_06._38;
 
-public class GenerateRandomCharacters { // Yl and github
+
+public class GenerateRandomCharacters {
     public static void main(String[] args) {
-        RandomCharacter();
+        RandomCharacter0();
     }
 
-    public static void RandomCharacter(){
+    public static void RandomCharacter0(){
 
         for (int i = 1; i <= 100 ; i++) {
 

@@ -53,8 +53,7 @@ public class ParallelMergeSort {
                 // Obtain the second half
                 int secondHalfLength = list.length - list.length / 2;
                 int[] secondHalf = new int[secondHalfLength];
-                System.arraycopy(list, list.length / 2,
-                        secondHalf, 0, secondHalfLength);
+                System.arraycopy(list, list.length / 2, secondHalf, 0, secondHalfLength);
 
                 // Recursively sort the two halves
                 invokeAll(new SortTask(firstHalf),
