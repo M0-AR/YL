@@ -6,7 +6,7 @@ public class Revise {
     /**
      * Main method
      */
-    public static void main(String[] args) { // github
+    public static void main(String[] args) {
         final int NUM_OF_PRIMES = 50;
         // Store prime numbers
         int[] primeNumbers = new int[NUM_OF_PRIMES];

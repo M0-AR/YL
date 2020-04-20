@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment=" - Method:&#10; 1 - Review: &#10;  PrintCalendar95%, AreaOfPentagon&#10;  and AreaOfRegularPolygon&#10; 2- More assigment: PrintCalendar100%, FormatAnInteger and GenerateRandomCharacters&#10; &#10; - Array &#10; 1- Review: AnalyzeScores&#10; 2- More assigment: PrintDistinctNumbers&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans100%&#10;  2- More assigment: DisplayCylinder&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable 10%  &#10;    2- More assigment: AccessAndUpdateStaffTable 25%">
-      <change afterPath="$PROJECT_DIR$/Exercise17.02.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BookExercise/_32/ParallelMax.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_06/_39/PointPosition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_06/Revise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_12/_01/NumberFormatException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_14/_11/PaintSmileyFace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_17/_02/CreateBinaryDataFile.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_07/CountSingleDigits.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_08/AverageAnArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_17/_03/SumAllIntegersInBinaryDataFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BookExercise/_32/ParallelMergeSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/BookExercise/_32/ParallelMergeSort.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_04/_16/RandomCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_04/_16/RandomCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_37/FormatAnInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_37/FormatAnInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_06/_38/GenerateRandomCharacters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_06/_38/GenerateRandomCharacters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_05/PrintDistinctNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_05/PrintDistinctNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_10/DisplayCylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_10/DisplayCylinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_17/_01/CreateTextFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_17/_01/CreateTextFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Exercise17.02.dat" beforeDir="false" afterPath="$PROJECT_DIR$/Exercise17.02.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_06/Revise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_06/Revise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_12/_01/NumberFormatException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_12/_01/NumberFormatException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_11/PaintSmileyFace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_11/PaintSmileyFace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_17/_02/CreateBinaryDataFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_17/_02/CreateBinaryDataFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_34/_01/AccessAndUpdateStaffTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_34/_01/AccessAndUpdateStaffTable.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +86,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ParallelMax">
+  <component name="RunManager" selected="Application.SumAllIntegersInBinaryDataFile">
+    <configuration name="CountSingleDigits" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._07.CountSingleDigits" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_07._07.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CreateBinaryDataFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_17._02.CreateBinaryDataFile" />
       <module name="YL" />
@@ -111,19 +119,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NumberFormatException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_12._01.NumberFormatException" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_12._01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ParallelMax" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="BookExercise._32.ParallelMax" />
       <module name="YL" />
@@ -137,12 +132,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrintDistinctNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._05.PrintDistinctNumbers" />
+    <configuration name="SumAllIntegersInBinaryDataFile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_17._03.SumAllIntegersInBinaryDataFile" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_07._05.*" />
+          <option name="PATTERN" value="Exercise_17._03.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ParallelMax" />
+        <item itemvalue="Application.SumAllIntegersInBinaryDataFile" />
         <item itemvalue="Application.CreateBinaryDataFile" />
+        <item itemvalue="Application.CountSingleDigits" />
+        <item itemvalue="Application.ParallelMax" />
         <item itemvalue="Application.Exercise17_02" />
-        <item itemvalue="Application.NumberFormatException" />
-        <item itemvalue="Application.PrintDistinctNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -292,13 +287,8 @@
       <workItem from="1586938712133" duration="6040000" />
       <workItem from="1587117854552" duration="2498000" />
       <workItem from="1587185815007" duration="7311000" />
-    </task>
-    <task id="LOCAL-00026" summary="21 and 22">
-      <created>1579339109692</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1579339109692</updated>
+      <workItem from="1587200391803" duration="246000" />
+      <workItem from="1587281921843" duration="5427000" />
     </task>
     <task id="LOCAL-00027" summary="23, 24 and 25">
       <created>1579508423404</created>
@@ -636,7 +626,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586970919812</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary=" - Method:&#10; 1 - Review: &#10;  FormatAnInteger and GenerateRandomCharacters&#10; 2- More assigment: PointPosition &#10; &#10; - Array &#10; 1- Review: PrintDistinctNumbers&#10; 2- More assigment: Revise&#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: NumberFormatException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayCylinder&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateBinaryDataFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMax&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:">
+      <created>1587200627642</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1587200627642</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -657,7 +654,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1- Check if correct and improving them:FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;2- More assigment: FindSalesAmount, Combinations, Bit_level_operations and ComputeMeanAndStandardDeviation" />
     <MESSAGE value="1- Check if correct and improving FindSalesAmount, Combinations, Bit_level_operations and ComputeMeanAndStandardDeviation&#10;2- More assigment: ReverseAString, CheckISBN_13, ProcessString, CountVowelsAndConsonants, CountUpperCaseLetters and (LongestCommonPrefix)/2" />
     <MESSAGE value="1- Check if correct and improving: ReverseAString, CheckISBN_13, ProcessString, CountVowelsAndConsonants and CountUpperCaseLetters &#10;2- More assigment: (LongestCommonPrefix)/2" />
     <MESSAGE value="1- Check if correct and improving: LongestCommonPrefix&#10;2- More assigment: Factorial and FibonacciNumber" />
@@ -682,7 +678,8 @@
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar75%&#10; &#10; - Array &#10; 1- Review: AssignGrades&#10; 2- More assigment: &#10;ReverseNumbersEntered and CountOccurrenceOfNumber&#10;&#10; - Javafx&#10;  1- Review:   Display54Cards&#10;  2- More assigment: CreateFourFans25%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: LargestElementInArrayList&#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review: Thread States&#10; New:  Synchronized Collections" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar75%&#10;  &#10; 2- More assigment: PrintCalendar95%&#10; &#10; - Array &#10; 1- Review: ReverseNumbersEntered and CountOccurrenceOfNumber&#10; 2- More assigment: AnalyzeScores&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans25%&#10;  2- More assigment: CreateFourFans100%&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  Synchronized Collections&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review:  &#10;    2- More assigment: AccessAndUpdateStaffTable 10%" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar95%, AreaOfPentagon&#10;  and AreaOfRegularPolygon&#10; 2- More assigment: PrintCalendar100%, FormatAnInteger and GenerateRandomCharacters&#10; &#10; - Array &#10; 1- Review: AnalyzeScores&#10; 2- More assigment: PrintDistinctNumbers&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans100%&#10;  2- More assigment: DisplayCylinder&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable 10%  &#10;    2- More assigment: AccessAndUpdateStaffTable 25%" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar95%, AreaOfPentagon&#10;  and AreaOfRegularPolygon&#10; 2- More assigment: PrintCalendar100%, FormatAnInteger and GenerateRandomCharacters&#10; &#10; - Array &#10; 1- Review: AnalyzeScores&#10; 2- More assigment: PrintDistinctNumbers&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans100%&#10;  2- More assigment: DisplayCylinder&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable 10%  &#10;    2- More assigment: AccessAndUpdateStaffTable 25%" />
+    <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  FormatAnInteger and GenerateRandomCharacters&#10; 2- More assigment: PointPosition &#10; &#10; - Array &#10; 1- Review: PrintDistinctNumbers&#10; 2- More assigment: Revise&#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: NumberFormatException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayCylinder&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateBinaryDataFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMax&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Method:&#10; 1 - Review: &#10;  FormatAnInteger and GenerateRandomCharacters&#10; 2- More assigment: PointPosition &#10; &#10; - Array &#10; 1- Review: PrintDistinctNumbers&#10; 2- More assigment: Revise&#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: NumberFormatException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayCylinder&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateBinaryDataFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMax&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
