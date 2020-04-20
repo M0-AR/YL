@@ -1,12 +1,17 @@
 package Exercise_34._01;
 
 import javafx.application.Application;
+import javafx.geometry.Pos;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+
+import java.sql.Statement;
 
 // https://www.chegg.com/homework-help/introduction-to-java-programming-comprehensive-version-10th-edition-chapter-32-problem-1pe-solution-9780133762563
 public class AccessAndUpdateStaffTable extends Application {
@@ -23,6 +28,9 @@ public class AccessAndUpdateStaffTable extends Application {
     private final TextField STATE_TEXTFIELD;
     private final TextField TELEPHONE_TEXTFIELD;
     private final TextField EMAIL_TEXTFIELD;
+    private final Label TOP_LABEL;
+    // The statement for processing queries
+    private Statement myStatement;
 
 
 
@@ -40,6 +48,7 @@ public class AccessAndUpdateStaffTable extends Application {
         this.STATE_TEXTFIELD = new TextField(  );
         this.TELEPHONE_TEXTFIELD = new TextField(  );
         this.EMAIL_TEXTFIELD = new TextField(  );
+        this.TOP_LABEL = new Label(  );
     }
 
     @SuppressWarnings( "Unused" ) // todo see what is it use for?
@@ -107,6 +116,26 @@ public class AccessAndUpdateStaffTable extends Application {
                                     myBox3_2, myBox3_3,myBox_4,myBox_5,myBox_6);
 
         // HBox for all buttons
+        HBox myBox_7 = new HBox( 5 );
+
+        boolean addAll6 = myBox_7.getChildren().addAll( VIEW_BTN, INSERT_BTN,
+                                                            UPDATE_BTN, CLEAR_BTN);
+
+        myBox_7.setAlignment( Pos.CENTER );
+
+        BorderPane mainPane = new BorderPane(  );
+        mainPane.setCenter(myBox_1);
+        mainPane.setTop( TOP_LABEL );
+        mainPane.setBottom( myBox_7 );
+
+
+        // Set mainPane in the scene
+        Scene scene = new Scene( mainPane );
+        stage.setTitle( "Exercise32_01" );
+        stage.setScene( scene );
+        stage.show();
+
+        //init_DB(); // todo this methd
 
 
 
