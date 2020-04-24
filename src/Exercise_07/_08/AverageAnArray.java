@@ -1,5 +1,12 @@
 package Exercise_07._08;
-
+/************************************************************************************
+ * (Average an array) Write two overloaded methods that return the average of an     *
+ * array with the following headers:                                                 *
+ * public static int average(int[] array)                                            *
+ * public static double average(double[] array)                                      *
+ * Write a test program that prompts the user to enter ten double values, invokes    *
+ * this method, and displays the average value.                                      *
+ *************************************************************************************/
 import java.util.Scanner;
 
 public class AverageAnArray { // github and y
@@ -7,17 +14,22 @@ public class AverageAnArray { // github and y
         // Create a scanner
         Scanner input = new Scanner( System.in );
 
-        int[] n = new int[10];
         double[] d = new double[10];
 
+        // Prompt the user to enter ten double values
         System.out.print("Enter 10 digits number: ");
-//        for (int i = 0; i < 10 ; i++)
+        for (int i = 0; i < 10 ; i++)
+            d[i] = input.nextDouble();
+
+        // Display the average value of the array
+        System.out.println("The average value: " + average( d ));
+
 
 
 
     }
 
-    /** Return average of integer number in an array */
+    /** Overloaded method average accepts an integer array and returns its average */
     public static int average(int[] array){
         int sum = 0;
         for (int i : array)
@@ -25,7 +37,7 @@ public class AverageAnArray { // github and y
         return sum / array.length;
     }
 
-    /** Return average of double number in an array */
+    /** Overloaded method average accepts an double array and returns its average */
     public static double average(double[] array){
         double sum = 0;
         for (double i : array)
