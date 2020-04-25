@@ -12,7 +12,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.*;
 import javafx.stage.Stage;
 
-public class PaintSmileyFace extends Application { // github fix the problem
+public class PaintSmileyFace extends Application {
 
 
     @Override // Override the start method in the Application class
@@ -27,7 +27,7 @@ public class PaintSmileyFace extends Application { // github fix the problem
 
 
         // create a circle and place it in a stack pane
-        Circle circle = new Circle(  );
+        Circle circle = getCircle();
         stackPane.getChildren().add(circle);
 
         // Create a Polygon and place it in a stack pane
@@ -71,7 +71,7 @@ public class PaintSmileyFace extends Application { // github fix the problem
     /** Return a Arc of specified properties */
     private Arc getArc(Circle c){
         Arc a = new Arc(c.getRadius(), c.getRadius() * 1.30,
-                c.getRadius() / 2, c.getRadius() / 4, 0, -180);// todo ?
+                c.getRadius() / 2, c.getRadius() / 4, 0, -180);
         a.setType( ArcType.OPEN);
         a.setFill(Color.WHITE);
         a.setStroke(Color.BLACK);
@@ -82,7 +82,7 @@ public class PaintSmileyFace extends Application { // github fix the problem
     /** Return a circle of specified properties */
     private Circle getCircle(Ellipse e){
         Circle c = new Circle(e.getCenterX(), e.getCenterY(),
-                e.getRadiusY() - (e.getRadiusX() - e.getRadiusY())); // Todo not sure I got it
+                e.getRadiusY() - (e.getRadiusX() - e.getRadiusY()));
         return c;
     }
 

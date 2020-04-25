@@ -1,10 +1,14 @@
 package Exercise_12._02;
-
+/*********************************************************************************
+ * (InputMismatchException) Write a program that prompts the user to read two     *
+ * integers and displays their sum. Your program should prompt the user to read   *
+ * the number again if the input is incorrect.                                    *
+ *********************************************************************************/
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class inputMismatchException  {
-    public static void main(String[] args) { // github
+    public static void main(String[] args) {
         // Create a scanner
         Scanner input = new Scanner( System.in );
 
