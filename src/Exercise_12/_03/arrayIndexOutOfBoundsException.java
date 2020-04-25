@@ -1,5 +1,13 @@
 package Exercise_12._03;
-
+/*********************************************************************************
+ * (ArrayIndexOutOfBoundsException) Write a program that meets the following      *
+ * requirements:                                                                  *
+ *                                                                                *
+ * ■ Creates an array with 100 randomly chosen integers.                          *
+ * ■ Prompts the user to enter the index of the array, then displays the          *
+ *   corresponding element value. If the specified index is out of bounds,        *
+ *   display the message "Out of Bounds".                                         *
+ *********************************************************************************/
 import java.util.Scanner;
 
 public class arrayIndexOutOfBoundsException {
@@ -13,6 +21,7 @@ public class arrayIndexOutOfBoundsException {
 
         // Create an array of 100 length
         int[] n = new int[100];
+
         // Full the array with a random number
         for (int i = 0; i < n.length; i++)
             n[i] = (int)(Math.random() * 100) + 1;
