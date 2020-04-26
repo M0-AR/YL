@@ -1,5 +1,11 @@
 package Exercise_07._15;
-
+/*********************************************************************************
+ * (Eliminate duplicates) Write a method that returns a new array by eliminating  *
+ * the duplicate values in the array using the following method header:           *
+ * public static int[] eliminateDuplicates(int[] list)                            *
+ * Write a test program that reads in ten integers, invokes the method, and       *
+ * displays the result.                                                           *
+ *********************************************************************************/
 import java.util.Scanner;
 
 public class EliminateDuplicates {
@@ -22,6 +28,7 @@ public class EliminateDuplicates {
                 System.out.print( i + " " );
     }
 
+    // Method 1.
     /** Return an array with out duplicating */
     public static int[] eliminateDuplicates(int[] list){
         int[] temp = new int[list.length];
@@ -44,6 +51,29 @@ public class EliminateDuplicates {
         }
 
         return temp;
+    }
+
+
+    // Method 2.
+    /** eliminateDuplicates returns a new array with duplicate values eliminated */
+    public static int [] eliminateDuplicates2(int[] list){
+        int[] distinctList = new int[list.length];
+        int i = 0; // index distinctList
+        for (int j : distinctList)
+            if (linearSearch( distinctList, j )  == -1 )
+                distinctList[i++] = j;
+
+        return distinctList;
+    }
+
+    /** To find element in the array by linear time if not return -1 */
+    public static int linearSearch(int[] array, int key){
+
+        for (int i = 0; i < array.length; i++)
+            if (key == array[i])
+                return i;
+
+        return -1;
     }
 }
 
