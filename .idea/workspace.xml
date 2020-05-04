@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment=" - Array &#10; 1- Review: ComputingGCD and EliminateDuplicates&#10; 2- More assigment:  ExecutionTime  &#10;&#10;- Exception&#10;  1- Review:   illegalArgumentException&#10;  2- More assigment: illegalTriangleException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayBarChart 10%plan&#10;  2- More assigment: DisplayBarChart &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  StoreObjectsAndArraysInFile&#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable&#10;    2- More assigment: AccessAndUpdateStaffTable">
-      <change afterPath="$PROJECT_DIR$/Exercise17_06.dat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_16/ExecutionTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_17/sortStudents.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_18/bubbleSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_12/_05/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_17/_06/StoreLoanObjects.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_14/ComputingGCD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_14/ComputingGCD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_15/EliminateDuplicates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_15/EliminateDuplicates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_12/_04/illegalArgumentException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_12/_04/illegalArgumentException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_12/_05/illegalTriangleException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_14/_12/DisplayBarChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_14/_12/DisplayBarChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_17/_05/StoreObjectsAndArraysInFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_17/_05/StoreObjectsAndArraysInFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_16/ExecutionTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_16/ExecutionTime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_17/sortStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_17/sortStudents.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +79,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.StoreLoanObjects">
+  <component name="RunManager" selected="Application.sortStudents">
     <configuration name="DisplayBarChart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_14._12.DisplayBarChart" />
       <module name="YL" />
@@ -129,19 +119,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="illegalArgumentException" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_12._04.illegalArgumentException" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_12._04.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_12._05.main" />
       <module name="YL" />
@@ -155,13 +132,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="sortStudents" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._17.sortStudents" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_07._17.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.sortStudents" />
+        <item itemvalue="Application.ExecutionTime" />
         <item itemvalue="Application.StoreLoanObjects" />
         <item itemvalue="Application.DisplayBarChart" />
         <item itemvalue="Application.main" />
-        <item itemvalue="Application.illegalArgumentException" />
-        <item itemvalue="Application.ExecutionTime" />
       </list>
     </recent_temporary>
   </component>
@@ -302,14 +292,8 @@
       <workItem from="1587360886026" duration="2726000" />
       <workItem from="1587709414471" duration="5926000" />
       <workItem from="1587798515832" duration="6473000" />
-      <workItem from="1587885607122" duration="10945000" />
-    </task>
-    <task id="LOCAL-00030" summary="MonetaryUnits 04-26 need to be continued">
-      <created>1579594932996</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1579594932996</updated>
+      <workItem from="1587885607122" duration="11046000" />
+      <workItem from="1588579292698" duration="2588000" />
     </task>
     <task id="LOCAL-00031" summary="MonetaryUnits 04-26 &#10;substring and indexOf">
       <created>1579680215294</created>
@@ -647,7 +631,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587807038322</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary=" - Array &#10; 1- Review: ComputingGCD and EliminateDuplicates&#10; 2- More assigment:  ExecutionTime  &#10;&#10;- Exception&#10;  1- Review:   illegalArgumentException&#10;  2- More assigment: illegalTriangleException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayBarChart 10%plan&#10;  2- More assigment: DisplayBarChart &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  StoreObjectsAndArraysInFile&#10;   2- More assigment: StoreLoanObjects&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:">
+      <created>1587908271309</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1587908271309</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -668,7 +659,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="1- Check if correct and improving: Factorial and FibonacciNumbers&#10;2- More assigment: GreatestCommonDivisor, SumSeries, SumSeries01 and SumSeries02" />
     <MESSAGE value="1- Check if correct and improving: GreatestCommonDivisor, SumSeries, SumSeries01 and SumSeries02&#10;2- More assigment: FibonacciSeries, IntegerReversely, StringReversely and OccurrencesOfCharacterInString" />
     <MESSAGE value="&#10;3-  TestGraphIfConnected" />
     <MESSAGE value="Recursion:&#10;1- Check if correct and improving: FibonacciSeries, IntegerReversely, StringReversely and OccurrencesOfCharacterInString&#10;2- More assigment: SumDigitsUsingRecursion, PrintCharactersInStringReversely(Not totally understand what to do) and &#10;FindLargestNumberInArray&#10;Method:&#10;1- Check if correct and improving: PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;&#10;Graph:&#10;1- AbstractGraph and Graph" />
@@ -693,7 +683,8 @@
     <MESSAGE value=" - Array &#10; 1- Review: Revise&#10; 2- More assigment:  CountSingleDigits and AverageAnArray&#10;&#10;- Exception&#10;  1- Review:   NumberFormatException&#10;  2- More assigment: NumberFormatException&#10;  &#10; - Javafx&#10;  1- Review:   PaintSmileyFace&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateBinaryDataFile&#10;   2- More assigment: SumAllIntegersInBinaryDataFile&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable&#10;    2- More assigment: AccessAndUpdateStaffTable" />
     <MESSAGE value=" - Array &#10; 1- Review: CountSingleDigits, AverageAnArray, FindTheSmallestElement, FindTheIndexOfTheSmallestElement and ComputeDeviation&#10; 2- More assigment:  ReverseAnArray and RandomNumberChooser&#10;&#10;- Exception&#10;  1- Review:   NumberFormatException&#10;  2- More assigment: inputMismatchException and arrayIndexOutOfBoundsException&#10;  &#10; - Javafx&#10;  1- Review:   PaintSmileyFace&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  SumAllIntegersInBinaryDataFile&#10;   2- More assigment: ConvertTextFileIntoUTF&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable&#10;    2- More assigment: AccessAndUpdateStaffTable" />
     <MESSAGE value=" - Array &#10; 1- Review: ReverseAnArray and RandomNumberChooser&#10; 2- More assigment:  &#10;ComputingGCD and EliminateDuplicates&#10;- Exception&#10;  1- Review:   inputMismatchException and arrayIndexOutOfBoundsException&#10;  2- More assigment: illegalArgumentException&#10;  &#10; - Javafx&#10;  1- Review:   PaintSmileyFace&#10;  2- More assigment: DisplayBarChart 10%plan&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  ConvertTextFileIntoUTF&#10;   2- More assigment: StoreObjectsAndArraysInFile&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable&#10;    2- More assigment: AccessAndUpdateStaffTable" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: ReverseAnArray and RandomNumberChooser&#10; 2- More assigment:  &#10;ComputingGCD and EliminateDuplicates&#10;- Exception&#10;  1- Review:   inputMismatchException and arrayIndexOutOfBoundsException&#10;  2- More assigment: illegalArgumentException&#10;  &#10; - Javafx&#10;  1- Review:   PaintSmileyFace&#10;  2- More assigment: DisplayBarChart 10%plan&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  ConvertTextFileIntoUTF&#10;   2- More assigment: StoreObjectsAndArraysInFile&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable&#10;    2- More assigment: AccessAndUpdateStaffTable" />
+    <MESSAGE value=" - Array &#10; 1- Review: ComputingGCD and EliminateDuplicates&#10; 2- More assigment:  ExecutionTime  &#10;&#10;- Exception&#10;  1- Review:   illegalArgumentException&#10;  2- More assigment: illegalTriangleException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayBarChart 10%plan&#10;  2- More assigment: DisplayBarChart &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  StoreObjectsAndArraysInFile&#10;   2- More assigment: StoreLoanObjects&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: ComputingGCD and EliminateDuplicates&#10; 2- More assigment:  ExecutionTime  &#10;&#10;- Exception&#10;  1- Review:   illegalArgumentException&#10;  2- More assigment: illegalTriangleException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayBarChart 10%plan&#10;  2- More assigment: DisplayBarChart &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  StoreObjectsAndArraysInFile&#10;   2- More assigment: StoreLoanObjects&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
