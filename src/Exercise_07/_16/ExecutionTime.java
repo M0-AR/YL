@@ -1,6 +1,16 @@
 package Exercise_07._16;
-
-public class ExecutionTime { // yl and github
+/*********************************************************************************
+ * (Execution time) Write a program that randomly generates an array of 100,000   *
+ * integers and a key. Estimate the execution time of invoking the linearSearch   *
+ * method in Listing 7.6. Sort the array and estimate the execution time of       *
+ * invoking the binarySearch method in Listing 7.7. You can use the following     *
+ * code template to obtain the execution time:                                    *
+ * long startTime = System.currentTimeMillis();                                   *
+ * perform the task;                                                              *
+ * long endTime = System.currentTimeMillis();                                     *
+ * long executionTime = endTime - startTime;                                      *
+ *********************************************************************************/
+public class ExecutionTime {
     public static void main(String[] args) {
          final int LENGTH_OF_ARRAY = 100000;
 
@@ -21,6 +31,7 @@ public class ExecutionTime { // yl and github
         // Sort the array before using binarySearch
         long startTime0 = System.nanoTime();
         selectionSort( n );
+//        java.util.Arrays.sort(n); TODO More fast
         long endTime0 = System.nanoTime();
         long executionTime0 = endTime0 - startTime0;
         System.out.println("selectionSort: "+executionTime0);
@@ -29,6 +40,7 @@ public class ExecutionTime { // yl and github
         // Estimate the execution time of invoking the binarySearch method
         long startTime1 = System.nanoTime();
         binarySearch( n, 9999 );
+//        java.util.Arrays.binarySearch(n, 9999);
         long endTime1 = System.nanoTime();
         long executionTime1 = endTime1 - startTime1;
         System.out.println("binarySearch: " + executionTime1);
@@ -49,20 +61,27 @@ public class ExecutionTime { // yl and github
         int n = list.length;
 
         for (int i = 0; i < n-1; i++) {
-
             // Find the minimum element in the array
+            int min = list[i];
             int minIndex = i;
+
+
             for (int j = i + 1; j < n; j++)
-                if (list[j] < list[minIndex])
-                    minIndex = j;
+                if (min > list[j]){
+                        min = list[j];
+                        minIndex = j;
+                }
 
 
-            // Swap
-            int temp = list[minIndex];
-            list[minIndex] = list[i];
-            list[i] = temp;
+
+            // Swap list[i] with list[minIndex] if necessary
+            if(minIndex != i){
+                list[minIndex] = list[i];
+                list[i] = min;
+            }
         }
     }
+
 
 
     /** Use binary search to find the key in the list */
