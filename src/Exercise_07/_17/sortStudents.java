@@ -7,7 +7,7 @@ import java.util.Scanner;
  * students, the students’ names, and their scores, and prints student names in  *
  * decreasing order of their scores.                                             *
  *********************************************************************************/
-public class sortStudents { // github
+public class sortStudents {
     /**
      * Main method
      */
