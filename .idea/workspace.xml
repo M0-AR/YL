@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_19/Sorted.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_20/ReviseSelectionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_21/SumIntegers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_22/FindTheNumbersOfUppercaseLetterInString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_17/sortStudents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_17/sortStudents.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_18/bubbleSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_18/bubbleSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_20/ReviseSelectionSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_20/ReviseSelectionSort.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,13 +80,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Sorted">
-    <configuration name="DisplayBarChart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_14._12.DisplayBarChart" />
+  <component name="RunManager" selected="Application.FindTheNumbersOfUppercaseLetterInString">
+    <configuration name="ExecutionTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._16.ExecutionTime" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_14._12.*" />
+          <option name="PATTERN" value="Exercise_07._16.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -95,12 +94,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ExecutionTime" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._16.ExecutionTime" />
+    <configuration name="FindTheNumbersOfUppercaseLetterInString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._22.FindTheNumbersOfUppercaseLetterInString" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_07._16.*" />
+          <option name="PATTERN" value="Exercise_07._22.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StoreLoanObjects" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_17._06.StoreLoanObjects" />
+    <configuration name="SumIntegers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._21.SumIntegers" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_17._06.*" />
+          <option name="PATTERN" value="Exercise_07._21.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.FindTheNumbersOfUppercaseLetterInString" />
+        <item itemvalue="Application.SumIntegers" />
         <item itemvalue="Application.Sorted" />
         <item itemvalue="Application.sortStudents" />
         <item itemvalue="Application.ExecutionTime" />
-        <item itemvalue="Application.StoreLoanObjects" />
-        <item itemvalue="Application.DisplayBarChart" />
       </list>
     </recent_temporary>
   </component>
@@ -297,14 +296,8 @@
       <workItem from="1587885607122" duration="11046000" />
       <workItem from="1588579292698" duration="2656000" />
       <workItem from="1588920731497" duration="2189000" />
-      <workItem from="1589125739271" duration="1959000" />
-    </task>
-    <task id="LOCAL-00032" summary="MonetaryUnits 04-26 &#10;and for loop">
-      <created>1580055660307</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1580055660307</updated>
+      <workItem from="1589125739271" duration="2011000" />
+      <workItem from="1589357832607" duration="2062000" />
     </task>
     <task id="LOCAL-00033" summary="Dec2Hex, GreatestCommonDivisor, PrimeNumber and CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers">
       <created>1580286790581</created>
@@ -642,7 +635,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588585244464</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary=" - Array &#10; 1- Review:   sortStudents's scores and bubbleSort&#10; 2- More assigment: Sorted and ReviseSelectionSort  &#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:">
+      <created>1589272533138</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1589272533142</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -663,7 +663,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="&#10;3-  TestGraphIfConnected" />
     <MESSAGE value="Recursion:&#10;1- Check if correct and improving: FibonacciSeries, IntegerReversely, StringReversely and OccurrencesOfCharacterInString&#10;2- More assigment: SumDigitsUsingRecursion, PrintCharactersInStringReversely(Not totally understand what to do) and &#10;FindLargestNumberInArray&#10;Method:&#10;1- Check if correct and improving: PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;&#10;Graph:&#10;1- AbstractGraph and Graph" />
     <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger and PalindromeInteger&#10;2- More assigment: &#10;DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns and&#10;ComputeFutureInvestmentValue&#10;&#10;Recursion:&#10;1- Check if correct and improving: SumDigitsUsingRecursion, PrintCharactersInStringReversely and   FindLargestNumberInArray&#10;2- More assigment: &#10;FindNumberOfUppercaseLettersInString, OccurrencesOfSpecifiedCharacterInString and FindNumberOfUppercaseLettersInArray&#10;Graph:&#10;1- AbstractGraph and Graph" />
     <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;PentagonalNumbers, SumDigitsInInteger , PalindromeInteger, DisplayIntegerReversed, SortThreeNumbers, DisplayPatterns , ComputeFutureInvestmentValue, CelsiusAndFahrenheit, FeetAndMeters, isPrime&#10;2- More assigment:&#10;ComputeCommissions, DisplayCharacters and SumSeries" />
@@ -688,7 +687,8 @@
     <MESSAGE value=" - Array &#10; 1- Review: ReverseAnArray and RandomNumberChooser&#10; 2- More assigment:  &#10;ComputingGCD and EliminateDuplicates&#10;- Exception&#10;  1- Review:   inputMismatchException and arrayIndexOutOfBoundsException&#10;  2- More assigment: illegalArgumentException&#10;  &#10; - Javafx&#10;  1- Review:   PaintSmileyFace&#10;  2- More assigment: DisplayBarChart 10%plan&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  ConvertTextFileIntoUTF&#10;   2- More assigment: StoreObjectsAndArraysInFile&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable&#10;    2- More assigment: AccessAndUpdateStaffTable" />
     <MESSAGE value=" - Array &#10; 1- Review: ComputingGCD and EliminateDuplicates&#10; 2- More assigment:  ExecutionTime  &#10;&#10;- Exception&#10;  1- Review:   illegalArgumentException&#10;  2- More assigment: illegalTriangleException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayBarChart 10%plan&#10;  2- More assigment: DisplayBarChart &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  StoreObjectsAndArraysInFile&#10;   2- More assigment: StoreLoanObjects&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: ExecutionTime&#10; 2- More assigment:    sortStudents's scores &#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: ExecutionTime&#10; 2- More assigment:    sortStudents's scores &#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
+    <MESSAGE value=" - Array &#10; 1- Review:   sortStudents's scores and bubbleSort&#10; 2- More assigment: Sorted and ReviseSelectionSort  &#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review:   sortStudents's scores and bubbleSort&#10; 2- More assigment: Sorted and ReviseSelectionSort  &#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
