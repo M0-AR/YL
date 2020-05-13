@@ -30,25 +30,25 @@ public class ReviseSelectionSort {
 
     /** Sorting numbers in decreasing order */
     public static void selectionSort(double[] list){
-        double currentMin;
-        int currentMinIndex;
+        double currentMax;
+        int currentMaxIndex;
 
-        for(int i = 0; i < list.length; i++){
-            // Find the smallest in the list[i..list.length-1]
-            currentMin = list[i];
-            currentMinIndex = i;
+        for(int i = list.length - 1; i >= 0; i--){
+            // Find the maximum in the list[i..list.length-1]
+            currentMax = list[i];
+            currentMaxIndex = i;
 
-            for(int j = i + 1; j < list.length; j++){
-                if(currentMin > list[j]){
-                    currentMin = list[j];
-                    currentMinIndex =  j;
+            for(int j = i - 1; j >= 0; j--){
+                if(currentMax < list[j]){
+                    currentMax = list[j];
+                    currentMaxIndex =  j;
                 }
             }
 
-            // Swap list[i] with list[currentMinIndex] if necessary;
-            if (currentMinIndex != i){
-                list[currentMinIndex] = list[i];
-                list[i] = currentMin;
+            // Swap list[i] with list[currentMaxIndex] if necessary;
+            if (currentMaxIndex != i){
+                list[currentMaxIndex] = list[i];
+                list[i] = currentMax;
             }
         }
     }
