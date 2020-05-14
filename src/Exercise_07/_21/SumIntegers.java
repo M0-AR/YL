@@ -1,30 +1,28 @@
 package Exercise_07._21;
+/*********************************************************************************
+ * (Sum integers) Write a program that passes an unspecified number of integers   *
+ * form command line and displays their total                                     *
+ *********************************************************************************/
 
-import java.util.Scanner;
 
 public class SumIntegers {
     public static void main(String[] args) {
-        // Create a scanner
-        Scanner input = new Scanner( System.in );
+        // Check command-line arguments
+        if(args.length == 0){
+            System.out.println(
+                    "Usage: java Exercise07_21 string");
+            System.exit( 1 );
+        }
 
-        // Prompt the user to enter an
-        // unspecified numbers of integers
-        System.out.println( "Enter a an " +
-                "unspecified numbers of integers end with 0:" );
-        int number;
-
-        // Compute the sum of integers
+        // Compute sum
         int sum = 0;
-
-
-        // Get unspecified number
-        while ((number = input.nextInt()) != 0){
-            sum += number;
-            if (number == 0)
-                break;
+        for (int i = 0; i < args.length; i++) {
+            sum += Integer.parseInt( args[i] );
         }
 
         // Display sum
-        System.out.println("The sum of integer numbers is: " + sum);
+        System.out.println("The sum of integer " +
+                                "numbers is: " + sum);
+
     }
 }

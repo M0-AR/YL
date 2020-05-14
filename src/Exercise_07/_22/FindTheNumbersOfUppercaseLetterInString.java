@@ -1,17 +1,22 @@
 package Exercise_07._22;
+/*********************************************************************************
+ * (Find the number of uppercase letters in a string) Write a program that        *
+ * passes a string to the command line and displays the number of uppercase       *
+ * letters in the string.                                                          *
+ *********************************************************************************/
 
-import java.util.Scanner;
 
 public class FindTheNumbersOfUppercaseLetterInString {
     /** Main method */
     public static void main(String[] args) {
-        // Create a scanner
-        Scanner input = new Scanner( System.in );
+        // Check command-line arguments
+        if(args.length != 1){
+            System.out.println(
+                    "Usage: java Exercise07_22 string");
+            System.exit( 1 );
+        }
 
-        // Prompt the user to enter a string
-        System.out.print( "Enter a string: " );
-        String str = input.nextLine();
-
+        String str = args[0];
 
         System.out.println("Tne number of uppercase is: " +
                                     numberOfUppercase( str ));
