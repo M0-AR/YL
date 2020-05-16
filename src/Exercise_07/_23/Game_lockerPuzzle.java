@@ -19,7 +19,8 @@ import java.util.Arrays;
  * locker is open (true) or closed (false). Initially, all lockers are closed.)   *
  *********************************************************************************/
 public class Game_lockerPuzzle {
-    public static void main(String[] args) { // github
+    /** Main method */
+    public static void main(String[] args) {
         // Create a boolean array, to indicate whether
         // a locker is open(true) or closed(false)
         boolean[] locker = new boolean[100];
