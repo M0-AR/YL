@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_09/_01/Rectangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_09/_01/RectangleTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Exercise_09/t.java" afterDir="false" />
+    <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment=" - Array &#10; 1- Review:      &#10; 2- More assigment: Game_lockerPuzzle&#10;&#10;- Two-Dimensional array&#10;   1- Review:   SumDiagonalInMatrix&#10;   2- More assigment: sortStudentsOnGrades&#10;   &#10;- Object and Classes&#10;      1- Review:   &#10;      2- More assigment: Rectangle and RectangleTest&#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_25/solveQuadraticEquations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_08/_04/computeWeeklyHoursForEachEmployee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/YL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/YL.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_23/Game_lockerPuzzle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_23/Game_lockerPuzzle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_24/couponCollectorsProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_24/couponCollectorsProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_08/_03/sortStudentsOnGrades.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_08/_03/sortStudentsOnGrades.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_09/_01/Rectangle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_09/_01/Rectangle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_09/_01/RectangleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_09/_01/RectangleTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +42,8 @@
       <list>
         <option value="Interface" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -96,19 +99,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.RectangleTest">
-    <configuration name="Game_lockerPuzzle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._23.Game_lockerPuzzle" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_07._23.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="RectangleTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_09._01.RectangleTest" />
       <module name="YL" />
@@ -135,12 +125,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SumElementsColumnByColumn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_08._01.SumElementsColumnByColumn" />
+    <configuration name="couponCollectorsProblem" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._24.couponCollectorsProblem" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_08._01.*" />
+          <option name="PATTERN" value="Exercise_07._24.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="solveQuadraticEquations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._25.solveQuadraticEquations" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_07._25.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,9 +168,9 @@
       <list>
         <item itemvalue="Application.RectangleTest" />
         <item itemvalue="Application.sortStudentsOnGrades" />
+        <item itemvalue="Application.solveQuadraticEquations" />
+        <item itemvalue="Application.couponCollectorsProblem" />
         <item itemvalue="Application.SumDiagonalInMatrix" />
-        <item itemvalue="Application.SumElementsColumnByColumn" />
-        <item itemvalue="Application.Game_lockerPuzzle" />
       </list>
     </recent_temporary>
   </component>
@@ -316,14 +319,8 @@
       <workItem from="1589360110040" duration="855000" />
       <workItem from="1589440502638" duration="5099000" />
       <workItem from="1589527588927" duration="357000" />
-      <workItem from="1589628331902" duration="3289000" />
-    </task>
-    <task id="LOCAL-00037" summary="1- Check if correct and improving them: MilesToKilometersAndKilometersToMiles and ComputeFutureTuition &#10;2- More assigment: FindTheHighestScore and FindTheTwoHighestScores&#10;3- Recursion: DirectorySize">
-      <created>1580635092577</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1580635092578</updated>
+      <workItem from="1589628331902" duration="3727000" />
+      <workItem from="1589700538301" duration="6765000" />
     </task>
     <task id="LOCAL-00038" summary="1- Check if correct and improving them: FindTheTwoHighestScores and FindNumbersDivisibleBy5And6 &#10;2- More assigment: FindNumbersDivisibleBy5Or6 and FindTheSmallestNSuchThatNSquareGreaterThan12000&#10;3- Recursion: TowerOfHanoi">
       <created>1580739662092</created>
@@ -661,7 +658,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589649310123</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary=" - Array &#10; 1- Review:      &#10; 2- More assigment: Game_lockerPuzzle&#10;&#10;- Two-Dimensional array&#10;   1- Review:   SumDiagonalInMatrix&#10;   2- More assigment: sortStudentsOnGrades&#10;   &#10;- Object and Classes&#10;      1- Review:   &#10;      2- More assigment: Rectangle and RectangleTest&#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:">
+      <created>1589650766820</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1589650766820</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +686,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;EstimatePi and NumberOfDaysInYear&#10;  &#10;2- More assigment:&#10; - PrintTaxTable, DisplayMatrixOf0sAnd1s and CheckPassword &#10;&#10; -  GenericStack" />
     <MESSAGE value="Method:&#10;1- Check if correct and improving: &#10;EstimatePi and NumberOfDaysInYear&#10;  &#10;2- More assigment:&#10; - PrintTaxTable, DisplayMatrixOf0sAnd1s and CheckPassword &#10;&#10; -  GenericStack &#10; &#10; 3- Just learned: &#10; AccountWithoutSync" />
     <MESSAGE value=" - Method:&#10; 1 - PrintTaxTable DisplayMatrixOf0sAnd1s and CheckPassword&#10;  &#10; 2- More assigment:Triangles, CountTheLettersInString and PhoneKeypads&#10;  &#10;&#10; - GenericStackUsingInheritance &#10; &#10; - Just learned: &#10; AccountWithoutSync&#10;  Synchronized: To avoid the problem with output use synchronized in method or in run method" />
     <MESSAGE value=" - Method:&#10; 1 - Review: Triangles, CountTheLettersInString and PhoneKeypads&#10;  &#10; 2- More assigment:&#10;  ApproximateTheSquareRoot, ApproximateTheSquareRoot and ConvertToHoursMinutesSeconds&#10;  &#10; - Javafx&#10;  1- Review: DisplayImages &#10;  2- More assigment:&#10;  TicTacToe&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericStackUsingInheritance&#10;   2- More assigment: DistinctElementsInArrayList&#10;   &#10;   &#10; - Just learned: &#10; AccountWithoutSync&#10;  Synchronized: We can use Lock interface and ReentrantLock class instead of type synchronized in a method to have a look on thread til the thread be done" />
@@ -707,7 +710,8 @@
     <MESSAGE value=" - Array &#10; 1- Review:   ReviseSelectionSort&#10; 2- More assigment: SumIntegers and    &#10;FindTheNumbersOfUppercaseLetterInString&#10;&#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: SumElementsColumnByColumn&#10;   &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review:   SumIntegers and    &#10; FindTheNumbersOfUppercaseLetterInString&#10; 2- More assigment: Game_lockerPuzzle&#10;&#10;- Two-Dimensional array&#10;   1- Review:   SumElementsColumnByColumn&#10;   2- More assigment: SumDiagonalInMatrix&#10;   &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review:      &#10; 2- More assigment: Game_lockerPuzzle&#10;&#10;- Two-Dimensional array&#10;   1- Review:   SumDiagonalInMatrix&#10;   2- More assigment: sortStudentsOnGrades&#10;   &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review:      &#10; 2- More assigment: Game_lockerPuzzle&#10;&#10;- Two-Dimensional array&#10;   1- Review:   SumDiagonalInMatrix&#10;   2- More assigment: sortStudentsOnGrades&#10;   &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
+    <MESSAGE value=" - Array &#10; 1- Review:      &#10; 2- More assigment: Game_lockerPuzzle&#10;&#10;- Two-Dimensional array&#10;   1- Review:   SumDiagonalInMatrix&#10;   2- More assigment: sortStudentsOnGrades&#10;   &#10;- Object and Classes&#10;      1- Review:   &#10;      2- More assigment: Rectangle and RectangleTest&#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review:      &#10; 2- More assigment: Game_lockerPuzzle&#10;&#10;- Two-Dimensional array&#10;   1- Review:   SumDiagonalInMatrix&#10;   2- More assigment: sortStudentsOnGrades&#10;   &#10;- Object and Classes&#10;      1- Review:   &#10;      2- More assigment: Rectangle and RectangleTest&#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -811,6 +815,11 @@
           <url>file://$PROJECT_DIR$/src/Exercise_17/_05/StoreObjectsAndArraysInFile.java</url>
           <line>21</line>
           <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_07/_25/solveQuadraticEquations.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

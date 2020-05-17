@@ -1,7 +1,4 @@
 package Exercise_07._23;
-
-import java.util.Arrays;
-
 /*********************************************************************************
  * (Game: locker puzzle) A school has 100 lockers and 100 students. All lockers   *
  * are closed on the first day of school. As the students enter, the first        *
@@ -18,6 +15,7 @@ import java.util.Arrays;
  * (Hint: Use an array of 100 Boolean elements, each of which indicates whether a *
  * locker is open (true) or closed (false). Initially, all lockers are closed.)   *
  *********************************************************************************/
+import java.util.Arrays;
 public class Game_lockerPuzzle {
     /** Main method */
     public static void main(String[] args) {
