@@ -1,8 +1,11 @@
 package Exercise_08._03;
-
+/*********************************************************************************
+ * (Sort students on grades) Rewrite Listing 8.2, GradeExam.java, to display the  *
+ * students in increasing order of the number of correct answers.                 *
+ *********************************************************************************/
 public class sortStudentsOnGrades {
     /** Main method */
-    public static void main(String args[]) { // github
+    public static void main(String args[]) {
         // Students' answers to the questions
         char[][] answers = {
                 {'A', 'B', 'A', 'C', 'C', 'D', 'E', 'E', 'A', 'D'},
@@ -17,20 +20,69 @@ public class sortStudentsOnGrades {
         // Key to the questions
         char[] keys = {'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D'};
 
-        // Count correct answer for student
-        int[] correctAnswerCount = new int[answers.length];
+        // Students' number and correct answers
+        int[][] correctCounts = new int[answers.length][2];
+
 
         // Grade all answers
         for (int i = 0; i < answers.length; i++) {
-
+            // Grade one student
             for (int j = 0; j < answers[i].length; j++) {
-                if (answers[i][j] == keys[j])
-                    correctAnswerCount[i]++;
+                if (answers[i][j] == keys[j]){
+                    correctCounts[i][0] = i;
+                    correctCounts[i][1]++;
+                }
+
             }
 
         }
 
-        // Display student in increasing order of the number of correct answers
+        // Sort in increasing order according to the count of correct answers
+        sort(correctCounts);
+
+        // Display sorted matrix
+        for (int i = 0; i < correctCounts.length; i++)
+            System.out.println("Student " + correctCounts[i][0] +
+                                "'s correct count is " + correctCounts[i][1]);
+
+
+
+    }
+
+    /** Sort according ot column 1 in increasing order*/
+    public static void sort(int[][] m){
+        for (int i = 0; i < m.length ; i++) {
+            // min value
+            int minCol0 = m[i][0];
+            int minCol1 = m[i][1];
+            int minIndex = i;
+
+            for (int j = i + 1; j < m.length ; j++) {
+                if (m[j][1] < minCol1){
+                    minCol0 = m[j][0];
+                    minCol1 = m[j][1];
+                    minIndex = j;
+                }
+            }
+
+            // swap
+            if (minIndex != i){
+                m[minIndex][0] = m[i][0];
+                m[minIndex][1] = m[i][1];
+                m[i][0] = minCol0;
+                m[i][1] = minCol1;
+            }
+
+        }
+    }
+
+
+    /** Solution in one-dimension array*/
+    // Count correct answer for student
+    /*int[] correctAnswerCount = new int[answers.length];
+    *        if (answers[i][j] == keys[j])
+                    correctAnswerCount[i]++;*/
+   /* public static void displayAndSort(int[] correctAnswerCount){
         for (int i = 0; i < correctAnswerCount.length; i++) {
 
             // min value
@@ -45,9 +97,8 @@ public class sortStudentsOnGrades {
             }
 
             System.out.println("Student " + minIndex + " has " + min +
-                                                        " correct answers");
+                    " correct answers");
             correctAnswerCount[minIndex] = Integer.MAX_VALUE;
         }
-
-    }
+    }*/
 }

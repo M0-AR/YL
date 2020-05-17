@@ -12,23 +12,27 @@ package Exercise_09._01;
  * getPerimeter(): double                          *
  * *************************************************/
 public class Rectangle {
-    private double width;
-    private double height;
+    double width; // Width of rectangle
+    double height; // Height of rectangle
 
-    // Default rectangle
+    /** A no-arg constructor that creates a default rectangle */
     public Rectangle(){
         this(1,1);
     }
 
+    /** A constructor that creates a rectangle
+     *  with specified with and height        */
     public Rectangle(double newWidth, double newHeight) {
         this.width = newWidth;
         this.height = newHeight;
     }
 
+    /** Return the area of this rectangle */
     public double getArea(){
         return width * height;
     }
 
+    /** Return the perimeter of this rectangle */
     public double getPerimeter(){
         return 2 * (width + height);
     }
