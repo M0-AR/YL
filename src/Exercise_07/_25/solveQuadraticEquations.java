@@ -1,8 +1,14 @@
 package Exercise_07._25;
-
+/*********************************************************************
+ * (Algebra: solve quadratic equations) write a method for solving a *
+ * quadratic equation using the following header:                    *
+ * public static int solveQuadratic(double[] eqn, double[] roots)    *
+ * Write a program that prompts the user to enter values for a, b,   *
+ * and c and displays the number of real roots and all real roots    *
+ * *******************************************************************/
 import java.util.Scanner;
 
-public class solveQuadraticEquations { // github
+public class solveQuadraticEquations {
     /** Main method */
     public static void main(String[] args) {
         // Create a scanner
