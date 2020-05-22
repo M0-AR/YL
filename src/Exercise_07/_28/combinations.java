@@ -1,17 +1,18 @@
 package Exercise_07._28;
-
+/*********************************************************************************
+ * (Math: combinations) Write a program that prompts the user to enter 10 integers*
+ * and displays all combinations of picking two numbers from the 10.              *
+ *********************************************************************************/
 import java.util.Scanner;
 
-public class combinations { // github and yl
+public class combinations {
     /** Main method */
     public static void main(String[] args) {
-        // Create a scanner
-        Scanner input = new Scanner( System.in );
+        Scanner input = new Scanner( System.in ); // Create a scanner
+        int[] numbers = new int[10]; // Create an array of length ten
 
         // Prompt the user to enter 10 integers
         System.out.println( "Enter 10 integers numbers: " );
-        int[] numbers = new int[10];
-
         for (int i = 0; i < numbers.length ; i++)
             numbers[i] = input.nextInt();
 
