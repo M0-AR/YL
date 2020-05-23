@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_30/consecutiveFourEqualNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_31/mergeTwoSortedLists.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_28/combinations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_28/combinations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_29/pickFourCards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_29/pickFourCards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_30/consecutiveFourEqualNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_30/consecutiveFourEqualNumbers.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.consecutiveFourEqualNumbers">
+  <component name="RunManager" selected="Application.mergeTwoSortedLists">
     <configuration name="combinations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_07._28.combinations" />
       <module name="YL" />
@@ -121,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="identicalArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._27.identicalArrays" />
+    <configuration name="mergeTwoSortedLists" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._31.mergeTwoSortedLists" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_07._27.*" />
+          <option name="PATTERN" value="Exercise_07._31.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -161,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.mergeTwoSortedLists" />
         <item itemvalue="Application.consecutiveFourEqualNumbers" />
         <item itemvalue="Application.pickFourCards" />
         <item itemvalue="Application.pickFourCards (1)" />
         <item itemvalue="Application.combinations" />
-        <item itemvalue="Application.identicalArrays" />
       </list>
     </recent_temporary>
   </component>
@@ -319,14 +318,8 @@
       <workItem from="1589788728648" duration="3285000" />
       <workItem from="1589962969891" duration="3212000" />
       <workItem from="1590135329449" duration="147000" />
-      <workItem from="1590135891918" duration="3054000" />
-    </task>
-    <task id="LOCAL-00040" summary="1- Check if correct and improving them: FindTheLargestNumber and ComputeTheGreatestCommonDivisor &#10;2- More assigment: ASCIICharacterTable , FindFactorsOfInteger and DisplayPyramid">
-      <created>1581241497219</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1581241497219</updated>
+      <workItem from="1590135891918" duration="3154000" />
+      <workItem from="1590222664161" duration="2392000" />
     </task>
     <task id="LOCAL-00041" summary="1- Check if correct and improving them: ASCIICharacterTable, FindFactorsOfInteger  and DisplayPyramid&#10;2- More assigment: DisplayFourPatternsUsingLoops,   DisplayNumbersInAPyramidPattern and DisplayPrimeNumbers">
       <created>1581325110525</created>
@@ -664,7 +657,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589966898539</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary=" - Array &#10; 1- Review: combinations and pickFourCards&#10;&#10; 2- More assigment: consecutiveFourEqualNumbers&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:">
+      <created>1590142876447</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1590142876449</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -685,7 +685,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" - Method:&#10; 1 - Review: Triangles, CountTheLettersInString and PhoneKeypads&#10;  &#10; 2- More assigment:&#10;  ApproximateTheSquareRoot, ApproximateTheSquareRoot and ConvertToHoursMinutesSeconds&#10;  &#10; - Javafx&#10;  1- Review: DisplayImages &#10;  2- More assigment:&#10;  TicTacToe&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericStackUsingInheritance&#10;   2- More assigment: DistinctElementsInArrayList&#10;   &#10;   &#10; - Just learned: &#10; AccountWithoutSync&#10;  Synchronized: We can use Lock interface and ReentrantLock class instead of type synchronized in a method to have a look on thread til the thread be done" />
     <MESSAGE value=" - Method:&#10; 1 - Review: ApproximateTheSquareRoot, ApproximateTheSquareRoot and ConvertToHoursMinutesSeconds&#10;  &#10; 2- More assigment:&#10;  DisplayCurrentDateAndTime, PalindromicPrime and Emirp&#10;  &#10; - Javafx&#10;  1- Review: TicTacToe &#10;  2- More assigment:&#10;  DisplayThreeCards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: DistinctElementsInArrayList&#10;   2- More assigment: GenericLinearSearch" />
     <MESSAGE value=" - Method:&#10; 1 - Review: DisplayCurrentDateAndTime, PalindromicPrime and Emirp&#10;  &#10; 2- More assigment:&#10;  MersennePrime, TwinPrimes and &#10;  Craps50%&#10;  &#10; - Javafx&#10;  1- Review: DisplayThreeCards &#10;  2- More assigment:&#10;  ColorAndFont&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericLinearSearch&#10;   2- More assigment: MaximumElementInArray&#10;   &#10; - Thread &#10; ThreadCooperation&#10; &#10; - DataBase &#10; FindGradeUsingPreparedStatement" />
     <MESSAGE value=" - Method:&#10; 1 - Review:  MersennePrime, TwinPrimes and Craps&#10;  &#10; 2- More assigment: CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10; &#10;  &#10; - Javafx&#10;  1- Review: ColorAndFont &#10;  2- More assigment: CharactersAroundCircle&#10;&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInArray&#10;   2- More assigment: MaximumElementInTwoDimensionalArray&#10;   &#10; - Thread &#10; Consumer Producer&#10; &#10; - DataBase &#10; Callable Statement" />
@@ -710,7 +709,8 @@
     <MESSAGE value=" - Array &#10; 1- Review:      &#10; 2- More assigment: Game_lockerPuzzle&#10;&#10;- Two-Dimensional array&#10;   1- Review:   SumDiagonalInMatrix&#10;   2- More assigment: sortStudentsOnGrades&#10;   &#10;- Object and Classes&#10;      1- Review:   &#10;      2- More assigment: Rectangle and RectangleTest&#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review:      Game_lockerPuzzle&#10; 2- More assigment: couponCollectorsProblem and solveQuadraticEquations&#10;&#10;- Two-Dimensional array&#10;   1- Review:   sortStudentsOnGrades&#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review:      couponCollectorsProblem, solveQuadraticEquations , strictlyIdenticalArrays and identicalArrays&#10;&#10; 2- More assigment:combinations and pickFourCards&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review:      couponCollectorsProblem, solveQuadraticEquations , strictlyIdenticalArrays and identicalArrays&#10;&#10; 2- More assigment:combinations and pickFourCards&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
+    <MESSAGE value=" - Array &#10; 1- Review: combinations and pickFourCards&#10;&#10; 2- More assigment: consecutiveFourEqualNumbers&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: combinations and pickFourCards&#10;&#10; 2- More assigment: consecutiveFourEqualNumbers&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -819,6 +819,11 @@
           <url>file://$PROJECT_DIR$/src/Exercise_07/_29/pickFourCards.java</url>
           <line>79</line>
           <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_07/_31/mergeTwoSortedLists.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
