@@ -2,7 +2,7 @@ package Exercise_07._32;
 
 import java.util.Scanner;
 
-public class partitionOfList {
+public class partitionOfList { // Yl
     public static void main(String[] args) {
         // Create a scanner
         Scanner input = new Scanner( System.in );
@@ -17,8 +17,22 @@ public class partitionOfList {
         for (int i = 0; i < list.length ; i++)
             list[i] = input.nextInt();
 
-        // Make the partition part
+
+        // For test purpose
+        int[] list1 = new int[size];
+        System.arraycopy( list, 0, list1, 0, list.length);
+
+        // Make the partition part and test purpose
+        long startTime0 = System.nanoTime();
         partition( list );
+        long endTime0 = System.nanoTime();
+        System.out.println(endTime0 - startTime0);
+
+
+        long startTime1 = System.nanoTime();
+        partitionYL( list1 ); // This method much faster than mine
+        long endTime1 = System.nanoTime();
+        System.out.println(endTime1 - startTime1);
 
         // Display result
         System.out.print("After the partition, the list is ");
@@ -27,7 +41,7 @@ public class partitionOfList {
         }
     }
 
-    /** Partitions the list using hte first element, called a pivot*/
+    /** Partitions the list using the first element, called a pivot */
     public static int partition(int[] list){
         int pivot = list[0];
         int pivotIndex = 0;
@@ -65,5 +79,44 @@ public class partitionOfList {
             }
         }
         return pivotIndex;
+    }
+
+    /** YL code */
+    public static int partitionYL(int[] list){
+        int first = 0;
+        int last = list.length - 1;
+        int pivot = list[first]; // Choose the first element as the pivot
+        int low = first + 1; // Index for forward search
+        int high = last; // Index for backward search
+
+        while (high > low) {
+            // Search forward from left
+            while (low <= high && list[low] <= pivot)
+                low++;
+
+            // Search backward from right
+            while (low <= high && list[high] > pivot)
+                high--;
+
+            // Swap two elements in the list
+            if (high > low) {
+                int temp = list[high];
+                list[high] = list[low];
+                list[low] = temp;
+            }
+        }
+
+        while (high > first && list[high] >= pivot)
+            high--;
+
+        // Swap pivot with list[high]
+        if (pivot > list[high]) {
+            list[first] = list[high];
+            list[high] = pivot;
+            return high;
+        }
+        else{
+            return first;
+        }
     }
 }
