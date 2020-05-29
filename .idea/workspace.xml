@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_33/ChineseZodiac.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_34/SortCharactersInString.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Exercise_07/_32/partitionOfList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_32/partitionOfList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_33/ChineseZodiac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_33/ChineseZodiac.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,13 +94,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ChineseZodiac">
+  <component name="RunManager" selected="Application.SortCharactersInString">
     <configuration name="ChineseZodiac" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_07._33.ChineseZodiac" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Exercise_07._33.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SortCharactersInString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._34.SortCharactersInString" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_07._34.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -146,26 +160,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="pickFourCards" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._29.pickFourCards" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_07._29.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SortCharactersInString" />
         <item itemvalue="Application.ChineseZodiac" />
         <item itemvalue="Application.partitionOfList" />
         <item itemvalue="Application.mergeTwoSortedLists" />
         <item itemvalue="Application.consecutiveFourEqualNumbers" />
-        <item itemvalue="Application.pickFourCards" />
       </list>
     </recent_temporary>
   </component>
@@ -322,14 +323,8 @@
       <workItem from="1590135891918" duration="3154000" />
       <workItem from="1590222664161" duration="2744000" />
       <workItem from="1590306694178" duration="2052000" />
-      <workItem from="1590671176865" duration="1857000" />
-    </task>
-    <task id="LOCAL-00043" summary="1- Check if correct and improving them: &#10;2- More assigment: LoanAmortization">
-      <created>1582265289314</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1582265289314</updated>
+      <workItem from="1590671176865" duration="1972000" />
+      <workItem from="1590734692316" duration="1161000" />
     </task>
     <task id="LOCAL-00044" summary="1- Check if correct and improving them: &#10;2- More assigment: DemonstrateCancellationErrors&#10;3- JavaFX">
       <created>1582361224730</created>
@@ -667,7 +662,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590308728019</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: partitionOfList and ChineseZodiac">
+      <created>1590673122826</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1590673122829</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -688,7 +690,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" - Method:&#10; 1 - Review:  MersennePrime, TwinPrimes and Craps&#10;  &#10; 2- More assigment: CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10; &#10;  &#10; - Javafx&#10;  1- Review: ColorAndFont &#10;  2- More assigment: CharactersAroundCircle&#10;&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInArray&#10;   2- More assigment: MaximumElementInTwoDimensionalArray&#10;   &#10; - Thread &#10; Consumer Producer&#10; &#10; - DataBase &#10; Callable Statement" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10; CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime75%&#10;  &#10; - Javafx&#10;  1- Review: CharactersAroundCircle &#10;  2- More assigment: &#10;DisplayCheckerBoard and DisplayRandom0Or1_20%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInTwoDimensionalArray&#10;   2- More assigment: &#10;   GenericBinarySearch&#10;   &#10; - Thread &#10; &#10; - DataBase" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime&#10;  &#10; - Javafx&#10;  1- Review: DisplayCheckerBoard &#10;  2- More assigment: &#10; DisplayRandom0Or1 70%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericBinarySearch&#10;   2- More assigment: ShuffleArrayList&#10;   &#10;   &#10; - Thread &#10; Semaphore&#10; &#10; - DataBase&#10; Metadata" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: PrintCalendar25%&#10; &#10;  &#10; - Javafx&#10;  1- Review:  &#10;  2- More assigment: &#10; DisplayRandom0Or1_100%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: ShuffleArrayList&#10;   2- More assigment: SortArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Semaphore&#10; New: Avoiding&#10; &#10; - DataBase&#10; Review: Metadata" />
@@ -713,7 +714,8 @@
     <MESSAGE value=" - Array &#10; 1- Review: combinations and pickFourCards&#10;&#10; 2- More assigment: consecutiveFourEqualNumbers&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: consecutiveFourEqualNumbers&#10;&#10; 2- More assigment: mergeTwoSortedLists&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: mergeTwoSortedLists&#10;&#10; 2- More assigment: partitionOfList&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: mergeTwoSortedLists&#10;&#10; 2- More assigment: partitionOfList&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
+    <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: partitionOfList and ChineseZodiac" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: partitionOfList and ChineseZodiac" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
