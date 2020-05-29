@@ -2,7 +2,7 @@ package Exercise_07._32;
 
 import java.util.Scanner;
 
-public class partitionOfList { // Yl
+public class partitionOfList {
     public static void main(String[] args) {
         // Create a scanner
         Scanner input = new Scanner( System.in );
