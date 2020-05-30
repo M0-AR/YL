@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_34/SortCharactersInString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_35/Hangman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_32/partitionOfList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_32/partitionOfList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_33/ChineseZodiac.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_33/ChineseZodiac.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_34/SortCharactersInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_34/SortCharactersInString.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +93,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SortCharactersInString">
+  <component name="RunManager" selected="Application.Hangman">
     <configuration name="ChineseZodiac" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_07._33.ChineseZodiac" />
       <module name="YL" />
@@ -108,12 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SortCharactersInString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._34.SortCharactersInString" />
+    <configuration name="Hangman" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._35.Hangman" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_07._34.*" />
+          <option name="PATTERN" value="Exercise_07._35.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -121,12 +120,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="consecutiveFourEqualNumbers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._30.consecutiveFourEqualNumbers" />
+    <configuration name="SortCharactersInString" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._34.SortCharactersInString" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercise_07._30.*" />
+          <option name="PATTERN" value="Exercise_07._34.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,11 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Hangman" />
         <item itemvalue="Application.SortCharactersInString" />
         <item itemvalue="Application.ChineseZodiac" />
         <item itemvalue="Application.partitionOfList" />
         <item itemvalue="Application.mergeTwoSortedLists" />
-        <item itemvalue="Application.consecutiveFourEqualNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -324,14 +323,8 @@
       <workItem from="1590222664161" duration="2744000" />
       <workItem from="1590306694178" duration="2052000" />
       <workItem from="1590671176865" duration="1972000" />
-      <workItem from="1590734692316" duration="1161000" />
-    </task>
-    <task id="LOCAL-00044" summary="1- Check if correct and improving them: &#10;2- More assigment: DemonstrateCancellationErrors&#10;3- JavaFX">
-      <created>1582361224730</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1582361224730</updated>
+      <workItem from="1590734692316" duration="1208000" />
+      <workItem from="1590820495496" duration="3521000" />
     </task>
     <task id="LOCAL-00045" summary="1- Check if correct and improving them: SumASeries&#10;2- More assigment: ComputePi, Compute_e and DisplayLeapYears&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Shape">
       <created>1582449450193</created>
@@ -669,7 +662,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590673122829</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary=" - Array &#10; 1- Review: partitionOfList and ChineseZodiac&#10;&#10; 2- More assigment:  SortCharactersInString">
+      <created>1590736733290</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1590736733290</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +690,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" - Method:&#10; 1 - Review: &#10; CreditCardNumberValidation, ChanceOfWinningAtCraps and CurrentDateAndTime50%&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime75%&#10;  &#10; - Javafx&#10;  1- Review: CharactersAroundCircle &#10;  2- More assigment: &#10;DisplayCheckerBoard and DisplayRandom0Or1_20%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: MaximumElementInTwoDimensionalArray&#10;   2- More assigment: &#10;   GenericBinarySearch&#10;   &#10; - Thread &#10; &#10; - DataBase" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime&#10;  &#10; - Javafx&#10;  1- Review: DisplayCheckerBoard &#10;  2- More assigment: &#10; DisplayRandom0Or1 70%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericBinarySearch&#10;   2- More assigment: ShuffleArrayList&#10;   &#10;   &#10; - Thread &#10; Semaphore&#10; &#10; - DataBase&#10; Metadata" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: PrintCalendar25%&#10; &#10;  &#10; - Javafx&#10;  1- Review:  &#10;  2- More assigment: &#10; DisplayRandom0Or1_100%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: ShuffleArrayList&#10;   2- More assigment: SortArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Semaphore&#10; New: Avoiding&#10; &#10; - DataBase&#10; Review: Metadata" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar50%&#10; &#10; - Array &#10; 1- Review: &#10; 2- More assigment: AssignGrades&#10;  &#10; - Javafx&#10;  1- Review:   DisplayRandom0Or1&#10;  2- More assigment: Display54Cards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: SortArrayList&#10;   2- More assigment: LargestElementInArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Avoiding Deadlocks&#10; New:  Thread States&#10; &#10; - DataBase&#10; Review: Database Metadata&#10; New:  Chapter Summary" />
@@ -715,7 +714,8 @@
     <MESSAGE value=" - Array &#10; 1- Review: consecutiveFourEqualNumbers&#10;&#10; 2- More assigment: mergeTwoSortedLists&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: mergeTwoSortedLists&#10;&#10; 2- More assigment: partitionOfList&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: partitionOfList and ChineseZodiac" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: partitionOfList and ChineseZodiac" />
+    <MESSAGE value=" - Array &#10; 1- Review: partitionOfList and ChineseZodiac&#10;&#10; 2- More assigment:  SortCharactersInString" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: partitionOfList and ChineseZodiac&#10;&#10; 2- More assigment:  SortCharactersInString" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -824,6 +824,11 @@
           <url>file://$PROJECT_DIR$/src/Exercise_07/_29/pickFourCards.java</url>
           <line>79</line>
           <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_07/_35/Hangman.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
