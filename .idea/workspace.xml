@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_35/Hangman.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_34/SortCharactersInString.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_34/SortCharactersInString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_35/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_35/Hangman.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -324,14 +323,8 @@
       <workItem from="1590306694178" duration="2052000" />
       <workItem from="1590671176865" duration="1972000" />
       <workItem from="1590734692316" duration="1208000" />
-      <workItem from="1590820495496" duration="3521000" />
-    </task>
-    <task id="LOCAL-00045" summary="1- Check if correct and improving them: SumASeries&#10;2- More assigment: ComputePi, Compute_e and DisplayLeapYears&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Shape">
-      <created>1582449450193</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1582449450193</updated>
+      <workItem from="1590820495496" duration="3671000" />
+      <workItem from="1590919695531" duration="1269000" />
     </task>
     <task id="LOCAL-00046" summary="1- Check if correct and improving them: ComputePi, Compute_e and DisplayLeapYears&#10;2- More assigment: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; -&gt; Circle">
       <created>1582568474796</created>
@@ -669,7 +662,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590736733290</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary=" - Array &#10; 1- Review: SortCharactersInString&#10;&#10; 2- More assigment:  Hangman">
+      <created>1590824144597</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1590824144598</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +690,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: &#10; CurrentDateAndTime&#10;  &#10; - Javafx&#10;  1- Review: DisplayCheckerBoard &#10;  2- More assigment: &#10; DisplayRandom0Or1 70%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: GenericBinarySearch&#10;   2- More assigment: ShuffleArrayList&#10;   &#10;   &#10; - Thread &#10; Semaphore&#10; &#10; - DataBase&#10; Metadata" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  CurrentDateAndTime&#10;  &#10; 2- More assigment: PrintCalendar25%&#10; &#10;  &#10; - Javafx&#10;  1- Review:  &#10;  2- More assigment: &#10; DisplayRandom0Or1_100%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: ShuffleArrayList&#10;   2- More assigment: SortArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Semaphore&#10; New: Avoiding&#10; &#10; - DataBase&#10; Review: Metadata" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar50%&#10; &#10; - Array &#10; 1- Review: &#10; 2- More assigment: AssignGrades&#10;  &#10; - Javafx&#10;  1- Review:   DisplayRandom0Or1&#10;  2- More assigment: Display54Cards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: SortArrayList&#10;   2- More assigment: LargestElementInArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Avoiding Deadlocks&#10; New:  Thread States&#10; &#10; - DataBase&#10; Review: Database Metadata&#10; New:  Chapter Summary" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar75%&#10; &#10; - Array &#10; 1- Review: AssignGrades&#10; 2- More assigment: &#10;ReverseNumbersEntered and CountOccurrenceOfNumber&#10;&#10; - Javafx&#10;  1- Review:   Display54Cards&#10;  2- More assigment: CreateFourFans25%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: LargestElementInArrayList&#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review: Thread States&#10; New:  Synchronized Collections" />
@@ -715,7 +714,8 @@
     <MESSAGE value=" - Array &#10; 1- Review: mergeTwoSortedLists&#10;&#10; 2- More assigment: partitionOfList&#10;  &#10;- Two-Dimensional array&#10;   1- Review:   &#10;   2- More assigment: &#10;   &#10;- Object and Classes&#10;      1- Review:   Rectangle and RectangleTest&#10;      2- More assigment: &#10;      &#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: &#10;  &#10; - Javafx&#10;  1- Review:   &#10;  2- More assigment:  &#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: partitionOfList and ChineseZodiac" />
     <MESSAGE value=" - Array &#10; 1- Review: partitionOfList and ChineseZodiac&#10;&#10; 2- More assigment:  SortCharactersInString" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: partitionOfList and ChineseZodiac&#10;&#10; 2- More assigment:  SortCharactersInString" />
+    <MESSAGE value=" - Array &#10; 1- Review: SortCharactersInString&#10;&#10; 2- More assigment:  Hangman" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: SortCharactersInString&#10;&#10; 2- More assigment:  Hangman" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -824,11 +824,6 @@
           <url>file://$PROJECT_DIR$/src/Exercise_07/_29/pickFourCards.java</url>
           <line>79</line>
           <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Exercise_07/_35/Hangman.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

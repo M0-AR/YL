@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Hangman { // Github
+    static int count = 0; // To count wrong answers
+    static int correctAnswer = 0; // To count the correct answer
+
     /** Main method */
     public static void main(String[] args) {
         // Create a scanner
@@ -17,8 +20,6 @@ public class Hangman { // Github
         boolean play = true; // To pick one random word for one play round
         boolean end = true; // Boolean if the user want to play again
         String word = null; // To have a random word from words' array
-        int count = 0; // To count wrong answers
-        int correctAnswer = 0; // To count the correct answer
         boolean[] bl = new boolean[0]; // To help the user not repeat the input
         char[] asterisk = new char[0]; // To display asterisk according to the word length
         
@@ -42,23 +43,8 @@ public class Hangman { // Github
             char userInput = input.nextLine().charAt( 0 );
 
             // Check if the user's input match any letter in the word
-            boolean ch = true; // If the userInput don't match any letter in word
-            for (int i = 0; i < word.length(); i++) {
-                if (userInput == word.charAt( i )) {
-                    if (!bl[i]){
-                        bl[i] = true;
-                        ch = false;
-                        asterisk[i] = userInput;
-                        correctAnswer++;
-                    }
-                    else
-                        System.out.println( userInput + " is already in the word" );
-                }
-                else if (i == word.length()-1 && ch){
-                    System.out.println(userInput + " is not in the word");
-                    count++;
-                }
-            }
+            checkUserAnswer(bl, asterisk, word, userInput);
+
 
             // To display result and ask the user to play again or not
             if (correctAnswer == word.length()){
@@ -79,6 +65,30 @@ public class Hangman { // Github
 
 
         }while (end);
+    }
+
+    /** To check user answer and display user answer if correct or not */
+    public static void checkUserAnswer(boolean[] bl, char[] asterisk, String word, char userInput){
+        boolean ch = true; // If the userInput don't match any letter in word
+        for (int i = 0; i < word.length(); i++) {
+            if (userInput == word.charAt( i )) {
+                if (!bl[i]){
+                    bl[i] = true;
+                    ch = false;
+                    asterisk[i] = userInput;
+                    correctAnswer++;
+                }
+                else{
+                    System.out.println( userInput + " is already in the word" );
+                    break;
+                }
+
+            }
+            else if (i == word.length()-1 && ch){
+                System.out.println(userInput + " is not in the word");
+                count++;
+            }
+        }
     }
 
 
