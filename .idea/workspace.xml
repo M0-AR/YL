@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_36/EightQueens.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_35/Hangman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_35/Hangman.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,13 +92,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Hangman">
+  <component name="RunManager" selected="Application.EightQueens">
     <configuration name="ChineseZodiac" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_07._33.ChineseZodiac" />
       <module name="YL" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Exercise_07._33.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EightQueens" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._36.EightQueens" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_07._36.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -132,19 +145,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="mergeTwoSortedLists" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._31.mergeTwoSortedLists" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_07._31.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="partitionOfList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_07._32.partitionOfList" />
       <module name="YL" />
@@ -160,11 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.EightQueens" />
         <item itemvalue="Application.Hangman" />
         <item itemvalue="Application.SortCharactersInString" />
         <item itemvalue="Application.ChineseZodiac" />
         <item itemvalue="Application.partitionOfList" />
-        <item itemvalue="Application.mergeTwoSortedLists" />
       </list>
     </recent_temporary>
   </component>
@@ -325,14 +325,8 @@
       <workItem from="1590734692316" duration="1208000" />
       <workItem from="1590820495496" duration="3671000" />
       <workItem from="1590919695531" duration="1299000" />
-      <workItem from="1591014121841" duration="893000" />
-    </task>
-    <task id="LOCAL-00047" summary="1- Check if correct and improving them: DisplayFirstDaysOfEachMonth and DisplayCalendars &#10;2- More assigment: CompoundValue and ComputeCDValue &#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; Button with style and degree">
-      <created>1582615730488</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1582615730488</updated>
+      <workItem from="1591014121841" duration="997000" />
+      <workItem from="1591119527493" duration="1238000" />
     </task>
     <task id="LOCAL-00048" summary="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper">
       <created>1582712917718</created>
@@ -670,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590920982536</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary=" - Array &#10; 1- Review: Hangman&#10;&#10; 2- More assigment:">
+      <created>1591015106382</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1591015106383</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -691,7 +692,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar50%&#10; &#10; - Array &#10; 1- Review: &#10; 2- More assigment: AssignGrades&#10;  &#10; - Javafx&#10;  1- Review:   DisplayRandom0Or1&#10;  2- More assigment: Display54Cards&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: SortArrayList&#10;   2- More assigment: LargestElementInArrayList&#10;   &#10;   &#10; - Thread &#10; Review: Avoiding Deadlocks&#10; New:  Thread States&#10; &#10; - DataBase&#10; Review: Database Metadata&#10; New:  Chapter Summary" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar75%&#10; &#10; - Array &#10; 1- Review: AssignGrades&#10; 2- More assigment: &#10;ReverseNumbersEntered and CountOccurrenceOfNumber&#10;&#10; - Javafx&#10;  1- Review:   Display54Cards&#10;  2- More assigment: CreateFourFans25%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: LargestElementInArrayList&#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review: Thread States&#10; New:  Synchronized Collections" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar75%&#10;  &#10; 2- More assigment: PrintCalendar95%&#10; &#10; - Array &#10; 1- Review: ReverseNumbersEntered and CountOccurrenceOfNumber&#10; 2- More assigment: AnalyzeScores&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans25%&#10;  2- More assigment: CreateFourFans100%&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  Synchronized Collections&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review:  &#10;    2- More assigment: AccessAndUpdateStaffTable 10%" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar95%, AreaOfPentagon&#10;  and AreaOfRegularPolygon&#10; 2- More assigment: PrintCalendar100%, FormatAnInteger and GenerateRandomCharacters&#10; &#10; - Array &#10; 1- Review: AnalyzeScores&#10; 2- More assigment: PrintDistinctNumbers&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans100%&#10;  2- More assigment: DisplayCylinder&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable 10%  &#10;    2- More assigment: AccessAndUpdateStaffTable 25%" />
@@ -716,7 +716,8 @@
     <MESSAGE value=" - Array &#10; 1- Review: partitionOfList and ChineseZodiac&#10;&#10; 2- More assigment:  SortCharactersInString" />
     <MESSAGE value=" - Array &#10; 1- Review: SortCharactersInString&#10;&#10; 2- More assigment:  Hangman" />
     <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment:  Hangman" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment:  Hangman" />
+    <MESSAGE value=" - Array &#10; 1- Review: Hangman&#10;&#10; 2- More assigment:" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: Hangman&#10;&#10; 2- More assigment:" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
