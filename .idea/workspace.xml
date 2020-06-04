@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_36/EightQueens.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_36/EightQueens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_36/EightQueens.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -326,14 +326,10 @@
       <workItem from="1590820495496" duration="3671000" />
       <workItem from="1590919695531" duration="1299000" />
       <workItem from="1591014121841" duration="997000" />
-      <workItem from="1591119527493" duration="1238000" />
-    </task>
-    <task id="LOCAL-00048" summary="1- Check if correct and improving them: CompoundValue and ComputeCDValue &#10;2- More assigment: LotteryGame, PerfectNumber and ScissorRockPaper">
-      <created>1582712917718</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1582712917719</updated>
+      <workItem from="1591119527493" duration="1430000" />
+      <workItem from="1591124348963" duration="64000" />
+      <workItem from="1591207600591" duration="971000" />
+      <workItem from="1591287427000" duration="802000" />
     </task>
     <task id="LOCAL-00049" summary="1- Check if correct and improving them: LotteryGame, PerfectNumber and ScissorRockPaper &#10;2- More assigment: Summation, DecimalToBinary and DecimalToOctal&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; circle and font">
       <created>1582883824252</created>
@@ -671,7 +667,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591015106383</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: EightQueens">
+      <created>1591121112110</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1591121112113</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -692,7 +695,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar50%&#10;  &#10; 2- More assigment: PrintCalendar75%&#10; &#10; - Array &#10; 1- Review: AssignGrades&#10; 2- More assigment: &#10;ReverseNumbersEntered and CountOccurrenceOfNumber&#10;&#10; - Javafx&#10;  1- Review:   Display54Cards&#10;  2- More assigment: CreateFourFans25%&#10;  &#10; - GenericStackUsingInheritance&#10;   1- Review: LargestElementInArrayList&#10;   2- More assigment: &#10;   &#10;   &#10; - Thread &#10; Review: Thread States&#10; New:  Synchronized Collections" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar75%&#10;  &#10; 2- More assigment: PrintCalendar95%&#10; &#10; - Array &#10; 1- Review: ReverseNumbersEntered and CountOccurrenceOfNumber&#10; 2- More assigment: AnalyzeScores&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans25%&#10;  2- More assigment: CreateFourFans100%&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  Synchronized Collections&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review:  &#10;    2- More assigment: AccessAndUpdateStaffTable 10%" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar95%, AreaOfPentagon&#10;  and AreaOfRegularPolygon&#10; 2- More assigment: PrintCalendar100%, FormatAnInteger and GenerateRandomCharacters&#10; &#10; - Array &#10; 1- Review: AnalyzeScores&#10; 2- More assigment: PrintDistinctNumbers&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans100%&#10;  2- More assigment: DisplayCylinder&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable 10%  &#10;    2- More assigment: AccessAndUpdateStaffTable 25%" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  FormatAnInteger and GenerateRandomCharacters&#10; 2- More assigment: PointPosition &#10; &#10; - Array &#10; 1- Review: PrintDistinctNumbers&#10; 2- More assigment: Revise&#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: NumberFormatException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayCylinder&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateBinaryDataFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMax&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
@@ -717,7 +719,8 @@
     <MESSAGE value=" - Array &#10; 1- Review: SortCharactersInString&#10;&#10; 2- More assigment:  Hangman" />
     <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment:  Hangman" />
     <MESSAGE value=" - Array &#10; 1- Review: Hangman&#10;&#10; 2- More assigment:" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: Hangman&#10;&#10; 2- More assigment:" />
+    <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: EightQueens" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: EightQueens" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
