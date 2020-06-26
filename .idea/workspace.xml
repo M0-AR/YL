@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_37/BeanMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_36/EightQueens.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_36/EightQueens.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -330,14 +330,11 @@
       <workItem from="1591124348963" duration="64000" />
       <workItem from="1591207600591" duration="971000" />
       <workItem from="1591287427000" duration="871000" />
-      <workItem from="1591418061220" duration="634000" />
-    </task>
-    <task id="LOCAL-00050" summary="1- Check if correct and improving them: Summation, CheckingISBN, DecimalToBinary  and DecimalToOctal &#10;2- More assigment: FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;3- JavaFX: Stage -&gt; Sense -&gt; Pane -&gt; ImageView -&gt; image">
-      <created>1582968803946</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1582968803946</updated>
+      <workItem from="1591418061220" duration="795000" />
+      <workItem from="1591517805334" duration="975000" />
+      <workItem from="1591781350740" duration="635000" />
+      <workItem from="1591814318243" duration="602000" />
+      <workItem from="1593155701471" duration="1833000" />
     </task>
     <task id="LOCAL-00051" summary="1- Check if correct and improving them:FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;2- More assigment: FindSalesAmount, Combinations, Bit_level_operations and ComputeMeanAndStandardDeviation">
       <created>1583058401257</created>
@@ -675,7 +672,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591288272210</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary=" - Array &#10; 1- Review: EightQueens&#10;&#10; 2- More assigment:">
+      <created>1591418837304</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1591418837305</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -696,7 +700,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar75%&#10;  &#10; 2- More assigment: PrintCalendar95%&#10; &#10; - Array &#10; 1- Review: ReverseNumbersEntered and CountOccurrenceOfNumber&#10; 2- More assigment: AnalyzeScores&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans25%&#10;  2- More assigment: CreateFourFans100%&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  &#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  Synchronized Collections&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review:  &#10;    2- More assigment: AccessAndUpdateStaffTable 10%" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar95%, AreaOfPentagon&#10;  and AreaOfRegularPolygon&#10; 2- More assigment: PrintCalendar100%, FormatAnInteger and GenerateRandomCharacters&#10; &#10; - Array &#10; 1- Review: AnalyzeScores&#10; 2- More assigment: PrintDistinctNumbers&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans100%&#10;  2- More assigment: DisplayCylinder&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable 10%  &#10;    2- More assigment: AccessAndUpdateStaffTable 25%" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  FormatAnInteger and GenerateRandomCharacters&#10; 2- More assigment: PointPosition &#10; &#10; - Array &#10; 1- Review: PrintDistinctNumbers&#10; 2- More assigment: Revise&#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: NumberFormatException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayCylinder&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateBinaryDataFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMax&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: Revise&#10; 2- More assigment:  CountSingleDigits and AverageAnArray&#10;&#10;- Exception&#10;  1- Review:   NumberFormatException&#10;  2- More assigment: NumberFormatException&#10;  &#10; - Javafx&#10;  1- Review:   PaintSmileyFace&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateBinaryDataFile&#10;   2- More assigment: SumAllIntegersInBinaryDataFile&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable&#10;    2- More assigment: AccessAndUpdateStaffTable" />
@@ -721,7 +724,8 @@
     <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment:  Hangman" />
     <MESSAGE value=" - Array &#10; 1- Review: Hangman&#10;&#10; 2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: EightQueens" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: EightQueens" />
+    <MESSAGE value=" - Array &#10; 1- Review: EightQueens&#10;&#10; 2- More assigment:" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: EightQueens&#10;&#10; 2- More assigment:" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -830,11 +834,6 @@
           <url>file://$PROJECT_DIR$/src/Exercise_07/_29/pickFourCards.java</url>
           <line>79</line>
           <option name="timeStamp" value="75" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Exercise_07/_36/EightQueens.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="78" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
