@@ -2,8 +2,708 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf13964b-2fc2-4c76-b4dd-6c0aa3fb2edb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Exercise_07/_37/BeanMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_04/CheckPointQuestions/_4_20.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_04/_4_5/_01GuessingBirthdays.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_04/_4_5/_02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_04/_4_5/_02FormatDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_04/t.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_05/Dec2Hex.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_05/GreatestCommonDivisor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_05/MultiplicationTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_05/PrimeNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_14/_01MyJavaFx.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_18/ComputingTwoSquareOrMore.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_18/ComputingXSquareOrMore.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_18/DirectorySize.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_18/Factorial.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_18/Sort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_18/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_18/TowerOfHanoi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_19/AnyWildCardDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_19/GenericStack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_19/SuperWildCardDemo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/AccountWithoutSync$Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/AccountWithoutSync$AddAPennyTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/AccountWithoutSync.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ConsumerProducer$Buffer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ConsumerProducer$ConsumerTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ConsumerProducer$ProducerTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ConsumerProducer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ConsumerProducerUsingBlockingQueue$ConsumerTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ConsumerProducerUsingBlockingQueue$ProducerTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ConsumerProducerUsingBlockingQueue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/MergeSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ParallelMax$MaxTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ParallelMax.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ParallelMergeSort$SortTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ParallelMergeSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/PrintChar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/PrintNum.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ThreadCooperation$Account.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ThreadCooperation$DepositTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ThreadCooperation$WithdrawTask.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ThreadCooperation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_32/ThreadPools.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/_34/FindGradeUsingPreparedStatement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/BookExercise/t.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_02/Test.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_02/_07/FindTheNumberOfYears.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_02/e302addThreeNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_03/e303algebreSolve2m2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_04/e304randomMonth.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_05/e305FindFutureDates.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_06/e306BMI.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_07/e307montaryUnits.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_08/e308SortThreeIntegers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_09/e309checkISBN.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_10/e310additionQuiz.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_11/e311findNumberOfDaysInMonth.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_12/e312palindromeInteger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_13/e313computeTaxes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_14/e314headsOrTails.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_15/e315Lottery.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_16/e316RandomPoint.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_17/e317scissorRockPaper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_18/e318CostOfShipping.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_19/e319ComputeThePerimeterOfATriangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_20/e320windChillTemperature.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_21/e321dayOfTheWeek.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_22/e322pointInACircle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_23/e323pointInARectangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_24/e324pickACard.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_25/e325IntersectingPoint.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_26/e326UseAndOrOp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_27/GeometryPointsInTriangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_28/GeometryTwoRectangles.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_29/TwoCircles.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_30/CurrentTime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_31/CurrencyExchange.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_32/PointPosition.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_33/CompareCosts.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_03/_34/PointOnLineSegment.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_01/AreaOfAPentagon.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_02/GreatCircleDistance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_03/EstimateAreas.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_04/AreaOfAHexagon.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_05/AreaOfARegularPolygon.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_06/RandomPointsOnACircle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_07/CornerPointCoordinates.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_08/FindTheCharacterOfAnASCIICode.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_09/FindTheUnicodeOfACharacter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_10/GuessBirthday.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_11/DecimalToHex.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_12/HexToBinary.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_13/VowelOrConsonant.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_14/ConvertLetterGradeToNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_15/PhoneKeyPads.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_16/RandomCharacter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_17/DaysOfAMonth.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_18/StudentMajorAndStatus.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_19/CheckISBN_10.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_20/ProcessAString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_21/CheckSSN.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_22/CheckSubstring.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_23/Payroll.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_24/OrderThreeCities.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_25/GenerateVehiclePlateNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_04/_26/MonetaryUnits.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_01/CountPositiveAndNegativeNumbersAndComputeTheAverageOfNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_02/AdditionsQuiz.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_03/KilogramsToPounds.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_04/MileToKilometers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_05/KilogramsToPoundsAndPoundsToKilograms.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_06/MilesToKilometersAndKilometersToMiles.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_07/ComputeFutureTuition.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_08/FindTheHighestScore.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_09/FindTheTwoHighestScores.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_10/FindNumbersDivisibleBy5And6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_11/FindNumbersDivisibleBy5Or6.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_12/FindTheSmallestNSuchThatNSquareGreaterThan12000.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_13/FindTheLargestNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_14/ComputeTheGreatestCommonDivisor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_15/ASCIICharacterTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_16/FindFactorsOfInteger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_17/DisplayPyramid.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_18/DisplayFourPatternsUsingLoops.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_19/DisplayNumbersInAPyramidPattern.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_20/DisplayPrimeNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_21/CompareLoansWithVariousInterestRates.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_22/LoanAmortization.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_23/DemonstrateCancellationErrors.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_24/SumASeries.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_25/ComputePi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_26/Compute_e.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_27/DisplayLeapYears.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_28/DisplayFirstDaysOfEachMonth.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_29/DisplayCalendars.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_30/CompoundValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_31/ComputeCDValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_32/LotteryGame.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_33/PerfectNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_34/ScissorRockPaper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_35/Summation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_36/CheckingISBN.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_37/DecimalToBinary.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_38/DecimalToOctal.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_39/FindSalesAmount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_40/HeadsOrTails.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_41/OccurrenceOfMaxNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_42/FindSalesAmount.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_43/Combinations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_44/Bit_level_operations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_45/ComputeMeanAndStandardDeviation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_46/ReverseAString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_47/CheckISBN_13.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_48/ProcessString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_49/CountVowelsAndConsonants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_50/CountUpperCaseLetters.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_05/_51/LongestCommonPrefix.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_01/PentagonalNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_02/SumDigitsInInteger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_03/PalindromeInteger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_04/DisplayIntegerReversed.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_05/SortThreeNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_06/DisplayPatterns.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_07/ComputeFutureInvestmentValue.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_08/CelsiusAndFahrenheit.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_09/FeetAndMeters.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_10/isPrime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_11/ComputeCommissions.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_12/DisplayCharacters.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_13/SumSeries.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_14/EstimatePi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_15/PrintTaxTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_16/NumberOfDaysInYear.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_17/DisplayMatrixOf0sAnd1s.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_18/CheckPassword.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_18/YL.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_19/Triangles.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_20/CountTheLettersInString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_21/PhoneKeypads.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_22/ApproximateTheSquareRoot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_22/SquareRoot.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_23/OccurrencesOfASpecifiedCharacter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_24/DisplayCurrentDateAndTime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_25/ConvertToHoursMinutesSeconds.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_26/PalindromicPrime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_27/Emirp.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_28/MersennePrime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_29/TwinPrimes.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_30/Craps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_31/CreditCardNumberValidation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_32/ChanceOfWinningAtCraps.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_33/CurrentDateAndTime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_34/PrintCalendar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_35/AreaOfPentagon.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_36/AreaOfRegularPolygon.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_37/FormatAnInteger.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_38/GenerateRandomCharacters.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_06/_39/PointPosition.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_01/AssignGrades.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_02/ReverseNumbersEntered.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_03/CountOccurrenceOfNumber.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_04/AnalyzeScores.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_05/PrintDistinctNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_06/Revise.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_07/CountSingleDigits.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_08/AverageAnArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_09/FindTheSmallestElement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_10/FindTheIndexOfTheSmallestElement.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_11/ComputeDeviation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_12/ReverseAnArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_13/RandomNumberChooser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_14/ComputingGCD.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_15/EliminateDuplicates.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_16/ExecutionTime.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_17/sortStudents.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_18/bubbleSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_19/Sorted.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_20/ReviseSelectionSort.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_21/SumIntegers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_22/FindTheNumbersOfUppercaseLetterInString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_23/Game_lockerPuzzle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_24/couponCollectorsProblem.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_25/solveQuadraticEquations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_26/strictlyIdenticalArrays.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_27/identicalArrays.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_28/combinations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_29/pickFourCards.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_30/consecutiveFourEqualNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_31/mergeTwoSortedLists.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_32/partitionOfList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_33/ChineseZodiac.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_34/SortCharactersInString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_35/Hangman.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_07/_36/EightQueens.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_08/_01/SumElementsColumnByColumn.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_08/_02/SumDiagonalInMatrix.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_08/_03/sortStudentsOnGrades.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_08/_04/computeWeeklyHoursForEachEmployee.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_09/_01/Rectangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_09/_01/RectangleTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_09/t.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_12/_01/NumberFormatException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_12/_02/inputMismatchException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_12/_03/arrayIndexOutOfBoundsException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_12/_04/NewLoan.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_12/_04/illegalArgumentException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_12/_05/IllegalTriangleException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_12/_05/Triangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_12/_05/main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_01/DisplayImages.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_02/TicTacToe.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_03/DisplayThreeCards.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_04/ColorAndFont.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_05/CharactersAroundCircle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_06/DisplayCheckerBoard.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_07/DisplayRandom0Or1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_08/Display54Cards.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_09/CreateFourFans.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_10/DisplayCylinder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_10/MyCylinder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_11/PaintSmileyFace.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_14/_12/DisplayBarChart.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_17/_01/CreateTextFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_17/_02/CreateBinaryDataFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_17/_03/SumAllIntegersInBinaryDataFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_17/_04/ConvertTextFileIntoUTF.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_17/_05/StoreObjectsAndArraysInFile.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_17/_06/Loan.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_17/_06/StoreLoanObjects.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_01/Factorial.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_02/FibonacciNumbers.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_03/GreatestCommonDivisor.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_04/SumSeries.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_05/SumSeries01.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_06/SumSeries02.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_07/FibonacciSeries.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_08/IntegerReversely.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_09/StringReversely.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_10/OccurrencesOfCharacterInString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_11/SumDigitsUsingRecursion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_12/PrintCharactersInStringReversely.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_13/FindLargestNumberInArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_14/FindNumberOfUppercaseLettersInString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_15/OccurrencesOfSpecifiedCharacterInString.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_16/FindNumberOfUppercaseLettersInArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_17/OccurrencesOfCharacterInArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_18/TowerOfHanoi.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_18/_19/SierpinskiTriangle.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_01/GenericStack.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_01/RevisingListing.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_02/GenericStackUsingInheritance.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_02/Main.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_03/DistinctElementsInArrayList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_04/GenericLinearSearch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_05/MaximumElementInArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_06/MaximumElementInTwoDimensionalArray.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_07/GenericBinarySearch.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_08/ShuffleArrayList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_09/SortArrayList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_10/LargestElementInArrayList.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_19/_11/ComplexMatrix.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_20/_01/DisplayWordsInAscendingAlphabeticalOrder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_20/t.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_28/_01/AbstractGraph$Edge.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_28/_01/AbstractGraph$Tree.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_28/_01/AbstractGraph.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_28/_01/Graph.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_28/_01/TestGraphIfConnected.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_28/t.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/Exercise_34/_01/AccessAndUpdateStaffTable.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/L9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/TICTACTOE.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/ca.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/caIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/canada.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/43.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/51.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/52.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/53.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/54.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/b1fh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/b1fv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/b2fh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/card/b2fv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/center.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/centerAlignment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/china.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/china.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/chinaIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/correct.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/cross.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/denmark.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flag0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flag1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flag16.GIF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flag2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flag3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flag4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flag5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flag6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flagIcon0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flagIcon1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flagIcon2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flagIcon3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flagIcon4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flagIcon5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/flagIcon6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/fr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/france.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/germany.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/germany.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/germanyIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/grapes.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/horizontalRuler.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/illinoisMap.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/india.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/india.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/indianaMap.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/intro1e.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/intro2e.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/intro3e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/introjb3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/introjb4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/introvj6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/left.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/leftAlignment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/malaysia.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/malaysia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/my.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/mynationalflag.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/new.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/noanswer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/norway.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/norway.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/not.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/o.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/ohioMap.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/open.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/person.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/ph_bkcvr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/print.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/queen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/radjb3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/radjb5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/rbs.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/right.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/rightAlignment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/save.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/turkey.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/uk.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/uk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/uk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/ukIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/us-map.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/us.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/us.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/usIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/usa.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/verticalRuler.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/wrong.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/YL/image/x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_04/t.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/_19/SuperWildCardDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BookExercise/t.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L10.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L11.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L12.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L13.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L14.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L15.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L16.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L17.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L18.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L19.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L20.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L21.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L22.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L23.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L24.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L25.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L26.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L27.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L28.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L29.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L30.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L31.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L33.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L34.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L35.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L36.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L37.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L38.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L39.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L40.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L41.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L42.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L43.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L44.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L45.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L46.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L47.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L48.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L49.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L50.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L51.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L52.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L7.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L8.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/L9.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/TICTACTOE.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/ca.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/caIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/canada.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/41.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/42.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/43.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/44.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/45.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/47.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/49.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/51.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/52.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/53.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/54.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/b1fh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/b1fv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/b2fh.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/card/b2fv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/center.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/centerAlignment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/china.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/china.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/chinaIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/correct.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/cross.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/denmark.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flag0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flag1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flag16.GIF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flag2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flag3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flag4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flag5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flag6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flagIcon0.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flagIcon1.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flagIcon2.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flagIcon3.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flagIcon4.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flagIcon5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/flagIcon6.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/fr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/france.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/germany.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/germany.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/germanyIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/grapes.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/horizontalRuler.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/illinoisMap.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/india.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/india.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/indianaMap.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/intro1e.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/intro2e.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/intro3e.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/introjb3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/introjb4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/introvj6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/left.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/leftAlignment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/malaysia.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/malaysia.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/my.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/mynationalflag.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/new.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/noanswer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/norway.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/norway.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/not.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/o.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/ohioMap.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/open.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/person.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/ph_bkcvr.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/print.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/queen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/radjb3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/radjb5.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/rbs.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/right.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/rightAlignment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/save.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/turkey.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/uk.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/uk.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/uk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/ukIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/us-map.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/us.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/us.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/usIcon.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/usa.bmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/verticalRuler.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/wrong.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/image/x.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exercise_07/_37/BeanMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exercise_07/_37/BeanMachine.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +792,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.EightQueens">
+  <component name="RunManager" selected="Application.BeanMachine">
+    <configuration name="BeanMachine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Exercise_07._37.BeanMachine" />
+      <module name="YL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercise_07._37.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ChineseZodiac" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Exercise_07._33.ChineseZodiac" />
       <module name="YL" />
@@ -145,26 +858,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="partitionOfList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Exercise_07._32.partitionOfList" />
-      <module name="YL" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercise_07._32.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BeanMachine" />
         <item itemvalue="Application.EightQueens" />
         <item itemvalue="Application.Hangman" />
         <item itemvalue="Application.SortCharactersInString" />
         <item itemvalue="Application.ChineseZodiac" />
-        <item itemvalue="Application.partitionOfList" />
       </list>
     </recent_temporary>
   </component>
@@ -334,14 +1034,9 @@
       <workItem from="1591517805334" duration="975000" />
       <workItem from="1591781350740" duration="635000" />
       <workItem from="1591814318243" duration="602000" />
-      <workItem from="1593155701471" duration="1833000" />
-    </task>
-    <task id="LOCAL-00051" summary="1- Check if correct and improving them:FindSalesAmount, HeadsOrTails and OccurrenceOfMaxNumbers&#10;2- More assigment: FindSalesAmount, Combinations, Bit_level_operations and ComputeMeanAndStandardDeviation">
-      <created>1583058401257</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1583058401258</updated>
+      <workItem from="1593155701471" duration="2357000" />
+      <workItem from="1593164057044" duration="134000" />
+      <workItem from="1593245248982" duration="2300000" />
     </task>
     <task id="LOCAL-00052" summary="1- Check if correct and improving FindSalesAmount, Combinations, Bit_level_operations and ComputeMeanAndStandardDeviation&#10;2- More assigment: ReverseAString, CheckISBN_13, ProcessString, CountVowelsAndConsonants, CountUpperCaseLetters and (LongestCommonPrefix)/2">
       <created>1583220075295</created>
@@ -679,7 +1374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591418837305</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: Bean Machine">
+      <created>1593161368298</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1593161368300</updated>
+    </task>
+    <option name="localTasksCounter" value="101" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -700,7 +1402,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  PrintCalendar95%, AreaOfPentagon&#10;  and AreaOfRegularPolygon&#10; 2- More assigment: PrintCalendar100%, FormatAnInteger and GenerateRandomCharacters&#10; &#10; - Array &#10; 1- Review: AnalyzeScores&#10; 2- More assigment: PrintDistinctNumbers&#10;&#10;&#10; - Javafx&#10;  1- Review:   CreateFourFans100%&#10;  2- More assigment: DisplayCylinder&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateTextFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMergeSort&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable 10%  &#10;    2- More assigment: AccessAndUpdateStaffTable 25%" />
     <MESSAGE value=" - Method:&#10; 1 - Review: &#10;  FormatAnInteger and GenerateRandomCharacters&#10; 2- More assigment: PointPosition &#10; &#10; - Array &#10; 1- Review: PrintDistinctNumbers&#10; 2- More assigment: Revise&#10;&#10;- Exception&#10;  1- Review:   &#10;  2- More assigment: NumberFormatException&#10;  &#10; - Javafx&#10;  1- Review:   DisplayCylinder&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateTextFile&#10;   2- More assigment: CreateBinaryDataFile&#10;   &#10;   &#10; - Thread &#10; Review:  ParallelMergeSort&#10; New: ParallelMax&#10; &#10; - DataBase &#10;    1- Review: &#10;    2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: Revise&#10; 2- More assigment:  CountSingleDigits and AverageAnArray&#10;&#10;- Exception&#10;  1- Review:   NumberFormatException&#10;  2- More assigment: NumberFormatException&#10;  &#10; - Javafx&#10;  1- Review:   PaintSmileyFace&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  CreateBinaryDataFile&#10;   2- More assigment: SumAllIntegersInBinaryDataFile&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable&#10;    2- More assigment: AccessAndUpdateStaffTable" />
     <MESSAGE value=" - Array &#10; 1- Review: CountSingleDigits, AverageAnArray, FindTheSmallestElement, FindTheIndexOfTheSmallestElement and ComputeDeviation&#10; 2- More assigment:  ReverseAnArray and RandomNumberChooser&#10;&#10;- Exception&#10;  1- Review:   NumberFormatException&#10;  2- More assigment: inputMismatchException and arrayIndexOutOfBoundsException&#10;  &#10; - Javafx&#10;  1- Review:   PaintSmileyFace&#10;  2- More assigment: PaintSmileyFace&#10;  &#10;   &#10; - Binary I/O &#10;   1- Review:  SumAllIntegersInBinaryDataFile&#10;   2- More assigment: ConvertTextFileIntoUTF&#10;   &#10;   &#10; - Thread &#10; Review:  &#10; New: &#10;&#10; &#10; - DataBase &#10;    1- Review: AccessAndUpdateStaffTable&#10;    2- More assigment: AccessAndUpdateStaffTable" />
@@ -725,7 +1426,8 @@
     <MESSAGE value=" - Array &#10; 1- Review: Hangman&#10;&#10; 2- More assigment:" />
     <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: EightQueens" />
     <MESSAGE value=" - Array &#10; 1- Review: EightQueens&#10;&#10; 2- More assigment:" />
-    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: EightQueens&#10;&#10; 2- More assigment:" />
+    <MESSAGE value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: Bean Machine" />
+    <option name="LAST_COMMIT_MESSAGE" value=" - Array &#10; 1- Review: &#10;&#10; 2- More assigment: Bean Machine" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -834,6 +1536,11 @@
           <url>file://$PROJECT_DIR$/src/Exercise_07/_29/pickFourCards.java</url>
           <line>79</line>
           <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Exercise_07/_37/BeanMachine.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
