@@ -1,32 +1,88 @@
 package Exercise_07._37;
 
+import java.util.Scanner;
+
 public class BeanMachine {
     public static void main(String[] args) {
-        // 2^7 = 128 probabilities of L or R
-        // If we have two layer, so we have 2 letters mean like LR, LL, RL and RR with 3 slots
-        //
+        // Create a scanner
+        Scanner input = new Scanner( System.in );
 
-        int[] slots = new int[8]; // Stores the number of balls in a slot
+        // Prompt the user
+        System.out.print("Enter the number of balls to drop: "); // Prompt the user to enter the number of balls
+        int numberOfBalls = input.nextInt();
 
+        System.out.print("Enter the number of slots in the bean machine: "); // Prompt the user to enter tne number of slots
+        int numberOfSlots = input.nextInt();
 
-        String[] rightOrLeft = new String[(int) Math.pow( 2, slots.length-1 )];
+        // Initialise two arrays
+        String[] ballsPath = new String[numberOfBalls]; // Stores balls path
+        int[] slots = new int[numberOfSlots]; // Stores the number of balls in a slot
 
-        boolean rOrL = true;
-        for (int i = 1; i < slots.length-1 ; i++) {
-            for (int j = 0; j < (int) Math.pow( 2, i ) ; j++) {
-                if (rOrL) {
-                    rightOrLeft[j] += "R";
-                    rOrL = false;
-                } else {
-                    rightOrLeft[j] += "L";
-                    rOrL = true;
-                }
+        // Call methods
+        generateRandomPath(ballsPath); // To generate path for every ball in ballsPath array
+        countRLetter(ballsPath, slots); // Count R letter in ballsPath and increase the number of slot index by one according to ball's path
+        printBalls(ballsPath, slots); // Print Ball's path and Balls in right slot
+    }
 
+    /** To generate path for every ball in ballsPath array */
+    public static void generateRandomPath(String[] array) {
+        for (int i = 0; i < array.length ; i++) {
+            array[i] = "";
+            for (int j = 0; j < 7; j++) { // 7 is the number of letters in every index in array
+                int zeroOrOne = (int)(Math.random() * 2); // Zero = Left and One = Right
+                if(zeroOrOne == 1)
+                    array[i] += "R";
+                else
+                    array[i] += "L";
             }
         }
-        // Random left and right
-        // if letter > 0 so ad right and left
-
-
     }
+
+    /** Count R letter in ballsPath and increase the number of slot index by one according to ball's path */
+    public static void countRLetter(String[] ballsPath, int[] slots) {
+        for (int i = 0; i < ballsPath.length; i++) {
+            int countR = 0;
+            for (int j = 0; j < ballsPath[i].length(); j++)
+                if (ballsPath[i].charAt( j ) == 'R')
+                    countR++;
+
+            slots[countR % slots.length]++; // Increase one in the slots index
+        }
+    }
+
+    /** Print Ball's path and Balls in right slot */
+    public static void printBalls(String[] ballsPath, int[] slots) {
+        System.out.println("\n");
+        // Print balls's path
+        for (int i = 0; i < ballsPath.length; i++)
+            System.out.println(ballsPath[i]);
+
+        // Call method
+        int max = findMaximumNumber(slots); // To find maximum number of balls in a specific slot
+
+        System.out.println("\n");
+        // Print balls in slot
+        for (int i = max; i > 0; i--) {
+            for (int j = 0; j < slots.length; j++) {
+                if (max == slots[j]) {
+                    System.out.print( "O" );
+                    slots[j]--;
+                }
+            }
+            System.out.println();
+        }
+    }
+
+    /** Find maximum number in array */
+    public static int findMaximumNumber(int[] array) {
+        int max = array[0];
+
+        for (int i = 1; i < array.length -1; i++)
+            if (max < array[i])
+                max = array[i];
+
+        return max;
+    }
+
+
 }
