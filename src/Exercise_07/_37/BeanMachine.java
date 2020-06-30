@@ -65,11 +65,16 @@ public class BeanMachine {
         for (int i = max; i > 0; i--) {
             for (int j = 0; j < slots.length; j++) {
                 if (max == slots[j]) {
+                    // Print spaces
+                    for (int k = 0; k < j; k++) {
+                        System.out.print( " " );
+                    }
                     System.out.print( "O" );
                     slots[j]--;
                 }
             }
             System.out.println();
+            max--;
         }
     }
 
