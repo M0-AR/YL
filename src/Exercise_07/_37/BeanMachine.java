@@ -63,14 +63,18 @@ public class BeanMachine {
         System.out.println("\n");
         // Print balls in slot
         for (int i = max; i > 0; i--) {
+            int previousIndex = 0; // To print space from the previous ball
+
             for (int j = 0; j < slots.length; j++) {
+
                 if (max == slots[j]) {
                     // Print spaces
-                    for (int k = 0; k < j; k++) {
+                    for (int k = previousIndex+1; k < j; k++) {
                         System.out.print( " " );
                     }
                     System.out.print( "O" );
                     slots[j]--;
+                    previousIndex = j;
                 }
             }
             System.out.println();
