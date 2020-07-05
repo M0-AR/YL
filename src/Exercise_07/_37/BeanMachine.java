@@ -1,5 +1,44 @@
 package Exercise_07._37;
+/** (Game: bean machine) The bean machine, also known as a quincunx or
+     the Galton box, is a device for statistics experiments named after
+     English scientist Sir Francis Galton. It consists of an upright board
+     with evenly space nails (or pegs) in a triangular form, as shown in Figure 7.13.
 
+     Balls are dropped from the opening of the board. Every time a ball hits a nail,
+     it has a 50% chance of falling to the left or to the right. The piles of balls
+     are accumulated in the slots at the bottom of the board.
+
+     Write a program that simulates the bean machine. Your program should prompt the
+     user to enter the number of the balls and the number of the slots (maximum 50) in the machine.
+     Simulate the falling of each ball by printing its path. For example, the path for the ball in
+     Figure 7.13b is LLRRLLR and the path for the ball in Figure 7.13c is RLRRLRR.
+     Display the final buildup of the balls in the slots in a histogram. Here is a sample run of the program:
+
+     Enter the number of balls to drop: 5
+
+     Enter the number of slots in the bean machine: 8
+
+     LRLRLRR
+
+     RRLLLRR
+
+     LLRLLRR
+
+     RRLLLLL
+
+     LRLRRLR
+
+     O
+
+     O
+
+     O O O
+
+    (Hint: Create an array named slots. Each element in slots stores the number of balls in a slot.
+    Each ball falls into a slot via a path. The number of Rs in a path is the position of the slot
+    where the ball falls. For example, for the path LRLRLRR, the ball falls into slots[4], and for
+    the path is RRLLLLL, the ball falls into slots[2].)
+ */
 import java.util.Scanner;
 
 public class BeanMachine {
@@ -38,7 +77,7 @@ public class BeanMachine {
         }
     }
 
-    /** Count R letter in ballsPath and increase the number of slot index by one according to ball's path */
+    /**  Count R letter in ballsPath and increase the number of slot index by one according to ball's path*/
     public static void countRLetter(String[] ballsPath, int[] slots) {
         for (int i = 0; i < ballsPath.length; i++) {
             int countR = 0;
@@ -82,7 +121,7 @@ public class BeanMachine {
         }
     }
 
-    /** Find maximum number in array */
+    /** Find maximum number in array*/
     public static int findMaximumNumber(int[] array) {
         int max = array[0];
 
@@ -95,3 +134,63 @@ public class BeanMachine {
 
 
 }
+
+/** Another solution
+ * BeanMachine.java */
+/*
+import java.util.Scanner;
+
+public class BeanMachine {
+    public static void main(String[] args){
+        Scanner in=new Scanner(System.in);
+        int i=0;
+
+        System.out.print("Enter the number of balls to drop:");
+        int balls=in.nextInt();
+        System.out.print("Enter the number of slots in the bean machine:");
+        int n=in.nextInt();
+        int []slots=new int[n];
+        game(slots,balls,n);
+        output(slots,n);
+
+    }
+
+    public static void game(int[]slots,int balls,int n){
+        for(int i=0;i<balls;++i){
+            System.out.println();
+            int r=0;
+            for(int j=0;j<n;++j){
+                int chance=(int)(Math.random()*2);
+                if(chance==1){
+                    System.out.print("R");
+                    r++;
+                }
+                else{
+                    System.out.print("L");
+                }
+            }
+            slots[r]++;
+        }
+        System.out.println('\n');
+    }
+
+    public static void output(int[]slots,int n){
+        int max=0;
+        for(int i=0;i<n;++i){
+            if(max<slots[i])
+                max=slots[i];
+        }
+        for(int i=max;i>0;--i){
+            for(int j=0;j<n;++j){
+                int num=slots[j]-i;
+                if(num<0){
+                    System.out.print(" ");
+                }
+                else{
+                    System.out.print("O");
+                }
+            }
+            System.out.println();
+        }
+    }
+}*/
