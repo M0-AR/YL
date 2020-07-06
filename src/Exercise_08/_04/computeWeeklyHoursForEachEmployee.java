@@ -1,6 +1,12 @@
 package Exercise_08._04;
-
-public class computeWeeklyHoursForEachEmployee { // Todo yl and github
+/*********************************************************************************
+ * (Compute the weekly hours for each employee) Suppose the weekly hours for all  *
+ * employees are stored in a two-dimensional array. Each row records an employee’s*
+ * seven-day work hours with seven columns. For example, the following            *
+ * array stores the work hours for eight employees. Write a program that displays *
+ * employees and their total hours in decreasing order of the total hours.        *
+ *********************************************************************************/
+public class computeWeeklyHoursForEachEmployee {
     public static void main(String[] args) {
         // In every index include the hours for each employee
         int[][] weeklyHours = { {2, 4, 3, 4, 5, 8, 8},
@@ -62,3 +68,4 @@ public class computeWeeklyHoursForEachEmployee { // Todo yl and github
         }
     }
 }
+
