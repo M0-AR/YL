@@ -1,8 +1,11 @@
 package Exercise_08._08;
-
+/*********************************************************************************
+ * (All closest pairs of points) Revise Listing 8.3, FindNearestPoints.java, to   *
+ * display all closest pairs of points with the same minimum distance.            *
+ *********************************************************************************/
 import java.util.Scanner;
 
-public class AllClosestPairsOfPoints { // Todo github and yl
+public class AllClosestPairsOfPoints {
     public static void main(String[] args) {
         // Manual input for test purpose
         /*double[][] points = {{0, 0}, {1, 1}, {-1, -1},
@@ -13,7 +16,10 @@ public class AllClosestPairsOfPoints { // Todo github and yl
         double[][] points = getInput();
 
         // Find and Display short distance
-        findShortDistance( points );
+        double shortestDistance = findShortestDistance( points );
+
+        // Print result
+        print(points, shortestDistance);
     }
 
     /** Get the input from the user and return 2D array of x and y points*/
@@ -23,7 +29,7 @@ public class AllClosestPairsOfPoints { // Todo github and yl
 
         // Prompt the user to enter the number of points and points
         System.out.print( "Enter the number of points: " );
-        double[][] points = new double[input.nextInt()][2];
+        double[][] points = new double[input.nextInt()][2]; // Create an array to store points
 
 
         System.out.print( "Enter " + points.length + " points: ");
@@ -36,33 +42,47 @@ public class AllClosestPairsOfPoints { // Todo github and yl
     }
 
 
-    /** Find shortest distance and display result */
-    public static void findShortDistance(double[][] m) {
+    /** Compute distance between two points */
+    public static double distance(double x1, double y1, double x2, double y2) {
+        return Math.sqrt( Math.pow( x2 - x1, 2 ) + Math.pow( y2 - y1, 2 ) );
+    }
 
-        double shortestDistance = // To store a value of smallest distance
+
+    /** Find shortest distance and display result */
+    public static double findShortestDistance(double[][] m) {
+        double shortestDistance = // To store a value of first distance
                 distance( m[0][0], m[0][1], m[1][0], m[1][1] ); // To compute distance
 
-
+        // Compute distance for every two points
         for (int i = 0; i < m.length; i++) {
             for (int j = i + 1; j < m.length; j++) {
                 double distance = distance( m[i][0], m[i][1],
                         m[j][0], m[j][1] ); // Find distance
 
-                if (distance <= shortestDistance) {
+                if (distance < shortestDistance) {
                     shortestDistance = distance;
+                }
+            }
+        }
+        return shortestDistance;
+    }
 
-                    System.out.println("The closest two points are (" + m[i][0] + ", " + m[i][1] + ")" +
-                            "(" + m[j][0] + ", " + m[j][1] + ")");
+
+
+
+    /** Display the closest points and their distance */
+    public static void print(double[][] points,double shortestDistance) {
+        for (int i = 0; i < points.length; i++) {
+            for (int j = i + 1; j < points.length; j++) {
+                if (distance( points[i][0], points[i][1],
+                        points[j][0], points[j][1] ) == shortestDistance) {
+                    System.out.println( "The closest two points are " +
+                            "(" + points[i][0] + ", " + points[i][1] + ")" +
+                            "(" + points[j][0] + ", " + points[j][1] + ")" );
                 }
             }
         }
 
         System.out.println("Their distance is " + shortestDistance);
-
-    }
-
-    /** Compute distance between two points */
-    public static double distance(double x1, double y1, double x2, double y2) {
-        return Math.sqrt( Math.pow( x2 - x1, 2 ) + Math.pow( y2 - y1, 2 ) );
     }
 }
