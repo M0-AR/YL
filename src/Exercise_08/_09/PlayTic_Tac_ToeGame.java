@@ -14,7 +14,7 @@ package Exercise_08._09;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class PlayTic_Tac_ToeGame { // todo check row column cross
+public class PlayTic_Tac_ToeGame {
     public static void main(String[] args) {
         // Creat an array 3x3 to store X or O
         String[][] xOrO = new String[3][3];
@@ -87,7 +87,7 @@ public class PlayTic_Tac_ToeGame { // todo check row column cross
     }
 
 
-
+    /** Check if draw: no one win */
     public static boolean isDraw(String[][] strings) {
         for (int i = 0; i < strings.length; i++) {
             for (int j = 0; j < strings[i].length; j++) {
@@ -148,6 +148,7 @@ public class PlayTic_Tac_ToeGame { // todo check row column cross
         return false;
     }
 
+    /** Display game design to the user */
     public static void displayGrid(String[][] strings) {
         // Line
         for (int i = 0; i < 3; i++) {
