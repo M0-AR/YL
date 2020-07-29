@@ -1,9 +1,20 @@
 package Exercise_08._13;
-
+/*********************************************************************************
+ * (Locate the largest element) Write the following method that returns the       *
+ * location of the largest element in a two-dimensional array.                    *
+ *                                                                                *
+ * public static int[] locateLargest(double[][] a)                                *
+ *                                                                                *
+ * The return value is a one-dimensional array that contains two elements. These  *
+ * two elements indicate the row and column indices of the largest element in the *
+ * two-dimensional array. Write a test program that prompts the user to enter a   *
+ * two-dimensional array and displays the location of the largest element in the  *
+ * array.                                                                         *
+ *********************************************************************************/
 import java.util.Scanner;
 
 public class LocateLargestElement {
-    public static void main(String[] args) { // Github
+    public static void main(String[] args) {
         // Get 2D array from user input
         double[][] values = getUserInput();
 
@@ -24,16 +35,16 @@ public class LocateLargestElement {
 
         // Prompt the user to enter a number of rows and columns
         System.out.print( "Enter tnu number of rows and columns of the array: " );
-        int rowNumber = input.nextInt();
-        int columnNumber = input.nextInt();
+        int rowLength = input.nextInt();
+        int columnLength = input.nextInt();
 
         // Create an 2D array
-        double[][] values = new double[rowNumber][columnNumber];
+        double[][] values = new double[rowLength][columnLength];
 
         // Prompt the user to fill the array
         System.out.println( "Enter the array: " );
-        for (int row = 0; row < values.length; row++) {
-            for (int column = 0; column < values[row].length; column++) {
+        for (int row = 0; row < rowLength; row++) {
+            for (int column = 0; column < columnLength; column++) {
                 values[row][column] = input.nextDouble();
             }
         }
@@ -41,7 +52,7 @@ public class LocateLargestElement {
         return values;
     }
 
-    /** Return indices of largest element in a */
+    /** Return indices of largest element in a two-dimensional array */
     public static int[] locateLargest(double[][] a) {
         int[] rowAndColumnIndices = new int[2];
 
