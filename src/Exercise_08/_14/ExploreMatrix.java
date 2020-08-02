@@ -1,5 +1,9 @@
 package Exercise_08._14;
-
+/*********************************************************************************
+ * (Explore matrix) Write a program that prompts the user to enter the length of  *
+ * a square matrix, randomly fills in 0s and 1s into the matrix, prints the       *
+ * matrix, and finds the rows, columns, and diagonals with all 0s or 1s.          *
+ *********************************************************************************/
 import java.util.Scanner;
 
 public class ExploreMatrix { // github and yl
@@ -12,7 +16,7 @@ public class ExploreMatrix { // github and yl
         int size = input.nextInt();
 
 
-        // Create two-dimathinal array with length of size
+        // Create two-dimensional array with length of size
         int[][] zeroOrOne = new int[size][size];
 
         // Fill 2D array with random 0 or 1
