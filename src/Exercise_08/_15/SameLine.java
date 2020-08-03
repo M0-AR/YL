@@ -1,8 +1,18 @@
 package Exercise_08._15;
-
+/*********************************************************************************
+ * (Geometry: same line?) Programming Exercise 6.39 gives a method for testing    *
+ * whether three points are on the same line.                                     *
+ * Write the following method to test whether all the points in the array points  *
+ * are on the same line.                                                          *
+ *                                                                                *
+ * public static boolean sameLine(double[][] points)                              *
+ *                                                                                *
+ * Write a program that prompts the user to enter five points and displays        *
+ * whether they are on the same line.                                             *
+ *********************************************************************************/
 import java.util.Scanner;
 
-public class SameLine { // github
+public class SameLine {
     public static void main(String[] args) {
         final int FIVE_POINTS = 5;
 
