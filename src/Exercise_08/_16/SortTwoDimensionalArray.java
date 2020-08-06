@@ -5,29 +5,41 @@ public class SortTwoDimensionalArray {
         int[][] m = {{4, 2}, {1, 7}, {4, 5},
                         {1, 2}, {1, 1}, {4, 1}};
         sort( m );
+
+        // Print result
+        printTwoDimensionalArray( m );
     }
 
     public static void sort(int m[][]) {
-        int minValue;
-        int minRowIndex;
-        int columnIndex = 0;
-        // Row sorting
         for (int i = 0; i < m.length; i++) {
-            minValue = m[i][columnIndex];
-            minRowIndex = i;
+            int currentMin = m[i][0];
+            int currentMinIndex = i;
 
             for (int j = i + 1; j < m.length; j++) {
-                if (minValue > m[j][columnIndex]) {
-                    minValue = m[j][columnIndex];
-                    minRowIndex = j;
+                if (currentMin > m[j][0] || // Primary sort
+                        (currentMin == m[j][0] && m[currentMinIndex][1] > m[j][1])) // Secondary
+                                                                                        // sort
+                {
+                    currentMin = m[j][0];
+                    currentMinIndex = j;
                 }
             }
 
-            if (minValue < m[i][columnIndex]) {
-                m[minRowIndex][columnIndex] = m[i][columnIndex];
-                m[i][columnIndex] = minValue;
+            // Swap list[i] with list[currentMinIndex] if necessary
+            if (currentMinIndex != i) {
+                int temp0 = m[currentMinIndex][0];
+                int temp1 = m[currentMinIndex][1];
+                m[currentMinIndex][0] = m[i][0];
+                m[currentMinIndex][1] = m[i][1];
+                m[i][0] = temp0;
+                m[i][1] = temp1;
             }
+        }
+    }
 
+    public static void printTwoDimensionalArray(int[][] m) {
+        for (int i = 0; i < m.length; i++) {
+            System.out.println(m[i][0] + ", " + m[i][1]);
         }
     }
 }
