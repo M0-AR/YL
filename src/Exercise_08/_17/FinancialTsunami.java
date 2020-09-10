@@ -3,7 +3,7 @@ package Exercise_08._17;
 import java.util.Scanner;
 
 
-public class FinancialTsunami { // check how to print plural and singular and 3 first then 1
+public class FinancialTsunami { // Wrong outPut // check how to print plural and singular and 3 first then 1
     public static void main(String[] args) {
         // Create a scanner
         Scanner input = new Scanner( System.in );
@@ -16,21 +16,39 @@ public class FinancialTsunami { // check how to print plural and singular and 3 
         numbersOfBanks = 5;
         minimumTotalAssets = 201;
 
+
+
+
         double[] bankBalances = {25, 125,175,75,181};
         // First number indicates the number of banks that
-        // borrowed money from the bank.
+        // borrowed money from current bank.
         double[][] borrowers = {{2, 1, 100.5, 4, 320.5},
                                 {2, 2, 40, 3, 85},
                                 {2, 0, 125, 3, 75},
                                 {1, 0, 125},
                                 {1, 2, 125}};
 
+        bankBalances = new double[numbersOfBanks];
+        borrowers = new double[numbersOfBanks][numbersOfBanks*2 + 1];
+        for (int i = 0; i < numbersOfBanks; i++) {
+            bankBalances[0] = input.nextInt();
+            int numberOfBorrowedBanks = input.nextInt();
+            borrowers[i][0] = numberOfBorrowedBanks;
+            for (int j = 1; j < numberOfBorrowedBanks*2; j+=2) {
+                int indexOfBorrowedBank = input.nextInt();
+                borrowers[i][j] = indexOfBorrowedBank;
+                double amountOfBorrowedBank = input.nextDouble();
+                borrowers[i][j+1] = amountOfBorrowedBank;
+            }
+        }
 
         int[] unsafeBank = decideUnsafeBank(bankBalances, borrowers, minimumTotalAssets);
 
 
 
-        for (int i = 0; i < unsafeBank.length; i++) {
+
+        System.out.print( "Unsafe banks are " );
+        for (int i = unsafeBank.length-1; i >= 0 ; i--) {
             if (unsafeBank[i] == 1)
                 System.out.print( i + " " );
         }
@@ -83,3 +101,10 @@ public class FinancialTsunami { // check how to print plural and singular and 3 
 
 
 }
+/*
+25 2 1 100,5 4 320,5
+125 2 2 40 3 85
+175 2 0 125 3 75
+75 1 0 125
+181 1 2 125
+ */
