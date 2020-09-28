@@ -2,7 +2,7 @@ package Exercise_08._17;
 
 import java.util.Scanner;
 
-
+// TODO need more work
 public class FinancialTsunami { // Wrong outPut // check how to print plural and singular and 3 first then 1
     public static void main(String[] args) {
         // Create a scanner
