@@ -1,18 +1,74 @@
 package Exercise_08._19;
+/**
+ (Pattern recognition: four consecutive equal numbers) Write the following
+ method that tests whether a two-dimensional array has four consecutive numbers
+ of the same value, either horizontally, vertically, or diagonally:
 
+ public static boolean isConsecutiveFour(int[][] values)
+
+ Write a test program that prompts the user to enter the number of rows and
+ columns of a two-dimensional array then the values in the array, and displays true
+ if the array contains four consecutive numbers with the same value. Otherwise,
+ the program displays false. Here are some examples of the true cases:
+
+ 0 1 0 3 1 6 1
+ 0 1 6 8 6 0 1
+ 5 6 2 1 8 2 9            5                   6           9
+ 6 5 6 1 1 9 1            5                 6               9
+ 1 3 6 1 4 0 7            5               6                   9
+ 3-3-3-3 4 0 7            5             6                       9
+ */
 public class PatternRecognition { // Diagonally test
     public static void main(String[] args) {
-        int[][] values = {
+
+        //  Every thing checking but will print true for Horizontally checking
+        int[][] values0 = {
                 {0, 1, 0, 3, 1, 6, 1},
                 {0, 1, 6, 8, 6, 0, 1},
                 {0, 5, 2, 9, 6, 2, 9},
-                {6, 9, 6, 6, 9, 9, 1},
+                {6, 9, 6, 6, 2, 9, 1},
                 {1, 5, 9, 1, 4, 9, 7},
-                {3, 6, 3, 9, 4, 0, 9}
+                {3, 3, 3, 3, 4, 0, 9}  // 3, 3, 3, 3
         };
 
-        System.out.println(isConsecutiveFour( values ));
+        print("Horizontally checking", isConsecutiveFour( values0 ));
 
+        //  Every thing checking but will print true for Vertically checking
+        int[][] values1 = {
+                {0, 1, 0, 3, 1, 6, 1},
+                {0, 1, 6, 8, 6, 0, 1},
+                {0, 5, 2, 9, 6, 2, 9}, // 5
+                {6, 5, 6, 6, 9, 9, 1}, // 5
+                {1, 5, 9, 1, 4, 9, 7}, // 5
+                {3, 5, 3, 9, 4, 0, 9}  // 5
+        };
+
+        print("Vertically checking", isConsecutiveFour( values1 ));
+
+        //  Every thing checking but will print true for Diagonally checking from down to up
+        int[][] values2 = {
+                {0, 1, 0, 3, 1, 6, 1},
+                {0, 1, 6, 8, 6, 0, 1},
+                {0, 5, 2, 9, 6, 2, 9},  // , , , , 6
+                {6, 9, 6, 6, 0, 9, 1},  // , , , 6
+                {1, 5, 6, 1, 4, 9, 7},  // , , 6
+                {3, 6, 3, 9, 4, 0, 9}   // , 6
+        };
+
+        print("Diagonally checking from down to up", isConsecutiveFour( values2 ));
+
+        // Every thing checking but will print true for  Diagonally checking from up to down
+
+        int[][] values3 = {
+                {0, 1, 0, 3, 1, 6, 1},
+                {0, 1, 6, 8, 6, 0, 1},
+                {9, 5, 2, 9, 6, 2, 9}, // 9
+                {6, 9, 6, 6, 0, 9, 1}, // , 9
+                {1, 5, 9, 1, 4, 2, 7}, // , , 9
+                {3, 6, 3, 9, 4, 0, 9}  // , , , 9
+        };
+
+        print("Diagonally checking from up to down", isConsecutiveFour( values3 ));
     }
 
 
@@ -32,7 +88,6 @@ public class PatternRecognition { // Diagonally test
             fourConsecutiveCount = 1;
 
         }
-
 
 
 
@@ -93,11 +148,11 @@ public class PatternRecognition { // Diagonally test
                 }
             }
         }
-
-
-
-
         return false;
 
+    }
+
+    public static void print(String  text, boolean flag) {
+        System.out.println(text + ": " + flag);
     }
 }
