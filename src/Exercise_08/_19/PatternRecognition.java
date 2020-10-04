@@ -18,7 +18,7 @@ package Exercise_08._19;
  1 3 6 1 4 0 7            5               6                   9
  3-3-3-3 4 0 7            5             6                       9
  */
-public class PatternRecognition { // Diagonally test
+public class PatternRecognition { // todo improve this
     public static void main(String[] args) {
 
         //  Every thing checking but will print true for Horizontally checking
@@ -73,6 +73,15 @@ public class PatternRecognition { // Diagonally test
 
 
     public static boolean isConsecutiveFour(int[][] values) {
+        return  checkVertical(values)   ||
+                checkHorizontal(values) ||
+                checkDiagonal(values);
+    }
+
+
+
+
+    private static boolean checkVertical(int[][] values) {
         int fourConsecutiveCount = 1;
 
         // Horizontally checking
@@ -88,10 +97,13 @@ public class PatternRecognition { // Diagonally test
             fourConsecutiveCount = 1;
 
         }
+        return false;
+    }
 
 
+    private static boolean checkHorizontal(int[][] values) {
+        int fourConsecutiveCount = 1;
 
-        // Vertically checking
         for (int column = 0; column < values[0].length; column++) {
             for (int row = 0; row < values.length - 1; row++) {
                 if (values[row][column] == values[row + 1][column]) {
@@ -106,20 +118,22 @@ public class PatternRecognition { // Diagonally test
             }
             fourConsecutiveCount = 1;
         }
+        return false;
+    }
 
 
-
+    private static boolean checkDiagonal(int[][] values) {
         // Diagonally checking from down to up
         int row, column;
         for (int i = 3; i < values.length; i++) {
-           row = i;
+            row = i;
             for (int j = 0; j < values[i].length - 3; j++) {
                 column = j;
                 for (; row > 0; row--) {
                     for (; column < i; column++) {
                         if (values[row][column] == values[row-1][column+1]
-                            && values[row-2][column+2] == values[row-3][column+3]
-                            && values[row][column] == values[row-3][column+3]) {
+                                && values[row-2][column+2] == values[row-3][column+3]
+                                && values[row][column] == values[row-3][column+3]) {
                             return true;
                         }
                     }
@@ -149,8 +163,8 @@ public class PatternRecognition { // Diagonally test
             }
         }
         return false;
-
     }
+
 
     public static void print(String  text, boolean flag) {
         System.out.println(text + ": " + flag);
