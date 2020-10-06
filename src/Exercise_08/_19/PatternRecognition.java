@@ -22,40 +22,40 @@ public class PatternRecognition { // todo improve this
     public static void main(String[] args) {
 
         //  Every thing checking but will print true for Horizontally checking
-        int[][] values0 = {
-                {0, 1, 0, 3, 1, 6, 1},
-                {0, 1, 6, 8, 6, 0, 1},
-                {0, 5, 2, 9, 6, 2, 9},
-                {6, 9, 6, 6, 2, 9, 1},
-                {1, 5, 9, 1, 4, 9, 7},
-                {3, 3, 3, 3, 4, 0, 9}  // 3, 3, 3, 3
-        };
-
-        print("Horizontally checking", isConsecutiveFour( values0 ));
-
-        //  Every thing checking but will print true for Vertically checking
-        int[][] values1 = {
-                {0, 1, 0, 3, 1, 6, 1},
-                {0, 1, 6, 8, 6, 0, 1},
-                {0, 5, 2, 9, 6, 2, 9}, // 5
-                {6, 5, 6, 6, 9, 9, 1}, // 5
-                {1, 5, 9, 1, 4, 9, 7}, // 5
-                {3, 5, 3, 9, 4, 0, 9}  // 5
-        };
-
-        print("Vertically checking", isConsecutiveFour( values1 ));
-
-        //  Every thing checking but will print true for Diagonally checking from down to up
-        int[][] values2 = {
-                {0, 1, 0, 3, 1, 6, 1},
-                {0, 1, 6, 8, 6, 0, 1},
-                {0, 5, 2, 9, 6, 2, 9},  // , , , , 6
-                {6, 9, 6, 6, 0, 9, 1},  // , , , 6
-                {1, 5, 6, 1, 4, 9, 7},  // , , 6
-                {3, 6, 3, 9, 4, 0, 9}   // , 6
-        };
-
-        print("Diagonally checking from down to up", isConsecutiveFour( values2 ));
+//        int[][] values0 = {
+//                {0, 1, 0, 3, 1, 6, 1},
+//                {0, 1, 6, 8, 6, 0, 1},
+//                {0, 5, 2, 9, 6, 2, 9},
+//                {6, 9, 6, 6, 2, 9, 1},
+//                {1, 5, 9, 1, 4, 9, 7},
+//                {3, 3, 3, 3, 4, 0, 9}  // 3, 3, 3, 3
+//        };
+//
+//        print("Horizontally checking", isConsecutiveFour( values0 ));
+//
+//        //  Every thing checking but will print true for Vertically checking
+//        int[][] values1 = {
+//                {0, 1, 0, 3, 1, 6, 1},
+//                {0, 1, 6, 8, 6, 0, 1},
+//                {0, 5, 2, 9, 6, 2, 9}, // 5
+//                {6, 5, 6, 6, 9, 9, 1}, // 5
+//                {1, 5, 9, 1, 4, 9, 7}, // 5
+//                {3, 5, 3, 9, 4, 0, 9}  // 5
+//        };
+//
+//        print("Vertically checking", isConsecutiveFour( values1 ));
+//
+//        //  Every thing checking but will print true for Diagonally checking from down to up
+//        int[][] values2 = {
+//                {0, 1, 0, 3, 1, 6, 1},
+//                {0, 1, 6, 8, 6, 0, 1},
+//                {0, 5, 2, 9, 6, 2, 9},  // , , , , 6
+//                {6, 9, 6, 6, 0, 9, 1},  // , , , 6
+//                {1, 5, 6, 1, 4, 9, 7},  // , , 6
+//                {3, 6, 3, 9, 4, 0, 9}   // , 6
+//        };
+//
+//        print("Diagonally checking from down to up", isConsecutiveFour( values2 ));
 
         // Every thing checking but will print true for  Diagonally checking from up to down
 
@@ -125,40 +125,23 @@ public class PatternRecognition { // todo improve this
     private static boolean checkDiagonal(int[][] values) {
         // Diagonally checking from down to up
         int row, column;
-        for (int i = 3; i < values.length; i++) {
-            row = i;
-            for (int j = 0; j < values[i].length - 3; j++) {
-                column = j;
-                for (; row > 0; row--) {
-                    for (; column < i; column++) {
-                        if (values[row][column] == values[row-1][column+1]
-                                && values[row-2][column+2] == values[row-3][column+3]
-                                && values[row][column] == values[row-3][column+3]) {
-                            return true;
-                        }
-                    }
-
+        for (row = values.length - 1; row >= 3; row--) {
+            for (column = 0; column < values[row].length - 3; column++) {
+                if (values[row][column] == values[row-1][column+1]
+                        && values[row-2][column+2] == values[row-3][column+3]
+                        && values[row][column] == values[row-3][column+3]) {
+                    return true;
                 }
             }
         }
 
-
         // Diagonally checking from up to down
-        row = 0;
-        column = 0;
-        for (int i = 2; i < values.length; i++) {
-            row = i;
-            for (int j = 0; j < values[i].length - 3; j++) {
-                column = j;
-                for (; row > 0; row++) {
-                    for (; column < values[i].length; column++) {
-                        if (values[row][column] == values[row+1][column+1]
-                                && values[row+2][column+2] == values[row+3][column+3]
-                                && values[row][column] == values[row+3][column+3]) {
-                            return true;
-                        }
-                    }
-
+        for (row = 0; row < values.length - 3; row++) {
+            for (column = 0; column < values[row].length - 3; column++) {
+                if (values[row][column] == values[row+1][column+1]
+                        && values[row+2][column+2] == values[row+3][column+3]
+                        && values[row][column] == values[row+3][column+3]) {
+                    return true;
                 }
             }
         }
