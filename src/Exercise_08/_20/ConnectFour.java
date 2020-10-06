@@ -3,12 +3,8 @@ package Exercise_08._20;
 import Exercise_08._19.PatternRecognition;
 
 import java.util.Scanner;
-// Plan
-// Check if column is full and all grids as well(draw)
-// check if win
 
-public class ConnectFour { // -1 and drawFlag
-
+public class ConnectFour { //DrawFlag
     private static final int ROW_NUMBER = 6;
     private static final int COLUMN_NUMBER = 7;
     private static int[][] connectFourGrids = new int[ROW_NUMBER][COLUMN_NUMBER];
@@ -18,20 +14,16 @@ public class ConnectFour { // -1 and drawFlag
         // Create a scanner
         Scanner input = new Scanner( System.in );
 
+        // Random numbers
         connectFourGrids = new int[][]{
                 {0, 1, 0, 3, 1, 6, 1},
                 {0, 1, 6, 8, 6, 0, 1},
                 {0, 5, 2, 9, 6, 2, 9},
                 {6, 9, 6, 6, 2, 9, 1},
                 {1, 5, 9, 1, 4, 9, 7},
-                {3, 3, 3, 3, 4, 0, 9}  // 3, 3, 3, 3
+                {3, 2, 0, 3, 4, 0, 9}
         };
 
-        for (int i = 0; i < ROW_NUMBER; i++) {
-            for (int j = 0; j < COLUMN_NUMBER; j++) {
-                connectFourGrids[i][j] = -1;
-            }
-        }
 
         boolean winFlag = false;
         boolean drawFlag = false;
@@ -58,17 +50,19 @@ public class ConnectFour { // -1 and drawFlag
             // Check for win
            winFlag =  PatternRecognition.isConsecutiveFour(  connectFourGrids );
 
-            // Change player
-            diskColor = diskColor.equals( "red" ) ? "yellow" : "red";
+           if (!winFlag) // Change player
+                diskColor = diskColor.equals( "red" ) ? "yellow" : "red";
 
         }while (!winFlag || drawFlag);
-        connectFourGrids[5][0] = 'R';
+
+        drawConnectFourGame();
+        System.out.println("The winner is " + diskColor);
 
     }
 
     private static boolean checkForEmptySpaceAndAssignValue(int columnInput, char diskColor) {
         for (int i = ROW_NUMBER - 1; i >= 0; i--) {
-            if (connectFourGrids[i][columnInput] == -1) {
+            if (connectFourGrids[i][columnInput] != 'R' && connectFourGrids[i][columnInput] != 'Y') {
                 connectFourGrids[i][columnInput] = diskColor;
                return false;
             }
@@ -82,7 +76,9 @@ public class ConnectFour { // -1 and drawFlag
         int rowNumber = 6;
         for (int i = 0; i < rowNumber; i++) {
             for (int j = 0; j < columnNumber; j++) {
-                System.out.print("|" + (char) connectFourGrids[i][j]);
+                System.out.print("|" + (((char) connectFourGrids[i][j] == 'R' ||
+                                         (char) connectFourGrids[i][j] == 'Y') ?
+                                                (char) connectFourGrids[i][j] : " "));
             }
             System.out.println();
         }
