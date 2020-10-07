@@ -4,7 +4,7 @@ import Exercise_08._19.PatternRecognition;
 
 import java.util.Scanner;
 
-public class ConnectFour { //DrawFlag
+public class ConnectFour { // There is an error in PatternRecognition.isConsecutiveFour
     private static final int ROW_NUMBER = 6;
     private static final int COLUMN_NUMBER = 7;
     private static int[][] connectFourGrids = new int[ROW_NUMBER][COLUMN_NUMBER];
@@ -27,6 +27,7 @@ public class ConnectFour { //DrawFlag
 
         boolean winFlag = false;
         boolean drawFlag = false;
+        boolean changePlayer = true;
         String diskColor = "red";
         int columnInput = 0;
 
@@ -35,6 +36,7 @@ public class ConnectFour { //DrawFlag
 
         do {
             drawConnectFourGame();
+            changePlayer = true;
 
             // Prompt user
             System.out.print("Drop a " + diskColor + " disk at column (0-6): ");
@@ -44,21 +46,35 @@ public class ConnectFour { //DrawFlag
             fullColumn[columnInput] = checkForEmptySpaceAndAssignValue(columnInput,
                                         Character.toUpperCase(diskColor.charAt( 0 )));
 
-            if (fullColumn[columnInput])
-                System.out.println("Full Column find solution + drawFlag");
+            if (fullColumn[columnInput]) {
+                if (checkIfAllColumnsIsFull(fullColumn)) {
+                    drawFlag = true;
+                }
+
+                System.out.println("Full Column try another column");
+                changePlayer = false;
+            }
+
 
             // Check for win
            winFlag =  PatternRecognition.isConsecutiveFour(  connectFourGrids );
 
-           if (!winFlag) // Change player
+           if (changePlayer) // Change player
                 diskColor = diskColor.equals( "red" ) ? "yellow" : "red";
 
-        }while (!winFlag || drawFlag);
+        }while (!winFlag && !drawFlag);
 
-        drawConnectFourGame();
-        System.out.println("The winner is " + diskColor);
+
+        if (drawFlag) {
+            System.out.println("It's draw");
+        } else {
+            drawConnectFourGame();
+            System.out.println("The winner is " + diskColor);
+        }
+
 
     }
+
 
     private static boolean checkForEmptySpaceAndAssignValue(int columnInput, char diskColor) {
         for (int i = ROW_NUMBER - 1; i >= 0; i--) {
@@ -70,8 +86,15 @@ public class ConnectFour { //DrawFlag
         return true;
     }
 
+    private static boolean checkIfAllColumnsIsFull(boolean[] fullColumn) {
+        for (int i = 0; i < fullColumn.length; i++) {
+            if (!fullColumn[i])
+                return false;
+        }
+        return true;
+    }
+
     public static void drawConnectFourGame() {
-        int userInput = 0;
         int columnNumber = 7;
         int rowNumber = 6;
         for (int i = 0; i < rowNumber; i++) {
