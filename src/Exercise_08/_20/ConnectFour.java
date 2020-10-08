@@ -4,7 +4,8 @@ import Exercise_08._19.PatternRecognition;
 
 import java.util.Scanner;
 
-public class ConnectFour { // There is an error in PatternRecognition.isConsecutiveFour
+public class ConnectFour { // There is an error (maybe) in PatternRecognition.isConsecutiveFour
+                           // More test
     private static final int ROW_NUMBER = 6;
     private static final int COLUMN_NUMBER = 7;
     private static int[][] connectFourGrids = new int[ROW_NUMBER][COLUMN_NUMBER];
@@ -59,7 +60,7 @@ public class ConnectFour { // There is an error in PatternRecognition.isConsecut
             // Check for win
            winFlag =  PatternRecognition.isConsecutiveFour(  connectFourGrids );
 
-           if (changePlayer) // Change player
+           if (changePlayer && !winFlag) // Change player
                 diskColor = diskColor.equals( "red" ) ? "yellow" : "red";
 
         }while (!winFlag && !drawFlag);

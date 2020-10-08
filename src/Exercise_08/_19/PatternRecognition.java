@@ -58,7 +58,8 @@ public class PatternRecognition { // todo improve this
 //        print("Diagonally checking from down to up", isConsecutiveFour( values2 ));
 
         // Every thing checking but will print true for  Diagonally checking from up to down
-
+        System.out.println((int) 'R');
+        System.out.println((int) 'Y');
         int[][] values3 = {
                 {0, 1, 0, 3, 1, 6, 1},
                 {0, 1, 6, 8, 6, 0, 1},
@@ -69,6 +70,59 @@ public class PatternRecognition { // todo improve this
         };
 
         print("Diagonally checking from up to down", isConsecutiveFour( values3 ));
+
+
+
+        int[][] values4 = {
+                {0, 1, 9, 3, 1, 6, 1},
+                {0, 1, 6, 9, 6, 0, 1},
+                {9, 5, 2, 9, 9, 2, 9}, // 9
+                {6, 0, 6, 6, 0, 9, 1}, // , 9
+                {1, 5, 9, 1, 4, 2, 7}, // , , 9
+                {3, 6, 3, 9, 4, 0, 9}  // , , , 9
+        };
+
+        print("Diagonally checking from up to down", isConsecutiveFour( values4 ));
+        int[][] values5 = {
+                {2, 1, 0, 3, 1, 6, 1},
+                {0, 2, 6, 8, 6, 0, 1},
+                {9, 5, 2, 9, 6, 2, 9}, // 9
+                {6, 9, 6, 2, 0, 9, 1}, // , 9
+                {1, 5, 0, 1, 4, 2, 7}, // , , 9
+                {3, 6, 3, 9, 4, 0, 9}  // , , , 9
+        };
+
+        print("Diagonally checking from up to down", isConsecutiveFour( values5 ));
+        int[][] values6 = {
+                {0, 1, 0, 3, 1, 6, 1},
+                {0, 1, 6, 8, 6, 0, 1},
+                {9, 5, 2, 9, 6, 2, 9}, // 9
+                {6, 9, 6, 6, 9, 9, 1}, // , 9
+                {1, 5, 9, 1, 4, 9, 7}, // , , 9
+                {3, 6, 3, 0, 4, 0, 9}  // , , , 9
+        };
+
+        print("Diagonally checking from up to down", isConsecutiveFour( values6 ));
+        int[][] values7 = {
+                {0, 1, 0, 5, 1, 6, 1},
+                {0, 1, 6, 8, 5, 0, 1},
+                {9, 5, 2, 9, 6, 5, 9}, // 9
+                {6, 9, 6, 6, 0, 9, 5}, // , 9
+                {1, 5, 4, 1, 4, 2, 7}, // , , 9
+                {3, 6, 3, 9, 4, 0, 9}  // , , , 9
+        };
+
+        print("Diagonally checking from up to down", isConsecutiveFour( values7 ));
+        int[][] values8 = {
+                {0, 1, 0, 3, 1, 6, 1},
+                {0, 1, 6, 8, 6, 0, 1},
+                {9, 5, 8, 9, 6, 2, 9}, // 9
+                {6, 0, 6, 8, 0, 9, 1}, // , 9
+                {1, 5, 5, 1, 8, 2, 7}, // , , 9
+                {3, 6, 3, 9, 4, 8, 9}  // , , , 9
+        };
+
+        print("Diagonally checking from up to down", isConsecutiveFour( values8 ));
     }
 
 
@@ -76,6 +130,7 @@ public class PatternRecognition { // todo improve this
         return  checkVertical(values)   ||
                 checkHorizontal(values) ||
                 checkDiagonal(values);
+               // checkDia(values);
     }
 
 
@@ -85,9 +140,9 @@ public class PatternRecognition { // todo improve this
         int fourConsecutiveCount = 1;
 
         // Horizontally checking
-        for (int row = 0; row < values.length; row++) {
-            for (int column = 0; column < values[row].length -1; column++) {
-                if (values[row][column] == values[row][column+1]) {
+        for (int[] value : values) {
+            for (int column = 0; column < value.length - 1; column++) {
+                if (value[column] == value[column + 1]) {
                     fourConsecutiveCount++;
                 }
             }
@@ -121,7 +176,7 @@ public class PatternRecognition { // todo improve this
         return false;
     }
 
-
+    // Todo test on it not sure it's 100% right
     private static boolean checkDiagonal(int[][] values) {
         // Diagonally checking from down to up
         int row, column;
@@ -148,6 +203,87 @@ public class PatternRecognition { // todo improve this
         return false;
     }
 
+    /*http://soultionmanual.blogspot.com/2016/08/chapter-8-exercise-19-introduction-to.html*/
+    public static boolean checkDia(int[][] values) {
+
+        // From upper left to lower right
+        // Go through the row
+
+        for (int i = 0; i < values.length; i++) {
+            int start = values[i][0];
+            int count = 1;
+            for (int j = i+1, k = 1; j < values.length && k < values[0].length; j++, k++) {
+                if (start == values[j][k]) {
+                    count++;
+                } else {
+                    start = values[j][k];
+                    count = 1;
+                }
+                if (count == 4) {
+                    return true;
+                }
+            }
+        }
+
+        // Going through the column
+
+        for (int i = 0; i < values[0].length; i++) {
+            int start = values[0][i];
+            int count = 1;
+            for (int j = i+1, k = 1; j < values[0].length && k < values.length; j++, k++) {
+                if (start == values[k][j]) {
+                    count++;
+                } else {
+                    start = values[k][j];
+                    count = 1;
+                }
+
+                if (count == 4) {
+                    return true;
+                }
+            }
+        }
+
+        // From upper right to lower left
+        // Go through the column
+
+        for (int i = 0; i < values[0].length; i++) {
+            int start = values[0][i];
+            int count = 1;
+            for (int j = 1, k = i-1; j < values.length && k >= 0; j++, k--) {
+                if (start == values[j][k]) {
+                    count++;
+                } else {
+                    start = values[j][k];
+                    count = 1;
+                }
+                if (count == 4) {
+                    return true;
+                }
+            }
+        }
+
+        // Going through the row
+
+        for (int i = 0; i < values.length; i++) {
+            int start = values[i][values[i].length-1];
+            int count = 1;
+            for (int j = i+1, k = values[0].length-2; j < values.length && k >= 0; j++, k--) {
+                if (start == values[j][k]) {
+                    count++;
+                } else {
+                    start = values[j][k];
+                    count = 1;
+                }
+                if (count == 4) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+
+    }
 
     public static void print(String  text, boolean flag) {
         System.out.println(text + ": " + flag);
