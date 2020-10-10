@@ -21,45 +21,43 @@ package Exercise_08._19;
 public class PatternRecognition { // todo improve this
     public static void main(String[] args) {
 
-        //  Every thing checking but will print true for Horizontally checking
-//        int[][] values0 = {
-//                {0, 1, 0, 3, 1, 6, 1},
-//                {0, 1, 6, 8, 6, 0, 1},
-//                {0, 5, 2, 9, 6, 2, 9},
-//                {6, 9, 6, 6, 2, 9, 1},
-//                {1, 5, 9, 1, 4, 9, 7},
-//                {3, 3, 3, 3, 4, 0, 9}  // 3, 3, 3, 3
-//        };
-//
-//        print("Horizontally checking", isConsecutiveFour( values0 ));
-//
-//        //  Every thing checking but will print true for Vertically checking
-//        int[][] values1 = {
-//                {0, 1, 0, 3, 1, 6, 1},
-//                {0, 1, 6, 8, 6, 0, 1},
-//                {0, 5, 2, 9, 6, 2, 9}, // 5
-//                {6, 5, 6, 6, 9, 9, 1}, // 5
-//                {1, 5, 9, 1, 4, 9, 7}, // 5
-//                {3, 5, 3, 9, 4, 0, 9}  // 5
-//        };
-//
-//        print("Vertically checking", isConsecutiveFour( values1 ));
-//
-//        //  Every thing checking but will print true for Diagonally checking from down to up
-//        int[][] values2 = {
-//                {0, 1, 0, 3, 1, 6, 1},
-//                {0, 1, 6, 8, 6, 0, 1},
-//                {0, 5, 2, 9, 6, 2, 9},  // , , , , 6
-//                {6, 9, 6, 6, 0, 9, 1},  // , , , 6
-//                {1, 5, 6, 1, 4, 9, 7},  // , , 6
-//                {3, 6, 3, 9, 4, 0, 9}   // , 6
-//        };
-//
-//        print("Diagonally checking from down to up", isConsecutiveFour( values2 ));
+          //Every thing checking but will print true for Horizontally checking
+        int[][] values0 = {
+                {0, 1, 0, 3, 1, 6, 1},
+                {0, 1, 6, 8, 6, 0, 1},
+                {0, 5, 2, 9, 6, 2, 9},
+                {6, 9, 6, 6, 2, 9, 1},
+                {1, 5, 9, 1, 4, 9, 7},
+                {3, 3, 3, 3, 4, 0, 9}  // 3, 3, 3, 3
+        };
+
+        print("Horizontally checking", isConsecutiveFour( values0 ));
+
+        //  Every thing checking but will print true for Vertically checking
+        int[][] values1 = {
+                {0, 1, 0, 3, 1, 6, 1},
+                {0, 1, 6, 8, 6, 0, 1},
+                {0, 5, 2, 9, 6, 2, 9}, // 5
+                {6, 5, 6, 6, 9, 9, 1}, // 5
+                {1, 5, 9, 1, 4, 9, 7}, // 5
+                {3, 5, 3, 9, 4, 0, 9}  // 5
+        };
+
+        print("Vertically checking", isConsecutiveFour( values1 ));
+
+        //  Every thing checking but will print true for Diagonally checking from down to up
+        int[][] values2 = {
+                {0, 1, 0, 3, 1, 6, 1},
+                {0, 1, 6, 8, 6, 0, 1},
+                {0, 5, 2, 9, 6, 2, 9},  // , , , , 6
+                {6, 9, 6, 6, 0, 9, 1},  // , , , 6
+                {1, 5, 6, 1, 4, 9, 7},  // , , 6
+                {3, 6, 3, 9, 4, 0, 9}   // , 6
+        };
+
+        print("Diagonally checking from down to up", isConsecutiveFour( values2 ));
 
         // Every thing checking but will print true for  Diagonally checking from up to down
-        System.out.println((int) 'R');
-        System.out.println((int) 'Y');
         int[][] values3 = {
                 {0, 1, 0, 3, 1, 6, 1},
                 {0, 1, 6, 8, 6, 0, 1},
@@ -70,59 +68,6 @@ public class PatternRecognition { // todo improve this
         };
 
         print("Diagonally checking from up to down", isConsecutiveFour( values3 ));
-
-
-
-        int[][] values4 = {
-                {0, 1, 9, 3, 1, 6, 1},
-                {0, 1, 6, 9, 6, 0, 1},
-                {9, 5, 2, 9, 9, 2, 9}, // 9
-                {6, 0, 6, 6, 0, 9, 1}, // , 9
-                {1, 5, 9, 1, 4, 2, 7}, // , , 9
-                {3, 6, 3, 9, 4, 0, 9}  // , , , 9
-        };
-
-        print("Diagonally checking from up to down", isConsecutiveFour( values4 ));
-        int[][] values5 = {
-                {2, 1, 0, 3, 1, 6, 1},
-                {0, 2, 6, 8, 6, 0, 1},
-                {9, 5, 2, 9, 6, 2, 9}, // 9
-                {6, 9, 6, 2, 0, 9, 1}, // , 9
-                {1, 5, 0, 1, 4, 2, 7}, // , , 9
-                {3, 6, 3, 9, 4, 0, 9}  // , , , 9
-        };
-
-        print("Diagonally checking from up to down", isConsecutiveFour( values5 ));
-        int[][] values6 = {
-                {0, 1, 0, 3, 1, 6, 1},
-                {0, 1, 6, 8, 6, 0, 1},
-                {9, 5, 2, 9, 6, 2, 9}, // 9
-                {6, 9, 6, 6, 9, 9, 1}, // , 9
-                {1, 5, 9, 1, 4, 9, 7}, // , , 9
-                {3, 6, 3, 0, 4, 0, 9}  // , , , 9
-        };
-
-        print("Diagonally checking from up to down", isConsecutiveFour( values6 ));
-        int[][] values7 = {
-                {0, 1, 0, 5, 1, 6, 1},
-                {0, 1, 6, 8, 5, 0, 1},
-                {9, 5, 2, 9, 6, 5, 9}, // 9
-                {6, 9, 6, 6, 0, 9, 5}, // , 9
-                {1, 5, 4, 1, 4, 2, 7}, // , , 9
-                {3, 6, 3, 9, 4, 0, 9}  // , , , 9
-        };
-
-        print("Diagonally checking from up to down", isConsecutiveFour( values7 ));
-        int[][] values8 = {
-                {0, 1, 0, 3, 1, 6, 1},
-                {0, 1, 6, 8, 6, 0, 1},
-                {9, 5, 8, 9, 6, 2, 9}, // 9
-                {6, 0, 6, 8, 0, 9, 1}, // , 9
-                {1, 5, 5, 1, 8, 2, 7}, // , , 9
-                {3, 6, 3, 9, 4, 8, 9}  // , , , 9
-        };
-
-        print("Diagonally checking from up to down", isConsecutiveFour( values8 ));
     }
 
 
@@ -176,7 +121,6 @@ public class PatternRecognition { // todo improve this
         return false;
     }
 
-    // Todo test on it not sure it's 100% right
     private static boolean checkDiagonal(int[][] values) {
         // Diagonally checking from down to up
         int row, column;
