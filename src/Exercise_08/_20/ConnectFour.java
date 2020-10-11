@@ -26,6 +26,9 @@ public class ConnectFour {
         Scanner input = new Scanner( System.in );
 
         // Random numbers
+        // We need to have different values at the beginning of game,
+        // Because when checking of four connected pattern.
+        // Why this, because I reusing the previous assigment for this checking
         connectFourGrids = new int[][]{
                 {0, 1, 0, 3, 1, 6, 1},
                 {0, 1, 6, 8, 6, 0, 1},
@@ -40,21 +43,17 @@ public class ConnectFour {
         boolean drawFlag = false;
         boolean changePlayer = true;
         String diskColor = "red";
-        int columnInput = 0;
-
-
-
 
         do {
-            drawConnectFourGame();
+            displayBoard();
             changePlayer = true;
 
             // Prompt user
             System.out.print("Drop a " + diskColor + " disk at column (0-6): ");
-            columnInput = input.nextInt();
+            int columnInput = input.nextInt();
 
 
-            fullColumn[columnInput] = checkForEmptySpaceAndAssignValue(columnInput,
+            fullColumn[columnInput] = checkForEmptySpaceAndPlaceADisk(columnInput,
                                         Character.toUpperCase(diskColor.charAt( 0 )));
 
             if (fullColumn[columnInput]) {
@@ -79,7 +78,7 @@ public class ConnectFour {
         if (drawFlag) {
             System.out.println("It's draw");
         } else {
-            drawConnectFourGame();
+            displayBoard();
             System.out.println("The winner is " + diskColor);
         }
 
@@ -87,7 +86,7 @@ public class ConnectFour {
     }
 
 
-    private static boolean checkForEmptySpaceAndAssignValue(int columnInput, char diskColor) {
+    private static boolean checkForEmptySpaceAndPlaceADisk(int columnInput, char diskColor) {
         for (int i = ROW_NUMBER - 1; i >= 0; i--) {
             if (connectFourGrids[i][columnInput] != 'R' && connectFourGrids[i][columnInput] != 'Y') {
                 connectFourGrids[i][columnInput] = diskColor;
@@ -105,7 +104,7 @@ public class ConnectFour {
         return true;
     }
 
-    public static void drawConnectFourGame() {
+    public static void displayBoard() {
         int columnNumber = 7;
         int rowNumber = 6;
         for (int i = 0; i < rowNumber; i++) {

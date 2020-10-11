@@ -1,5 +1,17 @@
 package Exercise_08._21;
-
+/**
+ * (Central city) Given a set of cities, the central city is the city that has the shortest
+ * total distance to all other cities. Write a program that prompts the user to enter
+ * the number of cities and the locations of the cities (coordinates), and finds the
+ * central city and its total distance to all other cities.
+ * Input:
+ * Enter the number of cities: 5
+ * Enter the coordinates of the cities:
+ *  2.5 5 5.1 3 1 9 5.4 54 5.5 2.1
+ * Output:
+ * The central city is at (2.5, 5.0)
+ * The total distance to all other cities is 60.81
+ * */
 import java.util.Scanner;
 
 public class CentralCity {
