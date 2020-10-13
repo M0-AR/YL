@@ -32,7 +32,6 @@ public class EvenNumberOfIs { // check yl and github
         // because I print more and depends on return false row and column 's methods
     }
 
-    // Initialize matrix and display it
     private static int[][] initialize6By6MatrixWithValues0Or1() {
         int[][] _6By6Array = new int[6][6];
         for (int row = 0; row < _6By6Array.length; row++) {
@@ -68,7 +67,7 @@ public class EvenNumberOfIs { // check yl and github
         for (int column = 0; column < matrix[0].length; column++) {
             int sum = 0;
             for (int row = 0; row < matrix.length; row++)
-                sum = matrix[row][column];
+                sum += matrix[row][column];
             if (sum % 2 != 0)
                 return false;
         }
