@@ -1,5 +1,13 @@
 package Exercise_08._23;
-
+/*********************************************************************************
+ * (Game: find the flipped cell) Suppose you are given a 6-by-6 matrix filled     *
+ * with 0s and 1s. All rows and all columns have an even number of 1s. Let the    *
+ * user flip one cell (i.e., flip from 1 to 0 or from 0 to 1) and write a program *
+ * to find which cell was flipped. Your program should prompt the user to enter a *
+ * 6-by-6 array with 0s and 1s and find the first row r and first column c where  *
+ * the even number of the 1s property is violated (i.e., the number of 1s is not  *
+ * even). The flipped cell is at (r, c).                                          *
+ *********************************************************************************/
 import java.util.Scanner;
 
 public class FindTheFlippedCell {
@@ -20,7 +28,11 @@ public class FindTheFlippedCell {
         // Print output
         int r = isEveryRowHasEvenNumberOf1s( matrix );
         int c = isEveryColumnHasEvenNumberOf1s( matrix );
-        if (r != -1 || c != -1)
+
+
+        if (r < 0  || c < 0)
+            System.out.println("N' cell has been flipped");
+        else
             System.out.println("The flipped cell is at (" + r + "," + c + ")");
 
     }
