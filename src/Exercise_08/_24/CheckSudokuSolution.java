@@ -5,13 +5,24 @@ import java.util.Scanner;
 public class CheckSudokuSolution {
 
 
-    public static void main(String[] args) { // Todo isEverySmallBoxHasNumbers1To9 just read one box
-                                                // Make one method that call the rest of methods
-        int[][] grid = readASudoukuSolution();
+    public static void main(String[] args) { // Yl and github
+        //int[][] grid = readASudoukuSolution();
 
-        System.out.println((isEveryRowHasNumbers1To9( grid ) &&
-                            isEveryColumnHasNumbers1To9( grid ) &&
-                            isEverySmallBoxHasNumbers1To9( grid )) ?
+       int [][] sudoukuTest = new int[][]{{1, 2, 3, 4, 5, 6, 7, 8, 9},
+                {7, 8, 9, 1, 2, 3, 4, 5, 6},
+                {4, 5, 6, 7, 8, 9, 1, 2, 3},
+               {3, 1, 2, 8, 4, 5, 9, 6, 7},
+               {6, 9, 7, 3, 1, 2, 8, 4, 5},
+               {8, 4, 5, 6, 9, 7, 3, 1, 2},
+               {2, 3, 1, 5, 7, 4, 6, 9, 8},
+               {9, 6, 8, 2, 3, 1, 5, 7, 4},
+               {5, 7, 4, 9, 6, 8, 2, 3, 1},
+
+        };
+
+        System.out.println((isEveryRowHasNumbers1To9( sudoukuTest ) &&
+                            isEveryColumnHasNumbers1To9( sudoukuTest ) &&
+                            isEverySmallBoxHasNumbers1To9( sudoukuTest )) ?
                                 "Valid solution" : "Invalid solution");
 
         System.out.println();
@@ -54,7 +65,7 @@ public class CheckSudokuSolution {
 
 
 
-    private static boolean isEverySmallBoxHasNumbers1To9(int[][] matrix) {
+    private static boolean isEverySmallBoxHasNumbers1To9_(int[][] matrix) {
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
                 int sum = 0;
@@ -63,7 +74,6 @@ public class CheckSudokuSolution {
                         sum += matrix[row][column];
                     }
                 }
-
                 if (sum != 45)
                     return false;
             }
@@ -72,7 +82,21 @@ public class CheckSudokuSolution {
     }
 
 
-
+    private static boolean isEverySmallBoxHasNumbers1To9(int[][] matrix) {
+        for (int i = 3; i <= 9; i+=3) {
+            for (int j = 3; j <= 9; j+=3) {
+                int sum = 0;
+                for (int row = i-3; row < i; row++) {
+                    for (int column = j-3; column < j; column++) {
+                        sum += matrix[row][column];
+                    }
+                }
+                if (sum != 45)
+                    return false;
+            }
+        }
+       return true;
+    }
 
 }
 
