@@ -1,18 +1,27 @@
 package Exercise_08._25;
-
+/*********************************************************************************
+ * (Markov matrix) An n * n matrix is called a positive Markov matrix if each     *
+ * element is positive and the sum of the elements in each column is 1. Write the *
+ * following method to check whether a matrix is a Markov matrix.                 *
+ *                                                                                *
+ * public static boolean isMarkovMatrix(double[][] m)                             *
+ *                                                                                *
+ * Write a test program that prompts the user to enter a 3 * 3 matrix of double   *
+ * values and tests whether it is a Markov matrix.                                *
+ *********************************************************************************/
 import java.util.Scanner;
 
 public class MarkovMatrix {
     public static void main(String[] args) {
         /* Test */
-        // whiteBoxTest();
+        //whiteBoxTest();
 
-       double[][] matrix = enterAMatrix();
+       double[][] matrix = getMatrix();
         System.out.println("It is" + (isMarkovMatrix( matrix ) ? " " : " not ") + "a Markov matrix");
     }
 
 
-    public static double[][] enterAMatrix() {
+    public static double[][] getMatrix() {
         Scanner input = new Scanner( System.in );
 
         System.out.println("Enter a 3-by-3 matrix row by row: ");
@@ -25,11 +34,23 @@ public class MarkovMatrix {
     }
 
     public static boolean isMarkovMatrix(double[][] m) {
-        // Positive Numbers and sum of column is 1
+      return isElementsPositive( m ) && isEachColumnSum1( m );
+    }
+
+    public static boolean isElementsPositive(double[][] m) {
+        for (int row = 0; row < m.length; row++) {
+            for (int column = 0; column < m[row].length; column++) {
+                if (m[row][column] < 0)
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean isEachColumnSum1(double[][] m) {
         for (int column = 0; column < m.length; column++) {
             double sum = 0;
             for (int row = 0; row < m[column].length; row++) {
-                if (m[row][column] < 0) return false;
                 sum += m[row][column];
             }
             if (sum != 1)
