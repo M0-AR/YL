@@ -1,8 +1,16 @@
 package Exercise_08._27;
-
+/*********************************************************************************
+ * (Column sorting) Implement the following method to sort the columns in a       *
+ * twodimensional array. A new array is returned and the original array is intact.*
+ *                                                                                *
+ * public static double[][] sortColumns(double[][] m)                             *
+ *                                                                                *
+ * Write a test program that prompts the user to enter a 3 * 3 matrix of double   *
+ * values and displays a new column-sorted matrix. Here is a sample run:          *
+ *********************************************************************************/
 import java.util.Scanner;
-// https://www.geeksforgeeks.org/sorting-2d-array-according-values-given-column-java/
-public class ColumnSorting { // Yl and Github
+
+public class ColumnSorting {
     public static void main(String[] args) {
         /* White box testing */
         whiteBoxTest();
@@ -42,36 +50,26 @@ public class ColumnSorting { // Yl and Github
     public static double [][] sortColumns(double[][] m) {
         double[][] result = new double[m.length][m[0].length];
 
-        copyMatrixFromOriginalToCopy(m, result);
-
         double[] columnArray = new double[m.length];
         for (int column = 0; column < m.length; column++) {
 
-            // Get unsorted column
+            // Get unsorted column from m
             for (int row = 0; row < m.length ; row++) {
-                columnArray[row] = result[row][column];
+                columnArray[row] = m[row][column];
             }
 
             // Sort column
             java.util.Arrays.sort( columnArray );
 
-            // Post sorted column
+            // Post sorted column in result
             for (int row = 0; row < m.length ; row++) {
                 result[row][column] = columnArray[row];
             }
 
         }
 
-
         return result;
     }
-
-    private static void copyMatrixFromOriginalToCopy(double[][] original, double[][] copy) {
-        for (int i = 0; i < original.length; i++)
-            for (int j = 0; j < original[0].length; j++)
-                copy[i][j] = original[i][j];
-    }
-
 
     public static void displayMatrix(double[][] m) {
         for (double[] doubles : m) {
