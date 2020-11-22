@@ -1,18 +1,8 @@
-package Exercise_08._28;
-/*********************************************************************************
- * (Strictly identical arrays) The two-dimensional arrays m1 and m2 are strictly  *
- * identical if their corresponding elements are equal. Write a method that       *
- * returns true if m1 and m2 are strictly identical, using the following header:  *
- *                                                                                *
- * public static boolean equals(int[][] m1, int[][] m2)                           *
- *                                                                                *
- * Write a test program that prompts the user to enter two 3 * 3 arrays of        *
- * integers and displays whether the two are strictly identical. Here are the     *
- * sample runs.                                                                   *
- *********************************************************************************/
+package Exercise_08._29;
+
 import java.util.Scanner;
 
-public class StrictlyIdenticalArrays {
+public class IdenticalArrays { // yl and github
     private static final int MATRIX_LENGTH = 3;
     public static void main(String[] args) {
         /* White box testing */
@@ -22,21 +12,21 @@ public class StrictlyIdenticalArrays {
         int[][] list2 = getMatrix( 2 );
 
         System.out.println("The two arrays are" +
-                            (equals(list1, list2) ? " " : " not ") +
-                                                    "strictly identical");
+                (equals(list1, list2) ? " " : " not ") +
+                "strictly identical");
     }
 
 
     public static void whiteBoxTest() {
         // Positive test
-        int[][] list1 = {{51, 22, 25}, {6, 1, 4}, {24, 54, 6}};
+        int[][] list1 = {{51, 25, 22}, {6, 1, 4}, {24, 54, 6}};
         int[][] list2 = {{51, 22, 25}, {6, 1, 4}, {24, 54, 6}};
         System.out.println("The two arrays are" +
                 (equals(list1, list2) ? " " : " not ") +
                 "strictly identical");
 
         // Negative test
-        list1 = new int[][]{{51, 25, 22}, {6, 1, 4}, {24, 54, 6}};
+        list1 = new int[][]{{51, 5, 22}, {6, 1, 4}, {24, 54, 6}};
         list2 = new int[][]{{51, 22, 25}, {6, 1, 4}, {24, 54, 6}};
         System.out.println("The two arrays are" +
                 (equals(list1, list2) ? " " : " not ") +
@@ -58,10 +48,14 @@ public class StrictlyIdenticalArrays {
             return false;
 
         for (int row = 0; row < MATRIX_LENGTH; row++) {
+            int sumOfM1 = 0;
+            int sumOfM2 = 0;
             for (int column = 0; column < MATRIX_LENGTH; column++) {
-                if (m1[row][column] != m2[row][column])
-                    return false;
+               sumOfM1 += m1[row][column];
+               sumOfM2 += m2[row][column];
             }
+            if (sumOfM1 != sumOfM2)
+                return false;
         }
         return true;
     }
