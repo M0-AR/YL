@@ -1,5 +1,14 @@
 package Exercise_08._29;
-
+/*********************************************************************************
+ * (Identical arrays) The two-dimensional arrays m1 and m2 are identical if they  *
+ * have the same contents. Write a method that returns true if m1 and m2 are      *
+ * identical, using the following header:                                         *
+ *                                                                                *
+ * public static boolean equals(int[][] m1, int[][] m2)                           *
+ *                                                                                *
+ * Write a test program that prompts the user to enter two 3 * 3 arrays of        *
+ * integers and displays whether the two are identical.                           *
+ *********************************************************************************/
 import java.util.Scanner;
 
 public class IdenticalArrays { // yl and github
@@ -13,11 +22,11 @@ public class IdenticalArrays { // yl and github
 
         System.out.println("The two arrays are" +
                 (equals(list1, list2) ? " " : " not ") +
-                "strictly identical");
+                                        "strictly identical");
     }
 
 
-    public static void whiteBoxTest() {
+    private static void whiteBoxTest() {
         // Positive test
         int[][] list1 = {{51, 25, 22}, {6, 1, 4}, {24, 54, 6}};
         int[][] list2 = {{51, 22, 25}, {6, 1, 4}, {24, 54, 6}};
