@@ -1,3 +1,4 @@
+/*
 package Exercise_08._33;
 
 import java.util.Scanner;
@@ -57,28 +58,5 @@ public class PolygonSubAreas {
     }
 
 
-    private static double[] getFourAreasTriangles(double[][] points) {
-        double[] areas = new double[4];
-        areas[0] = getAreaForFristTriangle (points[0][0], points[0][1]);
-        areas[1] = getAreaForSecondTriangle(points[1][0], points[1][1]);
-        areas[2] = getAreaForThirdTriangle (points[2][0], points[2][1]);
-        areas[3] = getAreaForForthTriangle (points[3][0], points[3][1]);
-        return areas;
-    }
-
-    public static double getTriangleArea(double[][] points) {
-        double side1 = distance(points[0][0],  points[0][1], points[1][0], points[1][1]);
-        double side2 = distance(points[0][0],  points[0][1], points[2][0], points[2][1]);
-        double side3 = distance(points[2][0],  points[2][1], points[1][0], points[1][1]);
-        double s = (side1 + side2 + side3)/2;
-        double area = Math.sqrt( s * (s - side1) * (s - side2) * (s - side3) );
-        return ((int) (area * 100)) / 100.0; // Two decimal number
-    }
-
-    public static double distance(double x1, double y1, double x2, double y2) {
-        double d = Math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-        return d;
-    }
-
-
 }
+*/
