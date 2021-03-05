@@ -1,5 +1,12 @@
 package Exercise_10._03;
 
+/*********************************************
+ *                  MyInteger                 *
+ *--------------------------------------------*
+ * -value: int                                *
+ *--------------------------------------------*
+ * -value
+ */
 //////////////////////
 // TODO:
 // 1- check for isPrime method
@@ -16,18 +23,16 @@ public class MyInteger {
         return value;
     }
 
-    private boolean isEvent() {
-        return this.value % 2 == 0;
+    public boolean isEvent() {
+        return isEvent( this.value );
     }
 
-    private boolean isOdd() {
+    public boolean isOdd() {
         return !isEvent();
     }
 
-    private boolean isPrime() {
-        //return this.value
-        // todo
-        return false;
+    public boolean isPrime() {
+        return isPrime( this.value );
     }
 
     public static boolean isEvent(int value) {
@@ -39,9 +44,11 @@ public class MyInteger {
     }
 
     public static boolean isPrime(int value) {
-        //return this.value
-        // todo
-        return false;
+        for (int divisor = 2; divisor <= value / 2; divisor++) {
+            if (value % divisor == 0)
+                return false;
+        }
+        return true;
     }
 
 
@@ -54,32 +61,36 @@ public class MyInteger {
     }
 
     public static boolean isPrime(MyInteger myInteger) {
-        //return this.value
-        // todo
         return myInteger.isPrime();
     }
 
-    private boolean equals(int value) {
+    public boolean equals(int value) {
         return this.value == value;
     }
 
-    private boolean equals(MyInteger myInteger) {
+    public boolean equals(MyInteger myInteger) {
         return this.value == myInteger.getValue();
     }
 
+    /** Converts an array of numeric
+     *  characters to an int value
+     */
     public static int parseInt(char[] chars) {
-        int sum = 0;
-        for (char aChar : chars) {
-            sum += aChar;
+        int value = 0;
+        for (int i = 0, j = (int)Math.pow(10, chars.length - 1);
+             i < chars.length; i++, j /= 10) {
+            value += (chars[i] - 48) * j;
         }
-        return sum;
+        return value;
     }
 
+    /** Converts a string into an int value */
     public static int parseInt(String string) {
-        int sum = 0;
-        for (int i = 0; i < string.length(); i++) {
-            sum += string.charAt( i );
+        int value = 0;
+        for (int i = 0, j = (int)Math.pow(10, string.length() - 1);
+             i < string.length(); i++, j /= 10) {
+            value += (string.charAt(i) - 48) * j;
         }
-        return sum;
+        return value;
     }
 }
