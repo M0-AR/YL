@@ -29,6 +29,7 @@ public class MyIntegerTest {
         int[] values = {5, 6, 7, 8, 9};
 
         // Test isEvent(int), isOdd(int), and isPrime(int)
+        // by invoking static method from MyInteger class
         System.out.println("\nTest if values are even using isEven(int):");
         for(int i = 0; i < values.length; i++) {
             System.out.println(values[i] + " " + MyInteger.isEvent( values[i] ));
@@ -44,6 +45,23 @@ public class MyIntegerTest {
             System.out.println(values[i] + " " + MyInteger.isPrime( values[i] ));
         }
 
-        // Todo: continue with test ...
+        // Test MyInteger() object, isEvent(), isOdd(), isPrime() and getValue()
+        System.out.println("\nTest if values are even using isEvent():");
+        for (int index = 0; index < values.length; index++) {
+            MyInteger myInteger = new MyInteger(values[index]);
+            System.out.println(myInteger.getValue() + " " + myInteger.isEvent());
+        }
+
+        System.out.println("\nTest if values are odd using isOdd():");
+        for (int index = 0; index < values.length; index++) {
+            MyInteger myInteger = new MyInteger(values[index]);
+            System.out.println(myInteger.getValue() + " " + myInteger.isOdd());
+        }
+
+        System.out.println("\nTest if values are prime using isPrime():");
+        for (int index = 0; index < values.length; index++) {
+            MyInteger myInteger = new MyInteger(values[index]);
+            System.out.println(myInteger.getValue() + " " + myInteger.isPrime());
+        }
     }
 }
