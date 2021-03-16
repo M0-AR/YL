@@ -63,5 +63,25 @@ public class MyIntegerTest {
             MyInteger myInteger = new MyInteger(values[index]);
             System.out.println(myInteger.getValue() + " " + myInteger.isPrime());
         }
+
+        // Test isEven(MyInteger), isOdd(MyInteger), isPrime(MyInteger)
+        System.out.println("\nTest if values are even using isEven(MyInteger):");
+        for (int index = 0; index < values.length; index++) {
+            MyInteger myInteger = new MyInteger(values[index]);
+            System.out.println(myInteger.getValue() + " " + MyInteger.isEvent( myInteger ));
+        }
+
+        System.out.println("\nTest if values are odd using isOdd(MyInteger):");
+        for (int index = 0; index < values.length; index++) {
+            MyInteger myInteger = new MyInteger(values[index]);
+            System.out.println(myInteger.getValue() + " " + MyInteger.isOdd( myInteger ));
+        }
+
+        System.out.println("\nTest if values are prime using isPrime(MyInteger):");
+        for (int index = 0; index < values.length; index++) {
+            MyInteger myInteger = new MyInteger(values[index]);
+            System.out.println(myInteger.getValue() + " " + MyInteger.isPrime( myInteger));
+        }
+
     }
 }
