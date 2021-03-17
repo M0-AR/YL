@@ -83,5 +83,20 @@ public class MyIntegerTest {
             System.out.println(myInteger.getValue() + " " + MyInteger.isPrime( myInteger));
         }
 
+        // Test equals(int) and equals(MyInteger)
+        int[] values2 = {5, 9, 7};
+        MyInteger myInteger = new MyInteger( 9 );
+        System.out.println("\nTest if " + myInteger.getValue() +
+                            " is equal to the specified value:");
+        for (int index = 0; index < values2.length; index++) {
+            System.out.println(values2[index] + " " + myInteger.equals( values2[index] ));
+        }
+
+        System.out.println("\nTest if " + myInteger.getValue() +
+                                " is equal to the specified value");
+        for (int index = 0; index < values2.length; index++) {
+            MyInteger myInteger1 = new MyInteger( values2[index] );
+            System.out.println(values2[index] + " " + myInteger.equals( myInteger1 ));
+        }
     }
 }
