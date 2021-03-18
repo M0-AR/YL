@@ -98,5 +98,17 @@ public class MyIntegerTest {
             MyInteger myInteger1 = new MyInteger( values2[index] );
             System.out.println(values2[index] + " " + myInteger.equals( myInteger1 ));
         }
+
+        // Test parseInt(char[]) and parseInt(String)
+        System.out.println("\nTest parseInt(char[]) and parseInt(String):");
+        char[] numericCharacters = {'3', '4', '2'};
+        String numericString = "658";
+        System.out.print("\'");
+        for (int index = 0; index < numericCharacters.length; index++) {
+            System.out.print(numericCharacters[index]);
+        }
+        System.out.println("\' + \"" + numericString + "\" = " +
+                               (MyInteger.parseInt( numericCharacters ) +
+                                MyInteger.parseInt( numericString )));
     }
 }
