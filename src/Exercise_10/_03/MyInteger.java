@@ -5,13 +5,7 @@ package Exercise_10._03;
  *--------------------------------------------*
  * -value: int                                *
  *--------------------------------------------*
- * -value
  */
-//////////////////////
-// TODO:
-// 1- check for isPrime method
-// 2- UML diagram
-/////////////////////
 public class MyInteger {
     private int value;
 
