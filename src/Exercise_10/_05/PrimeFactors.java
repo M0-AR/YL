@@ -22,6 +22,7 @@ public class PrimeFactors {
             System.out.print(stackOfIntegers.pop() + " ");
     }
 
+    // O(n^2)
     private static void findSmallestFactorsOfPositiveInteger(int positiveInteger, StackOfIntegers stackOfIntegers) {
         int primeFactor = 2;
         while (positiveInteger != 1) {
@@ -31,5 +32,19 @@ public class PrimeFactors {
             positiveInteger /= primeFactor;
             stackOfIntegers.push( primeFactor );
         }
+    }
+
+    // O(n)
+    private static void smallestFactors(int positiveInteger, StackOfIntegers stackOfIntegers) {
+        int primeFactor = 2;
+        while (positiveInteger/primeFactor != 1) {
+            if (positiveInteger % primeFactor == 0) {
+                stackOfIntegers.push( primeFactor );
+                positiveInteger /= primeFactor;
+            } else {
+                primeFactor++;
+            }
+        }
+        stackOfIntegers.push( positiveInteger );
     }
 }
