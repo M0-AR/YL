@@ -8,22 +8,23 @@ public class PrimeFactors {
         Scanner scanner = new Scanner( System.in );
 
         System.out.print("Enter a positive integer: ");
-        int userInput = scanner.nextInt();
+        int number = scanner.nextInt();
 
-        int[] smallestFactors = findSmallestFactorsOfPositiveInteger(userInput);
+        StackOfIntegers stackOfIntegers = new StackOfIntegers();
+        findSmallestFactorsOfPositiveInteger(number, stackOfIntegers);
+
+        while (!stackOfIntegers.empty())
+            System.out.print(stackOfIntegers.pop() + " ");
     }
 
-    private static int[] findSmallestFactorsOfPositiveInteger(int positiveInteger) {
-        Stack<Integer> smallestFactors = new Stack<>();
-        int diviser = 2;
+    private static void findSmallestFactorsOfPositiveInteger(int positiveInteger, StackOfIntegers stackOfIntegers) {
+        int primeFactor = 2;
         while (positiveInteger != 1) {
-            while (positiveInteger % diviser != 0) {
-                diviser++;
+            while (positiveInteger % primeFactor != 0) {
+                primeFactor++;
             }
-            positiveInteger /= diviser;
-            smallestFactors.add( diviser );
+            positiveInteger /= primeFactor;
+            stackOfIntegers.push( primeFactor );
         }
-        System.out.println(smallestFactors);
-        return new int[0];
     }
 }
