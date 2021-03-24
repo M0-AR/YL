@@ -4,14 +4,24 @@ import java.util.GregorianCalendar;
 
 public class GregorianCalendarAPI {
     public static void main(String[] args) {
-       GregorianCalendar gregorianCalendar = new GregorianCalendar();
+        // Create a GregorianCalendar object
+        GregorianCalendar gregorianCalendar = new GregorianCalendar();
 
-       // TODO Display the right output according to the question
-       System.out.println(GregorianCalendar.YEAR + ":" +
-                GregorianCalendar.MONTH + ":" + GregorianCalendar.DAY_OF_MONTH);
+        // Display the current year, month, and day in format Mth/Day/Year
+        System.out.println("\nCurrent year, month, and day in format Mth/Day/Year: ");
+        System.out.println( gregorianCalendar.get(gregorianCalendar.MONTH) + "/" +
+                            gregorianCalendar.get(gregorianCalendar.DAY_OF_MONTH )+ "/" +
+                            gregorianCalendar.get(GregorianCalendar.YEAR));
 
+        // Set elapsed time since January 1, 1970 to 12345678765L
         gregorianCalendar.setTimeInMillis( 12345678765L );
-        System.out.println(gregorianCalendar.getTimeInMillis());
+
+        // Display the year, month and day
+        System.out.println("\nElapsed time since January 1, 1970 set to " +
+                            "12345678765L in format Mth/Day/Year: ");
+        System.out.println(gregorianCalendar.get(gregorianCalendar.MONTH) + "/" +
+                            gregorianCalendar.get(gregorianCalendar.DAY_OF_MONTH) + "/" +
+                            gregorianCalendar.get(gregorianCalendar.YEAR));
 
     }
 }
