@@ -4,8 +4,6 @@ package Exercise_08._33;
 import java.util.Scanner;
 
 public class PolygonSubAreas {
-
-
     public static void main(String[] args) {
         double[][] points = getPoints();
         double area = getFourAreasTriangles( points );
@@ -27,6 +25,15 @@ public class PolygonSubAreas {
         }
         return pointsInput;
     }
+
+
+    */
+/** Compute distance between two points*//*
+
+    private double distance(double x1, double y1, double x2, double y2) {
+        return Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    }
+
 
     private static double[] getIntersectingPoint(double[][] points) {
         double[][] p1 = findTwoFurthesPoints(points);
