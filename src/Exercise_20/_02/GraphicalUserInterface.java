@@ -1,5 +1,11 @@
 package Exercise_20._02;
-
+/*********************************************************************************
+ * (Store numbers in a linked list) Write a program that lets the user enter      *
+ * numbers from a graphical user interface and displays them in a text area, as   *
+ * shown in Figure 20.17a. Use a linked list to store the numbers. Do not store   *
+ * duplicate numbers. Add the buttons Sort, Shuffle, and Reverse to sort, shuffle,*
+ * and reverse the list.                                                          *
+ *********************************************************************************/
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -7,7 +13,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-
 import java.util.Collections;
 import java.util.LinkedList;
 
