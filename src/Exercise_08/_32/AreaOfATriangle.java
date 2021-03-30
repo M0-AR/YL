@@ -13,7 +13,7 @@ package Exercise_08._32;
  *********************************************************************************/
 import java.util.Scanner;
 
-public class AreaOfATriangle { // yl and github
+public class AreaOfATriangle {
 
     public static void main(String[] args) {
         double[][] points = getPoints();
