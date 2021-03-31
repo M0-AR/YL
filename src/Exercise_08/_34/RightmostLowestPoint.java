@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class RightmostLowestPoint {
     public static void main(String[] args) {
-        // Test -> double[][] points = {{1.5, 2.5}, {-3, 4.5}, {5.6, -7}, {6.5, -7}, {8, 1}, {10, 2.5}};
+        // Test input
+        // double[][] points = {{1.5, 2.5}, {-3, 4.5}, {5.6, -7}, {6.5, -7}, {8, 1}, {10, 2.5}};
 
         // Get user input
         double[][] points = getPoints();
@@ -45,5 +46,25 @@ public class RightmostLowestPoint {
             }
         }
         return rightMostLowestPoint;
+    }
+
+    // More readable method
+    private static double[] _getRightmostLowestPoint(double[][] p) {
+        int rightMostIndex = 0;
+        double rightMostX = p[0][0];
+        double rightMostY = p[0][1];
+
+        for (int i = 0; i < p.length; i++) {
+            if(rightMostY > p[i][1]) {
+                rightMostY = p[i][1];
+                rightMostIndex = i;
+            }
+            else if (rightMostY == p[i][1] && rightMostX < p[i][0]) {
+                rightMostX = p[i][0];
+                rightMostIndex = i;
+            }
+        }
+
+        return new double[]{p[rightMostIndex][0], p[rightMostIndex][1]};
     }
 }
