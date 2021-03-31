@@ -35,12 +35,12 @@ public class RightmostLowestPoint {
     public static double[] getRightmostLowestPoint(double[][] points) {
         double[] rightMostLowestPoint = new double[2];
         for (int i = 0; i < points.length; i++) {
-            if (rightMostLowestPoint[1] == points[i][1]) {
-                if (rightMostLowestPoint[0] < points[i][0]) {
-                    rightMostLowestPoint[0] = points[i][0];
-                    rightMostLowestPoint[1] = points[i][1];
-                }
-            } else if (rightMostLowestPoint[1] > points[i][1]) {
+            if (rightMostLowestPoint[1] == points[i][1] &&
+                    rightMostLowestPoint[0] < points[i][0]) {
+                rightMostLowestPoint[0] = points[i][0];
+                rightMostLowestPoint[1] = points[i][1];
+            }
+            else if (rightMostLowestPoint[1] > points[i][1]) {
                 rightMostLowestPoint[0] = points[i][0];
                 rightMostLowestPoint[1] = points[i][1];
             }
