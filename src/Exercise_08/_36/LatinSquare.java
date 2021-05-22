@@ -4,17 +4,26 @@ import java.util.Scanner;
 
 public class LatinSquare {
     public static void main(String[] args) {
-        char[][] _4x4 = {{'A', 'B', 'C', 'D'},
-                         {'B', 'A', 'D', 'C'},
-                         {'C', 'D', 'B', 'A'},
-                         {'D', 'C', 'A','B'}};
-        char[][] test = {{'A', 'F', 'D'}};
+        char[][] _4x4_true_test = {{'A', 'B', 'C', 'D'},
+                                   {'B', 'A', 'D', 'C'},
+                                   {'C', 'D', 'B', 'A'},
+                                   {'D', 'C', 'A','B'}};
 
-        if (!isFromAToC( test, 0)) {
+        char[][] _4x4_false_test = {{'A', 'B', 'C', 'D'},
+                                    {'B', 'A', 'D', 'C'},
+                                    {'C', 'D', 'B', 'A'},
+                                    {'D', 'C', 'A','B'}};
+
+        char[][] inputTest = {{'A', 'F', 'D'}};
+
+        char[][] _4x4 = getLatinSquare();
+        if (!isFromAToC( _4x4, 0)) {
             System.out.println("Wrong input: the letters must be from A to C");
             System.exit( 1 );
         }
 
+        boolean _isLatinSquare = isLatinSquare( _4x4 );
+        System.out.println(_isLatinSquare);
     }
 
 
@@ -53,6 +62,9 @@ public class LatinSquare {
         for (int i = 0; i < c.length; i++) {
             for (int j = 0; j < c[0].length; j++) {
                 exactlyOnce = isOccurringExactlyOnceInRowAndColumn(c, i, j);
+
+                if (!exactlyOnce) // Duplication found
+                    return false;
             }
         }
         return exactlyOnce;
@@ -62,9 +74,19 @@ public class LatinSquare {
 
     private static boolean isOccurringExactlyOnceInRowAndColumn(char[][] c, int i, int j) {
         for (int k = 0; k < c.length; k++) {
-            if (c[i][k] == )
+            if (k == j) // Same character
+                continue;
+            if (c[i][k] == c[i][j]) // Occurring more than one
+               return false;
         }
-        return false;
+
+        for (int k = 0; k < c.length; k++) {
+            if (k == i) // Same character
+                continue;
+            if (c[k][j] == c[i][j]) // Occurring more than one
+                return false;
+        }
+        return true;
     }
 
 }
