@@ -1,5 +1,11 @@
 package Exercise_08._36;
-
+/*********************************************************************************
+ * (Latin square) A Latin square is an n-by-n array filled with n different Latin *
+ * letters, each occurring exactly once in each row and once in each column.      *
+ * Write a program that prompts the user to enter the number n and the array of   *
+ * characters, as shown in the sample output, and checks if the input array is a  *
+ * Latin square. The characters are the first n characters starting from A.       *
+ *********************************************************************************/
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -43,7 +49,7 @@ public class LatinSquare {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                String s = input.next();
-               matrix[i][j] = s.charAt( 0 );
+               matrix[i][j] = s.charAt(0);
             }
 
             char[] clonedRow = matrix[i].clone();
@@ -86,14 +92,14 @@ public class LatinSquare {
 
 
     private static boolean isOccurringExactlyOnceInRowAndColumn(char[][] c, int i, int j) {
-        for (int k = 0; k < c.length; k++) {
+        for (int k = 0; k < c.length; k++) { // Row
             if (k == j) // Same character
                 continue;
             if (c[i][k] == c[i][j]) // Occurring more than one
                return false;
         }
 
-        for (int k = 0; k < c.length; k++) {
+        for (int k = 0; k < c.length; k++) { // Column
             if (k == i) // Same character
                 continue;
             if (c[k][j] == c[i][j]) // Occurring more than one
