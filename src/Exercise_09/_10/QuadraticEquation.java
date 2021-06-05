@@ -23,19 +23,6 @@ public class QuadraticEquation {
         this.c = c;
     }
 
-    public double getDiscriminant() {
-        double d = (b * b) - (4 * a * c);
-        return (d < 0) ? 0 : d;
-    }
-
-    public double getRoot1() {
-        return (-b + Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
-    }
-
-    public double getRoot2() {
-        return (-b - Math.sqrt((b * b) - (4 * a * c))) / (2 * a);
-    }
-
     public double getA() {
         return a;
     }
@@ -48,4 +35,21 @@ public class QuadraticEquation {
         return c;
     }
 
+    public double getDiscriminant() {
+        return (b * b) - (4 * a * c);
+    }
+
+    public double getRoot1() {
+        if (getDiscriminant() == 0)
+            return 0;
+        else
+            return (-b + getDiscriminant()) / (2 * a);
+    }
+
+    public double getRoot2() {
+        if (getDiscriminant() == 0)
+            return 0;
+        else
+            return (-b - getDiscriminant()) / (2 * a);
+    }
 }
