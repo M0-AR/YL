@@ -41,7 +41,7 @@ public class LinearEquation {
         return f;
     }
 
-    private boolean isSolvable() {
+    public boolean isSolvable() {
         return (a * d - b * c) != 0;
     }
 
