@@ -1,17 +1,20 @@
 package Exercise_09._10;
-/**********************************************
- *              QuadraticEquation             *
- **********************************************
- * - a: double                                *
- * - b: double                                *
- * - c: double                                *
- * ********************************************
- * + QuadraticEquation(double, double, double)*
- * + getDiscriminant(): double                *
- * + getRoot1(): double                       *
- * + getRoot2(): double                       *
- * ********************************************/
-
+                    // UML diagram
+/********************************************************
+ *              QuadraticEquation                       *
+ ********************************************************
+ * - a: double                                          *
+ * - b: double                                          *
+ * - c: double                                          *
+ * ******************************************************
+ * + QuadraticEquation(a: double, b: double, c: double) *
+ * + getA(): double                                     *
+ * + getB(): double                                     *
+ * + getC(): double                                     *
+ * + getDiscriminant(): double                          *
+ * + getRoot1(): double                                 *
+ * + getRoot2(): double                                 *
+ * *****************************************************/
 public class QuadraticEquation {
     private double a;
     private double b;
