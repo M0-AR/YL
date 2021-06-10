@@ -1,5 +1,27 @@
 package Exercise_09._11;
-
+                    // UML diagram
+/*****************************************************
+ *                  LinearEquation                   *
+ *---------------------------------------------------*
+ * - a: double                                       *
+ * - b: double                                       *
+ * - c: double                                       *
+ * - d: double                                       *
+ * - e: double                                       *
+ * - f: double                                       *
+ *---------------------------------------------------*
+ * + LinearEquation(a: double, b: double, c: double, *
+ *                  d: double, e: double, f: double) *
+ * + getA(): double                                  *
+ * + getB(): double                                  *
+ * + getC(): double                                  *
+ * + getD(): double                                  *
+ * + getE(): double                                  *
+ * + getF(): double                                  *
+ * + isSolvable(): boolean                           *
+ * + getX(): double                                  *
+ * + getY(): double                                  *
+ *****************************************************/
 public class LinearEquation {
     private double a;
     private double b;
@@ -46,10 +68,10 @@ public class LinearEquation {
     }
 
     public double getX() {
-        return (e*d - b*f) / (e*d - b*c);
+        return (e * d - b * f) / (e * d - b * c);
     }
 
     public double getY() {
-        return (a*f - e*c) / (a*d - b*c);
+        return (a * f - e * c) / (a * d - b * c);
     }
 }
