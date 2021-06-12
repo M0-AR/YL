@@ -9,8 +9,8 @@ package Exercise_09._13;
  * + locateLarges(a: double[][]): Location *
  *******************************************/
 public class Location {
-    private int[][] locations;
-    private double maxValue;
+    public int[][] locations;
+    public double maxValue;
 
     private Location(int[][] locations, double maxValue) {
         this.locations = locations;
