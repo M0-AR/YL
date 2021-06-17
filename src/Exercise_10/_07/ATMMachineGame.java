@@ -53,9 +53,4 @@ public class ATMMachineGame {
             }
         }
     }
-
-
-    public void displayMenu() {
-
-    }
 }
