@@ -1,5 +1,28 @@
 package Exercise_10._08;
-
+/*********************************************************************************
+ * (Financial: the Tax class) Programming Exercise 8.12 writes a program for      *
+ * computing taxes using arrays. Design a class named Tax to contain the          *
+ * following instance data fields:                                                *
+ *                                                                                *
+ * ■ int filingStatus: One of the four tax-filing statuses: 0—single filer, 1—    *
+ * 	 married filing jointly or qualifying widow(er), 2—married filing separately, *
+ * 	 and 3—head of household. Use the public static constants SINGLE_FILER        *
+ * 	 (0), MARRIED_JOINTLY_OR_QUALIFYING_WIDOW(ER) (1), MARRIED_                   *
+ * 	 SEPARATELY (2), HEAD_OF_HOUSEHOLD (3) to represent the statuses.             *
+ * ■ int[][] brackets: Stores the tax brackets for each filing status.            *
+ * ■ double[] rates: Stores the tax rates for each bracket.                       *
+ * ■ double taxableIncome: Stores the taxable income.                             *
+ *                                                                                *
+ * Provide the getter and setter methods for each data field and the getTax()     *
+ * method that returns the tax. Also provide a no-arg constructor and the         *
+ * constructor Tax(filingStatus, brackets, rates, taxableIncome).                 *
+ *                                                                                *
+ * Draw the UML diagram for the class and then implement the class. Write a test  *
+ * program that uses the Tax class to print the 2001 and 2009 tax tables for      *
+ * taxable income from $50,000 to $60,000 with intervals of $1,000 for all four   *
+ * statuses. The tax rates for the year 2009 were given in Table 3.2. The tax     *
+ * rates for 2001 are shown in Table 10.1.                                        *
+ *********************************************************************************/
 public class TaxTest {
     public static void main(String[] args) {
         int[][] bracketsFor2001 = {
@@ -12,10 +35,10 @@ public class TaxTest {
         double[] ratesFor2001 = {0.15, 0.275, 0.305, 0.355, 0.391};
 
         int[][] bracketsFor2002 = {
-                {6000, 27950, 67700, 141250, 307050},    // Single filer
-                {12000 , 46700, 112850, 171950, 307050}, // married filing jointly
-                {6000, 23350, 56425, 85975, 153525},     // married filing separately
-                {10000, 37450, 96700, 156600, 307050}    // head of household
+            {6000, 27950, 67700, 141250, 307050},    // Single filer
+            {12000 , 46700, 112850, 171950, 307050}, // married filing jointly
+            {6000, 23350, 56425, 85975, 153525},     // married filing separately
+            {10000, 37450, 96700, 156600, 307050}    // head of household
         };
 
         double[] ratesFor2002 = {0.1, 0.15, 0.27, 0.30, 0.35, 0.386};
