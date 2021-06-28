@@ -23,7 +23,7 @@ package Exercise_10._08;
  * statuses. The tax rates for the year 2009 were given in Table 3.2. The tax     *
  * rates for 2001 are shown in Table 10.1.                                        *
  *********************************************************************************/
-public class TaxTest {
+public class TestTax {
     public static void main(String[] args) {
         int[][] bracketsFor2001 = {
             {27050, 65550, 136750, 297350},  // Single filers
