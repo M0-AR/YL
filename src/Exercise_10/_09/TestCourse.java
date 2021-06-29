@@ -1,33 +1,38 @@
 package Exercise_10._09;
-
+/*********************************************************************************
+ * (The Course class) Revise the Course class as follows:                         *
+ *                                                                                *
+ * ■ The array size is fixed in Listing 10.6. Improve it to automatically         *
+ *   increase the array size by creating a new larger array and copying the       *
+ *   contents of the current array to it.                                         *
+ * ■ Implement the dropStudent method.                                            *
+ * ■ Add a new method named clear() that removes all students from the            *
+ *   course.                                                                      *
+ *                                                                                *
+ * Write a test program that creates a course, adds three students, removes one,  *
+ * and displays the students in the course.                                       *
+ *********************************************************************************/
 public class TestCourse {
     public static void main(String[] args) {
-        Course course1 = new Course("Data Structures");
-        Course course2 = new Course("Database Systems");
+        // Create a course
+        Course dataStructures = new Course("Data Structures");
 
-        course1.addStudent("Peter Jones");
-        course1.addStudent("Kim Smith");
-        course1.addStudent("Anne Kennedy");
+        // Add three students
+        dataStructures.addStudent("Peter Jones");
+        dataStructures.addStudent("Kim Smith");
+        dataStructures.addStudent("Anne Kennedy");
 
-        course2.addStudent("Peter Jones");
-        course2.addStudent("Steve Smith");
+        // Remove one student
+        dataStructures.dropStudent("Peter Jones");
 
-        System.out.println("Number of students in course1: " +
-            course1.getNumberOfStudents());
-        String[] students = course1.getStudents();
-        for (int i = 0; i < course1.getNumberOfStudents(); i++)
-            System.out.print(students[i] + ", ");
-
-        System.out.println();
-        System.out.println("Number of students in course2: " +
-            course2.getNumberOfStudents());
-
-        // Test drop method
-        course1.dropStudent("Peter Jones");
-        System.out.println("Number of students in course1: " +
-            course1.getNumberOfStudents());
-        for (String student : course1.getStudents()) {
-            System.out.print(student != null ? student + ", " : "");
+        // Displays students in the course
+        System.out.println("\nThe students in the course" +
+                         dataStructures.getCourseName() + ":");
+        String[] students = dataStructures.getStudents();
+        for (int i = 0; i < dataStructures.getNumberOfStudents(); i++) {
+            System.out.print(students[i] +
+                    ((i != dataStructures.getNumberOfStudents() - 1) ? ", ": ""));
         }
+        System.out.println();
     }
 }
