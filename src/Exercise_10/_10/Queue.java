@@ -49,6 +49,6 @@ public class Queue {
     }
 
     public int getSize() {
-        return size + 1;
+        return size;
     }
 }
