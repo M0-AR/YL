@@ -35,13 +35,11 @@ public class Queue {
     public int dequeue() {
         int firstElement = elements[0];
 
-        int[] e = new int[elements.length - 1];
-
         for (int i = 1; i < elements.length - 1; i++) {
-            e[i - 1] = elements[i];
+            elements[i - 1] = elements[i];
         }
 
-        elements = e;
+        size--;
 
        return firstElement;
     }
