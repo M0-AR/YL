@@ -27,6 +27,7 @@ public class Queue {
             System.arraycopy(elements, 0, temp, 0, elements.length);
             elements = temp;
         }
+
         elements[size++] = v;
     }
 
