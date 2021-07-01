@@ -15,23 +15,22 @@ public class Queue {
     private int[] elements;
     private int size;
 
+    /** Construct a queue with the default capacity 8 */
     public Queue() {
         elements = new int[8];
-        size = 0;
     }
 
+    /** Add a new integer into the queue */
     public void enqueue(int v) {
         if (size == elements.length) {
-            int[] e = new int[elements.length * 2];
-
-            System.arraycopy(elements, 0, e, 0, elements.length);
-
-            elements = e;
+            int[] temp = new int[elements.length * 2];
+            System.arraycopy(elements, 0, temp, 0, elements.length);
+            elements = temp;
         }
-        elements[size] = v;
-        size++;
+        elements[size++] = v;
     }
 
+    /** Remove and return an element from the queue */
     public int dequeue() {
         int firstElement = elements[0];
 
@@ -44,10 +43,12 @@ public class Queue {
        return firstElement;
     }
 
+    /** Test whether the queue is empty */
     public boolean empty() {
         return size == 0;
     }
 
+    /** Return the number of elements in the queue */
     public int getSize() {
         return size;
     }
