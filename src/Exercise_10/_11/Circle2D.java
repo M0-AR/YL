@@ -30,22 +30,31 @@ public class Circle2D {
     }
 
     public double getArea() {
-        return 0;
+        return Math.PI * Math.pow(radius, 2);
     }
 
     public double getPerimeter() {
-        return 0;
+        return 2 * Math.PI * radius;
     }
 
+    /** Test whether the (x, y) inside this circle.*/
     public boolean contains(double x, double y) {
-        return false;
+        return Math.sqrt(Math.pow(x - this.x, 2) +
+                         Math.pow(y - this.y, 2))
+                         < radius;
     }
 
+    /** Test whether the circle inside this circle.*/
     public boolean contains(Circle2D circle) {
-        return false;
+        return Math.sqrt(Math.pow(circle.getX()- this.x, 2) +
+                         Math.pow(circle.getY() - this.y, 2))
+                         <= Math.abs(radius - circle.getRadius());
     }
 
+    /** Test whether the circle overlaps this circle.*/
     public boolean overlaps(Circle2D circle) {
-        return false;
+        return Math.sqrt(Math.pow(circle.getX()- this.x, 2) +
+                         Math.pow(circle.getY() - this.y, 2))
+                         <= radius + circle.getRadius();
     }
 }
