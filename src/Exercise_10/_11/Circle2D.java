@@ -1,5 +1,18 @@
 package Exercise_10._11;
-
+                   // UML diagram
+/***************************************************
+ *                    Circle2D                     *
+ *-------------------------------------------------*
+ * -x: double                                      *
+ * -y: double                                      *
+ * -radius; double                                 *
+ *-------------------------------------------------*
+ * +Circle2D()                                     *
+ * +Circle2D(x: double, y: double, radius: double) *
+ * +contains(x: double, y: double): boolean        *
+ * +contains(circle: Circle2D): boolean            *
+ * +overlaps(circle: Circle2D): boolean            *
+ **************************************************/
 public class Circle2D {
     private double x;
     private double y;
