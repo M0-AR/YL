@@ -1,7 +1,6 @@
 package Exercise_10._12;
 
 import Exercise_10._04.MyPoint;
-
 import java.awt.geom.Line2D;
 
 public class Triangle2D {
@@ -58,6 +57,39 @@ public class Triangle2D {
         return p1.distance(p2) + p1.distance(p3) + p2.distance(p3);
     }
 
+    /** Return true if a triangle overlaps with this triangle */
+    public boolean overlaps(Triangle2D t) {
+        // Two triangles overlap if one is inside the other or a side in
+        // one triangle intersects a side in the other triangle
+        Line2D line1 = new Line2D.Double(t.p1.getX(), t.p1.getY(), t.p2.getX(), t.p2.getY());
+        Line2D line2 = new Line2D.Double(t.p1.getX(), t.p1.getY(), t.p3.getX(), t.p3.getY());
+        Line2D line3 = new Line2D.Double(t.p2.getX(), t.p2.getY(), t.p3.getX(), t.p3.getY());
+
+        Line2D side1 = new Line2D.Double(p1.getX(), p1.getY(), p2.getX(), p2.getY());
+        Line2D side2 = new Line2D.Double(p1.getX(), p1.getY(), p3.getX(), p3.getY());
+        Line2D side3 = new Line2D.Double(p2.getX(), p2.getY(), p3.getX(), p3.getY());
+
+        return contains(t) || t.contains(this) ||
+                line1.intersectsLine(side1) ||
+                line1.intersectsLine(side2) ||
+                line1.intersectsLine(side3) ||
+                line2.intersectsLine(side1) ||
+                line2.intersectsLine(side2) ||
+                line2.intersectsLine(side3) ||
+                line3.intersectsLine(side1) ||
+                line3.intersectsLine(side2) ||
+                line3.intersectsLine(side3);
+    }
+
+    /** Return true if a triangle is contained in this triangle */
+    public boolean contains(Triangle2D t) {
+        // If a triangle is contained in this triangle,
+        // all its three points must contain in this triangle
+        return  contains(t.getP1().getX(), t.getP1().getY()) &&
+                contains(t.getP2().getX(), t.getP2().getY()) &&
+                contains(t.getP3().getX(), t.getP3().getY());
+    }
+
     /** Test whether the MyPoint inside this Triangle.*/
     public boolean contains(double x, double y) {
         double maxX = Math.max(p1.getX(), Math.max(p2.getX(), p3.getX()));
@@ -108,15 +140,5 @@ public class Triangle2D {
             return false;
         else
             return true;
-    }
-
-    /** Test whether the Triangle inside this Triangle.*/
-    public boolean contains(Triangle2D t) {
-        return false;
-    }
-
-    /** Test whether the Triangle overlaps this Triangle.*/
-    public boolean overlaps(Triangle2D t) {
-        return false;
     }
 }
