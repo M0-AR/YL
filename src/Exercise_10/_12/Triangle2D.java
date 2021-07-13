@@ -20,6 +20,13 @@ public class Triangle2D {
         this.p3 = p3;
     }
 
+    public Triangle2D(double x1, double y1, double x2, double y2,
+         double x3, double y3) {
+        this.p1 = new MyPoint(x1, y1);
+        this.p2 = new MyPoint(x2, y2);
+        this.p3 = new MyPoint(x3, y3);
+    }
+
     public MyPoint getP1() {
         return p1;
     }
