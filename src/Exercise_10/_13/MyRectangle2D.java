@@ -57,13 +57,16 @@ public class MyRectangle2D {
     }
 
     public double getPerimeter() {
-        return -1;
+        return 2 * (width + height);
     }
 
+    /** Return true if (x, y) is inside this rectangle */
     public boolean contains(double x, double y) {
-        return false;
+        return getDistance(this.x, x) <= width / 2 &&
+                        getDistance(this.y, y) <= height / 2 ;
     }
 
+    /** Return true if a rectangle is contained in this rectangle */
     public boolean contains(MyRectangle2D r) {
         return false;
     }
@@ -71,4 +74,7 @@ public class MyRectangle2D {
     public boolean overlaps(MyRectangle2D r) {
         return false;
     }
-}
+
+    private double getDistance(double p1, double p2) {
+        return Math.sqrt(Math.pow(p2 - p1, 2));
+    }}
