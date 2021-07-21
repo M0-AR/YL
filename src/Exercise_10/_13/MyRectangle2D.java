@@ -66,13 +66,21 @@ public class MyRectangle2D {
                         getDistance(this.y, y) <= height / 2 ;
     }
 
-    /** Return true if a rectangle is contained in this rectangle */
-    public boolean contains(MyRectangle2D r) {
-        return false;
+    /** Return true if a rectangle overlaps this rectangle */
+    public boolean overlaps(MyRectangle2D r) {
+        return contains(r) &&
+                ((x + width / 2 > r.getX() - r.getWidth()) ||
+                        (y + height / 2 > r.getY() - r.getHeight())) &&
+                (getDistance(x, r.getX()) < width / 2 + r.getWidth() / 2) &&
+                (getDistance(y, r.getY()) < height / 2 + r.getHeight());
     }
 
-    public boolean overlaps(MyRectangle2D r) {
-        return false;
+    /** Return true if a rectangle is inside this rectangle */
+    public boolean contains(MyRectangle2D r) {
+        return  getDistance(x, r.getX()) + r.getWidth() / 2 <= width / 2 &&
+                getDistance(y, r.getY()) + r.getHeight() / 2 <= height / 2 &&
+                width / 2 + r.getWidth() / 2 <= width &&
+                height / 2 + r.getHeight() / 2 <= height;
     }
 
     private double getDistance(double p1, double p2) {
