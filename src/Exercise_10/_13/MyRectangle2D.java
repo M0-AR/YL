@@ -1,5 +1,18 @@
 package Exercise_10._13;
-
+                    // UML
+/************************************************
+ *                 MyRectangle2D                *
+ *----------------------------------------------*
+ * -x: double                                   *
+ * -y: double                                   *
+ * -width: double                               *
+ * -height: double                              *
+ *----------------------------------------------*
+ * +contains(x: double, y: double): boolean     *
+ * +contains(r: MyRectangle2D): boolean         *
+ * +overlaps(r: MyRectangle2D): boolean         *
+ * +getDistance(p1: double, p2: double): double *
+ ************************************************/
 public class MyRectangle2D {
     private double x;
     private double y;
