@@ -1,5 +1,17 @@
 package Exercise_10._14;
-
+                        // UML
+/**************************************************
+ *                     MyDate                     *
+ *------------------------------------------------*
+ * -year: int                                     *
+ * -month: int                                    *
+ * -day: int                                      *
+ *------------------------------------------------*
+ * +MyDate(): void                                *
+ * +MyDate(elapsedTime: long): void               *
+ * +MyDate(year: int, month: int, day: int): void *
+ * +setDate(elapsedTime: long): void              *
+ **************************************************/
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
