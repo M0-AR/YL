@@ -4,7 +4,7 @@ package Exercise_10._21;
  * that are divisible by 5 or 6.                                               *
  ******************************************************************************/
 import java.math.BigInteger;
-// Todo: check if the result is correct.
+
 public class DivisibleByFiveOrSix {
     public static void main(String[] args) {
         // BigNum represents Long.MAX_VALUE
