@@ -51,7 +51,7 @@ public class MyString1 {
         }
 
         char[] temp2 = new char[size];
-        for (int k = size; k >= 0; k--) {
+        for (int k = size - 1; k >= 0; k--) {
             temp2[k] = temp[size - k - 1];
         }
         return new MyString1(temp2);
