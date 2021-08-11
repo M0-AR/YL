@@ -4,7 +4,8 @@ public class MyString1 {
     private char[] chars;
 
     public MyString1(char[] chars) {
-        this.chars = chars;
+        this.chars = new char[chars.length];
+        System.arraycopy(chars, 0, this.chars, 0, chars.length);
     }
 
     public char charAt(int index) {
@@ -16,15 +17,19 @@ public class MyString1 {
     }
 
     public MyString1 substring(int begin, int end) {
-        char[] c = new char[end - begin + 1];
-        for (int i = 0; i < c.length; i++) {
-            c[i] = chars[begin++];
+        char[] temp = new char[end - begin];
+        for (int i = begin; i < end; i++) {
+            temp[i - begin] = chars[i];
         }
-        return new MyString1(c);
+        return new MyString1(temp);
     }
 
     public MyString1 toLowerCase() {
-        return null; // Todo
+        char[] temp = new char[chars.length];
+        for (int i = 0; i < chars.length; i++) {
+            temp[i] = Character.toLowerCase(chars[i]);
+        }
+        return new MyString1(temp);
     }
 
     public boolean equals(MyString1 s) {
@@ -36,6 +41,23 @@ public class MyString1 {
     }
 
     public static MyString1 valueOf(int i) {
-        return new MyString1(new char[]{(char) i});
+        char[] temp = new char[40];
+        int size = 0;
+        while (i != 0) {
+            int number = i % 10;
+            i = i / 10;
+            temp[size] = (char)(number + '0');
+            size++;
+        }
+
+        char[] temp2 = new char[size];
+        for (int k = size; k >= 0; k--) {
+            temp2[k] = temp[size - k - 1];
+        }
+        return new MyString1(temp2);
+    }
+
+    public char[] toChars() {
+        return chars;
     }
 }
