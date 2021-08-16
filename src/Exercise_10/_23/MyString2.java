@@ -42,7 +42,7 @@ public class MyString2 {
         return new MyString2(sub.toString());
     }
 
-    // Todo: continue with more comments to the rest of the methods. 
+    // Todo: continue with more comments to the rest of the methods.
     public MyString2 toUpperCase() {
         String s = "";
         for (int i = 0; i < this.str.length(); i++) {
