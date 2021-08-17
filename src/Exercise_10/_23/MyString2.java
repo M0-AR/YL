@@ -42,7 +42,7 @@ public class MyString2 {
         return new MyString2(sub.toString());
     }
 
-    // Todo: continue with more comments to the rest of the methods.
+    /** Return new MyString2 object in upper case characters */
     public MyString2 toUpperCase() {
         String s = "";
         for (int i = 0; i < this.str.length(); i++) {
@@ -51,6 +51,7 @@ public class MyString2 {
         return new MyString2(s);
     }
 
+    /** Return string as an array of characters */
     public char[] toChars() {
         char[] temp = new char[this.str.length()];
         for (int i = 0; i < temp.length; i++) {
@@ -59,6 +60,7 @@ public class MyString2 {
         return temp;
     }
 
+    /** Return a boolean format as a MyString2 object */
     public static MyString2 valueOf(boolean b) {
         return b ? new MyString2("true") : new MyString2("false");
     }
