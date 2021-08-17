@@ -19,7 +19,7 @@ public class MyString2 {
         if (this.str.length() < s.length()) {
             index = -1;
         }
-        if (s.length() < this.str.length()) {
+        if (this.str.length() > s.length()) {
             index = 1;
         }
 
