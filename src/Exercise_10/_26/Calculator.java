@@ -8,7 +8,7 @@ package Exercise_10._26;
  *      - "4 +         5"                                                            *
  *      - "4 *         5"                                                            *
  ************************************************************************************/
-
+// Todo: Make the program take an input from the command line.
 import java.util.HashSet;
 import java.util.Scanner;
 
