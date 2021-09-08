@@ -9,6 +9,7 @@ public class MyStringBuilder2 {
 
     }
 
+
     public MyStringBuilder2(char[] chars) {
         this.buffer = new char[chars.length];
         size = capacity = chars.length;
@@ -24,6 +25,31 @@ public class MyStringBuilder2 {
     }
 
     public MyStringBuilder2 insert(int offset, MyStringBuilder2 s) {
-        return null;
+        if (capacity < size + s.length()) {
+            increaseCapacity(2 * (size + s.length()));
+        }
+
+        String temp = s.toString();
+        for (int i = 0; i < temp.length(); i++)
+            buffer[size - 1 + temp.length() - i] = buffer[size - 1 - i]; // Todo: not sure what this is try to write a real example to understand it.
+
+        for (int i = 0; i < temp.length(); i++)
+            buffer[i + offset] = temp.charAt(i);
+
+        size += temp.length();
+
+        return this;
     }
+
+    private void increaseCapacity(int newCapacity) {
+        char[] temp = new char[newCapacity];
+        System.arraycopy(buffer, 0, temp, 0, size);
+        capacity = newCapacity;
+        buffer = temp;
+    }
+
+    public int length() {
+        return size;
+    }
+
 }
