@@ -56,6 +56,16 @@ public class MyStringBuilder2 {
         return new MyStringBuilder2(temp);
     }
 
+    private MyStringBuilder2 revers() {
+        for (int i = 0; i < size / 2; i++) {
+            char temp = buffer[i];
+            buffer[i] = buffer[size - 1 - i];
+            buffer[size - 1 - i] = temp;
+        }
+
+        return this;
+    }
+
     public int length() {
         return size;
     }
