@@ -48,6 +48,14 @@ public class MyStringBuilder2 {
         buffer = temp;
     }
 
+    private MyStringBuilder2 subString(int begin, int end) {
+        char[] temp = new char[end - begin];
+        for (int i = 0; i < temp.length; i++)
+            temp[i] = buffer[begin + i];
+
+        return new MyStringBuilder2(temp);
+    }
+
     public int length() {
         return size;
     }
