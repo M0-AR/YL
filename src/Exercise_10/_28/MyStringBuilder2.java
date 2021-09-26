@@ -1,5 +1,5 @@
 package Exercise_10._28;
-// Todo: continue with the methods.
+
 public class MyStringBuilder2 {
     private int size = 0;
     private int capacity = 0;
@@ -8,7 +8,6 @@ public class MyStringBuilder2 {
     public MyStringBuilder2() {
 
     }
-
 
     public MyStringBuilder2(char[] chars) {
         this.buffer = new char[chars.length];
@@ -48,7 +47,15 @@ public class MyStringBuilder2 {
         buffer = temp;
     }
 
-    private MyStringBuilder2 subString(int begin, int end) {
+    public int length() {
+        return size;
+    }
+
+    public MyStringBuilder2 subString(int begin) {
+        return subString(begin, size);
+    }
+
+    public MyStringBuilder2 subString(int begin, int end) {
         char[] temp = new char[end - begin];
         for (int i = 0; i < temp.length; i++)
             temp[i] = buffer[begin + i];
@@ -56,7 +63,7 @@ public class MyStringBuilder2 {
         return new MyStringBuilder2(temp);
     }
 
-    private MyStringBuilder2 revers() {
+    public MyStringBuilder2 revers() {
         for (int i = 0; i < size / 2; i++) {
             char temp = buffer[i];
             buffer[i] = buffer[size - 1 - i];
@@ -66,8 +73,10 @@ public class MyStringBuilder2 {
         return this;
     }
 
-    public int length() {
-        return size;
-    }
+    public MyStringBuilder2 toUpperCase() {
+        for (int i = 0; i < size; i++)
+            buffer[i] = Character.toUpperCase(buffer[i]);
 
+        return this;
+    }
 }
