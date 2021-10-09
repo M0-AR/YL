@@ -6,11 +6,12 @@ public class Person {
     protected String phoneNumber;
     protected String email;
 
-    public Person(String name, String address, String phoneNumber, String email) {
+    Person(String name) {
         this.name = name;
-        this.address = address;
-        this.phoneNumber = phoneNumber;
-        this.email = email;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
