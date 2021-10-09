@@ -1,16 +1,18 @@
 package Exercise_11._02;
 
-enum Status {FRESHMAN, SOPHOMORE, JUNIOR, SENIOR}
 public class Student extends Person{
-    private final Status status;
+    public static int FRESHMAN = 1;
+    public static int SOPHOMORE = 2;
+    public static int JUNIOR = 3;
+    public static int SENIOR = 4;
 
-    public Student(String name, String address, String phoneNumber, String email, Status status) {
-        super(name, address, phoneNumber, email);
-        this.status = status;
+    protected int status;
+
+    Student(String name) {
+        super(name);
     }
-
     @Override
     public String toString() {
-        return "Student's name: " + name;
+        return "Student's name: " + getName();
     }
 }

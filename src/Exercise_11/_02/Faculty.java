@@ -1,19 +1,20 @@
 package Exercise_11._02;
 
-import Exercise_10._14.MyDate;
-
 public class Faculty extends Employee{
-    private double officeHours;
-    private int rank;
+    public static int LECTURER = 1;
+    public static int ASSISTANT_PROFESSOR = 2;
+    public static int ASSOCIATE_PROFESSOR = 3;
+    public static int PROFESSOR = 4;
 
-    public Faculty(String name, String address, String phoneNumber, String email, String office, double salary, MyDate dateHired, double officeHours, int rank) {
-        super(name, address, phoneNumber, email, office, salary, dateHired);
-        this.officeHours = officeHours;
-        this.rank = rank;
+    protected String officeHours;
+    protected int rank;
+
+    Faculty(String name) {
+        super(name);
     }
 
     @Override
     public String toString() {
-        return "Faculty's name: " + name;
+        return "Faculty's name: " + getName();
     }
 }
