@@ -73,4 +73,14 @@ public class Account {
     public Date getDateCreated() {
         return dateCreated;
     }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "id=" + id +
+                ", balance=" + balance +
+                ", annualInterestRate=" + annualInterestRate +
+                ", dateCreated=" + dateCreated +
+                '}';
+    }
 }

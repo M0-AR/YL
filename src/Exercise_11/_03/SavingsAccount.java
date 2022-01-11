@@ -13,7 +13,7 @@ public class SavingsAccount extends Account{
     }
 
     /** Construct a SavingsAccount with specified id, balance */
-    public SavingsAccount(int id, int balance, int overdrawn) {
+    public SavingsAccount(int id, int balance) {
         super(id, balance);
     }
 
