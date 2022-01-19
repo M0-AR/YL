@@ -1,5 +1,4 @@
 package Exercise_11._05;
-import java.util.ArrayList;
 
 public class Test {
     public static void main(String[] args) {
@@ -18,10 +17,10 @@ public class Test {
         System.out.println("\nThe students in the course" +
                 dataStructures.getCourseName() + ":");
 
-        ArrayList<String> students = dataStructures.getStudents();
-        for (int i = 0; i < dataStructures.getNumberOfStudents(); i++) {
-            System.out.print(students.get(i) +
-                    ((i != dataStructures.getNumberOfStudents() - 1) ? ", ": ""));
+        String[] students = dataStructures.getStudents();
+        for (int i = 0; i < students.length; i++) {
+            System.out.print(students[i] +
+                    ((i != students.length - 1) ? ", ": ""));
         }
 
         System.out.println();

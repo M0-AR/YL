@@ -1,46 +1,34 @@
 package Exercise_11._05;
-
 import java.util.ArrayList;
 
 public class Course {
     private String courseName;
-    private ArrayList<String> students = new ArrayList<>();
-    private int numberOfStudents;
+    private ArrayList<String> students;
 
     public Course(String courseName) {
         this.courseName = courseName;
-    }
-
-    public ArrayList<String> getStudents() {
-        return students;
-    }
-
-    public int getNumberOfStudents() {
-        return numberOfStudents;
+        students = new ArrayList<>();
     }
 
     public String getCourseName() {
         return courseName;
     }
 
+    public String[] getStudents() {
+        String[] temp = new String[students.size()];
+        return students.toArray(temp);
+    }
+
     public void addStudent(String student) {
         students.add(student);
-        numberOfStudents++;
     }
 
     public void dropStudent(String student) {
-        int index = findStudent(student);
-        if (index != -1) {
-            dropStudent(index);
-        } else {
-            System.out.println(student +
-                    " is not in the course: " + courseName);
-        }
+        students.remove(student);
     }
 
     private void dropStudent(int index) {
         students.remove(index);
-        numberOfStudents--;
     }
 
     private int findStudent(String student) {
@@ -53,6 +41,5 @@ public class Course {
 
     public void clear() {
         students = new ArrayList<>();
-        numberOfStudents = 0;
     }
 }
