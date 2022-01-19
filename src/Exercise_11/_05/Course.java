@@ -31,6 +31,10 @@ public class Course {
         students.remove(index);
     }
 
+    public int getNumberOfStudents() {
+        return students.size();
+    }
+
     private int findStudent(String student) {
         for (int i = 0; i < students.size(); i++) {
             if (students.get(i).equalsIgnoreCase(student))
