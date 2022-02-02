@@ -2,15 +2,16 @@ package Exercise_11._08;
 
 public class Test_08 {
     public static void main(String[] args) {
-        Account account = new Account(1122, "George", 1000, 1.5);
+        Account.setAnnualInterestRate(5.5);
 
+        Account account = new Account(1122, "George", 1000);
         account.deposit(30);
         account.deposit(40);
         account.deposit(50);
 
-        account.withdraw(5, "");
-        account.withdraw(4, "");
-        account.withdraw(2, "");
+        account.withdraw(5);
+        account.withdraw(4);
+        account.withdraw(2);
 
         // Print object As JSON form
         //System.out.println(account);
@@ -19,7 +20,7 @@ public class Test_08 {
 
         // Print object from here
         System.out.println("Name: " + account.getName());
-        System.out.println("Annual Interest Rate: " + account.getInterestRate());
+        System.out.println("Annual Interest Rate: " + account.getAnnualInterestRate());
         System.out.println("Balance: " + account.getBalance());
         System.out.println();
 

@@ -8,17 +8,19 @@ public class Account {
     private int id;
     private String name;
     private double balance;
-    private double interestRate;
+    private static double annualInterestRate;
     private Date dateCreated;
-    private ArrayList<Transaction> transactions;
+    private ArrayList<Transaction> transactions = new ArrayList<>();
 
-    public Account(int id, String name, double newBalance, double newInterestRate) {
+    public Account() {
+        this.dateCreated = new Date();
+    }
+
+    public Account(int id, String name, double newBalance) {
         this.id = id;
         this.name = name;
         this.balance = newBalance;
-        this.interestRate = newInterestRate;
         this.dateCreated = new Date();
-        this.transactions = new ArrayList<>();
     }
 
     public String getName() {
@@ -37,12 +39,12 @@ public class Account {
         this.balance = balance;
     }
 
-    public double getInterestRate() {
-        return interestRate;
+    public double getAnnualInterestRate() {
+        return annualInterestRate;
     }
 
-    public void setInterestRate(double interestRate) {
-        this.interestRate = interestRate;
+    public static void setAnnualInterestRate(double annualInterestRate) {
+        Account.annualInterestRate = annualInterestRate;
     }
 
     public ArrayList<Transaction> getTransactions() {
@@ -53,13 +55,17 @@ public class Account {
         this.transactions = transactions;
     }
 
-    public void withdraw(double amount, String description) {
+    public double getMonthlyInterest() {
+        return balance * (annualInterestRate / 1200);
+    }
+
+    public void withdraw(double amount) {
         if (amount > balance) {
             System.out.println("Don't have enough money to withdraw.");
             return;
         }
         this.balance -= amount;
-        this.transactions.add(new Transaction('W', amount, this.balance, description));
+        this.transactions.add(new Transaction('W', amount, this.balance, ""));
     }
 
     public void deposit(double amount) {
@@ -72,7 +78,7 @@ public class Account {
         return "Account{" +
                 "name='" + name + '\'' +
                 ", balance=" + balance +
-                ", interestRate=" + interestRate +
+                ", interestRate=" + annualInterestRate +
                 ", transactions=" + Arrays.toString(transactions.toArray()) +
                 '}';
     }
