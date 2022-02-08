@@ -1,17 +1,19 @@
 package Exercise_11._08;
-/***************************************
- *              Account
- ***************************************
- * -id: int
- * -name: String
- * -balance: double
- * -annalInterestRate: double
- * -dateCreated: Date
- * -transactions: ArrayList<Transaction>
- *------------------------------------------
- * // todo
- */
-
+/*******************************************************
+ *                        Account                      *
+ *******************************************************
+ * -id: int                                            *
+ * -name: String                                       *
+ * -balance: double                                    *
+ * -annalInterestRate: double                          *
+ * -dateCreated: Date                                  *
+ * -transactions: ArrayList<Transaction>               *
+ *-----------------------------------------------------*
+ * +Account()                                          *
+ * +Account(id: int, name: String, newBalance: double) *
+ * +withdraw(amount: double)                           *
+ * +deposit(amount: double)                            *
+ *******************************************************/
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
