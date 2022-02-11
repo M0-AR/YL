@@ -25,13 +25,36 @@ public class LargestRowsAndColumns {
                 if ('1' == bits.get(i).charAt(j)) {
                    count1Bit++;
                 }
-                // Todo store more than one row max count
             }
+            maxRowWith1Bit.add(count1Bit);
         }
 
-        ArrayList<String> maxColumnWith1Bit= new ArrayList<>();
-        for (String bit : bits) {
-            System.out.print(bit + " ");
+
+        // Find max in maxRowWith1Bit
+        // Todo
+
+
+
+        ArrayList<Integer> maxColumnWith1Bit= new ArrayList<>();
+        for (int i = 0; i < n; i++) {
+            int count1Bit = 0;
+            for (int j = 0; j < n; j++) {
+                if ('1' == bits.get(j).charAt(i)) {
+                    count1Bit++;
+                }
+            }
+            maxColumnWith1Bit.add(count1Bit);
         }
+
+        // Find max in maxColumnWith1Bit
+        // Todo
+
     }
 }
+
+/*
+0011
+0011
+1101
+1010
+ */
