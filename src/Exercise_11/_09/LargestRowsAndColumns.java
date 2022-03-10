@@ -19,7 +19,6 @@ public class LargestRowsAndColumns {
 
 
         ArrayList<Integer> rowWith1Bit = new ArrayList<>();
-        countOneBit(bits, rowWith1Bit, n, 0, 0);
 
 
 
@@ -61,17 +60,27 @@ public class LargestRowsAndColumns {
 
     }
 
+    public static ArrayList<Integer> largestColumn(int[][] array) {
+        ArrayList<Integer> index = new ArrayList<>();
+        int[] count = countOneBit(array);
 
-    private static void countOneBit(ArrayList<String> bits, ArrayList<Integer> array, int n, int i, int j) {
-        for (i = 0; i < n; i++) {
-            int count1Bit = 0;
-            for (j = 0; j < n; j++) {
-                if ('1' == bits.get(i).charAt(j)) { // Todo: it works for row, flip i and j to make work for column
-                    count1Bit++;
-                }
+        int max = max(count);
+        getIndex(index, count, max);
+
+        return index;
+    }
+
+    private static int[] countOneBit(int[][] array) {
+        int[] count = new int[array.length];
+
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] == 1)
+                    count[j]++;
             }
-            array.add(count1Bit);
         }
+
+        return count;
     }
 
    /** Return the maximum integer in the array */
