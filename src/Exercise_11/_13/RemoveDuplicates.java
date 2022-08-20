@@ -9,7 +9,7 @@ public class RemoveDuplicates {
 
         ArrayList<Integer> list = new ArrayList<>();
 
-        System.out.print("Enter 10 double numbers: ");
+        System.out.print("Enter 10 integers: ");
         for (int i = 0; i < 10; i++) {
             list.add(input.nextInt());
         }
