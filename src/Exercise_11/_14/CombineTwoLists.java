@@ -25,16 +25,16 @@ public class CombineTwoLists {
 
     public static ArrayList<Integer> union(
             ArrayList<Integer> list1, ArrayList<Integer> list2) {
-        ArrayList<Integer> list = new ArrayList<>();
+        ArrayList<Integer> result = new ArrayList<>();
 
         for (Integer num : list1) {
-            list.add(num);
+            result.add(num);
         }
 
         for (Integer num : list2) {
-            list.add(num);
+            result.add(num);
         }
 
-        return list;
+        return result;
     }
 }
