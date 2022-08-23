@@ -23,7 +23,7 @@ public class AreaOfAConvexPolygon {
     }
 
     // http://www.mathwords.com/a/area_convex_polygon.htm
-    private static double areaOfConvexPolygon(double[][] points) {
+    public static double areaOfConvexPolygon(double[][] points) {
         final double HALF = .5;
         double principalDiagonal = 0, secondaryDiagonal = 0;
 
@@ -35,26 +35,7 @@ public class AreaOfAConvexPolygon {
             secondaryDiagonal += points[i][1] * points[i+1][0];
         }
 
-        double area = (HALF * principalDiagonal) + (-1 * (secondaryDiagonal));
-        return area;
+        double area = HALF * (principalDiagonal - secondaryDiagonal);
+        return Math.abs(area);
     }
 }
-
-/*
--12
-0
--8.5
-10
-0
-11.4
-5.5
-7.8
-6
--5.5
-0
--7
--3.5
--13.5
-
-result should be 292.575
- */
