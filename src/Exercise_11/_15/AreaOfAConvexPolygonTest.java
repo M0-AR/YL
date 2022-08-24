@@ -1,16 +1,29 @@
 package Exercise_11._15;
 
+import Exercise_10._04.MyPoint;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
-public class AreaOfAConvexPolygonTest {
-    double[][] points = {
-        {-12, 0},   {-8.5, 10}, {0, 11.4},
-        {5.5, 7.8}, {6, -5.5},  {0, -7},
-        {-3.5, -13.5}, {-12, 0}
-            // Last point is same as first point
-    };
+import java.util.ArrayList;
 
+public class AreaOfAConvexPolygonTest {
+
+    ArrayList<MyPoint> points;
+
+    @Before
+    public void runBeforeTest() {
+        points = new ArrayList<>();
+        points.add(new MyPoint(-12,  0));
+        points.add(new MyPoint(-8.5,  10));
+        points.add(new MyPoint( 0,    11.4));
+        points.add(new MyPoint( 5.5,  7.8));
+        points.add(new MyPoint( 6,   -5.5));
+        points.add(new MyPoint( 0,   -7));
+        points.add(new MyPoint(-3.5, -13.5));
+        // Last point is the same as first point
+        points.add(new MyPoint(-12,   0));
+    }
 
     @Test
     public void testAreaOfConvexPolygon() {

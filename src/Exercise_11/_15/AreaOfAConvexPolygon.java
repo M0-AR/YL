@@ -1,5 +1,8 @@
 package Exercise_11._15;
 
+import Exercise_10._04.MyPoint;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AreaOfAConvexPolygon {
@@ -10,29 +13,27 @@ public class AreaOfAConvexPolygon {
         int numberOfPoints = input.nextInt();
 
         System.out.print("Enter the coordinates of the points: ");
-        double[][] points = new double[numberOfPoints + 1][2];
+        ArrayList<MyPoint> points = new ArrayList<>();
         for (int i = 0; i < numberOfPoints; i++) {
-            points[i][0] = input.nextDouble();
-            points[i][1] = input.nextDouble();
+            points.add(new MyPoint(input.nextDouble(), input.nextDouble()));
         }
-        points[numberOfPoints][0] = points[0][0];
-        points[numberOfPoints][1] = points[0][1];
+        points.add(new MyPoint(points.get(0).getX(), points.get(0).getY()));
 
         System.out.println();
         System.out.println("The total area is " + areaOfConvexPolygon(points));
     }
 
     // http://www.mathwords.com/a/area_convex_polygon.htm
-    public static double areaOfConvexPolygon(double[][] points) {
+    public static double areaOfConvexPolygon(ArrayList<MyPoint> points) {
         final double HALF = .5;
         double principalDiagonal = 0, secondaryDiagonal = 0;
 
-        for (int i = 0; i < points.length - 1; i++) {
-            principalDiagonal += points[i][0] * points[i+1][1];
+        for (int i = 0; i < points.size() - 1; i++) {
+            principalDiagonal += points.get(i).getX() * points.get(i + 1).getY();
         }
 
-        for (int i = 0; i < points.length - 1; i++) {
-            secondaryDiagonal += points[i][1] * points[i+1][0];
+        for (int i = 0; i < points.size() - 1; i++) {
+            secondaryDiagonal += points.get(i).getY() * points.get(i + 1).getX();
         }
 
         double area = HALF * (principalDiagonal - secondaryDiagonal);
