@@ -12,7 +12,7 @@ public class AreaOfAConvexPolygonTest {
     ArrayList<MyPoint> points;
 
     @Before
-    public void runBeforeTest() {
+    public void setUp() throws Exception {
         points = new ArrayList<>();
         points.add(new MyPoint(-12,  0));
         points.add(new MyPoint(-8.5,  10));
