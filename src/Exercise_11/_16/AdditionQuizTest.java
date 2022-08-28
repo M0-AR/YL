@@ -9,14 +9,6 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 public class AdditionQuizTest {
-
-    ArrayList<Integer> numbers;
-
-    @Before
-    public void setUp() throws Exception {
-        numbers = new ArrayList<>();
-    }
-
     @Test
     public void testAdd() {
         // Given
