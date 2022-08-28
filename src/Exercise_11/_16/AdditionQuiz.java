@@ -6,21 +6,23 @@ import java.util.Scanner;
 public class AdditionQuiz {
     public static void main(String[] args) {
         HashSet<Integer> alreadyEnteredList = new HashSet<>();
-        String question = "What is 5 + 9? ";
-        int sum = 0, num1 = 5, num2 = 9, userInput;
 
-        sum = num1 + num2;
+        int answer;
+        int number1 = (int) (Math.random() * 10);
+        int number2 = (int) (Math.random() * 10);
+
+        String message = "What is " + number1 + " + " + number2;
 
         do {
-            userInput = promptingUserToEnterNumberUntilNumberMatch(question);
-            System.out.print((alreadyEnteredList.contains(userInput)) ? "You already entered " + userInput + "\n": "");
+            answer = promptingUserToEnterNumberUntilNumberMatch(message);
+            System.out.print((alreadyEnteredList.contains(answer)) ? "You already entered " + answer + "\n": "");
 
-            if (sum != userInput) {
+            if ((number1 + number2) != answer) {
                 System.out.print("Wrong answer. Try again. ");
-                alreadyEnteredList.add(userInput);
+                alreadyEnteredList.add(answer);
             }
 
-        } while (sum != userInput);
+        } while ((number1 + number2) != answer);
 
         System.out.println("You got it!");
     }
