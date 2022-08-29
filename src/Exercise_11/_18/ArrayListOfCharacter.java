@@ -2,7 +2,7 @@ package Exercise_11._18;
 /*
 (ArrayList of Character) Write a method that returns an array
 list of Character from a string using the following header:
-public static ArrayList<Character> toCharacterArray(String s)
+    public static ArrayList<Character> toCharacterArray(String s)
 For example, toCharacterArray("abc") returns an array list that contains
 characters 'a', 'b', and 'c'.
  */
