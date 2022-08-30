@@ -9,13 +9,16 @@ characters 'a', 'b', and 'c'.
 import java.util.ArrayList;
 
 public class ArrayListOfCharacter {
+    public static void main(String[] args) {
+        for (Character ch: toCharacterArray("Welcome")) {
+            System.out.println(ch);
+        }
+    }
     public static ArrayList<Character> toCharacterArray(String s) {
         ArrayList<Character> characters = new ArrayList<>();
-
-        for (char c: s.toCharArray()) {
-            characters.add(c);
+        for (int i = 0; i < s.length(); i++) {
+            characters.add(s.charAt(i));
         }
-
         return characters;
     }
 }
