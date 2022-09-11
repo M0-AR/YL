@@ -3,6 +3,7 @@ package Exercise_11._19;
 import java.util.ArrayList;
 import java.util.List;
 
+// TODO
 public class Container {
     public final int MAX_WEIGHT = 10;
 //    public static int numberOfObjects = 0;
