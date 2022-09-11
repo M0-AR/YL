@@ -14,7 +14,7 @@ package Exercise_11._01;
  * +setFilled(filled: boolean)                        *
  * +toString(): String                                *
  ******************************************************/
-public class GeometricObject {
+public abstract class GeometricObject {
     private String color;
     private boolean isFilled;
 
@@ -47,4 +47,8 @@ public class GeometricObject {
         return "Geometric: color = " + color +
                 " isFilled = " + isFilled;
     }
+
+    // Abstract methods
+    public abstract double getArea();
+    public abstract double getPerimeter();
 }
