@@ -24,6 +24,10 @@ public class Circle2D {
         this.radius = 1;
     }
 
+    public Circle2D(double radius) {
+        this.radius = radius;
+    }
+
     public Circle2D(double x, double y, double radius) {
         this.x = x;
         this.y = y;
