@@ -373,6 +373,8 @@ pre {
   position: relative;
   min-height: 100svh;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 132px 0 40px;
   overflow: hidden;
@@ -1567,8 +1569,13 @@ pre {
 
 @media (max-width: 1040px) {
   .hero-inner {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 44px;
+  }
+
+  .hero-copy,
+  .hero-panel {
+    min-width: 0;
   }
 
   .hero-panel {
