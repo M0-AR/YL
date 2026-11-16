@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sorting Lab — Java Atlas</title>
+<meta name="description" content="Animate bubble, selection, insertion, merge, quick, and heap sort with live comparisons, writes, and elapsed time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+</head>
+<body class="lab">
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Sorting Lab</b><span>Chapter 23 · algorithms you can watch</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill"><i></i> live canvas</span>
+    <a class="btn btn-sm btn-ghost" href="../index.html#labs">All labs</a>
+  </div>
+</header>
+
+<main class="lab-wrap">
+  <div class="lab-head">
+    <div>
+      <h1>Six algorithms. One array. Nothing hidden.</h1>
+      <p>Pick an algorithm, change the input, and watch every comparison and write. The counters are real; the animation is driven by the same generator that sorts the array.</p>
+    </div>
+    <div class="btn-row">
+      <button class="btn" id="shuffleBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h3l10 10h3M20 7h-3L7 17H4M17 4l3 3-3 3M17 14l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg> Shuffle</button>
+      <button class="btn" id="resetBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 6M20 5v6h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Reset</button>
+    </div>
+  </div>
+
+  <div class="lab-grid">
+    <section class="panel" aria-label="Array visualization">
+      <div class="panel-head">
+        <h2>Array state</h2>
+        <span class="hint" id="status">ready</span>
+      </div>
+      <div class="viz tall"><canvas id="bars" aria-label="Animated bar chart of the array"></canvas></div>
+      <div class="panel-body" style="border-top:1px solid var(--line)">
+        <div class="metrics" style="margin-bottom:12px">
+          <div class="metric"><b id="mComp">0</b><span>comparisons</span></div>
+          <div class="metric"><b id="mWrites">0</b><span>writes</span></div>
+          <div class="metric"><b id="mTime">0.00s</b><span>elapsed</span></div>
+          <div class="metric"><b id="mN">48</b><span>elements</span></div>
+        </div>
+        <div class="log" id="trace" aria-live="polite"><div><time>--:--</time><span>Waiting for a run. Press play.</span></div></div>
+      </div>
+    </section>
+
+    <aside style="display:grid;gap:14px">
+      <div class="panel">
+        <div class="panel-head"><h2>Controls</h2><span class="hint">space = play</span></div>
+        <div class="panel-body">
+          <div class="controls">
+            <div class="field">
+              <label for="algo">Algorithm</label>
+              <select id="algo">
+                <option value="bubble">Bubble sort</option>
+                <option value="selection">Selection sort</option>
+                <option value="insertion">Insertion sort</option>
+                <option value="merge" selected>Merge sort</option>
+                <option value="quick">Quick sort</option>
+                <option value="heap">Heap sort</option>
+              </select>
+            </div>
+            <div class="control-row">
+              <div class="field">
+                <label for="size">Elements <output id="sizeOut">48</output></label>
+                <input id="size" type="range" min="10" max="100" step="2" value="48">
+              </div>
+              <div class="field">
+                <label for="speed">Speed <output id="speedOut">65</output></label>
+                <input id="speed" type="range" min="1" max="100" step="1" value="65">
+              </div>
+            </div>
+            <button class="btn btn-primary btn-block" id="playBtn" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5-10-6.5Z" fill="currentColor"/></svg>
+              <span>Play sorting</span>
+            </button>
+            <div class="legend">
+              <span><i></i> untouched</span>
+              <span><i class="amber"></i> comparing</span>
+              <span><i class="pink"></i> writing</span>
+              <span><i class="green"></i> sorted</span>
+              <span><i class="violet"></i> pivot</span>
+            </div>
+            <p class="note cyan" id="algoNote">Merge sort splits, sorts, and merges. It is O(n log n) in every case and needs O(n) extra space.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Complexity</h2><span class="hint">selected row</span></div>
+        <div class="panel-body flush">
+          <table class="table">
+            <thead><tr><th>Algorithm</th><th>Best</th><th>Average</th><th>Worst</th><th>Space</th><th>Stable</th></tr></thead>
+            <tbody id="complexityBody">
+              <tr data-algo="bubble"><td><b>Bubble</b></td><td class="num">n</td><td class="num">n²</td><td class="num">n²</td><td class="num">1</td><td>Yes</td></tr>
+              <tr data-algo="selection"><td><b>Selection</b></td><td class="num">n²</td><td class="num">n²</td><td class="num">n²</td><td class="num">1</td><td>No</td></tr>
+              <tr data-algo="insertion"><td><b>Insertion</b></td><td class="num">n</td><td class="num">n²</td><td class="num">n²</td><td class="num">1</td><td>Yes</td></tr>
+              <tr data-algo="merge"><td><b>Merge</b></td><td class="num">n log n</td><td class="num">n log n</td><td class="num">n log n</td><td class="num">n</td><td>Yes</td></tr>
+              <tr data-algo="quick"><td><b>Quick</b></td><td class="num">n log n</td><td class="num">n log n</td><td class="num">n²</td><td class="num">log n</td><td>No</td></tr>
+              <tr data-algo="heap"><td><b>Heap</b></td><td class="num">n log n</td><td class="num">n log n</td><td class="num">n log n</td><td class="num">1</td><td>No</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Try this</h2></div>
+        <div class="panel-body">
+          <div class="log" style="max-height:none">
+            <div><span>1. Sort 100 elements with bubble sort, then with merge sort. Compare the counters.</span></div>
+            <div><span>2. Switch to quick sort and watch the pivot highlight move.</span></div>
+            <div><span>3. Shuffle the same array and run again. Why does insertion sort beat bubble on nearly sorted input?</span></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="lab-foot">Part of the <a href="../index.html">Java Atlas</a> · Concept labs are original work, MIT licensed.</footer>
+
+<script src="../assets/lab.js"></script>
+<script>
+(function () {
+  "use strict";
+  const { $, clamp, rand, fmt, toast, fitCanvas, observeResize, reduced, timeStamp } = window.Lab;
+
+  const canvas = $("#bars");
+  const statusEl = $("#status");
+  const traceEl = $("#trace");
+  const mComp = $("#mComp");
+  const mWrites = $("#mWrites");
+  const mTime = $("#mTime");
+  const mN = $("#mN");
+  const algoEl = $("#algo");
+  const sizeEl = $("#size");
+  const speedEl = $("#speed");
+  const playBtn = $("#playBtn");
+
+  let values = [];
+  let sorted = new Set();
+  let cmpPair = null;
+  let swapPair = null;
+  let pivotIndex = null;
+  let comparisons = 0;
+  let writes = 0;
+  let startedAt = 0;
+  let elapsed = 0;
+  let playing = false;
+  let finished = false;
+  let generator = null;
+  let rafId = 0;
+  let lastFrame = 0;
+  let accumulator = 0;
+  let stepCount = 0;
+  let W = 600;
+  let H = 400;
+
+  const notes = {
+    bubble: "Bubble sort repeatedly swaps neighbours. Simple to reason about, but O(n²) comparisons on random data.",
+    selection: "Selection sort finds the minimum of the unsorted suffix and swaps it into place. Always O(n²), but only n−1 swaps.",
+    insertion: "Insertion sort grows a sorted prefix. Excellent on small or nearly sorted arrays; O(n²) in the worst case.",
+    merge: "Merge sort splits, sorts, and merges. It is O(n log n) in every case and needs O(n) extra space.",
+    quick: "Quick sort partitions around a pivot (last element here). Fast in practice; worst case O(n²) on already sorted input.",
+    heap: "Heap sort builds a max heap, then repeatedly moves the root to the end. O(n log n) and in-place, but not stable."
+  };
+
+  function randomArray(n) {
+    return Array.from({ length: n }, () => rand(8, 100));
+  }
+
+  function resize() {
+    const fit = fitCanvas(canvas);
+    W = fit.width;
+    H = fit.height;
+    draw();
+  }
+
+  function barGeom() {
+    const n = values.length;
+    const pad = 14;
+    const top = 18;
+    const gap = n > 64 ? 1 : n > 34 ? 2 : 3;
+    const usable = W - pad * 2 - gap * (n - 1);
+    const bw = Math.max(1.5, usable / n);
+    return { pad, top, gap, bw, bottom: H - 12 };
+  }
+
+  function draw() {
+    const ctx = canvas.getContext("2d");
+    ctx.clearRect(0, 0, W, H);
+    const { pad, top, gap, bw, bottom } = barGeom();
+    const n = values.length;
+    const max = 100;
+    const usableH = bottom - top;
+
+    ctx.strokeStyle = "rgba(148,163,184,.09)";
+    ctx.lineWidth = 1;
+    for (let g = 1; g <= 3; g += 1) {
+      const y = top + (usableH / 4) * g;
+      ctx.beginPath();
+      ctx.moveTo(pad, y);
+      ctx.lineTo(W - pad, y);
+      ctx.stroke();
+    }
+
+    for (let i = 0; i < n; i += 1) {
+      const h = Math.max(3, (values[i] / max) * usableH);
+      const x = pad + i * (bw + gap);
+      const y = bottom - h;
+      let fill = "rgba(100,116,139,.55)";
+      if (sorted.has(i)) fill = "rgba(52,211,153,.85)";
+      if (pivotIndex === i) fill = "rgba(139,92,246,.95)";
+      if (cmpPair && (cmpPair[0] === i || cmpPair[1] === i)) fill = "rgba(251,191,36,.95)";
+      if (swapPair && (swapPair[0] === i || swapPair[1] === i)) fill = "rgba(244,114,182,.95)";
+      ctx.fillStyle = fill;
+      ctx.beginPath();
+      const r = Math.min(3, bw / 3);
+      ctx.roundRect(x, y, bw, h, r);
+      ctx.fill();
+      if (n <= 34 && bw > 12) {
+        ctx.fillStyle = "rgba(226,232,240,.65)";
+        ctx.font = "9px 'JetBrains Mono', monospace";
+        ctx.textAlign = "center";
+        ctx.fillText(String(values[i]), x + bw / 2, y - 4);
+      }
+    }
+  }
+
+  function addTrace(text, cls) {
+    const div = document.createElement("div");
+    div.innerHTML = "<time>" + timeStamp() + "</time><span" + (cls ? ' class="' + cls + '"' : "") + ">" + text + "</span>";
+    traceEl.prepend(div);
+    while (traceEl.children.length > 7) traceEl.lastElementChild.remove();
+  }
+
+  function updateMetrics() {
+    mComp.textContent = fmt(comparisons);
+    mWrites.textContent = fmt(writes);
+    mTime.textContent = (elapsed / 1000).toFixed(2) + "s";
+    mN.textContent = String(values.length);
+  }
+
+  function resetRun(keepArray) {
+    stop();
+    if (!keepArray) values = randomArray(Number(sizeEl.value));
+    sorted = new Set();
+    cmpPair = null;
+    swapPair = null;
+    pivotIndex = null;
+    comparisons = 0;
+    writes = 0;
+    elapsed = 0;
+    finished = false;
+    generator = null;
+    stepCount = 0;
+    traceEl.innerHTML = "";
+    addTrace("New array of " + values.length + " elements. Press play.", "cy");
+    statusEl.textContent = "ready";
+    playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5-10-6.5Z" fill="currentColor"/></svg><span>Play sorting</span>';
+    playBtn.disabled = false;
+    updateMetrics();
+    draw();
+  }
+
+  function stop() {
+    playing = false;
+    cancelAnimationFrame(rafId);
+  }
+
+  function* bubbleSort(a) {
+    const n = a.length;
+    let swapped = true;
+    for (let end = n - 1; end > 0 && swapped; end -= 1) {
+      swapped = false;
+      for (let i = 0; i < end; i += 1) {
+        yield { cmp: [i, i + 1], note: "compare " + a[i] + " and " + a[i + 1] };
+        if (a[i] > a[i + 1]) {
+          [a[i], a[i + 1]] = [a[i + 1], a[i]];
+          swapped = true;
+          yield { swap: [i, i + 1], note: "swap positions " + i + " and " + (i + 1) };
+        }
+      }
+      yield { sorted: [end] };
+    }
+    yield { markAll: true };
+  }
+
+  function* selectionSort(a) {
+    const n = a.length;
+    for (let i = 0; i < n - 1; i += 1) {
+      let min = i;
+      for (let j = i + 1; j < n; j += 1) {
+        yield { cmp: [min, j], note: "is " + a[j] + " smaller than " + a[min] + "?" };
+        if (a[j] < a[min]) min = j;
+      }
+      if (min !== i) {
+        [a[i], a[min]] = [a[min], a[i]];
+        yield { swap: [i, min], note: "place " + a[i] + " at index " + i };
+      }
+      yield { sorted: [i] };
+    }
+    yield { markAll: true };
+  }
+
+  function* insertionSort(a) {
+    const n = a.length;
+    for (let i = 1; i < n; i += 1) {
+      const key = a[i];
+      let j = i - 1;
+      yield { pivot: i, note: "insert " + key + " into the sorted prefix" };
+      while (j >= 0) {
+        yield { cmp: [j, j + 1], note: "compare " + a[j] + " with " + key };
+        if (a[j] <= key) break;
+        a[j + 1] = a[j];
+        yield { set: [j + 1, a[j]], note: "shift " + a[j] + " right" };
+        j -= 1;
+      }
+      a[j + 1] = key;
+      yield { set: [j + 1, key], note: "write " + key + " at index " + (j + 1) };
+    }
+    yield { markAll: true };
+  }
+
+  function* mergeSort(a, lo, hi, temp) {
+    if (lo >= hi) return;
+    const mid = (lo + hi) >> 1;
+    yield* mergeSort(a, lo, mid, temp);
+    yield* mergeSort(a, mid + 1, hi, temp);
+    let i = lo;
+    let j = mid + 1;
+    let k = lo;
+    while (i <= mid && j <= hi) {
+      yield { cmp: [i, j], note: "merge: compare " + a[i] + " and " + a[j] };
+      if (a[i] <= a[j]) temp[k++] = a[i++];
+      else temp[k++] = a[j++];
+    }
+    while (i <= mid) temp[k++] = a[i++];
+    while (j <= hi) temp[k++] = a[j++];
+    for (let x = lo; x <= hi; x += 1) {
+      a[x] = temp[x];
+      yield { set: [x, temp[x]], note: "merge: place " + temp[x] + " at " + x };
+    }
+  }
+
+  function* quickSort(a, lo, hi) {
+    if (lo >= hi) {
+      if (lo === hi) yield { sorted: [lo] };
+      return;
+    }
+    const pivot = a[hi];
+    yield { pivot: hi, note: "pivot = " + pivot + " at index " + hi };
+    let i = lo;
+    for (let j = lo; j < hi; j += 1) {
+      yield { cmp: [j, hi], pivot: hi, note: "compare " + a[j] + " with pivot " + pivot };
+      if (a[j] < pivot) {
+        if (i !== j) {
+          [a[i], a[j]] = [a[j], a[i]];
+          yield { swap: [i, j], note: "move " + a[i] + " left of the pivot" };
+        }
+        i += 1;
+      }
+    }
+    [a[i], a[hi]] = [a[hi], a[i]];
+    yield { swap: [i, hi], note: "place pivot " + pivot + " at index " + i };
+    yield { sorted: [i], pivot: null };
+    yield* quickSort(a, lo, i - 1);
+    yield* quickSort(a, i + 1, hi);
+  }
+
+  function* heapSort(a) {
+    const n = a.length;
+    function* sift(start, end) {
+      let root = start;
+      while (root * 2 + 1 <= end) {
+        let child = root * 2 + 1;
+        if (child + 1 <= end && a[child] < a[child + 1]) child += 1;
+        yield { cmp: [root, child], note: "heap: compare " + a[root] + " and " + a[child] };
+        if (a[root] < a[child]) {
+          [a[root], a[child]] = [a[child], a[root]];
+          yield { swap: [root, child], note: "sift " + a[child] + " down" };
+          root = child;
+        } else {
+          return;
+        }
+      }
+    }
+    for (let start = Math.floor(n / 2) - 1; start >= 0; start -= 1) yield* sift(start, n - 1);
+    for (let end = n - 1; end > 0; end -= 1) {
+      [a[0], a[end]] = [a[end], a[0]];
+      yield { swap: [0, end], note: "move max " + a[end] + " to index " + end };
+      yield { sorted: [end] };
+      yield* sift(0, end - 1);
+    }
+    yield { markAll: true };
+  }
+
+  function makeGenerator(name, a) {
+    const temp = new Array(a.length);
+    switch (name) {
+      case "selection": return selectionSort(a);
+      case "insertion": return insertionSort(a);
+      case "merge": return mergeSort(a, 0, a.length - 1, temp);
+      case "quick": return quickSort(a, 0, a.length - 1);
+      case "heap": return heapSort(a);
+      default: return bubbleSort(a);
+    }
+  }
+
+  function applyStep(step) {
+    stepCount += 1;
+    cmpPair = null;
+    swapPair = null;
+    if (step.cmp) {
+      comparisons += 1;
+      cmpPair = step.cmp;
+      pivotIndex = step.pivot === undefined ? null : step.pivot;
+      if (stepCount < 400) addTrace(step.note);
+    }
+    if (step.swap) {
+      writes += 2;
+      swapPair = step.swap;
+      pivotIndex = null;
+      if (stepCount < 400) addTrace(step.note, "warn");
+    }
+    if (step.set) {
+      writes += 1;
+      swapPair = step.set;
+      pivotIndex = null;
+      if (stepCount < 400) addTrace(step.note, "warn");
+    }
+    if (step.sorted) {
+      step.sorted.forEach((i) => sorted.add(i));
+      if (step.pivot === null) pivotIndex = null;
+    }
+    if (step.pivot !== undefined && !step.cmp) pivotIndex = step.pivot;
+    if (step.markAll) {
+      for (let i = 0; i < values.length; i += 1) sorted.add(i);
+    }
+  }
+
+  function finish() {
+    stop();
+    finished = true;
+    elapsed = performance.now() - startedAt;
+    for (let i = 0; i < values.length; i += 1) sorted.add(i);
+    cmpPair = null;
+    swapPair = null;
+    pivotIndex = null;
+    updateMetrics();
+    draw();
+    statusEl.textContent = "sorted in " + (elapsed / 1000).toFixed(2) + "s";
+    playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>New run</span>';
+    addTrace("Done. " + fmt(comparisons) + " comparisons, " + fmt(writes) + " writes, " + (elapsed / 1000).toFixed(2) + "s.", "ok");
+    toast("Sorted " + values.length + " elements in " + (elapsed / 1000).toFixed(2) + "s");
+  }
+
+  function loop(now) {
+    if (!playing) return;
+    if (!lastFrame) lastFrame = now;
+    const dt = Math.min(64, now - lastFrame);
+    lastFrame = now;
+    if (!reduced) accumulator += dt;
+    const perSecond = 4 + Number(speedEl.value) * 3;
+    const due = reduced ? 50 : Math.min(240, Math.floor((accumulator / 1000) * perSecond));
+    if (due > 0) {
+      accumulator = 0;
+      for (let s = 0; s < due; s += 1) {
+        const next = generator.next();
+        if (next.done) {
+          finish();
+          return;
+        }
+        applyStep(next.value);
+      }
+      elapsed = performance.now() - startedAt;
+      updateMetrics();
+      draw();
+    }
+    rafId = requestAnimationFrame(loop);
+  }
+
+  function start() {
+    if (finished) {
+      resetRun(false);
+    }
+    if (!generator) {
+      generator = makeGenerator(algoEl.value, values);
+      startedAt = performance.now();
+      statusEl.textContent = "sorting…";
+      addTrace("Run started: " + algoEl.options[algoEl.selectedIndex].text + ".", "cy");
+    }
+    playing = true;
+    lastFrame = 0;
+    accumulator = 0;
+    playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg><span>Pause</span>';
+    rafId = requestAnimationFrame(loop);
+  }
+
+  function pause() {
+    stop();
+    statusEl.textContent = "paused";
+    playBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5-10-6.5Z" fill="currentColor"/></svg><span>Resume</span>';
+  }
+
+  function toggle() {
+    if (playing) pause();
+    else start();
+  }
+
+  function updateAlgoUi() {
+    document.querySelectorAll("#complexityBody tr").forEach((tr) => {
+      tr.style.background = tr.dataset.algo === algoEl.value ? "rgba(34,211,238,.07)" : "";
+      tr.querySelectorAll("td").forEach((td) => { td.style.color = tr.dataset.algo === algoEl.value ? "var(--text)" : ""; });
+    });
+    $("#algoNote").textContent = notes[algoEl.value];
+  }
+
+  playBtn.addEventListener("click", toggle);
+  $("#shuffleBtn").addEventListener("click", () => resetRun(false));
+  $("#resetBtn").addEventListener("click", () => resetRun(false));
+  algoEl.addEventListener("change", () => { updateAlgoUi(); resetRun(false); });
+  sizeEl.addEventListener("input", () => {
+    $("#sizeOut").textContent = sizeEl.value;
+    resetRun(false);
+  });
+  speedEl.addEventListener("input", () => {
+    $("#speedOut").textContent = speedEl.value;
+    speedEl.style.setProperty("--fill", speedEl.value + "%");
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.code !== "Space") return;
+    if (["INPUT", "SELECT", "TEXTAREA", "BUTTON"].includes(document.activeElement.tagName)) return;
+    e.preventDefault();
+    toggle();
+  });
+
+  function initSlider(el) {
+    el.style.setProperty("--fill", ((el.value - el.min) / (el.max - el.min)) * 100 + "%");
+    el.addEventListener("input", () => {
+      el.style.setProperty("--fill", ((el.value - el.min) / (el.max - el.min)) * 100 + "%");
+    });
+  }
+  initSlider(sizeEl);
+  initSlider(speedEl);
+
+  observeResize(canvas.parentElement, resize);
+  updateAlgoUi();
+  values = randomArray(Number(sizeEl.value));
+  mN.textContent = String(values.length);
+  addTrace("New array of " + values.length + " elements. Press play.", "cy");
+  draw();
+})();
+</script>
+</body>
+</html>

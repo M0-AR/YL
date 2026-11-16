@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neural Nexus — Java Atlas</title>
+<meta name="description" content="A small 3D game about building a neural network: collect features, fire a forward pass, and hear the concepts explained.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<style>
+  .game-shell { display:grid; grid-template-columns:minmax(0,1.75fr) minmax(290px,.75fr); gap:16px; align-items:start; }
+  @media (max-width: 980px) { .game-shell { grid-template-columns:1fr; } }
+  .stage { position:relative; aspect-ratio:16/10; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:radial-gradient(120% 120% at 50% 20%, #07222c 0%, #030a0f 55%, #020509 100%); }
+  .stage canvas { display:block; width:100%; height:100%; touch-action:none; cursor:crosshair; }
+  .stage::after { content:""; position:absolute; inset:0; pointer-events:none; box-shadow:inset 0 0 90px rgba(0,0,0,.55); }
+  .hud { position:absolute; inset:0; pointer-events:none; display:flex; flex-direction:column; justify-content:space-between; padding:14px 16px; }
+  .hud-row { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .hud-block { background:rgba(3,12,17,.72); border:1px solid rgba(148,163,184,.14); border-radius:9px; padding:7px 10px; backdrop-filter:blur(6px); }
+  .hud-label { font:10px 'JetBrains Mono',monospace; letter-spacing:.14em; color:var(--dim); text-transform:uppercase; }
+  .hud-value { font:600 15px 'Space Grotesk',sans-serif; color:var(--text); }
+  .hud-value small { font:400 10px 'JetBrains Mono',monospace; color:var(--muted); }
+  .status-pill { align-self:center; font:500 10px 'JetBrains Mono',monospace; letter-spacing:.16em; text-transform:uppercase; color:var(--cyan); border:1px solid rgba(34,211,238,.3); background:rgba(34,211,238,.08); padding:6px 12px; border-radius:999px; transition:all .25s; }
+  .status-pill.ready { color:#fbbf24; border-color:rgba(251,191,36,.45); background:rgba(251,191,36,.1); }
+  .status-pill.training { color:#a78bfa; border-color:rgba(167,139,250,.45); background:rgba(167,139,250,.1); }
+  .caption { margin-top:auto; max-width:58ch; background:rgba(3,12,17,.78); border:1px solid rgba(148,163,184,.14); border-left:2px solid var(--cyan); border-radius:8px; padding:9px 12px; font:12px/1.55 'Inter',sans-serif; color:#c7d7e2; backdrop-filter:blur(6px); min-height:44px; }
+  .caption b { color:var(--cyan); font-weight:600; }
+  .start-hint { position:absolute; left:50%; top:58%; transform:translate(-50%,-50%); text-align:center; pointer-events:none; transition:opacity .5s; }
+  .start-hint .big { font:600 13px 'JetBrains Mono',monospace; letter-spacing:.18em; color:rgba(226,244,255,.85); text-transform:uppercase; }
+  .start-hint .small { display:block; margin-top:8px; font:11px 'Inter',sans-serif; color:rgba(148,163,184,.75); }
+  .start-hint.hide { opacity:0; visibility:hidden; }
+  .confidence { display:flex; align-items:center; gap:8px; font:11px 'JetBrains Mono',monospace; color:var(--muted); }
+  .confidence .track { width:110px; height:5px; border-radius:99px; background:rgba(148,163,184,.14); overflow:hidden; }
+  .confidence .track i { display:block; height:100%; width:0; background:linear-gradient(90deg,#22d3ee,#a78bfa); transition:width .5s; }
+  .train-btn { width:100%; justify-content:center; padding:13px 16px; font-size:13px; }
+  .train-btn:disabled { opacity:.4; cursor:not-allowed; transform:none; }
+  .train-btn kbd { font:10px 'JetBrains Mono',monospace; border:1px solid rgba(3,12,17,.35); border-radius:4px; padding:2px 5px; margin-left:6px; }
+  .mission-name { font:600 19px 'Space Grotesk',sans-serif; letter-spacing:-.01em; margin:4px 0 6px; }
+  .mission-brief { font:12.5px/1.6 'Inter',sans-serif; color:var(--muted); margin:0 0 12px; }
+  .classes { display:flex; gap:6px; margin-bottom:12px; }
+  .class-pill { font:500 10px 'JetBrains Mono',monospace; letter-spacing:.08em; color:var(--text); border:1px solid var(--line); border-radius:6px; padding:4px 8px; }
+  .log-list { display:grid; gap:7px; max-height:210px; overflow:auto; }
+  .log-list div { font:11.5px/1.5 'Inter',sans-serif; color:var(--muted); padding-left:10px; border-left:1px solid rgba(34,211,238,.25); }
+  .loading { position:absolute; inset:0; display:grid; place-items:center; background:rgba(2,8,12,.85); z-index:3; font:11px 'JetBrains Mono',monospace; letter-spacing:.2em; text-transform:uppercase; color:var(--dim); transition:opacity .4s; }
+  .loading.hide { opacity:0; visibility:hidden; pointer-events:none; }
+  .kbd-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:6px 0; border-bottom:1px solid rgba(148,163,184,.06); font-size:12px; color:var(--muted); }
+  .kbd-row:last-child { border-bottom:0; }
+  .kbd-row kbd { font:10px 'JetBrains Mono',monospace; color:var(--text); border:1px solid var(--line); border-radius:4px; padding:2px 6px; background:rgba(148,163,184,.05); }
+</style>
+</head>
+<body class="lab">
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Neural Nexus</b><span>Three.js · a network you build with your hands</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <button class="btn btn-sm btn-ghost" id="muteBtn" type="button">Mute narration</button>
+    <button class="btn btn-sm btn-ghost" id="resetBtn" type="button">Restart</button>
+  </div>
+</header>
+
+<main class="lab-wrap">
+  <div class="lab-head">
+    <div>
+      <h1>Collect the signal. Light the network.</h1>
+      <p>Move the collector through drifting feature packets. Each pickup energises an input neuron. When the input layer is full, train the network and watch the forward pass travel to the output.</p>
+    </div>
+  </div>
+
+  <div class="game-shell">
+    <section>
+      <div class="stage" id="stage">
+        <canvas id="scene" aria-label="3D neural network game. Move the collector with the pointer or arrow keys, collect feature packets, press Space to train."></canvas>
+        <div class="loading" id="loading">Loading the network</div>
+        <div class="hud">
+          <div class="hud-row">
+            <div class="hud-block">
+              <span class="hud-label">Level <b id="levelNum">1</b> · mission</span>
+              <div class="hud-value" id="hudMission">Cats vs Dogs</div>
+            </div>
+            <div class="hud-block" style="text-align:right">
+              <span class="hud-label">Score</span>
+              <div class="hud-value" id="scoreNum">0</div>
+            </div>
+          </div>
+          <div class="status-pill" id="statusPill">Collect features</div>
+          <div class="hud-row" style="align-items:flex-end">
+            <div class="caption" id="caption" aria-live="polite">Move to collect feature packets. Press Space to train once the network is ready.</div>
+            <div class="hud-block confidence">
+              <span>confidence</span>
+              <div class="track"><i id="confBar"></i></div>
+              <b id="confidence" style="color:var(--text)">—</b>
+            </div>
+          </div>
+        </div>
+        <div class="start-hint" id="startHint"><span class="big">Move to begin</span><span class="small">pointer, touch, or WASD / arrow keys</span></div>
+      </div>
+      <p class="note" style="margin-top:10px">The 3D scene is a real Three.js render, not a video. Narration uses your browser's speech synthesis — no audio files are downloaded.</p>
+    </section>
+
+    <aside style="display:grid;gap:14px">
+      <div class="panel">
+        <div class="panel-head"><h2>Mission</h2><span class="hint" id="targetHint">0 / 5</span></div>
+        <div class="panel-body">
+          <div class="mission-name" id="levelName">Cats vs Dogs</div>
+          <p class="mission-brief" id="missionBrief">Collect five feature packets. Each one represents a measurement the network can learn from.</p>
+          <div class="classes" id="classPills"></div>
+          <div class="bar-row">
+            <span>Input signal</span>
+            <div class="bar"><i id="signalBar" style="--w:0%"></i></div>
+            <b id="signalPct">0%</b>
+          </div>
+          <div class="metrics three" style="grid-template-columns:1fr 1fr;margin-top:12px">
+            <div class="metric"><b id="dataCount">0</b><span>features</span></div>
+            <div class="metric"><b id="levelCount">1</b><span>level</span></div>
+          </div>
+          <button class="btn train-btn" id="trainBtn" type="button" disabled>Train network <kbd>Space</kbd></button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Controls</h2></div>
+        <div class="panel-body">
+          <div class="kbd-row"><span>Move collector</span><span><kbd>pointer</kbd> <kbd>WASD</kbd></span></div>
+          <div class="kbd-row"><span>Train when ready</span><kbd>Space</kbd></div>
+          <div class="kbd-row"><span>Mute narration</span><kbd>M</kbd></div>
+          <div class="kbd-row"><span>Restart</span><kbd>R</kbd></div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>What just happened</h2></div>
+        <div class="panel-body">
+          <div class="log-list" id="logList">
+            <div>Collect features to fill the input layer.</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="lab-foot">Part of the <a href="../index.html">Java Atlas</a> · Neural Nexus is original work, MIT licensed.</footer>
+
+<script src="../assets/lab.js"></script>
+<script type="module">
+const { $, clamp } = window.Lab;
+const canvas = $("#scene");
+const stage = $("#stage");
+const startHint = $("#startHint");
+const caption = $("#caption");
+const logList = $("#logList");
+const trainBtn = $("#trainBtn");
+
+const LEVELS = [
+  { name: "Cats vs Dogs", classes: ["CAT", "DOG"], target: 5, brief: "Collect five feature packets. Each one represents a measurement the network can learn from.", concept: "The input layer holds raw features. Hidden layers combine them into increasingly abstract evidence." },
+  { name: "Handwritten Digits", classes: ["3", "7"], target: 7, brief: "Seven pixels of signal. The network must separate a 3 from a 7 using only the features you gather.", concept: "A forward pass multiplies inputs by weights, adds a bias, and applies an activation function. Depth lets the network compose simple tests into complex ones." },
+  { name: "Customer Churn", classes: ["STAY", "LEAVE"], target: 9, brief: "Nine behavioural signals. More evidence usually means a sharper decision boundary.", concept: "The output layer turns hidden activations into class scores. The highest score becomes the prediction." },
+  { name: "Sentiment", classes: ["POS", "NEG"], target: 11, brief: "Eleven fragments of language. Train the network and listen to how it commits to a label.", concept: "Confidence is not truth. A network can be certain and wrong — which is why real systems need evaluation beyond one forward pass." }
+];
+
+const state = {
+  level: 1, score: 0, data: 0, target: 5, ready: false, training: false,
+  confidence: 0, chosen: 0, muted: false, started: false, trainingStart: 0
+};
+let mission = LEVELS[0];
+let THREE = null;
+
+function setCaption(text) { caption.innerHTML = text; }
+function addLog(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  logList.prepend(div);
+  while (logList.children.length > 5) logList.lastElementChild.remove();
+}
+
+function pickVoice() {
+  try {
+    const voices = speechSynthesis.getVoices();
+    return voices.find((v) => /en-US/i.test(v.lang) && /female|samantha|zira|google/i.test(v.name)) || voices.find((v) => /en/i.test(v.lang)) || null;
+  } catch (error) { return null; }
+}
+
+function say(text) {
+  if (state.muted || !("speechSynthesis" in window)) return;
+  try {
+    speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text.replace(/\s+/g, " "));
+    utterance.rate = 0.98;
+    utterance.pitch = 1.02;
+    const voice = pickVoice();
+    if (voice) utterance.voice = voice;
+    speechSynthesis.speak(utterance);
+  } catch (error) { /* narration is optional */ }
+}
+
+function narrate(text, log = true) {
+  setCaption(text);
+  if (log) addLog(text);
+  say(text.replace(/<[^>]+>/g, " "));
+}
+
+function missionText() {
+  return "Level " + state.level + ", " + mission.name + ". " + mission.brief + " Move the collector to gather " + state.target + " feature packets.";
+}
+
+function updateHud() {
+  $("#levelNum").textContent = String(state.level);
+  $("#levelCount").textContent = String(state.level);
+  $("#hudMission").textContent = mission.name;
+  $("#levelName").textContent = mission.name;
+  $("#missionBrief").textContent = mission.brief;
+  $("#scoreNum").textContent = String(state.score);
+  $("#dataCount").textContent = String(state.data);
+  $("#targetHint").textContent = state.data + " / " + state.target;
+  $("#classPills").innerHTML = mission.classes.map((c) => '<span class="class-pill">' + c + "</span>").join("");
+  const pct = Math.round((state.data / state.target) * 100);
+  $("#signalBar").style.setProperty("--w", pct + "%");
+  $("#signalPct").textContent = pct + "%";
+  const pill = $("#statusPill");
+  if (state.training) { pill.className = "status-pill training"; pill.textContent = "Forward pass"; }
+  else if (state.ready) { pill.className = "status-pill ready"; pill.textContent = "Ready to train"; }
+  else { pill.className = "status-pill"; pill.textContent = "Collect features"; }
+  trainBtn.disabled = !state.ready || state.training;
+  $("#confidence").textContent = state.confidence ? state.confidence + "%" : "—";
+  $("#confBar").style.width = state.confidence ? state.confidence + "%" : "0%";
+}
+
+function spawnMission(level, announce) {
+  mission = LEVELS[(level - 1) % LEVELS.length];
+  state.level = level;
+  state.target = Math.min(14, mission.target + Math.floor((level - 1) / LEVELS.length) * 2);
+  state.data = 0;
+  state.ready = false;
+  state.training = false;
+  state.confidence = 0;
+  state.chosen = 0;
+  updateHud();
+  startHint.classList.add("hide");
+  if (announce) narrate(missionText());
+}
+
+async function boot() {
+  try {
+    THREE = await import("https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js");
+  } catch (error) {
+    fallback2D();
+    return;
+  }
+  if (!window.WebGLRenderingContext) { fallback2D(); return; }
+  init3D();
+}
+
+function fallback2D() {
+  $("#loading").classList.add("hide");
+  setCaption("The 3D engine could not load — this static view still shows the idea: inputs feed hidden layers, and the output layer makes the call.");
+  addLog("3D unavailable; showing a 2D network.");
+  trainBtn.disabled = true;
+  const ctx = canvas.getContext("2d");
+  function draw(now) {
+    const rect = canvas.getBoundingClientRect();
+    const dpr = Math.min(devicePixelRatio || 1, 2);
+    canvas.width = Math.max(1, rect.width * dpr);
+    canvas.height = Math.max(1, rect.height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const w = rect.width, h = rect.height;
+    ctx.clearRect(0, 0, w, h);
+    const layers = [6, 5, 4, 2];
+    const gap = w / 5;
+    const pos = layers.map((count, li) => Array.from({ length: count }, (_, i) => ({
+      x: gap * (li + 0.7),
+      y: h / 2 + (i - (count - 1) / 2) * Math.min(46, h / (count + 1)),
+      glow: 0.35 + 0.65 * (((now / 900 + li + i) % 1))
+    })));
+    ctx.lineWidth = 1;
+    for (let l = 0; l < pos.length - 1; l++) {
+      for (const a of pos[l]) for (const b of pos[l + 1]) {
+        ctx.strokeStyle = "rgba(34,211,238,.09)";
+        ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+      }
+    }
+    for (let l = 0; l < pos.length; l++) {
+      for (const p of pos[l]) {
+        ctx.beginPath(); ctx.arc(p.x, p.y, 5, 0, Math.PI * 2);
+        ctx.fillStyle = l === 3 ? "rgba(251,191,36,.9)" : "rgba(34,211,238," + p.glow.toFixed(2) + ")";
+        ctx.shadowColor = ctx.fillStyle; ctx.shadowBlur = 14; ctx.fill(); ctx.shadowBlur = 0;
+      }
+    }
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+}
+
+function init3D() {
+  const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio || 1, 2));
+  renderer.setClearColor(0x020509, 1);
+
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.FogExp2(0x020509, 0.032);
+  const camera = new THREE.PerspectiveCamera(48, 16 / 10, 0.1, 120);
+  camera.position.set(0, 0.2, 13.2);
+  camera.lookAt(0, 0, 0);
+
+  scene.add(new THREE.AmbientLight(0x7dd3fc, 0.5));
+  const key = new THREE.DirectionalLight(0xffffff, 1.4);
+  key.position.set(4, 8, 10);
+  scene.add(key);
+  const violet = new THREE.PointLight(0xa78bfa, 40, 30);
+  violet.position.set(-8, 5, 4);
+  scene.add(violet);
+  const cyan = new THREE.PointLight(0x22d3ee, 35, 30);
+  cyan.position.set(8, -4, 5);
+  scene.add(cyan);
+
+  const starGeo = new THREE.BufferGeometry();
+  const starPos = new Float32Array(900 * 3);
+  for (let i = 0; i < starPos.length; i += 3) {
+    starPos[i] = (Math.random() - 0.5) * 46;
+    starPos[i + 1] = (Math.random() - 0.5) * 26;
+    starPos[i + 2] = -16 + Math.random() * 18;
+  }
+  starGeo.setAttribute("position", new THREE.BufferAttribute(starPos, 3));
+  scene.add(new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0x93e7f7, size: 0.045, transparent: true, opacity: 0.55, depthWrite: false })));
+
+  const grid = new THREE.GridHelper(44, 44, 0x0e7490, 0x083344);
+  grid.position.y = -7;
+  grid.material.transparent = true;
+  grid.material.opacity = 0.25;
+  scene.add(grid);
+
+  const layerDefs = [6, 5, 4, 2];
+  const layerX = [-5.4, -1.9, 1.5, 5.2];
+  const nodeGeo = new THREE.SphereGeometry(0.21, 18, 18);
+  const layers = [];
+  layerDefs.forEach((count, li) => {
+    const nodes = [];
+    for (let i = 0; i < count; i++) {
+      const mat = new THREE.MeshStandardMaterial({
+        color: 0x0b2b36, emissive: li === 3 ? 0x8a6a1a : 0x0b5f72,
+        emissiveIntensity: li === 3 ? 0.5 : 0.25, roughness: 0.3, metalness: 0.5
+      });
+      const mesh = new THREE.Mesh(nodeGeo, mat);
+      mesh.position.set(layerX[li], (i - (count - 1) / 2) * (li === 0 ? 1.05 : 1.25), 0);
+      scene.add(mesh);
+      nodes.push(mesh);
+    }
+    layers.push(nodes);
+  });
+
+  const edges = [];
+  for (let li = 0; li < layers.length - 1; li++) {
+    for (const a of layers[li]) for (const b of layers[li + 1]) {
+      const geo = new THREE.BufferGeometry().setFromPoints([a.position.clone(), b.position.clone()]);
+      const mat = new THREE.LineBasicMaterial({ color: 0x1a7189, transparent: true, opacity: 0.16, blending: THREE.AdditiveBlending, depthWrite: false });
+      const line = new THREE.Line(geo, mat);
+      scene.add(line);
+      edges.push({ line, layer: li });
+    }
+  }
+
+  function makeLabel(text, color) {
+    const c = document.createElement("canvas");
+    c.width = 256; c.height = 64;
+    const g = c.getContext("2d");
+    g.font = "600 26px 'JetBrains Mono', monospace";
+    g.textAlign = "center"; g.textBaseline = "middle";
+    g.fillStyle = color;
+    g.fillText(text, 128, 34);
+    const texture = new THREE.CanvasTexture(c);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    const sprite = new THREE.Sprite(new THREE.SpriteMaterial({ map: texture, transparent: true, depthWrite: false }));
+    sprite.scale.set(1.7, 0.42, 1);
+    return sprite;
+  }
+
+  const labels = mission.classes.map((text, i) => {
+    const sprite = makeLabel(text, i === 0 ? "#7dd3fc" : "#fbbf24");
+    sprite.position.set(layers[3][i].position.x + 1.45, layers[3][i].position.y, 0);
+    scene.add(sprite);
+    return sprite;
+  });
+
+  const player = new THREE.Group();
+  const core = new THREE.Mesh(
+    new THREE.IcosahedronGeometry(0.3, 0),
+    new THREE.MeshStandardMaterial({ color: 0x22d3ee, emissive: 0x22d3ee, emissiveIntensity: 2.2, roughness: 0.2, metalness: 0.6 })
+  );
+  player.add(core);
+  const ring = new THREE.Mesh(
+    new THREE.TorusGeometry(0.58, 0.016, 8, 64),
+    new THREE.MeshBasicMaterial({ color: 0x7dd3fc, transparent: true, opacity: 0.75 })
+  );
+  ring.rotation.x = Math.PI / 2.4;
+  player.add(ring);
+  const ring2 = new THREE.Mesh(
+    new THREE.TorusGeometry(0.72, 0.01, 8, 64),
+    new THREE.MeshBasicMaterial({ color: 0xa78bfa, transparent: true, opacity: 0.4 })
+  );
+  ring2.rotation.y = Math.PI / 2;
+  player.add(ring2);
+  const playerLight = new THREE.PointLight(0x22d3ee, 16, 7);
+  player.add(playerLight);
+  player.position.set(0, 0, 1.8);
+  scene.add(player);
+
+  const pointer = new THREE.Vector2(0, 0);
+  const target = new THREE.Vector3(0, 0, 1.8);
+  const keys = new Set();
+  let lastSpawn = 0;
+  let time = 0;
+
+  const shardColors = [0x22d3ee, 0xa78bfa, 0xfbbf24, 0x34d399, 0xf472b6];
+  const shards = [];
+  const bursts = [];
+  const pulses = [];
+
+  function spawnShard() {
+    const group = new THREE.Group();
+    const color = shardColors[Math.floor(Math.random() * shardColors.length)];
+    const coreMesh = new THREE.Mesh(
+      new THREE.OctahedronGeometry(0.24, 0),
+      new THREE.MeshStandardMaterial({ color, emissive: color, emissiveIntensity: 1.6, roughness: 0.25, metalness: 0.4 })
+    );
+    group.add(coreMesh);
+    const halo = new THREE.Mesh(
+      new THREE.TorusGeometry(0.36, 0.012, 6, 40),
+      new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.55 })
+    );
+    group.add(halo);
+    group.position.set((Math.random() - 0.5) * 15, (Math.random() - 0.5) * 8, 0.6 + Math.random() * 1.2);
+    group.userData = { color, phase: Math.random() * Math.PI * 2, drift: (Math.random() - 0.5) * 0.35, halo, coreMesh };
+    scene.add(group);
+    shards.push(group);
+  }
+  for (let i = 0; i < 5; i++) spawnShard();
+
+  function burst(position, color) {
+    const mesh = new THREE.Mesh(
+      new THREE.SphereGeometry(0.16, 12, 12),
+      new THREE.MeshBasicMaterial({ color, transparent: true, opacity: 0.85, blending: THREE.AdditiveBlending, depthWrite: false })
+    );
+    mesh.position.copy(position);
+    scene.add(mesh);
+    bursts.push({ mesh, life: 0, color });
+  }
+
+  function spawnPulses() {
+    const points = [
+      layers[0][Math.floor(Math.random() * layers[0].length)].position.clone(),
+      layers[1][Math.floor(Math.random() * layers[1].length)].position.clone(),
+      layers[2][Math.floor(Math.random() * layers[2].length)].position.clone(),
+      layers[3][Math.floor(Math.random() * layers[3].length)].position.clone()
+    ];
+    const mesh = new THREE.Mesh(
+      new THREE.SphereGeometry(0.085, 10, 10),
+      new THREE.MeshBasicMaterial({ color: 0x9cf7ff, transparent: true, opacity: 0.95, blending: THREE.AdditiveBlending, depthWrite: false })
+    );
+    mesh.position.copy(points[0]);
+    scene.add(mesh);
+    pulses.push({ mesh, points, life: 0, dur: 1.15 + Math.random() * 0.35 });
+  }
+
+  function collect(shard) {
+    const idx = shards.indexOf(shard);
+    if (idx >= 0) shards.splice(idx, 1);
+    burst(shard.position, shard.userData.color);
+    scene.remove(shard);
+    state.data += 1;
+    state.score += 10;
+    const inputIndex = (state.data - 1) % layers[0].length;
+    layers[0][inputIndex].material.emissiveIntensity = 2.4;
+    if (state.data >= state.target) {
+      state.ready = true;
+      layers[0].forEach((n) => { n.material.emissiveIntensity = 2; });
+      narrate("Signal acquired. The input layer is full. Press Space or the Train button to run the forward pass.");
+    } else {
+      setCaption("Feature " + state.data + " of " + state.target + " collected. Keep moving.");
+    }
+    updateHud();
+  }
+
+  function train() {
+    if (!state.ready || state.training) return;
+    state.training = true;
+    state.ready = false;
+    state.trainingStart = time;
+    state.chosen = Math.random() < 0.5 ? 0 : 1;
+    state.confidence = Math.min(99, 80 + Math.round(Math.random() * 8) + Math.max(0, state.data - mission.target) * 2);
+    updateHud();
+    burst(player.position, 0x22d3ee);
+    for (let i = 0; i < 18; i++) {
+      setTimeout(() => { if (state.training) spawnPulses(); }, i * 70);
+    }
+    narrate("Forward pass. Each feature is multiplied by a weight, summed with a bias, and passed through an activation function. The output layer chooses " + mission.classes[state.chosen] + " with " + state.confidence + " percent confidence. " + mission.concept);
+  }
+
+  function finishTraining() {
+    state.training = false;
+    state.confidence = state.confidence;
+    layers[3][state.chosen].material.emissive.setHex(0xfbbf24);
+    layers[3][state.chosen].material.emissiveIntensity = 3.2;
+    updateHud();
+    addLog("Output: " + mission.classes[state.chosen] + " · " + state.confidence + "%");
+    setTimeout(() => {
+      spawnMission(state.level + 1, true);
+      layers[0].forEach((n) => { n.material.emissiveIntensity = 0.25; });
+      layers[1].forEach((n) => { n.material.emissiveIntensity = 0.25; });
+      layers[2].forEach((n) => { n.material.emissiveIntensity = 0.25; });
+      layers[3].forEach((n, i) => {
+        n.material.emissive.setHex(i === 0 ? 0x8a6a1a : 0x8a6a1a);
+        n.material.emissiveIntensity = 0.5;
+      });
+      edges.forEach((e) => { e.line.material.opacity = 0.16; e.line.material.color.setHex(0x1a7189); });
+      for (let i = 0; i < 2; i++) spawnShard();
+    }, 2600);
+  }
+
+  function resetGame() {
+    while (shards.length) scene.remove(shards.pop());
+    while (pulses.length) { scene.remove(pulses.pop().mesh); }
+    while (bursts.length) { scene.remove(bursts.pop().mesh); }
+    state.score = 0;
+    state.confidence = 0;
+    edges.forEach((e) => { e.line.material.opacity = 0.16; e.line.material.color.setHex(0x1a7189); });
+    layers.forEach((layer, li) => layer.forEach((n) => {
+      n.material.emissiveIntensity = li === 3 ? 0.5 : 0.25;
+      n.material.emissive.setHex(li === 3 ? 0x8a6a1a : 0x0b5f72);
+    }));
+    for (let i = 0; i < 5; i++) spawnShard();
+    spawnMission(1, true);
+    state.started = true;
+    say(missionText());
+  }
+
+  function resize() {
+    const rect = stage.getBoundingClientRect();
+    const w = Math.max(1, Math.floor(rect.width));
+    const h = Math.max(1, Math.floor(rect.height));
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    camera.updateProjectionMatrix();
+  }
+
+  const resizeObserver = new ResizeObserver(resize);
+  resizeObserver.observe(stage);
+  resize();
+
+  canvas.addEventListener("pointermove", (event) => {
+    const rect = canvas.getBoundingClientRect();
+    pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+    pointer.y = -(((event.clientY - rect.top) / rect.height) * 2 - 1);
+    target.x = pointer.x * 7.6;
+    target.y = pointer.y * 4.2;
+    if (!state.started) {
+      state.started = true;
+      startHint.classList.add("hide");
+      narrate(missionText());
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    const key = event.key.toLowerCase();
+    if (["arrowup", "arrowdown", "arrowleft", "arrowright", " "].includes(key) && event.target === document.body) event.preventDefault();
+    if (key === " " && state.started) { train(); return; }
+    if (key === "m") { toggleMute(); return; }
+    if (key === "r") { resetGame(); return; }
+    if (["w", "a", "s", "d", "arrowup", "arrowdown", "arrowleft", "arrowright"].includes(key)) {
+      keys.add(key);
+      if (!state.started) { state.started = true; startHint.classList.add("hide"); narrate(missionText()); }
+    }
+  });
+  window.addEventListener("keyup", (event) => keys.delete(event.key.toLowerCase()));
+
+  function toggleMute() {
+    state.muted = !state.muted;
+    $("#muteBtn").textContent = state.muted ? "Unmute narration" : "Mute narration";
+    if (state.muted) { try { speechSynthesis.cancel(); } catch (error) { /* no speech support */ } }
+    else say("Narration on.");
+  }
+  $("#muteBtn").addEventListener("click", toggleMute);
+  $("#resetBtn").addEventListener("click", resetGame);
+  trainBtn.addEventListener("click", () => { if (state.started) train(); });
+
+  const clock = new THREE.Clock();
+  function animate() {
+    requestAnimationFrame(animate);
+    const dt = Math.min(clock.getDelta(), 0.05);
+    time += dt;
+
+    const speed = 7.5;
+    if (keys.has("a") || keys.has("arrowleft")) target.x -= speed * dt;
+    if (keys.has("d") || keys.has("arrowright")) target.x += speed * dt;
+    if (keys.has("w") || keys.has("arrowup")) target.y += speed * dt;
+    if (keys.has("s") || keys.has("arrowdown")) target.y -= speed * dt;
+    target.x = clamp(target.x, -7.8, 7.8);
+    target.y = clamp(target.y, -4.4, 4.4);
+    player.position.lerp(target, 1 - Math.pow(0.001, dt));
+    ring.rotation.z += dt * 0.8;
+    ring2.rotation.x -= dt * 0.6;
+    core.scale.setScalar(1 + Math.sin(time * 4) * 0.06);
+
+    if (shards.length < 5 && time - lastSpawn > 0.9) {
+      lastSpawn = time;
+      spawnShard();
+    }
+    for (let i = shards.length - 1; i >= 0; i--) {
+      const shard = shards[i];
+      shard.rotation.y += dt * 1.2;
+      shard.rotation.x += dt * 0.7;
+      shard.position.y += Math.sin(time * 1.6 + shard.userData.phase) * dt * 0.22;
+      shard.position.x += Math.sin(time * 0.7 + shard.userData.phase) * shard.userData.drift * dt;
+      shard.position.x = clamp(shard.position.x, -7.6, 7.6);
+      shard.userData.halo.rotation.z += dt * 1.6;
+      const dx = shard.position.x - player.position.x;
+      const dy = shard.position.y - player.position.y;
+      if (dx * dx + dy * dy < 0.82 * 0.82) collect(shard);
+    }
+
+    for (let i = bursts.length - 1; i >= 0; i--) {
+      const b = bursts[i];
+      b.life += dt;
+      const p = b.life / 0.55;
+      b.mesh.scale.setScalar(1 + p * 3.2);
+      b.mesh.material.opacity = Math.max(0, 0.85 * (1 - p));
+      if (p >= 1) { scene.remove(b.mesh); bursts.splice(i, 1); }
+    }
+
+    for (let i = pulses.length - 1; i >= 0; i--) {
+      const p = pulses[i];
+      p.life += dt;
+      const t = Math.min(1, p.life / p.dur);
+      const seg = t * 3;
+      const k = Math.min(2, Math.floor(seg));
+      const local = seg - k;
+      p.mesh.position.lerpVectors(p.points[k], p.points[k + 1], local);
+      p.mesh.material.opacity = 0.95 * (1 - t);
+      if (t >= 1) { scene.remove(p.mesh); pulses.splice(i, 1); }
+    }
+
+    if (state.training) {
+      const progress = Math.min(1, (time - state.trainingStart) / 1.9);
+      edges.forEach((e) => {
+        const lit = progress * 3 >= e.layer + 0.15;
+        if (lit) {
+          e.line.material.opacity = 0.5;
+          e.line.material.color.setHex(e.layer === 2 ? 0xa78bfa : 0x22d3ee);
+        }
+      });
+      if (progress > 0.33) layers[1].forEach((n) => { n.material.emissiveIntensity = 1.6; });
+      if (progress > 0.66) layers[2].forEach((n) => { n.material.emissiveIntensity = 1.8; });
+      if (progress > 0.9) layers[3].forEach((n) => { n.material.emissiveIntensity = 2.6; });
+      if (progress >= 1) finishTraining();
+    }
+
+    labels.forEach((label, i) => { label.position.y = layers[3][i].position.y; });
+    renderer.render(scene, camera);
+  }
+
+  $("#loading").classList.add("hide");
+  updateHud();
+  animate();
+}
+
+boot();
+</script>
+</body>
+</html>

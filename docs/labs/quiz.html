@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compiler Mind — Java Atlas Quiz</title>
+<meta name="description" content="A ten-question warm-up across Java language, OOP, collections, algorithms, runtime, and data access. Every answer explains itself.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<style>
+  .quiz-shell { display:grid; grid-template-columns: minmax(0,1.6fr) minmax(280px,.7fr); gap:16px; align-items:start; }
+  @media (max-width: 900px) { .quiz-shell { grid-template-columns:1fr; } }
+  .quiz-top { display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
+  .quiz-progress { flex:1; min-width:160px; }
+  .quiz-meta { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:12px; }
+  .topic-tag { font:500 10px 'JetBrains Mono',monospace; letter-spacing:.12em; text-transform:uppercase; color:var(--cyan); border:1px solid rgba(34,211,238,.25); padding:4px 8px; border-radius:999px; }
+  .qtext { font-size:17px; line-height:1.6; color:var(--text); margin:0 0 14px; }
+  .qcode { margin:0 0 16px; padding:14px 16px; background:rgba(2,10,14,.8); border:1px solid var(--line); border-left:2px solid var(--cyan); border-radius:8px; color:#c8f5ff; font:13px/1.7 'JetBrains Mono',monospace; overflow:auto; white-space:pre; }
+  .options { display:grid; gap:9px; }
+  .option { display:flex; gap:12px; align-items:flex-start; width:100%; text-align:left; padding:13px 14px; background:rgba(148,163,184,.035); border:1px solid var(--line); border-radius:10px; color:var(--text); font:14px/1.5 'Inter',sans-serif; cursor:pointer; transition:border-color .15s, background .15s, transform .15s; }
+  .option:hover:not(:disabled) { border-color:rgba(34,211,238,.35); background:rgba(34,211,238,.05); transform:translateX(2px); }
+  .option:disabled { cursor:default; }
+  .option .key { flex:none; width:22px; height:22px; display:grid; place-items:center; border:1px solid var(--line); border-radius:6px; font:500 11px 'JetBrains Mono',monospace; color:var(--muted); }
+  .option.correct { border-color:rgba(52,211,153,.5); background:rgba(52,211,153,.09); }
+  .option.correct .key { border-color:rgba(52,211,153,.5); color:var(--green); }
+  .option.wrong { border-color:rgba(251,113,133,.5); background:rgba(251,113,133,.08); }
+  .option.wrong .key { border-color:rgba(251,113,133,.5); color:var(--rose); }
+  .option.dim { opacity:.55; }
+  .feedback { margin-top:16px; padding:14px 15px; border-radius:10px; border:1px solid var(--line); background:rgba(148,163,184,.04); font-size:13px; line-height:1.6; color:var(--muted); display:none; }
+  .feedback.show { display:block; }
+  .feedback.good { border-color:rgba(52,211,153,.35); background:rgba(52,211,153,.06); }
+  .feedback.bad { border-color:rgba(251,113,133,.35); background:rgba(251,113,133,.06); }
+  .feedback b { color:var(--text); }
+  .quiz-actions { display:flex; justify-content:flex-end; gap:10px; margin-top:16px; }
+  .topic-chips { display:flex; flex-wrap:wrap; gap:7px; }
+  .chip { padding:6px 10px; border-radius:999px; border:1px solid var(--line); background:transparent; color:var(--muted); font:500 11px 'Inter',sans-serif; cursor:pointer; transition:all .15s; }
+  .chip:hover { color:var(--text); border-color:rgba(148,163,184,.35); }
+  .chip.on { color:var(--cyan); border-color:rgba(34,211,238,.4); background:rgba(34,211,238,.08); }
+  .result { text-align:center; padding:22px 10px 8px; }
+  .result .score { font:700 64px/1 'Space Grotesk',sans-serif; letter-spacing:-.04em; background:linear-gradient(180deg,#fff,#7dd3fc); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .result p { color:var(--muted); margin:10px auto 0; max-width:46ch; font-size:14px; line-height:1.65; }
+  .review { text-align:left; margin-top:20px; display:grid; gap:10px; }
+  .review-item { padding:12px 14px; border:1px solid var(--line); border-radius:9px; background:rgba(251,113,133,.04); font-size:13px; line-height:1.55; color:var(--muted); }
+  .review-item b { color:var(--text); display:block; margin-bottom:4px; }
+  .best-line { font:11px 'JetBrains Mono',monospace; color:var(--dim); letter-spacing:.08em; }
+</style>
+</head>
+<body class="lab">
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Compiler Mind</b><span>Ten questions · every answer explains itself</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="best-line" id="bestLine">BEST —</span>
+    <a class="btn btn-sm btn-ghost" href="../index.html#labs">All labs</a>
+  </div>
+</header>
+
+<main class="lab-wrap">
+  <div class="lab-head">
+    <div>
+      <h1>Think in Java, not in syntax.</h1>
+      <p>A short diagnostic. Pick topics, answer ten questions, and read the reasoning behind every option. Keyboard: 1–4 to answer, Enter for the next question.</p>
+    </div>
+    <div class="btn-row">
+      <button class="btn" id="restartBtn" type="button">New mix</button>
+    </div>
+  </div>
+
+  <div class="quiz-shell">
+    <section class="panel" aria-live="polite">
+      <div class="panel-body">
+        <div class="quiz-top">
+          <span class="hint" id="progressLabel">Question 1 of 10</span>
+          <div class="quiz-progress bar"><i id="progressBar" style="--w:0%"></i></div>
+        </div>
+
+        <div id="quizView">
+          <div class="quiz-meta">
+            <span class="topic-tag" id="topicTag">Language</span>
+            <span class="hint" id="scoreHint">Score 0</span>
+          </div>
+          <p class="qtext" id="qText"></p>
+          <pre class="qcode" id="qCode" hidden></pre>
+          <div class="options" id="options"></div>
+          <div class="feedback" id="feedback"></div>
+          <div class="quiz-actions">
+            <button class="btn" id="nextBtn" type="button" hidden>Next question</button>
+          </div>
+        </div>
+
+        <div id="resultView" hidden>
+          <div class="result">
+            <div class="score" id="scoreBig">0%</div>
+            <p id="scoreLine"></p>
+          </div>
+          <div class="review" id="review"></div>
+          <div class="quiz-actions" style="justify-content:center">
+            <button class="btn" id="againBtn" type="button">Play again</button>
+            <button class="btn btn-ghost" id="newMixBtn" type="button">Change topics</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <aside style="display:grid;gap:14px">
+      <div class="panel">
+        <div class="panel-head"><h2>Topics</h2></div>
+        <div class="panel-body">
+          <div class="topic-chips" id="chips"></div>
+          <p class="note" id="poolNote" style="margin-top:12px">—</p>
+          <button class="btn btn-sm" id="applyBtn" type="button" style="width:100%;justify-content:center">Start a new run</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Run stats</h2></div>
+        <div class="panel-body">
+          <div class="metrics three" style="grid-template-columns:1fr 1fr">
+            <div class="metric"><b id="statScore">0</b><span>correct</span></div>
+            <div class="metric"><b id="statStreak">0</b><span>best streak</span></div>
+          </div>
+          <div class="bar-row" style="margin-top:12px">
+            <span>Accuracy</span>
+            <div class="bar"><i id="accuracyBar" style="--w:0%"></i></div>
+            <b id="accuracyPct">—</b>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>How to use this</h2></div>
+        <div class="panel-body">
+          <div class="log" style="max-height:none">
+            <div><span>Guess fast. The explanation matters more than the score.</span></div>
+            <div><span>Wrong answers are collected into a review at the end.</span></div>
+            <div><span>Every question maps back to a chapter in the atlas.</span></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="lab-foot">Part of the <a href="../index.html">Java Atlas</a> · Original questions, MIT licensed.</footer>
+
+<script src="../assets/lab.js"></script>
+<script>
+(function () {
+  "use strict";
+  const { $, $$, shuffle, toast } = window.Lab;
+
+  const QUESTIONS = [
+    { topic: "Language", q: "What is the value of x after this line?", code: "int x = 7 / 2;", options: ["3", "3.5", "4", "A compile error"], answer: 0, why: "Both operands are int, so Java performs integer division and truncates toward zero. Use 7 / 2.0 if you want 3.5." },
+    { topic: "Language", q: "Which of these is NOT a primitive type?", options: ["boolean", "char", "String", "double"], answer: 2, why: "String is a class in java.lang. The eight primitives are boolean, byte, short, int, long, float, double, and char." },
+    { topic: "Language", q: "Why prefer StringBuilder over += inside a loop?", options: ["It uses less memory and avoids repeated copying", "It is the only way to build a String", "It makes the text immutable", "It runs on a separate thread"], answer: 0, why: "Strings are immutable, so each += creates a new object. StringBuilder appends into a resizable buffer, giving linear rather than quadratic work." },
+    { topic: "Language", q: "What does try-with-resources require of a resource?", options: ["It implements AutoCloseable", "It extends Thread", "It is marked final", "It has a no-argument constructor"], answer: 0, why: "Any object implementing AutoCloseable (directly or through Closeable) can be declared in the try header and is closed automatically." },
+    { topic: "OOP", q: "Which keyword prevents a class from being extended?", options: ["static", "final", "sealed", "abstract"], answer: 1, why: "A final class cannot be subclassed. sealed restricts inheritance to a known set of subclasses rather than forbidding it." },
+    { topic: "OOP", q: "What is dynamic dispatch?", options: ["The JVM choosing an overridden method at runtime based on the object", "The compiler inlining every method call", "Loading classes lazily from disk", "Converting primitives to wrappers"], answer: 0, why: "When you call an overridden instance method through a supertype reference, the JVM selects the implementation from the actual object's class." },
+    { topic: "OOP", q: "Which statement about interfaces is true in modern Java?", options: ["They can declare default methods with bodies", "They can hold instance fields", "They can be instantiated with new", "They cannot be extended"], answer: 0, why: "Since Java 8, interfaces may declare default and static methods. Interface fields are implicitly public static final; interfaces cannot be instantiated." },
+    { topic: "OOP", q: "A record is primarily designed to…", options: ["carry immutable data with generated accessors, equals, hashCode, and toString", "replace every class in a domain model", "provide multiple inheritance of state", "make fields mutable by default"], answer: 0, why: "Records are transparent, shallowly immutable data carriers. Their components are final and the compiler generates the boilerplate." },
+    { topic: "Collections", q: "Which collection forbids duplicate elements?", options: ["List", "Set", "Queue", "Deque"], answer: 1, why: "A Set models a mathematical set. List, Queue, and Deque allow duplicates and care about order or position." },
+    { topic: "Collections", q: "Average-case lookup in a well-sized HashMap is…", options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"], answer: 0, why: "Hashing maps a key to a bucket in constant time on average. Degenerate collisions can push a bucket toward O(n) or O(log n) in treeified bins." },
+    { topic: "Collections", q: "What does List.of(\"a\", \"b\") return?", options: ["A mutable ArrayList", "An immutable list", "A Set", "A stream"], answer: 1, why: "List.of returns an unmodifiable list. Calling add or remove throws UnsupportedOperationException." },
+    { topic: "Collections", q: "Which structure does breadth-first search use?", options: ["Stack", "Queue", "Priority queue", "Hash table"], answer: 1, why: "BFS explores level by level, so it enqueues neighbors and dequeues the oldest first. DFS uses a stack or recursion." },
+    { topic: "Algorithms", q: "Binary search on a sorted array runs in…", options: ["O(1)", "O(log n)", "O(n)", "O(n log n)"], answer: 1, why: "Each comparison halves the search space, so the number of steps grows with log base 2 of n." },
+    { topic: "Algorithms", q: "Which sort is stable and O(n log n) in the worst case?", options: ["Quicksort", "Merge sort", "Heap sort", "Selection sort"], answer: 1, why: "Merge sort splits and merges predictably, preserving equal elements' order. Quicksort can degrade to O(n^2); heap sort is not stable." },
+    { topic: "Algorithms", q: "Which algorithm fails when edge weights are negative?", options: ["Dijkstra", "Bellman–Ford", "BFS on an unweighted graph", "Kruskal"], answer: 0, why: "Dijkstra assumes shortest distances only improve forward. Negative edges can create shorter paths to already-settled nodes; Bellman–Ford handles them." },
+    { topic: "Algorithms", q: "Which tree rebalances itself with rotations after insertions?", options: ["Binary search tree", "AVL tree", "Linked list", "Trie"], answer: 1, why: "AVL trees track balance factors and rotate to keep height logarithmic. A plain BST can become a chain." },
+    { topic: "Algorithms", q: "Separate chaining resolves hash collisions by…", options: ["storing colliding entries in a list or tree per bucket", "rehashing the entire table on every insert", "sorting the keys", "using a second hash function only"], answer: 0, why: "Chaining keeps a container per bucket. Open addressing instead probes for another empty slot." },
+    { topic: "Runtime", q: "What does the JVM execute?", options: ["Source code directly", "Bytecode", "Machine code only", "Python bytecode"], answer: 1, why: "javac compiles Java source to platform-neutral bytecode. The JVM loads, verifies, and executes it, JIT-compiling hot paths to native code." },
+    { topic: "Runtime", q: "What is type erasure?", options: ["Generic type parameters are checked at compile time and mostly absent at runtime", "The JVM deletes unused classes", "The garbage collector clears references", "Exceptions are removed from the stack trace"], answer: 0, why: "Generics are a compile-time safety feature. At runtime, List<String> and List<Integer> share the same raw List class." },
+    { topic: "Runtime", q: "Which exception is checked at compile time?", options: ["NullPointerException", "IllegalArgumentException", "IOException", "ArrayIndexOutOfBoundsException"], answer: 2, why: "IOException extends Exception and must be caught or declared. The others extend RuntimeException and are unchecked." },
+    { topic: "Runtime", q: "What does synchronized guarantee?", options: ["Only one thread at a time executes the guarded block for a given monitor", "The block runs faster", "The thread never blocks", "Variables become immutable"], answer: 0, why: "synchronized provides mutual exclusion and a happens-before edge, protecting shared state. It does not make code parallel or lock-free." },
+    { topic: "Runtime", q: "The preferred way to define a task for a thread is to…", options: ["implement Runnable or submit a task to an ExecutorService", "extend Thread and override run", "call Thread.stop", "use finalize"], answer: 0, why: "Separating the task (Runnable/Callable) from execution lets you reuse thread pools. Extending Thread couples the two and scales poorly." },
+    { topic: "Data", q: "PreparedStatement mainly protects against…", options: ["SQL injection by separating SQL from parameters", "network latency", "disk fragmentation", "connection pool exhaustion"], answer: 0, why: "Parameters are bound separately from the SQL text, so user input cannot change the statement's structure. It can also improve reuse." },
+    { topic: "Data", q: "Which HTTP method is expected to be idempotent?", options: ["POST", "GET", "PATCH always", "CONNECT"], answer: 1, why: "Repeating GET should not change server state. POST usually creates something new on each call; PUT and DELETE are also idempotent." },
+    { topic: "Data", q: "A foreign key enforces…", options: ["referential integrity between tables", "unique values in every column", "encryption at rest", "automatic indexing of all columns"], answer: 0, why: "A foreign key requires the referencing value to exist in the referenced table (or be null, if allowed), preventing orphan rows." },
+    { topic: "Data", q: "Comparable vs Comparator: which is true?", options: ["Comparable defines a natural order inside the class; Comparator is an external strategy", "Comparator must be implemented by the class being sorted", "Comparable can only compare strings", "They are identical"], answer: 0, why: "Comparable<T> gives one natural ordering via compareTo. Comparator<T> lets you define many orderings without touching the class." }
+  ];
+
+  const TOPICS = ["Language", "OOP", "Collections", "Algorithms", "Runtime", "Data"];
+  const active = new Set(TOPICS);
+  const RUN_SIZE = 10;
+
+  let pool = [];
+  let run = [];
+  let index = 0;
+  let score = 0;
+  let streak = 0;
+  let bestStreak = 0;
+  let missed = [];
+  let answered = false;
+  let best = null;
+
+  try {
+    best = JSON.parse(localStorage.getItem("javaAtlasQuizBest") || "null");
+  } catch (error) {
+    best = null;
+  }
+
+  function renderBest() {
+    $("#bestLine").textContent = best ? "BEST " + best.score + "% · " + best.date : "BEST —";
+  }
+
+  function saveBest(pct) {
+    if (!best || pct > best.score) {
+      best = { score: pct, date: new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" }) };
+      try { localStorage.setItem("javaAtlasQuizBest", JSON.stringify(best)); } catch (error) { /* storage may be disabled */ }
+      renderBest();
+    }
+  }
+
+  function filteredPool() {
+    return QUESTIONS.filter((q) => active.has(q.topic));
+  }
+
+  function updatePoolNote() {
+    pool = filteredPool();
+    $("#poolNote").textContent = pool.length + " questions available · run size " + Math.min(RUN_SIZE, pool.length) + ".";
+  }
+
+  function buildChips() {
+    $("#chips").innerHTML = TOPICS.map((topic) => {
+      const count = QUESTIONS.filter((q) => q.topic === topic).length;
+      return '<button class="chip' + (active.has(topic) ? " on" : "") + '" data-topic="' + topic + '" type="button" aria-pressed="' + active.has(topic) + '">' + topic + ' · ' + count + "</button>";
+    }).join("");
+    $$("#chips .chip").forEach((chip) => {
+      chip.addEventListener("click", () => {
+        const topic = chip.dataset.topic;
+        if (active.has(topic)) {
+          if (active.size === 1) { toast("Keep at least one topic"); return; }
+          active.delete(topic);
+        } else {
+          active.add(topic);
+        }
+        chip.classList.toggle("on", active.has(topic));
+        chip.setAttribute("aria-pressed", String(active.has(topic)));
+        updatePoolNote();
+      });
+    });
+  }
+
+  function startRun() {
+    pool = filteredPool();
+    if (!pool.length) { toast("Select at least one topic"); return; }
+    run = shuffle(pool).slice(0, Math.min(RUN_SIZE, pool.length));
+    index = 0;
+    score = 0;
+    streak = 0;
+    bestStreak = 0;
+    missed = [];
+    $("#resultView").hidden = true;
+    $("#quizView").hidden = false;
+    $("#statScore").textContent = "0";
+    $("#statStreak").textContent = "0";
+    $("#accuracyBar").style.setProperty("--w", "0%");
+    $("#accuracyPct").textContent = "—";
+    question();
+  }
+
+  function question() {
+    answered = false;
+    const item = run[index];
+    const total = run.length;
+    $("#progressLabel").textContent = "Question " + (index + 1) + " of " + total;
+    $("#progressBar").style.setProperty("--w", ((index / total) * 100) + "%");
+    $("#scoreHint").textContent = "Score " + score + " / " + index;
+    $("#topicTag").textContent = item.topic;
+    $("#qText").textContent = item.q;
+    const code = $("#qCode");
+    if (item.code) { code.hidden = false; code.textContent = item.code; }
+    else { code.hidden = true; code.textContent = ""; }
+    $("#options").innerHTML = item.options.map((option, i) =>
+      '<button class="option" data-i="' + i + '" type="button"><span class="key">' + (i + 1) + '</span><span>' + option + "</span></button>"
+    ).join("");
+    $$("#options .option").forEach((button) => {
+      button.addEventListener("click", () => answer(Number(button.dataset.i)));
+    });
+    const feedback = $("#feedback");
+    feedback.className = "feedback";
+    feedback.innerHTML = "";
+    $("#nextBtn").hidden = true;
+    $("#nextBtn").textContent = index === total - 1 ? "See results" : "Next question";
+    updateAccuracy();
+  }
+
+  function answer(choice) {
+    if (answered) return;
+    answered = true;
+    const item = run[index];
+    const buttons = $$("#options .option");
+    buttons.forEach((button, i) => {
+      button.disabled = true;
+      if (i === item.answer) button.classList.add("correct");
+      else if (i === choice) button.classList.add("wrong");
+      else button.classList.add("dim");
+    });
+    const correct = choice === item.answer;
+    if (correct) {
+      score += 1;
+      streak += 1;
+      bestStreak = Math.max(bestStreak, streak);
+    } else {
+      streak = 0;
+      missed.push({ q: item.q, correct: item.options[item.answer], why: item.why });
+    }
+    const feedback = $("#feedback");
+    feedback.className = "feedback show " + (correct ? "good" : "bad");
+    feedback.innerHTML = "<b>" + (correct ? "Correct." : "Not quite.") + "</b> " + item.why;
+    $("#scoreHint").textContent = "Score " + score + " / " + (index + 1);
+    $("#statScore").textContent = String(score);
+    $("#statStreak").textContent = String(bestStreak);
+    updateAccuracy();
+    $("#nextBtn").hidden = false;
+    if (!window.matchMedia("(pointer:coarse)").matches) $("#nextBtn").focus();
+  }
+
+  function updateAccuracy() {
+    const seen = index + (answered ? 1 : 0);
+    const pct = seen ? Math.round((score / seen) * 100) : 0;
+    $("#accuracyBar").style.setProperty("--w", pct + "%");
+    $("#accuracyPct").textContent = seen ? pct + "%" : "—";
+  }
+
+  function next() {
+    if (!answered) return;
+    if (index >= run.length - 1) { finish(); return; }
+    index += 1;
+    question();
+  }
+
+  function finish() {
+    $("#quizView").hidden = true;
+    $("#resultView").hidden = false;
+    $("#progressBar").style.setProperty("--w", "100%");
+    $("#progressLabel").textContent = "Run complete";
+    const pct = Math.round((score / run.length) * 100);
+    $("#scoreBig").textContent = pct + "%";
+    let line;
+    if (pct === 100) line = "Flawless run. You are reading Java the way the JVM does.";
+    else if (pct >= 80) line = "Strong. The gaps are small — read the missed explanations and run it again.";
+    else if (pct >= 60) line = "Solid foundation. The review below is your shortest path upward.";
+    else line = "This is exactly what practice is for. Read every explanation, then try a narrower topic run.";
+    $("#scoreLine").textContent = line + " You answered " + score + " of " + run.length + " correctly with a best streak of " + bestStreak + ".";
+    $("#review").innerHTML = missed.length
+      ? missed.map((m) => '<div class="review-item"><b>' + m.q + "</b>Correct answer: " + m.correct + ". " + m.why + "</div>").join("")
+      : '<div class="review-item" style="background:rgba(52,211,153,.05);border-color:rgba(52,211,153,.25)"><b>Nothing to review.</b>Every answer was correct.</div>';
+    saveBest(pct);
+  }
+
+  $("#nextBtn").addEventListener("click", next);
+  $("#restartBtn").addEventListener("click", startRun);
+  $("#againBtn").addEventListener("click", startRun);
+  $("#newMixBtn").addEventListener("click", () => {
+    $("#resultView").hidden = true;
+    $("#quizView").hidden = false;
+    startRun();
+  });
+  $("#applyBtn").addEventListener("click", () => {
+    if (!active.size) { toast("Select at least one topic"); return; }
+    startRun();
+    toast("New run started");
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (!document.getElementById("resultView").hidden) return;
+    if (event.key >= "1" && event.key <= "4" && !answered) {
+      const option = $('.option[data-i="' + (Number(event.key) - 1) + '"]');
+      if (option) { option.click(); event.preventDefault(); }
+    } else if ((event.key === "Enter" || event.key === " ") && answered) {
+      next();
+      event.preventDefault();
+    }
+  });
+
+  renderBest();
+  buildChips();
+  updatePoolNote();
+  startRun();
+})();
+</script>
+</body>
+</html>

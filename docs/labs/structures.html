@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Structure Studio — Java Atlas</title>
+<meta name="description" content="Operate a stack, queue, linked list, binary search tree, and hash table with live visualization and an operation log.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<style>
+  .seg { display: flex; flex-wrap: wrap; gap: 4px; padding: 4px; border: 1px solid var(--line); border-radius: 10px; background: rgba(2,6,14,.45); }
+  .seg button { flex: 1 1 auto; min-width: 72px; height: 32px; padding: 0 10px; border: 1px solid transparent; border-radius: 7px; background: transparent; color: var(--muted); font-size: 11.5px; cursor: pointer; transition: background .18s ease, color .18s ease, border-color .18s ease; }
+  .seg button:hover { color: var(--text); background: rgba(148,163,184,.07); }
+  .seg button[aria-selected="true"] { color: var(--text); background: rgba(34,211,238,.1); border-color: rgba(34,211,238,.3); }
+  .seg button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 1px; }
+  .input-row { display: flex; gap: 8px; }
+  .input-row input { flex: 1; }
+  .input-row .btn { flex: none; }
+</style>
+</head>
+<body class="lab">
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Structure Studio</b><span>Chapters 20–27 · five structures, one console</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill"><i></i> live state</span>
+    <a class="btn btn-sm btn-ghost" href="../index.html#labs">All labs</a>
+  </div>
+</header>
+
+<main class="lab-wrap">
+  <div class="lab-head">
+    <div>
+      <h1>Same data. Radically different behavior.</h1>
+      <p>Switch structures and repeat the same operations. Watch how order, shape, and cost change — and read the log to see exactly what happened.</p>
+    </div>
+  </div>
+
+  <div class="seg" role="tablist" aria-label="Choose a data structure" style="margin-bottom:14px">
+    <button role="tab" id="tab-stack" aria-selected="true" aria-controls="stage" data-mode="stack">Stack</button>
+    <button role="tab" id="tab-queue" aria-selected="false" aria-controls="stage" data-mode="queue" tabindex="-1">Queue</button>
+    <button role="tab" id="tab-list" aria-selected="false" aria-controls="stage" data-mode="list" tabindex="-1">Linked List</button>
+    <button role="tab" id="tab-bst" aria-selected="false" aria-controls="stage" data-mode="bst" tabindex="-1">BST</button>
+    <button role="tab" id="tab-hash" aria-selected="false" aria-controls="stage" data-mode="hash" tabindex="-1">Hash Table</button>
+  </div>
+
+  <div class="lab-grid" id="stage" role="tabpanel" aria-labelledby="tab-stack">
+    <section class="panel" aria-label="Structure visualization">
+      <div class="panel-head">
+        <h2 id="vizTitle">Stack · last in, first out</h2>
+        <span class="hint" id="status">ready</span>
+      </div>
+      <div class="viz tall"><canvas id="struct" aria-label="Visualization of the selected data structure"></canvas></div>
+      <div class="panel-body" style="border-top:1px solid var(--line)">
+        <div class="metrics" style="margin-bottom:10px">
+          <div class="metric"><b id="mSize">3</b><span>elements</span></div>
+          <div class="metric"><b id="mShape">top 23</b><span id="mShapeLabel">top element</span></div>
+          <div class="metric"><b id="mCost">O(1)</b><span>primary op</span></div>
+          <div class="metric"><b id="mLast">push</b><span>last operation</span></div>
+        </div>
+        <div class="log" id="trace" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <aside style="display:grid;gap:14px">
+      <div class="panel">
+        <div class="panel-head"><h2>Operations</h2><span class="hint">enter = add</span></div>
+        <div class="panel-body">
+          <div class="controls">
+            <div class="field">
+              <label for="value">Value</label>
+              <div class="input-row">
+                <input id="value" type="number" inputmode="numeric" min="-999" max="999" value="42" aria-label="Value to insert">
+                <button class="btn btn-primary" id="addBtn" type="button">Push</button>
+              </div>
+            </div>
+            <div class="btn-row">
+              <button class="btn" id="removeBtn" type="button">Pop</button>
+              <button class="btn" id="searchBtn" type="button">Find</button>
+              <button class="btn btn-danger" id="clearBtn" type="button">Clear</button>
+            </div>
+            <p class="note cyan" id="structNote">A stack is LIFO. The most recent push is the first pop. Java’s <b>ArrayDeque</b> is the usual implementation.</p>
+            <table class="table">
+              <thead><tr><th>Operation</th><th>Average</th><th>Worst</th></tr></thead>
+              <tbody id="costBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Mental model</h2></div>
+        <div class="panel-body">
+          <div class="log" style="max-height:none" id="mental"></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="lab-foot">Part of the <a href="../index.html">Java Atlas</a> · Concept labs are original work, MIT licensed.</footer>
+
+<script src="../assets/lab.js"></script>
+<script>
+(function () {
+  "use strict";
+  const { $, $$, rand, toast, fitCanvas, observeResize, timeStamp } = window.Lab;
+
+  const canvas = $("#struct");
+  const ctx = canvas.getContext("2d");
+  const valueEl = $("#value");
+  const statusEl = $("#status");
+  const traceEl = $("#trace");
+
+  let W = 700;
+  let H = 440;
+  let mode = "stack";
+  let stack = [12, 7, 23];
+  let queue = [4, 9, 15];
+  let list = [3, 8, 13, 21];
+  let bst = null;
+  let buckets = Array.from({ length: 11 }, () => []);
+  let flash = null;
+  let path = [];
+  let flashTimer = 0;
+
+  bst = null;
+  [50, 30, 70, 20, 40, 60, 80].forEach((v) => { bst = insertNode(bst, v); });
+
+  const mental = {
+    stack: [
+      "Push adds to the top; pop removes from the top.",
+      "Only the top is reachable in O(1).",
+      "Used by undo history, expression evaluation, DFS, and the call stack.",
+      "Java: ArrayDeque, or the legacy Stack class."
+    ],
+    queue: [
+      "Enqueue adds at the rear; dequeue removes from the front.",
+      "First in, first out — fairness by arrival order.",
+      "Used by schedulers, buffers, BFS, and message queues.",
+      "Java: ArrayDeque or LinkedList."
+    ],
+    list: [
+      "Each node stores a value and a reference to the next node.",
+      "Appending with a tail pointer is O(1); finding a value is O(n).",
+      "Used when frequent insertion/removal beats random access.",
+      "Java: LinkedList implements both List and Deque."
+    ],
+    bst: [
+      "Left subtree < node < right subtree.",
+      "Search, insert, and delete are O(height).",
+      "A balanced tree is O(log n); a skewed tree degrades to O(n).",
+      "Used by ordered maps, range queries, and databases."
+    ],
+    hash: [
+      "A hash function maps a key to a bucket.",
+      "Collisions are resolved by chaining or open addressing.",
+      "Average lookup is O(1); worst case is O(n).",
+      "Used by dictionaries, caches, indexes, and symbol tables."
+    ]
+  };
+
+  const notes = {
+    stack: "A stack is LIFO. The most recent push is the first pop. Java’s <b>ArrayDeque</b> is the usual implementation.",
+    queue: "A queue is FIFO. Elements leave in arrival order. Java’s <b>ArrayDeque</b> is the standard choice.",
+    list: "A linked list trades random access for cheap insertion and removal at known positions.",
+    bst: "A binary search tree keeps order. Search follows one branch per level — if the tree stays balanced.",
+    hash: "A hash table turns a key into an index. With a good hash function and a sane load factor, lookup is constant time."
+  };
+
+  const costs = {
+    stack: [["push", "O(1)", "O(1)"], ["pop", "O(1)", "O(1)"], ["search", "O(n)", "O(n)"]],
+    queue: [["enqueue", "O(1)", "O(1)"], ["dequeue", "O(1)", "O(1)"], ["search", "O(n)", "O(n)"]],
+    list: [["append", "O(1)", "O(1)"], ["remove head", "O(1)", "O(1)"], ["search", "O(n)", "O(n)"]],
+    bst: [["insert", "O(log n)", "O(n)"], ["delete", "O(log n)", "O(n)"], ["search", "O(log n)", "O(n)"]],
+    hash: [["put", "O(1)", "O(n)"], ["remove", "O(1)", "O(n)"], ["contains", "O(1)", "O(n)"]]
+  };
+
+  function insertNode(node, value) {
+    if (!node) return { value, left: null, right: null };
+    if (value < node.value) node.left = insertNode(node.left, value);
+    else if (value > node.value) node.right = insertNode(node.right, value);
+    return node;
+  }
+
+  function deleteNode(node, value) {
+    if (!node) return null;
+    if (value < node.value) { node.left = deleteNode(node.left, value); return node; }
+    if (value > node.value) { node.right = deleteNode(node.right, value); return node; }
+    if (!node.left) return node.right;
+    if (!node.right) return node.left;
+    let successor = node.right;
+    while (successor.left) successor = successor.left;
+    node.value = successor.value;
+    node.right = deleteNode(node.right, successor.value);
+    return node;
+  }
+
+  function countNodes(node) {
+    return node ? 1 + countNodes(node.left) + countNodes(node.right) : 0;
+  }
+
+  function treeHeight(node) {
+    return node ? 1 + Math.max(treeHeight(node.left), treeHeight(node.right)) : 0;
+  }
+
+  function layoutTree(node, depth, out, positions) {
+    if (!node) return;
+    layoutTree(node.left, depth + 1, out, positions);
+    out.push({ node, depth });
+    layoutTree(node.right, depth + 1, out, positions);
+  }
+
+  function hashIndex(v) {
+    return Math.abs(v) % 11;
+  }
+
+  function resize() {
+    const fit = fitCanvas(canvas);
+    W = fit.width;
+    H = fit.height;
+    render();
+  }
+
+  function roundRect(x, y, w, h, r, fill, stroke, lw) {
+    ctx.beginPath();
+    ctx.roundRect(x, y, w, h, r);
+    if (fill) { ctx.fillStyle = fill; ctx.fill(); }
+    if (stroke) { ctx.strokeStyle = stroke; ctx.lineWidth = lw || 1; ctx.stroke(); }
+  }
+
+  function emptyMessage(text) {
+    ctx.fillStyle = "rgba(148,163,184,.55)";
+    ctx.font = "12px 'Inter', sans-serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(text, W / 2, H / 2);
+  }
+
+  function drawStack() {
+    const n = stack.length;
+    const cw = Math.min(170, W * 0.4);
+    const ch = 34;
+    const gap = 4;
+    const bottom = H - 34;
+    const x = W / 2 - cw / 2;
+    if (!n) { emptyMessage("Stack is empty. Push a value."); return; }
+    for (let i = 0; i < n; i += 1) {
+      const y = bottom - (i + 1) * ch - i * gap;
+      const isTop = i === n - 1;
+      const isFlash = flash && flash.index === i;
+      roundRect(x, y, cw, ch, 6, isFlash ? "rgba(244,114,182,.2)" : isTop ? "rgba(34,211,238,.1)" : "rgba(13,20,36,.9)", isFlash ? "#f472b6" : isTop ? "#22d3ee" : "rgba(148,163,184,.3)", isTop ? 1.8 : 1);
+      ctx.fillStyle = "#e8eef9";
+      ctx.font = "600 13px 'Space Grotesk', sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(String(stack[i]), x + cw / 2, y + ch / 2);
+      if (isTop) {
+        ctx.fillStyle = "#22d3ee";
+        ctx.font = "9px 'JetBrains Mono', monospace";
+        ctx.textAlign = "left";
+        ctx.fillText("TOP", x + cw + 10, y + ch / 2);
+      }
+    }
+    ctx.fillStyle = "rgba(100,116,139,.8)";
+    ctx.font = "9px 'JetBrains Mono', monospace";
+    ctx.textAlign = "center";
+    ctx.fillText("BOTTOM", W / 2, bottom + 16);
+  }
+
+  function drawQueue() {
+    const n = queue.length;
+    if (!n) { emptyMessage("Queue is empty. Enqueue a value."); return; }
+    const gap = 8;
+    const maxW = W - 60;
+    const cw = Math.min(86, (maxW - gap * (n - 1)) / n);
+    const total = cw * n + gap * (n - 1);
+    const x0 = W / 2 - total / 2;
+    const y = H / 2 - 24;
+    for (let i = 0; i < n; i += 1) {
+      const x = x0 + i * (cw + gap);
+      const isFlash = flash && flash.index === i;
+      roundRect(x, y, cw, 48, 7, isFlash ? "rgba(244,114,182,.2)" : "rgba(13,20,36,.9)", isFlash ? "#f472b6" : i === 0 ? "#22d3ee" : i === n - 1 ? "#fbbf24" : "rgba(148,163,184,.3)", i === 0 || i === n - 1 ? 1.6 : 1);
+      ctx.fillStyle = "#e8eef9";
+      ctx.font = "600 12px 'Space Grotesk', sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(String(queue[i]), x + cw / 2, y + 24);
+    }
+    ctx.font = "9px 'JetBrains Mono', monospace";
+    ctx.fillStyle = "#22d3ee";
+    ctx.textAlign = "left";
+    ctx.fillText("FRONT", x0, y + 66);
+    ctx.fillStyle = "#fbbf24";
+    ctx.textAlign = "right";
+    ctx.fillText("REAR", x0 + total, y + 66);
+    ctx.fillStyle = "rgba(100,116,139,.8)";
+    ctx.textAlign = "center";
+    ctx.fillText("dequeue ←", x0 + 24, y - 16);
+    ctx.fillText("← enqueue", x0 + total - 28, y - 16);
+  }
+
+  function drawList() {
+    const n = list.length;
+    if (!n) { emptyMessage("List is empty. Append a value."); return; }
+    const gap = 34;
+    const maxW = W - 60;
+    const nw = Math.min(74, (maxW - gap * (n - 1)) / n);
+    const total = nw * n + gap * (n - 1);
+    const x0 = W / 2 - total / 2;
+    const y = H / 2 - 22;
+    for (let i = 0; i < n; i += 1) {
+      const x = x0 + i * (nw + gap);
+      const isFlash = flash && flash.index === i;
+      roundRect(x, y, nw, 44, 6, isFlash ? "rgba(244,114,182,.18)" : "rgba(13,20,36,.9)", isFlash ? "#f472b6" : i === 0 ? "#22d3ee" : "rgba(148,163,184,.3)", i === 0 ? 1.6 : 1);
+      ctx.fillStyle = "#e8eef9";
+      ctx.font = "600 12px 'Space Grotesk', sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(String(list[i]), x + nw / 2, y + 22);
+      if (i < n - 1) {
+        ctx.strokeStyle = "rgba(148,163,184,.55)";
+        ctx.lineWidth = 1.4;
+        ctx.beginPath();
+        ctx.moveTo(x + nw + 4, y + 22);
+        ctx.lineTo(x + nw + gap - 8, y + 22);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(x + nw + gap - 12, y + 18);
+        ctx.lineTo(x + nw + gap - 6, y + 22);
+        ctx.lineTo(x + nw + gap - 12, y + 26);
+        ctx.stroke();
+      }
+    }
+    ctx.fillStyle = "#22d3ee";
+    ctx.font = "9px 'JetBrains Mono', monospace";
+    ctx.textAlign = "left";
+    ctx.fillText("HEAD", x0, y + 60);
+    ctx.fillStyle = "rgba(100,116,139,.8)";
+    ctx.textAlign = "right";
+    ctx.fillText("null", x0 + total + 6, y + 60);
+  }
+
+  function drawBst() {
+    if (!bst) { emptyMessage("Tree is empty. Insert a value."); return; }
+    const items = [];
+    layoutTree(bst, 0, items, null);
+    const n = items.length;
+    const maxDepth = Math.max(...items.map((i) => i.depth));
+    const padX = 36;
+    const top = 36;
+    const usableH = H - top - 40;
+    const yStep = maxDepth === 0 ? 0 : Math.min(72, usableH / maxDepth);
+    const positions = new Map();
+    items.forEach((item, i) => {
+      const x = padX + ((i + 1) / (n + 1)) * (W - padX * 2);
+      const y = top + item.depth * yStep;
+      positions.set(item.node, { x, y });
+    });
+    const pathSet = new Set(path.map((p) => p.node));
+
+    items.forEach(({ node }) => {
+      const p = positions.get(node);
+      [[node.left, p], [node.right, p]].forEach(([child, parent]) => {
+        if (!child) return;
+        const c = positions.get(child);
+        const onPath = pathSet.has(node) && pathSet.has(child);
+        ctx.strokeStyle = onPath ? "rgba(251,191,36,.75)" : "rgba(100,116,139,.32)";
+        ctx.lineWidth = onPath ? 1.8 : 1.2;
+        ctx.beginPath();
+        ctx.moveTo(parent.x, parent.y);
+        ctx.lineTo(c.x, c.y);
+        ctx.stroke();
+      });
+    });
+
+    items.forEach(({ node }) => {
+      const p = positions.get(node);
+      const onPath = pathSet.has(node);
+      const isFlash = flash && flash.value === node.value;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 17, 0, Math.PI * 2);
+      ctx.fillStyle = isFlash ? "rgba(244,114,182,.24)" : onPath ? "rgba(251,191,36,.14)" : "rgba(13,20,36,.95)";
+      ctx.fill();
+      ctx.strokeStyle = isFlash ? "#f472b6" : onPath ? "#fbbf24" : "rgba(148,163,184,.42)";
+      ctx.lineWidth = onPath ? 1.8 : 1.2;
+      ctx.stroke();
+      ctx.fillStyle = "#e8eef9";
+      ctx.font = "600 10px 'Space Grotesk', sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(String(node.value), p.x, p.y);
+    });
+
+    ctx.fillStyle = "rgba(100,116,139,.75)";
+    ctx.font = "9px 'JetBrains Mono', monospace";
+    ctx.textAlign = "left";
+    ctx.fillText("in-order layout · left < node < right", 14, H - 14);
+  }
+
+  function drawHash() {
+    const rows = 11;
+    const rowH = Math.min(28, (H - 30) / rows);
+    const top = 14;
+    const boxW = 34;
+    const x0 = 24;
+    for (let i = 0; i < rows; i += 1) {
+      const y = top + i * rowH;
+      const isFlash = flash && flash.bucket === i;
+      roundRect(x0, y + 2, boxW, rowH - 5, 4, isFlash ? "rgba(244,114,182,.2)" : "rgba(13,20,36,.9)", isFlash ? "#f472b6" : "rgba(148,163,184,.28)", 1);
+      ctx.fillStyle = isFlash ? "#f9a8d4" : "rgba(148,163,184,.75)";
+      ctx.font = "9px 'JetBrains Mono', monospace";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(String(i), x0 + boxW / 2, y + rowH / 2);
+      let x = x0 + boxW + 12;
+      const chain = buckets[i];
+      chain.forEach((v, j) => {
+        ctx.strokeStyle = "rgba(148,163,184,.35)";
+        ctx.beginPath();
+        ctx.moveTo(x - 8, y + rowH / 2);
+        ctx.lineTo(x, y + rowH / 2);
+        ctx.stroke();
+        const cw = 34;
+        roundRect(x, y + 5, cw, rowH - 10, 4, "rgba(34,211,238,.1)", "rgba(34,211,238,.4)", 1);
+        ctx.fillStyle = "#e8eef9";
+        ctx.font = "600 9px 'JetBrains Mono', monospace";
+        ctx.fillText(String(v), x + cw / 2, y + rowH / 2);
+        x += cw + 8;
+      });
+      if (!chain.length) {
+        ctx.fillStyle = "rgba(100,116,139,.4)";
+        ctx.font = "9px 'JetBrains Mono', monospace";
+        ctx.textAlign = "left";
+        ctx.fillText("null", x, y + rowH / 2);
+      }
+    }
+    ctx.fillStyle = "rgba(100,116,139,.75)";
+    ctx.font = "9px 'JetBrains Mono', monospace";
+    ctx.textAlign = "right";
+    ctx.fillText("h(v) = |v| mod 11", W - 14, H - 8);
+  }
+
+  function render() {
+    ctx.clearRect(0, 0, W, H);
+    if (mode === "stack") drawStack();
+    else if (mode === "queue") drawQueue();
+    else if (mode === "list") drawList();
+    else if (mode === "bst") drawBst();
+    else drawHash();
+    updateMetrics();
+  }
+
+  function updateMetrics() {
+    if (mode === "stack") {
+      $("#mSize").textContent = String(stack.length);
+      $("#mShape").textContent = stack.length ? String(stack[stack.length - 1]) : "—";
+      $("#mShapeLabel").textContent = "top element";
+      $("#mCost").textContent = "O(1)";
+    } else if (mode === "queue") {
+      $("#mSize").textContent = String(queue.length);
+      $("#mShape").textContent = queue.length ? String(queue[0]) : "—";
+      $("#mShapeLabel").textContent = "front element";
+      $("#mCost").textContent = "O(1)";
+    } else if (mode === "list") {
+      $("#mSize").textContent = String(list.length);
+      $("#mShape").textContent = list.length ? String(list[0]) : "—";
+      $("#mShapeLabel").textContent = "head value";
+      $("#mCost").textContent = "O(1)";
+    } else if (mode === "bst") {
+      $("#mSize").textContent = String(countNodes(bst));
+      $("#mShape").textContent = String(treeHeight(bst));
+      $("#mShapeLabel").textContent = "height";
+      $("#mCost").textContent = "O(log n)";
+    } else {
+      const keys = buckets.reduce((sum, b) => sum + b.length, 0);
+      const used = buckets.filter((b) => b.length).length;
+      $("#mSize").textContent = String(keys);
+      $("#mShape").textContent = used + "/11";
+      $("#mShapeLabel").textContent = "buckets used";
+      $("#mCost").textContent = "O(1)";
+    }
+  }
+
+  function addTrace(text, cls) {
+    const div = document.createElement("div");
+    div.innerHTML = "<time>" + timeStamp() + "</time><span" + (cls ? ' class="' + cls + '"' : "") + ">" + text + "</span>";
+    traceEl.prepend(div);
+    while (traceEl.children.length > 8) traceEl.lastElementChild.remove();
+  }
+
+  function setFlash(next, value) {
+    flash = next;
+    clearTimeout(flashTimer);
+    flashTimer = setTimeout(() => { flash = null; render(); }, 950);
+    render();
+  }
+
+  function parseValue() {
+    const raw = valueEl.value.trim();
+    if (!raw) { toast("Enter a value first"); valueEl.focus(); return null; }
+    const v = Number(raw);
+    if (!Number.isInteger(v) || v < -999 || v > 999) { toast("Use a whole number from -999 to 999"); return null; }
+    return v;
+  }
+
+  function add() {
+    if (mode === "stack") {
+      if (stack.length >= 12) { toast("Stack is full in this demo"); return; }
+      const v = parseValue();
+      if (v === null) return;
+      stack.push(v);
+      $("#mLast").textContent = "push";
+      addTrace("push(" + v + ") → top", "ok");
+      setFlash({ index: stack.length - 1 }, v);
+    } else if (mode === "queue") {
+      if (queue.length >= 12) { toast("Queue is full in this demo"); return; }
+      const v = parseValue();
+      if (v === null) return;
+      queue.push(v);
+      $("#mLast").textContent = "enqueue";
+      addTrace("enqueue(" + v + ") → rear", "ok");
+      setFlash({ index: queue.length - 1 }, v);
+    } else if (mode === "list") {
+      if (list.length >= 10) { toast("List is full in this demo"); return; }
+      const v = parseValue();
+      if (v === null) return;
+      list.push(v);
+      $("#mLast").textContent = "append";
+      addTrace("append(" + v + ") → tail", "ok");
+      setFlash({ index: list.length - 1 }, v);
+    } else if (mode === "bst") {
+      const v = parseValue();
+      if (v === null) return;
+      const found = searchPath(bst, v);
+      path = found.path;
+      if (found.found) { toast(v + " is already in the tree"); addTrace("insert(" + v + ") → duplicate ignored", "warn"); setFlash({ value: v }, v); return; }
+      bst = insertNode(bst, v);
+      $("#mLast").textContent = "insert";
+      addTrace("insert(" + v + ") along " + path.length + " node(s)", "ok");
+      setFlash({ value: v }, v);
+    } else {
+      const v = parseValue();
+      if (v === null) return;
+      const i = hashIndex(v);
+      if (buckets[i].includes(v)) { toast(v + " already exists in bucket " + i); addTrace("put(" + v + ") → duplicate", "warn"); setFlash({ bucket: i }, v); return; }
+      buckets[i].push(v);
+      $("#mLast").textContent = "put";
+      addTrace("put(" + v + ") → bucket " + i, "ok");
+      setFlash({ bucket: i }, v);
+    }
+    statusEl.textContent = "updated";
+  }
+
+  function remove() {
+    if (mode === "stack") {
+      if (!stack.length) { toast("Stack is empty"); return; }
+      const v = stack.pop();
+      $("#mLast").textContent = "pop";
+      addTrace("pop() → " + v, "warn");
+      toast("Popped " + v);
+      render();
+    } else if (mode === "queue") {
+      if (!queue.length) { toast("Queue is empty"); return; }
+      const v = queue.shift();
+      $("#mLast").textContent = "dequeue";
+      addTrace("dequeue() → " + v, "warn");
+      toast("Dequeued " + v);
+      render();
+    } else if (mode === "list") {
+      if (!list.length) { toast("List is empty"); return; }
+      const v = list.shift();
+      $("#mLast").textContent = "remove head";
+      addTrace("removeHead() → " + v, "warn");
+      toast("Removed head " + v);
+      render();
+    } else if (mode === "bst") {
+      const v = parseValue();
+      if (v === null) return;
+      const found = searchPath(bst, v);
+      path = found.path;
+      if (!found.found) { toast(v + " is not in the tree"); addTrace("delete(" + v + ") → not found", "err"); setFlash({ value: v }, v); return; }
+      bst = deleteNode(bst, v);
+      $("#mLast").textContent = "delete";
+      addTrace("delete(" + v + ") → removed", "warn");
+      setFlash({ value: v }, v);
+      toast("Deleted " + v);
+    } else {
+      const v = parseValue();
+      if (v === null) return;
+      const i = hashIndex(v);
+      const at = buckets[i].indexOf(v);
+      if (at === -1) { toast(v + " is not in bucket " + i); addTrace("remove(" + v + ") → not found", "err"); setFlash({ bucket: i }, v); return; }
+      buckets[i].splice(at, 1);
+      $("#mLast").textContent = "remove";
+      addTrace("remove(" + v + ") ← bucket " + i, "warn");
+      setFlash({ bucket: i }, v);
+      toast("Removed " + v);
+    }
+    statusEl.textContent = "updated";
+  }
+
+  function searchPath(node, value) {
+    const out = [];
+    let cur = node;
+    while (cur) {
+      out.push({ node: cur, value: cur.value });
+      if (value === cur.value) return { found: true, path: out };
+      cur = value < cur.value ? cur.left : cur.right;
+    }
+    return { found: false, path: out };
+  }
+
+  function find() {
+    if (mode === "stack") {
+      const at = stack.lastIndexOf(Number(valueEl.value));
+      if (at === -1) { toast("Not found"); addTrace("search → not found", "err"); return; }
+      const fromTop = stack.length - at;
+      addTrace("search(" + stack[at] + ") → position " + fromTop + " from top", "ok");
+      setFlash({ index: at }, stack[at]);
+      toast("Found at position " + fromTop + " from the top");
+      return;
+    }
+    if (mode === "queue") {
+      const at = queue.indexOf(Number(valueEl.value));
+      if (at === -1) { toast("Not found"); addTrace("search → not found", "err"); return; }
+      addTrace("search(" + queue[at] + ") → position " + (at + 1) + " from front", "ok");
+      setFlash({ index: at }, queue[at]);
+      toast("Found at position " + (at + 1) + " from the front");
+      return;
+    }
+    if (mode === "list") {
+      const at = list.indexOf(Number(valueEl.value));
+      if (at === -1) { toast("Not found"); addTrace("search → not found", "err"); return; }
+      addTrace("search(" + list[at] + ") → node " + (at + 1), "ok");
+      setFlash({ index: at }, list[at]);
+      toast("Found at node " + (at + 1));
+      return;
+    }
+    const v = parseValue();
+    if (v === null) return;
+    if (mode === "bst") {
+      const found = searchPath(bst, v);
+      path = found.path;
+      addTrace("search(" + v + ") → " + (found.found ? "found" : "not found") + " after " + found.path.length + " comparison(s)", found.found ? "ok" : "err");
+      toast(found.found ? "Found " + v : v + " is not in the tree");
+      setFlash({ value: v }, v);
+    } else {
+      const i = hashIndex(v);
+      const hit = buckets[i].includes(v);
+      addTrace("contains(" + v + ") → bucket " + i + " · " + (hit ? "hit" : "miss"), hit ? "ok" : "err");
+      toast(hit ? "Found " + v + " in bucket " + i : v + " is not in bucket " + i);
+      setFlash({ bucket: i }, v);
+    }
+  }
+
+  function clearAll() {
+    if (mode === "stack") stack = [];
+    else if (mode === "queue") queue = [];
+    else if (mode === "list") list = [];
+    else if (mode === "bst") bst = null;
+    else buckets = Array.from({ length: 11 }, () => []);
+    path = [];
+    flash = null;
+    $("#mLast").textContent = "clear";
+    addTrace("clear()", "warn");
+    statusEl.textContent = "cleared";
+    render();
+    toast("Cleared");
+  }
+
+  function updateButtons() {
+    const labels = {
+      stack: ["Push", "Pop", "Find"],
+      queue: ["Enqueue", "Dequeue", "Find"],
+      list: ["Append", "Remove head", "Find"],
+      bst: ["Insert", "Delete", "Search"],
+      hash: ["Put", "Remove", "Contains"]
+    };
+    const [a, r, f] = labels[mode];
+    $("#addBtn").textContent = a;
+    $("#removeBtn").textContent = r;
+    $("#searchBtn").textContent = f;
+    $("#structNote").innerHTML = notes[mode];
+    $("#mental").innerHTML = mental[mode].map((line) => "<div><span>· " + line + "</span></div>").join("");
+    $("#costBody").innerHTML = costs[mode].map((row) => "<tr><td><b>" + row[0] + "</b></td><td class=\"num\">" + row[1] + "</td><td class=\"num\">" + row[2] + "</td></tr>").join("");
+    $("#vizTitle").textContent = {
+      stack: "Stack · last in, first out",
+      queue: "Queue · first in, first out",
+      list: "Linked list · nodes and next pointers",
+      bst: "Binary search tree · order in the shape",
+      hash: "Hash table · buckets and chains"
+    }[mode];
+    $("#stage").setAttribute("aria-labelledby", "tab-" + mode);
+  }
+
+  function setMode(next) {
+    mode = next;
+    path = [];
+    flash = null;
+    $$(".seg button").forEach((b) => {
+      const selected = b.dataset.mode === mode;
+      b.setAttribute("aria-selected", String(selected));
+      b.tabIndex = selected ? 0 : -1;
+    });
+    updateButtons();
+    statusEl.textContent = "ready";
+    $("#mLast").textContent = "—";
+    traceEl.innerHTML = "";
+    addTrace({
+      stack: "Viewing stack. Try Push or Pop.",
+      queue: "Viewing queue. Try Enqueue or Dequeue.",
+      list: "Viewing linked list. Append a node, then search for it.",
+      bst: "Viewing BST. Insert a value and follow the search path.",
+      hash: "Viewing hash table. Put a key and watch its bucket."
+    }[mode], "cy");
+    render();
+  }
+
+  $$(".seg button").forEach((btn) => {
+    btn.addEventListener("click", () => setMode(btn.dataset.mode));
+    btn.addEventListener("keydown", (e) => {
+      const buttons = $$(".seg button");
+      const i = buttons.indexOf(btn);
+      let next = null;
+      if (e.key === "ArrowRight") next = buttons[(i + 1) % buttons.length];
+      if (e.key === "ArrowLeft") next = buttons[(i - 1 + buttons.length) % buttons.length];
+      if (e.key === "Home") next = buttons[0];
+      if (e.key === "End") next = buttons[buttons.length - 1];
+      if (next) { e.preventDefault(); setMode(next.dataset.mode); next.focus(); }
+    });
+  });
+
+  $("#addBtn").addEventListener("click", add);
+  $("#removeBtn").addEventListener("click", remove);
+  $("#searchBtn").addEventListener("click", find);
+  $("#clearBtn").addEventListener("click", clearAll);
+  valueEl.addEventListener("keydown", (e) => { if (e.key === "Enter") add(); });
+
+  observeResize(canvas.parentElement, resize);
+  setMode("stack");
+  addTrace("Seeded stack: 12, 7, 23. Top is 23.", "cy");
+})();
+</script>
+</body>
+</html>

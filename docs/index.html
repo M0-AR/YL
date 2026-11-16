@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.classList.add("js");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Java Atlas — The Interactive Companion to Introduction to Java Programming</title>
+<meta name="description" content="An interactive Java engineering atlas: 439 worked Java files, 23 original companion lessons, six live browser labs, and a 3D concept game. Explore algorithms, data structures, payroll logic, and the full 42-chapter map.">
+<meta name="theme-color" content="#05070f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Java Atlas — Learn Java by touching it">
+<meta property="og:description" content="439 worked Java files, 23 companion lessons, six live labs, and a 3D game that builds a neural network from what you learn.">
+<meta property="og:image" content="assets/screenshots/hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<svg aria-hidden="true" width="0" height="0" style="position:absolute">
+  <defs>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.5v13l10-6.5-10-6.5Z" fill="currentColor"/></symbol>
+    <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 5h5v5M19 5l-8 8M18 14v4a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5v-16Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M4 18.5A2.5 2.5 0 0 1 6.5 16H20" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-code" viewBox="0 0 24 24"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M18.5 16.5l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2Z" fill="currentColor"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m3 13 9 5 9-5M3 17.5l9 5 9-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-1 5.8V15a3 3 0 0 0 4 2.8V20M15 4a3 3 0 0 1 3 3 3 3 0 0 1 1 5.8V15a3 3 0 0 1-4 2.8V20M9 4a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9h6M9 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.2 4.2L19 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m7 9 3 3-3 3M12.5 15H17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-git" viewBox="0 0 24 24"><path d="M12 3v6M12 15v6M6 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM18 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM12 12a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 6h2.5a1.5 1.5 0 0 1 1.5 1.5v7a1.5 1.5 0 0 0 1.5 1.5H16" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="5" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="19" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m11 7-5 9M13 7l5 9M7 18h10" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M3 20c0-3.3 2.7-5 6-5s6 1.7 6 5M16 5.5a3 3 0 0 1 0 5.6M18 20c0-2.4-.9-4-2.5-4.8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4M4 20h16M8 17v-5M12.5 17V8M17 17v-8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3 2.7 5.7 6.3.9-4.6 4.3 1.1 6.1-5.5-3-5.5 3 1.1-6.1L3 9.6l6.3-.9L12 3Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 2.5a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.3 1.1 2.9.8.1-.6.3-1.1.6-1.3-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.5 9.5 0 0 1 5 0c2-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.4 4.7-4.6 5 .3.3.6.9.6 1.8v3c0 .3.2.6.7.5A10 10 0 0 0 12 2.5Z" fill="currentColor"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.5 2.4 4 5.5 4 9s-1.5 6.6-4 9c-2.5-2.4-4-5.5-4-9s1.5-6.6 4-9Z" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="9" r="5.5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m8.5 13.5-1 7 4.5-2.5 4.5 2.5-1-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 11a8 8 0 1 0-2.3 6M20 5v6h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#top" aria-label="Java Atlas home">
+      <span class="brand-mark">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h8M12 5v9c0 3.4-2.2 5-5 5" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round"/><circle cx="17" cy="18" r="2" fill="#8b5cf6"/></svg>
+      </span>
+      <span>Java Atlas<small>YL Engineering Companion</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#labs">Live Labs</a></li>
+        <li><a href="#path">Learning Path</a></li>
+        <li><a href="#chapters">42 Chapters</a></li>
+        <li><a href="#game">3D Game</a></li>
+        <li><a href="#beginner">Beginner Guide</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL" target="_blank" rel="noopener">
+        <svg aria-hidden="true"><use href="#i-github"/></svg> GitHub
+      </a>
+      <a class="btn btn-sm btn-primary" href="#labs">
+        <svg aria-hidden="true"><use href="#i-play"/></svg> Try it live
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <div class="hero-badge"><b>10TH EDITION</b> A complete, interactive companion — all 42 chapters mapped</div>
+      <h1>Java, from<br><span class="grad">first line</span> to<br><span class="grad-warm">full system.</span></h1>
+      <p class="lead">One atlas for the entire journey: 439 worked Java files, 23 original companion lessons, six live browser labs, and a 3D game that wires every concept into a network you can see — and hear.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#labs"><svg aria-hidden="true"><use href="#i-play"/></svg> Launch the live demo</a>
+        <a class="btn btn-ghost" href="#beginner"><svg aria-hidden="true"><use href="#i-book"/></svg> Start from zero</a>
+      </div>
+      <div class="hero-meta">
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg> No install to explore</span>
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg> Keyboard accessible</span>
+        <span><svg aria-hidden="true"><use href="#i-check"/></svg> MIT-licensed original work</span>
+      </div>
+    </div>
+    <aside class="hero-panel" aria-label="A first Java program">
+      <div class="hero-panel-inner">
+        <div class="window-bar">
+          <div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <span class="window-title">Atlas.java — chapter 01</span>
+        </div>
+        <pre class="code-pane"><span class="ln">1</span><span class="c-key">public class</span> <span class="c-type">Atlas</span> {
+<span class="ln">2</span>  <span class="c-key">public static void</span> <span class="c-fn">main</span>(<span class="c-type">String</span>[] args) {
+<span class="ln">3</span>    <span class="c-type">System</span>.out.<span class="c-fn">println</span>(<span class="c-str">"Learn → build → prove."</span>);
+<span class="ln">4</span>  }
+<span class="ln">5</span>}</pre>
+        <div class="console">
+          <div class="console-label"><i></i> program output</div>
+          <div class="console-out">Learn → build → prove.<span class="cursor"></span></div>
+        </div>
+        <div class="hero-metrics">
+          <div><b>5</b><span>learning phases</span></div>
+          <div><b>100%</b><span>browser labs</span></div>
+          <div><b>MIT</b><span>original work</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+  <div class="container">
+    <div class="stats reveal" aria-label="Repository statistics">
+      <div class="stat"><b data-count="439">439</b><span>Java files in the repository</span></div>
+      <div class="stat"><b data-count="42">42</b><span>chapters mapped end to end</span></div>
+      <div class="stat"><b data-count="23">23</b><span>original companion lessons</span></div>
+      <div class="stat"><b data-count="6">6</b><span>live interactive labs</span></div>
+      <div class="stat"><b>0</b><span>installs to explore the site</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The short version</span>
+      <h2>A classic Java curriculum, rebuilt as a working product.</h2>
+      <p>This is not a folder of answers. It is a navigable engineering atlas: read the idea, run the code, move the sliders, break the algorithm, and watch the structure respond. Use it to learn Java from scratch, to refresh the fundamentals before an interview, or to evaluate how a real system is put together.</p>
+    </div>
+    <div class="audience">
+      <article class="audience-card reveal">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-book"/></svg></div>
+        <h3>Students</h3>
+        <p>Follow the 42-chapter map, open a worked file for any topic, and use the beginner guide to build a foundation that survives interviews.</p>
+      </article>
+      <article class="audience-card reveal reveal-delay-1">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-code"/></svg></div>
+        <h3>Engineers</h3>
+        <p>Refresh data structures, concurrency, JDBC, and networking with runnable examples — then use the labs to reason about complexity and behavior.</p>
+      </article>
+      <article class="audience-card reveal reveal-delay-2">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></div>
+        <h3>Business leaders</h3>
+        <p>See the actual mechanics behind payroll, tax, loans, and operational systems — not slideware, but transparent calculations you can test.</p>
+      </article>
+      <article class="audience-card reveal reveal-delay-3">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-search"/></svg></div>
+        <h3>Researchers &amp; reviewers</h3>
+        <p>Inspect a reproducible teaching artifact: clear chapter boundaries, original companion material, and labs that make abstract algorithms observable.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="labs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Live, not a mockup</span>
+      <h2>Six real products. One browser frame.</h2>
+      <p>Every tab below loads the actual page — not a screenshot. Change an array, drag a graph, push a value, run a pay stub, take a quiz, or play the 3D game. Each lab is a standalone page you can open full screen.</p>
+    </div>
+    <div class="lab-shell reveal">
+      <div class="lab-tabs" role="tablist" aria-label="Interactive labs">
+        <button class="lab-tab" id="tab-sorting" role="tab" aria-selected="true" aria-controls="lab-panel" tabindex="0" data-lab="sorting" data-title="Sorting Lab" data-url="labs/sorting.html" data-caption="Six sorting algorithms animated with live comparisons, swaps, and elapsed time. Change the input size, slow the animation, and watch the invariant hold." data-poster="assets/posters/sorting.png">
+          <svg aria-hidden="true"><use href="#i-chart"/></svg> Sorting Lab
+        </button>
+        <button class="lab-tab" id="tab-graph" role="tab" aria-selected="false" aria-controls="lab-panel" tabindex="-1" data-lab="graph" data-title="Graph Explorer" data-url="labs/graph.html" data-caption="Run BFS, DFS, and Dijkstra on a weighted network. Choose a source, drag the nodes, and watch the frontier expand one edge at a time." data-poster="assets/posters/graph.png">
+          <svg aria-hidden="true"><use href="#i-network"/></svg> Graph Explorer
+        </button>
+        <button class="lab-tab" id="tab-structures" role="tab" aria-selected="false" aria-controls="lab-panel" tabindex="-1" data-lab="structures" data-title="Structure Studio" data-url="labs/structures.html" data-caption="Push, pop, enqueue, insert, search, and delete across a stack, queue, linked list, binary search tree, and hash table — with an operation log." data-poster="assets/posters/structures.png">
+          <svg aria-hidden="true"><use href="#i-layers"/></svg> Structure Studio
+        </button>
+        <button class="lab-tab" id="tab-payroll" role="tab" aria-selected="false" aria-controls="lab-panel" tabindex="-1" data-lab="payroll" data-title="Payroll Engine" data-url="labs/payroll.html" data-caption="Build a pay stub from gross to net with progressive brackets, FICA, and deductions. Every number is shown as a step you can inspect." data-poster="assets/posters/payroll.png">
+          <svg aria-hidden="true"><use href="#i-db"/></svg> Payroll Engine
+        </button>
+        <button class="lab-tab" id="tab-quiz" role="tab" aria-selected="false" aria-controls="lab-panel" tabindex="-1" data-lab="quiz" data-title="Knowledge Quiz" data-url="labs/quiz.html" data-caption="Twenty-six original questions across the full curriculum, drawn ten at a time. Immediate explanations, topic filters, a final score, and a review of every miss." data-poster="assets/posters/quiz.png">
+          <svg aria-hidden="true"><use href="#i-award"/></svg> Knowledge Quiz
+        </button>
+        <button class="lab-tab" id="tab-game" role="tab" aria-selected="false" aria-controls="lab-panel" tabindex="-1" data-lab="game" data-title="Neural Nexus" data-url="labs/game.html" data-caption="Steer a collector through drifting feature packets in a real Three.js scene. Fill the input layer, train the network, and watch a narrated forward pass race to the output." data-poster="assets/posters/game.png">
+          <svg aria-hidden="true"><use href="#i-brain"/></svg> Neural Nexus
+        </button>
+      </div>
+      <div class="browser">
+        <div class="browser-bar">
+          <div class="browser-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="browser-url">
+            <svg aria-hidden="true"><use href="#i-lock"/></svg>
+            <span id="urlText">java-atlas.dev/labs/sorting</span>
+          </div>
+          <div class="browser-actions">
+            <button class="browser-btn" id="reloadLab" aria-label="Reload this lab" title="Reload"><svg aria-hidden="true"><use href="#i-refresh"/></svg></button>
+            <a class="browser-btn" id="openLab" href="labs/sorting.html" target="_blank" rel="noopener" aria-label="Open this lab in a new tab" title="Open full screen"><svg aria-hidden="true"><use href="#i-external"/></svg></a>
+          </div>
+        </div>
+        <div class="browser-screen" id="browserScreen">
+          <div class="lab-poster" id="labPoster">
+            <div class="poster-content">
+              <div class="poster-icon" id="posterIcon"><svg aria-hidden="true"><use href="#i-chart"/></svg></div>
+              <h3 id="posterTitle">Sorting Lab</h3>
+              <p id="posterDesc">Watch six algorithms race on the same array.</p>
+              <button class="btn btn-primary" id="launchLab"><svg aria-hidden="true"><use href="#i-play"/></svg> Launch interactive demo</button>
+              <div class="lab-loading" id="labLoading" hidden><i></i> loading the real page…</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="lab-caption">
+        <p id="labCaption"><strong>Sorting Lab.</strong> Six sorting algorithms animated with live comparisons, swaps, and elapsed time. Change the input size, slow the animation, and watch the invariant hold.</p>
+        <div class="btn-row">
+          <a class="btn btn-sm btn-ghost" href="labs.html">Browse all pages <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="path">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The route</span>
+      <h2>Five phases. No skipped steps.</h2>
+      <p>The repository follows a deliberate progression. Each phase adds one kind of power, and each chapter in the atlas tells you whether the code lives in this repository or in the original companion curriculum.</p>
+    </div>
+    <div class="path-grid">
+      <a class="path-card reveal" href="#chapters">
+        <span class="path-num">PHASE 01</span>
+        <h3>Foundations</h3>
+        <p>Programs, variables, selections, strings, loops, methods, and arrays. The grammar of computation.</p>
+        <div class="path-tags"><span class="tag">Ch 1–8</span><span class="tag">Java syntax</span><span class="tag">Problem solving</span></div>
+      </a>
+      <a class="path-card reveal reveal-delay-1" href="#chapters">
+        <span class="path-num">PHASE 02</span>
+        <h3>Objects</h3>
+        <p>Classes, encapsulation, inheritance, polymorphism, exceptions, abstract types, and interfaces.</p>
+        <div class="path-tags"><span class="tag">Ch 9–13</span><span class="tag">OOP</span><span class="tag">Design</span></div>
+      </a>
+      <a class="path-card reveal reveal-delay-2" href="#chapters">
+        <span class="path-num">PHASE 03</span>
+        <h3>Interfaces</h3>
+        <p>JavaFX, event-driven programming, controls, layout, and animation — the user-facing layer.</p>
+        <div class="path-tags"><span class="tag">Ch 14–16</span><span class="tag">JavaFX</span><span class="tag">Events</span></div>
+      </a>
+      <a class="path-card reveal reveal-delay-3" href="#chapters">
+        <span class="path-num">PHASE 04</span>
+        <h3>Structures</h3>
+        <p>Recursion, generics, collections, sorting, trees, hashing, graphs, and weighted shortest paths.</p>
+        <div class="path-tags"><span class="tag">Ch 17–29</span><span class="tag">Algorithms</span><span class="tag">Complexity</span></div>
+      </a>
+      <a class="path-card reveal reveal-delay-3" href="#chapters">
+        <span class="path-num">PHASE 05</span>
+        <h3>Systems</h3>
+        <p>Threads, sockets, databases, web applications, testing, internationalization, and services.</p>
+        <div class="path-tags"><span class="tag">Ch 30–42</span><span class="tag">Enterprise</span><span class="tag">Testing</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="chapters">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">The atlas</span>
+      <h2>Every chapter, accounted for.</h2>
+      <p>Green means worked Java code is in the repository. Violet means the topic is covered by an original companion lesson, with runnable examples and practice. Nothing is a dead end.</p>
+    </div>
+    <div class="atlas reveal" id="atlas" role="list" aria-label="Chapter map"></div>
+    <div class="atlas-legend reveal">
+      <span><i></i> Worked code in <code>src/</code></span>
+      <span><i></i> Original companion lesson</span>
+      <span>23 companion lessons · 19 chapters with code · 42 total</span>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="game">
+  <div class="container">
+    <div class="game-panel reveal">
+      <div class="game-copy">
+        <span class="eyebrow">Neural Nexus · 3D lab</span>
+        <h2>Play the curriculum. Watch your brain light up.</h2>
+        <p>Guide a collector through drifting feature packets. Each pickup energises an input neuron; fill the layer, press Train, and watch a forward pass race through the network. Four short missions connect features, hidden layers, and confident predictions — narrated as you play.</p>
+        <ul class="game-list">
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Real WebGL 3D — steer with pointer, touch, or WASD; no install</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Four missions that build input, hidden, and output layers</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> A visible network that lights up as you collect real features</li>
+          <li><svg aria-hidden="true"><use href="#i-check"/></svg> Spoken explanations and a mute control, built in</li>
+        </ul>
+        <div class="game-actions">
+          <a class="btn btn-primary" href="labs/game.html" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-play"/></svg> Play Neural Nexus</a>
+          <button class="btn btn-ghost" type="button" data-open-lab="game">Open inside the demo frame</button>
+        </div>
+      </div>
+      <div class="orb" aria-hidden="true">
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <div class="orb-ring"></div>
+        <div class="orb-core"></div>
+        <span class="orb-node"></span>
+        <span class="orb-node"></span>
+        <span class="orb-node"></span>
+        <span class="orb-node"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What makes it different</span>
+      <h2>Depth you can inspect.</h2>
+      <p>The value is not a longer list of files. It is the connection between the idea, the code, the visualization, and the explanation.</p>
+    </div>
+    <div class="feature-grid">
+      <article class="feature reveal">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-code"/></svg></div>
+        <h3>439 worked Java files</h3>
+        <p>Chapter-by-chapter solutions covering fundamentals, OOP, JavaFX, recursion, generics, collections, graphs, concurrency, and database connectivity.</p>
+      </article>
+      <article class="feature reveal reveal-delay-1">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-book"/></svg></div>
+        <h3>23 original companion lessons</h3>
+        <p>Every uncovered chapter gets a plain-language lesson, a worked example, a practice task, and a checkpoint. Written for this repository — no textbook text reproduced.</p>
+      </article>
+      <article class="feature reveal reveal-delay-2">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></div>
+        <h3>Observable algorithms</h3>
+        <p>Sorting, graph traversal, shortest paths, trees, hashing, stacks, and queues are not just code — they are animations with counters, logs, and controls.</p>
+      </article>
+      <article class="feature reveal">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-db"/></svg></div>
+        <h3>Business-grade examples</h3>
+        <p>Payroll, progressive tax, FICA, loan amortization, and account logic show how Java becomes a financial system instead of a syntax exercise.</p>
+      </article>
+      <article class="feature reveal reveal-delay-1">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-cpu"/></svg></div>
+        <h3>Systems, not just syntax</h3>
+        <p>Threads, sockets, JDBC, servlets, JSP, web services, internationalization, and JUnit form the bridge from coursework to production.</p>
+      </article>
+      <article class="feature reveal reveal-delay-2">
+        <div class="icon"><svg aria-hidden="true"><use href="#i-globe"/></svg></div>
+        <h3>Zero-install exploration</h3>
+        <p>The entire showcase runs in the browser from a static site. Clone it, open a lab, or deploy it anywhere. No server, no build step, no account.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="beginner">
+  <div class="container">
+    <div class="beginner reveal">
+      <div>
+        <span class="eyebrow">Start here</span>
+        <h2>You do not need to know anything yet.</h2>
+        <p>If you can open a terminal and follow four steps, you can use this repository. The beginner guide explains what Java is, how to install it, how to run your first file, what to read first, and how to know you are ready for interviews.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://github.com/M0-AR/YL#-beginner-guide--read-this-and-you-are-a-professional" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-book"/></svg> Read the beginner guide</a>
+          <a class="btn btn-ghost" href="https://github.com/M0-AR/YL" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg> Open the repository</a>
+        </div>
+      </div>
+      <ol class="beginner-steps">
+        <li><b>1</b> Read the one-page mental model of how Java runs</li>
+        <li><b>2</b> Install a JDK and run one file from <code>src/</code></li>
+        <li><b>3</b> Pick a lab and break it on purpose</li>
+        <li><b>4</b> Follow the chapter map from foundations to systems</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Straight answers</span>
+      <h2>Questions people actually ask.</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal">
+        <summary>Is this the textbook?</summary>
+        <p>No. This is an independent companion project. It does not contain or redistribute the book’s chapters, figures, or exercise text. It contains code, original lessons, and interactive labs built around the same topic sequence. The textbook remains the work of its author and publisher.</p>
+      </details>
+      <details class="reveal">
+        <summary>Do I need Java installed to use the site?</summary>
+        <p>No. Every lab is HTML, CSS, and JavaScript running in your browser. You only need a JDK when you want to compile and run the Java files in <code>src/</code> or the companion examples.</p>
+      </details>
+      <details class="reveal">
+        <summary>Which Java version does the code target?</summary>
+        <p>The original chapter files are written for Java 8–10 and some GUI examples use JavaFX. The new companion examples target Java 17 and are kept dependency-free so they compile with a standard JDK.</p>
+      </details>
+      <details class="reveal">
+        <summary>Are all 439 files verified?</summary>
+        <p>They are organized by chapter and written to run independently. The companion code is compiled automatically. If you find a file that needs an environment-specific database or GUI runtime, the chapter notes explain what it expects.</p>
+      </details>
+      <details class="reveal">
+        <summary>Can I use this for teaching or commercial training?</summary>
+        <p>Yes, under the MIT license for the original code and companion material. Keep the copyright notice, and do not imply endorsement by the textbook’s author or publisher. For the textbook itself, obtain the book and its permissions from the publisher.</p>
+      </details>
+      <details class="reveal">
+        <summary>How is the live demo built?</summary>
+        <p>Each lab is a standalone static page. The showcase loads the real page in an iframe when you select its tab, so you are interacting with the product itself. The “Open full screen” link opens the same page without the frame.</p>
+      </details>
+      <details class="reveal">
+        <summary>Can I contribute a chapter or a lab?</summary>
+        <p>Yes. Open an issue describing the chapter or concept, then submit a focused pull request. Keep the code self-contained, include a short explanation, and do not paste copyrighted exercise text.</p>
+      </details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="#top">
+          <span class="brand-mark"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5h8M12 5v9c0 3.4-2.2 5-5 5" fill="none" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round"/><circle cx="17" cy="18" r="2" fill="#8b5cf6"/></svg></span>
+          <span>Java Atlas<small>YL Engineering Companion</small></span>
+        </a>
+        <p>An independent, MIT-licensed companion to the Introduction to Java Programming curriculum. Built to make the whole path visible — from the first line of code to a working system.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#labs">Live labs</a></li>
+          <li><a href="#chapters">42-chapter atlas</a></li>
+          <li><a href="#game">Neural Nexus</a></li>
+          <li><a href="#beginner">Beginner guide</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Repository</h4>
+        <ul>
+          <li><a href="https://github.com/M0-AR/YL" target="_blank" rel="noopener">Source code</a></li>
+          <li><a href="https://github.com/M0-AR/YL/blob/master/companion/README.md" target="_blank" rel="noopener">Companion curriculum</a></li>
+          <li><a href="https://github.com/M0-AR/YL/releases" target="_blank" rel="noopener">Releases</a></li>
+          <li><a href="https://github.com/M0-AR/YL/issues" target="_blank" rel="noopener">Issues</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Use it well</h4>
+        <ul>
+          <li><a href="https://github.com/M0-AR/YL/blob/master/LICENSE" target="_blank" rel="noopener">MIT license</a></li>
+          <li><a href="https://github.com/M0-AR/YL/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing</a></li>
+          <li><a href="https://github.com/M0-AR/YL/blob/master/CODE_OF_CONDUCT.md" target="_blank" rel="noopener">Code of conduct</a></li>
+          <li><a href="https://github.com/M0-AR/YL/blob/master/SECURITY.md" target="_blank" rel="noopener">Security</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> Java Atlas contributors. Original work under the MIT license.</span>
+      <span>Not affiliated with or endorsed by the textbook’s author or publisher.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  const $ = (s, r) => (r || document).querySelector(s);
+  const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+
+  const nav = $("#nav");
+  const navToggle = $("#navToggle");
+  const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 12);
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  navToggle.addEventListener("click", () => {
+    const open = nav.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(open));
+    navToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  $$("#navLinks a").forEach((a) => a.addEventListener("click", () => {
+    nav.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }));
+
+  const counters = $$("[data-count]");
+
+  if (!("IntersectionObserver" in window)) {
+    $$(".reveal").forEach((el) => el.classList.add("is-visible"));
+    counters.forEach((el) => { el.textContent = el.dataset.count; });
+  } else {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  $$(".reveal").forEach((el) => revealObserver.observe(el));
+
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = Number(el.dataset.count);
+      const start = performance.now();
+      const duration = 900;
+      const step = (now) => {
+        const p = Math.min(1, (now - start) / duration);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if (p < 1) requestAnimationFrame(step);
+        else el.textContent = target;
+      };
+      requestAnimationFrame(step);
+      counterObserver.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+  counters.forEach((el) => counterObserver.observe(el));
+  }
+
+  const canvas = $("#heroCanvas");
+  const ctx = canvas.getContext("2d");
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let nodes = [];
+  let pointer = { x: 0.5, y: 0.5 };
+  let raf = 0;
+  let running = true;
+
+  function resizeHero() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const w = canvas.clientWidth;
+    const h = canvas.clientHeight;
+    canvas.width = Math.round(w * dpr);
+    canvas.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    const count = Math.max(38, Math.min(90, Math.round((w * h) / 22000)));
+    nodes = Array.from({ length: count }, () => ({
+      x: Math.random() * w,
+      y: Math.random() * h,
+      vx: (Math.random() - 0.5) * 0.18,
+      vy: (Math.random() - 0.5) * 0.18,
+      r: Math.random() * 1.5 + 0.7
+    }));
+  }
+
+  function drawHero() {
+    const w = canvas.clientWidth;
+    const h = canvas.clientHeight;
+    ctx.clearRect(0, 0, w, h);
+    const ox = (pointer.x - 0.5) * 18;
+    const oy = (pointer.y - 0.5) * 18;
+    for (let i = 0; i < nodes.length; i += 1) {
+      const a = nodes[i];
+      if (!reduced) {
+        a.x += a.vx;
+        a.y += a.vy;
+        if (a.x < -20) a.x = w + 20;
+        if (a.x > w + 20) a.x = -20;
+        if (a.y < -20) a.y = h + 20;
+        if (a.y > h + 20) a.y = -20;
+      }
+      for (let j = i + 1; j < nodes.length; j += 1) {
+        const b = nodes[j];
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+        const dist = Math.hypot(dx, dy);
+        if (dist < 150) {
+          const alpha = (1 - dist / 150) * 0.16;
+          ctx.strokeStyle = "rgba(34, 211, 238, " + alpha + ")";
+          ctx.lineWidth = 0.6;
+          ctx.beginPath();
+          ctx.moveTo(a.x + ox, a.y + oy);
+          ctx.lineTo(b.x + ox, b.y + oy);
+          ctx.stroke();
+        }
+      }
+    }
+    nodes.forEach((n, i) => {
+      const hue = i % 3 === 0 ? "139, 92, 246" : "34, 211, 238";
+      ctx.beginPath();
+      ctx.arc(n.x + ox, n.y + oy, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(" + hue + ", 0.72)";
+      ctx.shadowColor = "rgba(" + hue + ", 0.8)";
+      ctx.shadowBlur = 8;
+      ctx.fill();
+      ctx.shadowBlur = 0;
+    });
+    if (running) raf = requestAnimationFrame(drawHero);
+  }
+
+  window.addEventListener("resize", resizeHero);
+  window.addEventListener("pointermove", (e) => {
+    pointer.x = e.clientX / window.innerWidth;
+    pointer.y = e.clientY / window.innerHeight;
+  }, { passive: true });
+  document.addEventListener("visibilitychange", () => {
+    running = !document.hidden;
+    if (running) {
+      cancelAnimationFrame(raf);
+      drawHero();
+    }
+  });
+  resizeHero();
+  drawHero();
+
+  const chapters = [
+    [1, "Introduction to Java", "companion", "https://github.com/M0-AR/YL/blob/master/companion/foundations.md#chapter-1-how-java-runs"],
+    [2, "Elementary Programming", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_02"],
+    [3, "Selections", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_03"],
+    [4, "Math, Characters, Strings", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_04"],
+    [5, "Loops", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_05"],
+    [6, "Methods", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_06"],
+    [7, "Single-Dimensional Arrays", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_07"],
+    [8, "Multidimensional Arrays", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_08"],
+    [9, "Objects and Classes", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_09"],
+    [10, "Thinking in Objects", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_10"],
+    [11, "Inheritance and Polymorphism", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_11"],
+    [12, "Exception Handling and I/O", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_12"],
+    [13, "Abstract Classes and Interfaces", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_13"],
+    [14, "JavaFX Basics", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_14"],
+    [15, "Events and Animation", "companion", "https://github.com/M0-AR/YL/blob/master/companion/foundations.md#chapter-15-events-and-animation"],
+    [16, "JavaFX Controls and Media", "companion", "https://github.com/M0-AR/YL/blob/master/companion/foundations.md#chapter-16-controls-layout-and-media"],
+    [17, "Binary I/O", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_17"],
+    [18, "Recursion", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_18"],
+    [19, "Generics", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_19"],
+    [20, "Lists, Stacks, Queues", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_20"],
+    [21, "Sets and Maps", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-21-sets-and-maps"],
+    [22, "Efficient Algorithms", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-22-efficient-algorithms"],
+    [23, "Sorting", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-23-sorting"],
+    [24, "Implementing Collections", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-24-implementing-collections"],
+    [25, "Binary Search Trees", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-25-binary-search-trees"],
+    [26, "AVL Trees", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-26-avl-trees"],
+    [27, "Hashing", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-27-hashing"],
+    [28, "Graphs", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_28"],
+    [29, "Weighted Graphs", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-29-weighted-graphs"],
+    [30, "Multithreading", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-30-multithreading-and-parallelism"],
+    [31, "Networking", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-31-networking"],
+    [32, "JDBC", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-32-jdbc"],
+    [33, "JavaServer Faces", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-33-javaserver-faces"],
+    [34, "Advanced GUI", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_34"],
+    [35, "Advanced Databases", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-35-advanced-database-programming"],
+    [36, "Internationalization", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-36-internationalization"],
+    [37, "Servlets", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-37-servlets"],
+    [38, "JavaServer Pages", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-38-javaserver-pages"],
+    [39, "Web Services", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-39-web-services"],
+    [40, "2-4 Trees and B-Trees", "companion", "https://github.com/M0-AR/YL/blob/master/companion/advanced-trees-testing.md#chapter-40-2-4-trees-and-b-trees"],
+    [41, "Red-Black Trees", "companion", "https://github.com/M0-AR/YL/blob/master/companion/advanced-trees-testing.md#chapter-41-red-black-trees"],
+    [42, "Testing with JUnit", "companion", "https://github.com/M0-AR/YL/blob/master/companion/advanced-trees-testing.md#chapter-42-testing-with-junit"]
+  ];
+
+  const atlas = $("#atlas");
+  atlas.innerHTML = chapters.map((c) => {
+    return '<a class="chip" role="listitem" data-kind="' + c[2] + '" href="' + c[3] + '" target="_blank" rel="noopener" title="Chapter ' + c[0] + ': ' + c[1] + '"><b>CH ' + String(c[0]).padStart(2, "0") + '</b><span>' + c[1] + '</span><i aria-hidden="true"></i></a>';
+  }).join("");
+
+  const tabs = $$(".lab-tab");
+  const browserScreen = $("#browserScreen");
+  const poster = $("#labPoster");
+  const posterTitle = $("#posterTitle");
+  const posterDesc = $("#posterDesc");
+  const posterIcon = $("#posterIcon");
+  const launchBtn = $("#launchLab");
+  const loading = $("#labLoading");
+  const urlText = $("#urlText");
+  const openLab = $("#openLab");
+  const reloadLab = $("#reloadLab");
+  const labCaption = $("#labCaption");
+  let current = null;
+  let iframe = null;
+  let loadTimer = 0;
+  let started = false;
+
+  const icons = {
+    sorting: '<svg aria-hidden="true"><use href="#i-chart"/></svg>',
+    graph: '<svg aria-hidden="true"><use href="#i-network"/></svg>',
+    structures: '<svg aria-hidden="true"><use href="#i-layers"/></svg>',
+    payroll: '<svg aria-hidden="true"><use href="#i-db"/></svg>',
+    quiz: '<svg aria-hidden="true"><use href="#i-award"/></svg>',
+    game: '<svg aria-hidden="true"><use href="#i-brain"/></svg>'
+  };
+
+  function setPoster(tab) {
+    poster.style.backgroundImage = "linear-gradient(rgba(5,7,15,.35), rgba(5,7,15,.55)), url('" + tab.dataset.poster + "')";
+    posterTitle.textContent = tab.dataset.title;
+    posterDesc.textContent = tab.dataset.caption.split(".")[0] + ".";
+    posterIcon.innerHTML = icons[tab.dataset.lab] || "";
+    labCaption.innerHTML = "<strong>" + tab.dataset.title + ".</strong> " + tab.dataset.caption;
+    urlText.textContent = "java-atlas.dev/" + tab.dataset.url.replace(".html", "");
+    openLab.href = tab.dataset.url;
+  }
+
+  function markReady() {
+    clearTimeout(loadTimer);
+    loading.hidden = true;
+    browserScreen.classList.add("is-ready");
+  }
+
+  function load(tab) {
+    if (iframe) {
+      iframe.remove();
+      iframe = null;
+    }
+    browserScreen.classList.remove("is-ready");
+    loading.hidden = false;
+    launchBtn.disabled = true;
+    setPoster(tab);
+
+    iframe = document.createElement("iframe");
+    iframe.title = tab.dataset.title + " interactive demo";
+    iframe.loading = "lazy";
+    iframe.allow = "fullscreen";
+    iframe.src = tab.dataset.url + "?embed=1";
+    iframe.addEventListener("load", markReady);
+    browserScreen.appendChild(iframe);
+
+    clearTimeout(loadTimer);
+    loadTimer = setTimeout(() => {
+      if (!browserScreen.classList.contains("is-ready")) {
+        loading.hidden = true;
+        launchBtn.disabled = false;
+        launchBtn.innerHTML = '<svg aria-hidden="true"><use href="#i-external"/></svg> Open full screen';
+        launchBtn.onclick = () => window.open(tab.dataset.url, "_blank", "noopener");
+        posterDesc.textContent = "The embedded preview is taking too long. Open the lab in a full tab.";
+      }
+    }, 7000);
+    iframe.addEventListener("error", () => {
+      clearTimeout(loadTimer);
+      loading.hidden = true;
+      launchBtn.disabled = false;
+      launchBtn.innerHTML = '<svg aria-hidden="true"><use href="#i-external"/></svg> Open full screen';
+      launchBtn.onclick = () => window.open(tab.dataset.url, "_blank", "noopener");
+    });
+  }
+
+  function activate(tab, focus) {
+    if (!tab) return;
+    tabs.forEach((t) => {
+      const selected = t === tab;
+      t.setAttribute("aria-selected", String(selected));
+      t.tabIndex = selected ? 0 : -1;
+    });
+    if (focus) tab.focus();
+    if (current === tab.dataset.lab && iframe) return;
+    current = tab.dataset.lab;
+    started = true;
+    launchBtn.disabled = false;
+    launchBtn.innerHTML = '<svg aria-hidden="true"><use href="#i-play"/></svg> Launch interactive demo';
+    launchBtn.onclick = () => load(tab);
+    load(tab);
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => activate(tab, false));
+    tab.addEventListener("keydown", (e) => {
+      const i = tabs.indexOf(tab);
+      let next = null;
+      if (e.key === "ArrowRight") next = tabs[(i + 1) % tabs.length];
+      if (e.key === "ArrowLeft") next = tabs[(i - 1 + tabs.length) % tabs.length];
+      if (e.key === "Home") next = tabs[0];
+      if (e.key === "End") next = tabs[tabs.length - 1];
+      if (next) {
+        e.preventDefault();
+        activate(next, true);
+      }
+    });
+  });
+
+  launchBtn.addEventListener("click", () => {
+    const tab = tabs.find((t) => t.dataset.lab === current);
+    if (tab) load(tab);
+  });
+
+  reloadLab.addEventListener("click", () => {
+    const tab = tabs.find((t) => t.dataset.lab === current);
+    if (tab) load(tab);
+  });
+
+  $$("[data-open-lab]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.openLab;
+      const tab = tabs.find((t) => t.dataset.lab === id);
+      $("#labs").scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" });
+      setTimeout(() => activate(tab, true), reduced ? 0 : 550);
+    });
+  });
+
+  setTimeout(() => {
+    if (!started) {
+      const first = tabs[0];
+      setPoster(first);
+      poster.style.backgroundImage = "linear-gradient(rgba(5,7,15,.35), rgba(5,7,15,.55)), url('" + first.dataset.poster + "')";
+    }
+  }, 0);
+
+  $("#year").textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graph Explorer — Java Atlas</title>
+<meta name="description" content="Run BFS, DFS, and Dijkstra on a weighted graph. Drag nodes, pick a source, and watch the frontier expand.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+</head>
+<body class="lab">
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Graph Explorer</b><span>Chapters 28–29 · traversal and shortest paths</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill"><i></i> interactive graph</span>
+    <a class="btn btn-sm btn-ghost" href="../index.html#labs">All labs</a>
+  </div>
+</header>
+
+<main class="lab-wrap">
+  <div class="lab-head">
+    <div>
+      <h1>Watch a frontier become a path.</h1>
+      <p>Click a node to set the start, shift-click to set the target, and drag to reshape the network. BFS explores in rings, DFS dives deep, and Dijkstra weighs every option.</p>
+    </div>
+    <div class="btn-row">
+      <button class="btn" id="stepBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5v14l9-7-9-7ZM18 5v14" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg> Step</button>
+      <button class="btn btn-primary" id="runBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5-10-6.5Z" fill="currentColor"/></svg> Run</button>
+      <button class="btn" id="resetBtn" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 6M20 5v6h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Reset</button>
+    </div>
+  </div>
+
+  <div class="lab-grid">
+    <section class="panel" aria-label="Graph visualization">
+      <div class="panel-head">
+        <h2>Weighted network</h2>
+        <span class="hint" id="status">ready</span>
+      </div>
+      <div class="viz tall"><canvas id="graph" aria-label="Interactive graph of nine nodes"></canvas></div>
+      <div class="panel-body" style="border-top:1px solid var(--line)">
+        <div class="metrics" style="margin-bottom:10px">
+          <div class="metric"><b id="mVisited">0</b><span>visited</span></div>
+          <div class="metric"><b id="mFrontier">1</b><span>frontier</span></div>
+          <div class="metric"><b id="mCost">—</b><span>path cost</span></div>
+          <div class="metric"><b id="mSteps">0</b><span>events</span></div>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px">
+          <span class="hint" style="font-family:var(--font-mono);font-size:9px;color:var(--faint)">FRONTIER</span>
+          <div id="frontierList" style="display:flex;gap:5px;flex-wrap:wrap"><span class="tag">A</span></div>
+          <span class="hint" style="font-family:var(--font-mono);font-size:9px;color:var(--faint);margin-left:auto">PATH</span>
+          <div id="pathOut" style="display:flex;gap:5px;flex-wrap:wrap;color:var(--faint);font-size:11px">not found yet</div>
+        </div>
+        <div class="log" id="trace" aria-live="polite"><div><time>--:--</time><span>Choose an algorithm and press Run.</span></div></div>
+      </div>
+    </section>
+
+    <aside style="display:grid;gap:14px">
+      <div class="panel">
+        <div class="panel-head"><h2>Controls</h2><span class="hint">drag nodes</span></div>
+        <div class="panel-body">
+          <div class="controls">
+            <div class="field">
+              <label for="preset">Graph</label>
+              <select id="preset">
+                <option value="city">City network · weighted</option>
+                <option value="mesh">Social mesh · unweighted</option>
+                <option value="grid">Service grid · mixed</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="algo">Algorithm</label>
+              <select id="algo">
+                <option value="bfs">Breadth-first search</option>
+                <option value="dfs">Depth-first search</option>
+                <option value="dijkstra" selected>Dijkstra shortest path</option>
+              </select>
+            </div>
+            <div class="control-row">
+              <div class="field">
+                <label for="startSel">Start</label>
+                <select id="startSel"></select>
+              </div>
+              <div class="field">
+                <label for="targetSel">Target</label>
+                <select id="targetSel"></select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="speed">Speed <output id="speedOut">70</output></label>
+              <input id="speed" type="range" min="1" max="100" step="1" value="70">
+            </div>
+            <div class="legend">
+              <span><i></i> start</span>
+              <span><i class="amber"></i> frontier</span>
+              <span><i class="green"></i> visited</span>
+              <span><i class="violet"></i> final path</span>
+              <span><i class="pink"></i> active edge</span>
+            </div>
+            <p class="note cyan" id="algoNote">Dijkstra settles the closest unsettled node, then relaxes its edges. It requires non-negative weights.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Distance table</h2><span class="hint">from start</span></div>
+        <div class="panel-body flush">
+          <table class="table">
+            <thead><tr><th>Node</th><th>Distance</th><th>Previous</th></tr></thead>
+            <tbody id="distBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head"><h2>Why it matters</h2></div>
+        <div class="panel-body">
+          <div class="log" style="max-height:none">
+            <div><span>BFS is the base for shortest paths in unweighted networks: social distance, hop counts, broadcast layers.</span></div>
+            <div><span>DFS underpins cycle detection, topological sorting, and maze solving.</span></div>
+            <div><span>Dijkstra powers routing, maps, and network planning when every edge has a cost.</span></div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="lab-foot">Part of the <a href="../index.html">Java Atlas</a> · Concept labs are original work, MIT licensed.</footer>
+
+<script src="../assets/lab.js"></script>
+<script>
+(function () {
+  "use strict";
+  const { $, clamp, fmt, toast, fitCanvas, observeResize, timeStamp } = window.Lab;
+
+  const canvas = $("#graph");
+  const ctx = canvas.getContext("2d");
+  const statusEl = $("#status");
+  const traceEl = $("#trace");
+  const distBody = $("#distBody");
+  const frontierList = $("#frontierList");
+  const pathOut = $("#pathOut");
+  const runBtn = $("#runBtn");
+  const stepBtn = $("#stepBtn");
+  const speedEl = $("#speed");
+
+  let W = 700;
+  let H = 440;
+  let nodes = [];
+  let edges = [];
+  let startId = "A";
+  let targetId = "I";
+  let visited = new Set();
+  let frontier = [];
+  let current = null;
+  let activeEdge = null;
+  let path = [];
+  let dist = {};
+  let prev = {};
+  let steps = [];
+  let index = 0;
+  let running = false;
+  let timer = 0;
+  let finished = false;
+  let eventCount = 0;
+
+  const presets = {
+    city: {
+      weighted: true,
+      nodes: [
+        ["A", 0.07, 0.40], ["B", 0.23, 0.14], ["C", 0.43, 0.20],
+        ["D", 0.66, 0.11], ["E", 0.91, 0.29], ["F", 0.79, 0.62],
+        ["G", 0.52, 0.80], ["H", 0.26, 0.71], ["I", 0.06, 0.67]
+      ],
+      edges: [
+        ["A", "B", 4], ["A", "H", 8], ["B", "C", 8], ["B", "H", 11],
+        ["C", "D", 7], ["C", "F", 4], ["C", "I", 2], ["D", "E", 9],
+        ["D", "F", 14], ["E", "F", 10], ["F", "G", 2], ["G", "H", 1],
+        ["G", "I", 6], ["H", "I", 7]
+      ]
+    },
+    mesh: {
+      weighted: false,
+      nodes: [
+        ["A", 0.10, 0.20], ["B", 0.50, 0.12], ["C", 0.90, 0.20],
+        ["D", 0.14, 0.50], ["E", 0.50, 0.42], ["F", 0.86, 0.50],
+        ["G", 0.10, 0.82], ["H", 0.50, 0.86], ["I", 0.90, 0.82]
+      ],
+      edges: [
+        ["A", "B", 1], ["B", "C", 1], ["D", "E", 1], ["E", "F", 1],
+        ["G", "H", 1], ["H", "I", 1], ["A", "D", 1], ["D", "G", 1],
+        ["B", "E", 1], ["E", "H", 1], ["C", "F", 1], ["F", "I", 1],
+        ["A", "E", 1], ["C", "E", 1], ["E", "I", 1], ["E", "G", 1]
+      ]
+    },
+    grid: {
+      weighted: true,
+      nodes: [
+        ["A", 0.12, 0.22], ["B", 0.50, 0.14], ["C", 0.88, 0.22],
+        ["D", 0.12, 0.55], ["E", 0.50, 0.46], ["F", 0.88, 0.55],
+        ["G", 0.12, 0.86], ["H", 0.50, 0.80], ["I", 0.88, 0.86]
+      ],
+      edges: [
+        ["A", "B", 3], ["B", "C", 5], ["D", "E", 2], ["E", "F", 4],
+        ["G", "H", 6], ["H", "I", 3], ["A", "D", 7], ["D", "G", 2],
+        ["B", "E", 1], ["E", "H", 8], ["C", "F", 5], ["F", "I", 1],
+        ["B", "D", 4], ["B", "F", 6], ["E", "G", 3], ["E", "I", 9]
+      ]
+    }
+  };
+
+  let currentPreset = presets.city;
+
+  function weightBetween(u, v) {
+    const e = edges.find((x) => (x[0] === u && x[1] === v) || (x[0] === v && x[1] === u));
+    return e ? e[2] : 1;
+  }
+
+  function adjacency() {
+    const adj = {};
+    nodes.forEach((n) => { adj[n.id] = []; });
+    edges.forEach(([u, v, w]) => {
+      adj[u].push([v, w]);
+      adj[v].push([u, w]);
+    });
+    Object.keys(adj).forEach((k) => adj[k].sort((a, b) => a[0].localeCompare(b[0])));
+    return adj;
+  }
+
+  function pos(id) {
+    const n = nodes.find((x) => x.id === id);
+    const padX = 44;
+    const padY = 38;
+    return { x: padX + n.x * (W - padX * 2), y: padY + n.y * (H - padY * 2) };
+  }
+
+  function resize() {
+    const fit = fitCanvas(canvas);
+    W = fit.width;
+    H = fit.height;
+    draw();
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    const pathSet = new Set();
+    for (let i = 0; i < path.length - 1; i += 1) {
+      const a = path[i];
+      const b = path[i + 1];
+      pathSet.add(a + "|" + b);
+      pathSet.add(b + "|" + a);
+    }
+    const active = activeEdge ? new Set([activeEdge[0] + "|" + activeEdge[1], activeEdge[1] + "|" + activeEdge[0]]) : new Set();
+
+    edges.forEach(([u, v, w]) => {
+      const a = pos(u);
+      const b = pos(v);
+      const isPath = pathSet.has(u + "|" + v);
+      const isActive = active.has(u + "|" + v);
+      ctx.strokeStyle = isPath ? "rgba(139,92,246,.95)" : isActive ? "rgba(244,114,182,.95)" : "rgba(100,116,139,.38)";
+      ctx.lineWidth = isPath ? 3.5 : isActive ? 3 : 1.4;
+      ctx.beginPath();
+      ctx.moveTo(a.x, a.y);
+      ctx.lineTo(b.x, b.y);
+      ctx.stroke();
+
+      if (currentPreset.weighted) {
+        const mx = (a.x + b.x) / 2;
+        const my = (a.y + b.y) / 2;
+        const label = String(w);
+        ctx.font = "10px 'JetBrains Mono', monospace";
+        const tw = ctx.measureText(label).width;
+        ctx.fillStyle = "rgba(6,10,18,.88)";
+        ctx.beginPath();
+        ctx.roundRect(mx - tw / 2 - 5, my - 9, tw + 10, 17, 5);
+        ctx.fill();
+        ctx.fillStyle = isPath ? "#c4b5fd" : isActive ? "#f9a8d4" : "rgba(148,163,184,.75)";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(label, mx, my);
+      }
+    });
+
+    nodes.forEach((n) => {
+      const p = pos(n.id);
+      const isVisited = visited.has(n.id);
+      const isFrontier = frontier.includes(n.id);
+      const isCurrent = current === n.id;
+      const isPath = path.includes(n.id);
+      const isStart = n.id === startId;
+      const isTarget = n.id === targetId;
+      const r = 19;
+
+      if (isCurrent) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, r + 8, 0, Math.PI * 2);
+        ctx.fillStyle = "rgba(34,211,238,.12)";
+        ctx.fill();
+      }
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.fillStyle = isPath ? "rgba(139,92,246,.26)" : isVisited ? "rgba(52,211,153,.16)" : isFrontier ? "rgba(251,191,36,.13)" : "rgba(13,20,36,.95)";
+      ctx.fill();
+      ctx.lineWidth = isCurrent ? 2.6 : isPath ? 2.2 : 1.5;
+      ctx.strokeStyle = isCurrent ? "#22d3ee" : isPath ? "#a78bfa" : isVisited ? "#34d399" : isFrontier ? "#fbbf24" : "rgba(148,163,184,.45)";
+      ctx.stroke();
+
+      if (isStart || isTarget) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, r + 5, 0, Math.PI * 2);
+        ctx.strokeStyle = isStart ? "rgba(34,211,238,.55)" : "rgba(251,191,36,.55)";
+        ctx.lineWidth = 1;
+        ctx.setLineDash([3, 4]);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+
+      ctx.fillStyle = "#e8eef9";
+      ctx.font = "600 13px 'Space Grotesk', sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(n.id, p.x, p.y + 0.5);
+
+      if (isStart || isTarget) {
+        ctx.fillStyle = isStart ? "#22d3ee" : "#fbbf24";
+        ctx.font = "8px 'JetBrains Mono', monospace";
+        ctx.fillText(isStart ? "START" : "TARGET", p.x, p.y + r + 12);
+      }
+    });
+  }
+
+  function addTrace(text, cls) {
+    const div = document.createElement("div");
+    div.innerHTML = "<time>" + timeStamp() + "</time><span" + (cls ? ' class="' + cls + '"' : "") + ">" + text + "</span>";
+    traceEl.prepend(div);
+    while (traceEl.children.length > 7) traceEl.lastElementChild.remove();
+  }
+
+  function renderFrontier() {
+    const list = frontier.filter((n) => !visited.has(n));
+    frontierList.innerHTML = list.length
+      ? list.map((n) => '<span class="tag">' + n + "</span>").join("")
+      : '<span style="color:var(--faint);font-size:11px">empty</span>';
+  }
+
+  function renderDist() {
+    distBody.innerHTML = nodes.map((n) => {
+      const d = dist[n.id];
+      const label = d === undefined || d === Infinity ? "∞" : String(d);
+      const className = d === undefined || d === Infinity ? "" : "num";
+      return "<tr><td><b>" + n.id + "</b></td><td class=\"" + className + "\">" + label + "</td><td>" + (prev[n.id] || "—") + "</td></tr>";
+    }).join("");
+  }
+
+  function renderPath() {
+    if (!path.length) {
+      pathOut.innerHTML = '<span style="color:var(--faint)">not found yet</span>';
+      return;
+    }
+    pathOut.innerHTML = path.map((n) => '<span class="tag" style="border-color:rgba(139,92,246,.35);color:#c4b5fd">' + n + "</span>").join('<span style="color:var(--faint)">→</span>');
+  }
+
+  function buildPath(from, to) {
+    if (from === to) return [from];
+    if (!(to in prev)) return [];
+    const out = [to];
+    let cur = to;
+    let guard = 0;
+    while (cur !== from && guard < 100) {
+      cur = prev[cur];
+      if (cur === undefined) return [];
+      out.unshift(cur);
+      guard += 1;
+    }
+    return out[0] === from ? out : [];
+  }
+
+  function* bfs(adj, start, target) {
+    const seen = new Set([start]);
+    const localPrev = {};
+    const localDist = { [start]: 0 };
+    const queue = [start];
+    yield { frontier: queue.slice(), dist: { ...localDist }, note: "enqueue start " + start };
+    while (queue.length) {
+      const u = queue.shift();
+      yield { visit: u, frontier: queue.slice(), dist: { ...localDist }, prev: { ...localPrev }, note: "visit " + u };
+      if (u === target) break;
+      for (const [v] of adj[u]) {
+        if (seen.has(v)) continue;
+        seen.add(v);
+        localPrev[v] = u;
+        localDist[v] = localDist[u] + 1;
+        queue.push(v);
+        yield { discover: [u, v], frontier: queue.slice(), dist: { ...localDist }, prev: { ...localPrev }, note: "discover " + v + " via " + u };
+      }
+    }
+    const pathOut = buildPathLocal(localPrev, start, target);
+    yield { done: true, path: pathOut, cost: pathOut.length ? localDist[target] : null, hops: true, prev: { ...localPrev }, note: "BFS complete" };
+  }
+
+  function* dfs(adj, start, target) {
+    const seen = new Set();
+    const localPrev = {};
+    const localDist = { [start]: 0 };
+    const stack = [start];
+    yield { frontier: stack.slice(), dist: { ...localDist }, note: "push start " + start };
+    while (stack.length) {
+      const u = stack.pop();
+      if (seen.has(u)) continue;
+      seen.add(u);
+      yield { visit: u, frontier: stack.slice(), dist: { ...localDist }, prev: { ...localPrev }, note: "visit " + u };
+      if (u === target) break;
+      const neighbours = adj[u].map((e) => e[0]).filter((v) => !seen.has(v));
+      for (let i = neighbours.length - 1; i >= 0; i -= 1) {
+        const v = neighbours[i];
+        if (!localPrev[v] || localDist[v] === undefined) {
+          localPrev[v] = u;
+          localDist[v] = (localDist[u] || 0) + 1;
+        }
+        stack.push(v);
+      }
+      yield { frontier: stack.slice(), dist: { ...localDist }, prev: { ...localPrev }, note: "push neighbours of " + u };
+    }
+    const pathOut = buildPathLocal(localPrev, start, target);
+    yield { done: true, path: pathOut, cost: pathOut.length ? localDist[target] : null, hops: true, prev: { ...localPrev }, note: "DFS complete" };
+  }
+
+  function* dijkstra(adj, start, target) {
+    const localDist = {};
+    const localPrev = {};
+    const done = new Set();
+    const pending = new Set(nodes.map((n) => n.id));
+    nodes.forEach((n) => { localDist[n.id] = Infinity; });
+    localDist[start] = 0;
+    yield { frontier: Array.from(pending), dist: { ...localDist }, note: "start " + start + " at distance 0" };
+    while (pending.size) {
+      let u = null;
+      for (const id of pending) {
+        if (u === null || localDist[id] < localDist[u]) u = id;
+      }
+      if (distInfinity(localDist[u])) break;
+      pending.delete(u);
+      done.add(u);
+      yield { visit: u, frontier: Array.from(pending), dist: { ...localDist }, prev: { ...localPrev }, note: "settle " + u + " at " + localDist[u] };
+      if (u === target) break;
+      for (const [v, w] of adj[u]) {
+        if (!pending.has(v)) continue;
+        const candidate = localDist[u] + w;
+        if (candidate < localDist[v]) {
+          localDist[v] = candidate;
+          localPrev[v] = u;
+          yield { relax: [u, v], frontier: Array.from(pending), dist: { ...localDist }, prev: { ...localPrev }, note: "relax " + u + "→" + v + " to " + candidate };
+        }
+      }
+    }
+    const pathOut = buildPathLocal(localPrev, start, target);
+    yield { done: true, path: pathOut, cost: pathOut.length ? localDist[target] : null, hops: false, prev: { ...localPrev }, note: "Dijkstra complete" };
+  }
+
+  function distInfinity(v) {
+    return v === undefined || v === Infinity;
+  }
+
+  function buildPathLocal(localPrev, from, to) {
+    if (from === to) return [from];
+    if (!(to in localPrev)) return [];
+    const out = [to];
+    let cur = to;
+    let guard = 0;
+    while (cur !== from && guard < 100) {
+      cur = localPrev[cur];
+      if (cur === undefined) return [];
+      out.unshift(cur);
+      guard += 1;
+    }
+    return out[0] === from ? out : [];
+  }
+
+  function prepare() {
+    stop();
+    const adj = adjacency();
+    const gen = $("#algo").value === "bfs" ? bfs(adj, startId, targetId)
+      : $("#algo").value === "dfs" ? dfs(adj, startId, targetId)
+        : dijkstra(adj, startId, targetId);
+    steps = Array.from(gen);
+    index = 0;
+    eventCount = 0;
+    visited = new Set();
+    frontier = [startId];
+    current = null;
+    activeEdge = null;
+    path = [];
+    dist = {};
+    prev = {};
+    finished = false;
+    runBtn.disabled = false;
+    stepBtn.disabled = false;
+    renderFrontier();
+    renderDist();
+    renderPath();
+    $("#mVisited").textContent = "0";
+    $("#mFrontier").textContent = "1";
+    $("#mCost").textContent = "—";
+    $("#mSteps").textContent = "0";
+    statusEl.textContent = "ready";
+    traceEl.innerHTML = "";
+    addTrace("Prepared " + $("#algo").selectedOptions[0].text + " from " + startId + " to " + targetId + ".", "cy");
+    draw();
+  }
+
+  function apply(step) {
+    eventCount += 1;
+    if (step.visit) {
+      current = step.visit;
+      visited.add(step.visit);
+      activeEdge = null;
+      addTrace(step.note, "ok");
+    }
+    if (step.discover) {
+      activeEdge = step.discover;
+      addTrace(step.note, "warn");
+    }
+    if (step.relax) {
+      activeEdge = step.relax;
+      addTrace(step.note, "warn");
+    }
+    if (step.frontier) frontier = step.frontier.slice();
+    if (step.dist) dist = step.dist;
+    if (step.prev) prev = step.prev;
+    if (step.done) {
+      path = step.path || [];
+      finished = true;
+      statusEl.textContent = "done";
+      runBtn.disabled = true;
+      stepBtn.disabled = true;
+      if (path.length) {
+        const cost = step.cost;
+        $("#mCost").textContent = cost === null || cost === undefined ? "—" : String(cost) + (step.hops ? " hops" : "");
+        addTrace("Shortest path: " + path.join(" → ") + " · cost " + (cost === null ? "unreachable" : cost), "ok");
+        toast("Path found: " + path.join(" → "));
+      } else {
+        $("#mCost").textContent = "∞";
+        addTrace("Target is unreachable from the chosen start.", "err");
+        toast("Target unreachable");
+      }
+      renderPath();
+    }
+    renderFrontier();
+    renderDist();
+    $("#mVisited").textContent = String(visited.size);
+    $("#mFrontier").textContent = String(frontier.filter((n) => !visited.has(n)).length);
+    $("#mSteps").textContent = String(eventCount);
+    draw();
+  }
+
+  function delay() {
+    return Math.round(760 - Number(speedEl.value) * 7);
+  }
+
+  function tick() {
+    if (!running) return;
+    if (index >= steps.length) {
+      stop();
+      return;
+    }
+    const step = steps[index];
+    index += 1;
+    apply(step);
+    if (step.done) {
+      stop();
+      return;
+    }
+    timer = setTimeout(tick, delay());
+  }
+
+  function start() {
+    if (finished) prepare();
+    if (!steps.length) prepare();
+    running = true;
+    statusEl.textContent = "running…";
+    runBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h4v14H7zM13 5h4v14h-4z" fill="currentColor"/></svg> Pause';
+    clearTimeout(timer);
+    tick();
+  }
+
+  function stop() {
+    running = false;
+    clearTimeout(timer);
+    runBtn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l10-6.5-10-6.5Z" fill="currentColor"/></svg> Run';
+    if (!finished && statusEl.textContent === "running…") statusEl.textContent = "paused";
+  }
+
+  function stepOnce() {
+    if (finished) return;
+    if (running) stop();
+    if (!steps.length) prepare();
+    if (index >= steps.length) return;
+    const step = steps[index];
+    index += 1;
+    apply(step);
+    statusEl.textContent = finished ? "done" : "stepping";
+  }
+
+  function loadPreset(key, keepStart) {
+    currentPreset = presets[key];
+    nodes = currentPreset.nodes.map(([id, x, y]) => ({ id, x, y }));
+    edges = currentPreset.edges.map((e) => e.slice());
+    const ids = nodes.map((n) => n.id);
+    const start = keepStart && ids.includes(startId) ? startId : ids[0];
+    const target = keepStart && ids.includes(targetId) && targetId !== start ? targetId : ids[ids.length - 1];
+    startId = start;
+    targetId = target;
+    fillSelects();
+    prepare();
+  }
+
+  function fillSelects() {
+    const opts = nodes.map((n) => '<option value="' + n.id + '">' + n.id + "</option>").join("");
+    $("#startSel").innerHTML = opts;
+    $("#targetSel").innerHTML = opts;
+    $("#startSel").value = startId;
+    $("#targetSel").value = targetId;
+  }
+
+  function reset() {
+    stop();
+    prepare();
+  }
+
+  let drag = null;
+  function pointerPos(e) {
+    const r = canvas.getBoundingClientRect();
+    const x = (e.touches ? e.touches[0].clientX : e.clientX) - r.left;
+    const y = (e.touches ? e.touches[0].clientY : e.clientY) - r.top;
+    return { x, y };
+  }
+
+  function nodeAt(x, y) {
+    for (let i = nodes.length - 1; i >= 0; i -= 1) {
+      const p = pos(nodes[i].id);
+      if (Math.hypot(p.x - x, p.y - y) <= 24) return nodes[i];
+    }
+    return null;
+  }
+
+  canvas.addEventListener("pointerdown", (e) => {
+    const p = pointerPos(e);
+    const n = nodeAt(p.x, p.y);
+    if (!n) return;
+    drag = { node: n, sx: p.x, sy: p.y, moved: false, shift: e.shiftKey };
+    canvas.setPointerCapture(e.pointerId);
+  });
+
+  canvas.addEventListener("pointermove", (e) => {
+    const p = pointerPos(e);
+    if (!drag) {
+      canvas.style.cursor = nodeAt(p.x, p.y) ? "grab" : "default";
+      return;
+    }
+    if (Math.hypot(p.x - drag.sx, p.y - drag.sy) > 4) drag.moved = true;
+    if (!drag.moved) return;
+    const padX = 44;
+    const padY = 38;
+    drag.node.x = clamp((p.x - padX) / (W - padX * 2), 0, 1);
+    drag.node.y = clamp((p.y - padY) / (H - padY * 2), 0, 1);
+    draw();
+  });
+
+  canvas.addEventListener("pointerup", (e) => {
+    if (!drag) return;
+    const wasMoved = drag.moved;
+    const shift = drag.shift;
+    const node = drag.node;
+    drag = null;
+    if (wasMoved) return;
+    if (shift && node.id !== startId) {
+      targetId = node.id;
+      $("#targetSel").value = targetId;
+    } else {
+      startId = node.id;
+      $("#startSel").value = startId;
+      if (targetId === startId) {
+        const other = nodes.find((n) => n.id !== startId);
+        targetId = other.id;
+        $("#targetSel").value = targetId;
+      }
+    }
+    prepare();
+    toast((shift ? "Target set to " : "Start set to ") + node.id);
+  });
+
+  $("#preset").addEventListener("change", (e) => loadPreset(e.target.value, false));
+  $("#algo").addEventListener("change", () => {
+    const notes = {
+      bfs: "BFS explores by hop count. Every node is reached through the fewest possible edges.",
+      dfs: "DFS follows one branch to the end before backtracking. Depth is the priority, not distance.",
+      dijkstra: "Dijkstra settles the closest unsettled node, then relaxes its edges. It requires non-negative weights."
+    };
+    $("#algoNote").textContent = notes[$("#algo").value];
+    prepare();
+  });
+  $("#startSel").addEventListener("change", (e) => {
+    startId = e.target.value;
+    if (targetId === startId) {
+      targetId = nodes.find((n) => n.id !== startId).id;
+      $("#targetSel").value = targetId;
+    }
+    prepare();
+  });
+  $("#targetSel").addEventListener("change", (e) => {
+    targetId = e.target.value;
+    prepare();
+  });
+  runBtn.addEventListener("click", () => { if (running) stop(); else start(); });
+  stepBtn.addEventListener("click", stepOnce);
+  $("#resetBtn").addEventListener("click", reset);
+  speedEl.addEventListener("input", () => {
+    $("#speedOut").textContent = speedEl.value;
+    speedEl.style.setProperty("--fill", speedEl.value + "%");
+  });
+
+  function initSlider(el) {
+    el.style.setProperty("--fill", ((el.value - el.min) / (el.max - el.min)) * 100 + "%");
+    el.addEventListener("input", () => {
+      el.style.setProperty("--fill", ((el.value - el.min) / (el.max - el.min)) * 100 + "%");
+    });
+  }
+  initSlider(speedEl);
+
+  observeResize(canvas.parentElement, resize);
+  loadPreset("city", false);
+  $("#algoNote").textContent = "Dijkstra settles the closest unsettled node, then relaxes its edges. It requires non-negative weights.";
+})();
+</script>
+</body>
+</html>

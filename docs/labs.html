@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All labs — Java Atlas</title>
+<meta name="description" content="Six interactive labs: sorting, graphs, data structures, payroll, a quiz, and a 3D neural network game.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/lab.css">
+<style>
+  .labs-hero { padding:34px 0 8px; }
+  .labs-hero h1 { font:600 clamp(30px,4.5vw,48px)/1.05 'Space Grotesk',sans-serif; letter-spacing:-.03em; margin:0 0 10px; }
+  .labs-hero p { color:var(--muted); max-width:62ch; line-height:1.65; margin:0; font-size:15px; }
+  .labs-meta { display:flex; gap:18px; flex-wrap:wrap; margin-top:18px; }
+  .labs-meta div { font:11px 'JetBrains Mono',monospace; color:var(--dim); letter-spacing:.06em; }
+  .labs-meta b { color:var(--cyan); font-weight:500; }
+  .labs-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; padding:26px 0 10px; }
+  @media (max-width: 780px) { .labs-grid { grid-template-columns:1fr; } }
+  .lab-card { display:flex; flex-direction:column; border:1px solid var(--line); border-radius:14px; overflow:hidden; background:rgba(9,17,23,.55); text-decoration:none; color:inherit; transition:transform .2s, border-color .2s, box-shadow .2s; }
+  .lab-card:hover { transform:translateY(-3px); border-color:rgba(34,211,238,.35); box-shadow:0 18px 50px rgba(0,0,0,.35); }
+  .lab-card.featured { grid-column:span 2; }
+  @media (max-width: 780px) { .lab-card.featured { grid-column:span 1; } }
+  .thumb { position:relative; aspect-ratio:16/8.5; background:radial-gradient(120% 140% at 20% 0%, #0a2b35, #050b10 70%); overflow:hidden; }
+  .lab-card.featured .thumb { aspect-ratio:16/6.2; }
+  .thumb img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .5s; }
+  .lab-card:hover .thumb img { transform:scale(1.025); }
+  .thumb .fallback { position:absolute; inset:0; display:grid; place-items:center; font:600 11px 'JetBrains Mono',monospace; letter-spacing:.2em; text-transform:uppercase; color:rgba(125,211,252,.5); }
+  .thumb .badge { position:absolute; top:10px; left:10px; font:500 9px 'JetBrains Mono',monospace; letter-spacing:.14em; text-transform:uppercase; color:var(--cyan); background:rgba(3,12,17,.8); border:1px solid rgba(34,211,238,.3); padding:4px 7px; border-radius:5px; }
+  .card-body { padding:15px 17px 17px; display:flex; flex-direction:column; gap:8px; flex:1; }
+  .card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:10px; }
+  .card-top h2 { font:600 18px 'Space Grotesk',sans-serif; letter-spacing:-.01em; margin:0; }
+  .card-top .ch { font:10px 'JetBrains Mono',monospace; color:var(--dim); white-space:nowrap; padding-top:4px; }
+  .card-body p { margin:0; color:var(--muted); font-size:12.5px; line-height:1.6; }
+  .tags { display:flex; gap:6px; flex-wrap:wrap; margin-top:auto; padding-top:6px; }
+  .tags span { font:10px 'JetBrains Mono',monospace; color:var(--dim); border:1px solid var(--line); border-radius:5px; padding:3px 6px; }
+  .open { display:flex; align-items:center; gap:6px; font:500 11px 'JetBrains Mono',monospace; letter-spacing:.08em; color:var(--cyan); text-transform:uppercase; margin-top:8px; }
+  .open svg { width:12px; height:12px; }
+  .labs-foot-note { margin:26px 0 0; padding:18px 20px; border:1px dashed var(--line); border-radius:12px; color:var(--muted); font-size:13px; line-height:1.65; }
+  .labs-foot-note b { color:var(--text); }
+</style>
+</head>
+<body class="lab">
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas</b><span>All interactive labs</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <a class="btn btn-sm btn-ghost" href="index.html">Home</a>
+  </div>
+</header>
+
+<main class="lab-wrap">
+  <div class="labs-hero">
+    <h1>Six ways to touch the code.</h1>
+    <p>Every lab is a self-contained page built with plain HTML, CSS, and JavaScript. No accounts, no tracking, no server. Open one in a new tab, or embed it anywhere.</p>
+    <div class="labs-meta">
+      <div><b>6</b> experiments</div>
+      <div><b>100%</b> client-side</div>
+      <div><b>0</b> sign-ups</div>
+      <div><b>MIT</b> licensed</div>
+    </div>
+  </div>
+
+  <div class="labs-grid">
+    <a class="lab-card featured" href="labs/game.html">
+      <div class="thumb">
+        <span class="fallback">NEURAL NEXUS · 3D</span>
+        <span class="badge">3D · Featured</span>
+        <img src="assets/posters/game.png" alt="Neural Nexus 3D neural network game" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="card-body">
+        <div class="card-top"><h2>Neural Nexus</h2><span class="ch">AI · Three.js</span></div>
+        <p>Pilot a collector through drifting feature packets. Every pickup lights an input neuron. Then fire a forward pass and hear the network explain its decision out loud.</p>
+        <div class="tags"><span>3D</span><span>speech synthesis</span><span>game</span><span>neural networks</span></div>
+        <span class="open">Launch experiment <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+
+    <a class="lab-card" href="labs/sorting.html">
+      <div class="thumb">
+        <span class="fallback">SORTING · RACE</span>
+        <span class="badge">Algorithms</span>
+        <img src="assets/posters/sorting.png" alt="Sorting race lab" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="card-body">
+        <div class="card-top"><h2>Sorting Race</h2><span class="ch">Ch. 23</span></div>
+        <p>Six classic algorithms race the same array. Compare comparisons, writes, and elapsed time at every size.</p>
+        <div class="tags"><span>bubble</span><span>merge</span><span>quick</span><span>heap</span></div>
+        <span class="open">Open lab <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+
+    <a class="lab-card" href="labs/graph.html">
+      <div class="thumb">
+        <span class="fallback">GRAPH · PATHS</span>
+        <span class="badge">Algorithms</span>
+        <img src="assets/posters/graph.png" alt="Graph pathfinding lab" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="card-body">
+        <div class="card-top"><h2>Graph Explorer</h2><span class="ch">Ch. 29</span></div>
+        <p>Drag nodes, pick a start and target, then watch BFS, DFS, and Dijkstra explore the same map differently.</p>
+        <div class="tags"><span>BFS</span><span>DFS</span><span>Dijkstra</span><span>priority queue</span></div>
+        <span class="open">Open lab <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+
+    <a class="lab-card" href="labs/structures.html">
+      <div class="thumb">
+        <span class="fallback">STRUCTURES · MEMORY</span>
+        <span class="badge">Collections</span>
+        <img src="assets/posters/structures.png" alt="Data structures lab" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="card-body">
+        <div class="card-top"><h2>Structures, Live</h2><span class="ch">Ch. 21–27</span></div>
+        <p>Push a stack, enqueue a job, insert into a BST, or collide two keys in a hash table. Every operation is drawn as it happens.</p>
+        <div class="tags"><span>stack</span><span>queue</span><span>BST</span><span>hash table</span></div>
+        <span class="open">Open lab <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+
+    <a class="lab-card" href="labs/payroll.html">
+      <div class="thumb">
+        <span class="fallback">PAYROLL · LEDGER</span>
+        <span class="badge">Business logic</span>
+        <img src="assets/posters/payroll.png" alt="Payroll engine lab" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="card-body">
+        <div class="card-top"><h2>Payroll Engine</h2><span class="ch">Ch. 4–5</span></div>
+        <p>Turn gross pay into net pay with progressive brackets, FICA, state tax, retirement, and dependent credits — transparently.</p>
+        <div class="tags"><span>income tax</span><span>pay stub</span><span>business rules</span></div>
+        <span class="open">Open lab <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+
+    <a class="lab-card" href="labs/quiz.html">
+      <div class="thumb">
+        <span class="fallback">QUIZ · COMPILER MIND</span>
+        <span class="badge">Diagnostic</span>
+        <img src="assets/posters/quiz.png" alt="Compiler Mind quiz" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div class="card-body">
+        <div class="card-top"><h2>Compiler Mind</h2><span class="ch">All chapters</span></div>
+        <p>Ten questions across language, OOP, collections, algorithms, runtime, and data. Every answer explains the reasoning.</p>
+        <div class="tags"><span>quiz</span><span>explanations</span><span>keyboard</span></div>
+        <span class="open">Open lab <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </div>
+    </a>
+  </div>
+
+  <p class="labs-foot-note"><b>Building your own?</b> Each lab imports the shared <code>assets/lab.css</code> and <code>assets/lab.js</code>, so a new page only needs its own canvas and logic. Add <code>?embed=1</code> to any lab URL to hide the header and footer for iframe use.</p>
+</main>
+
+<footer class="lab-foot">Part of the <a href="index.html">Java Atlas</a> · MIT licensed · Built with plain web standards.</footer>
+</body>
+</html>
