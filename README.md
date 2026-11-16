@@ -5,6 +5,7 @@
 ### From first line to full system — an interactive companion to all 42 chapters
 
 [![Live site](https://img.shields.io/badge/live-site-22d3ee?style=flat-square)](https://m0-ar.github.io/YL/)
+[![Release](https://img.shields.io/github/v/release/M0-AR/YL?style=flat-square&color=8b5cf6)](https://github.com/M0-AR/YL/releases/tag/v1.0.0)
 [![License: MIT](https://img.shields.io/badge/license-MIT-34d399?style=flat-square)](LICENSE)
 [![Java 17](https://img.shields.io/badge/Java-17-fbbf24?style=flat-square)](companion/java/pom.xml)
 [![Chapters](https://img.shields.io/badge/chapters-42-8b5cf6?style=flat-square)](#the-42-chapter-atlas)
@@ -12,6 +13,7 @@
 
 **[Open the live atlas](https://m0-ar.github.io/YL/)** ·
 **[Preview page](https://m0-ar.github.io/YL/preview.html)** ·
+**[Release v1.0.0](https://github.com/M0-AR/YL/releases/tag/v1.0.0)** ·
 **[Beginner guide](#-beginner-guide--read-this-and-you-are-a-professional)** ·
 **[Companion lessons](companion/README.md)** ·
 **[All labs](https://m0-ar.github.io/YL/labs.html)**
@@ -368,6 +370,21 @@ YL/
 ```
 
 The site has no framework and no bundler. That is deliberate: you can view source, copy a lab, and understand every line without learning a toolchain first.
+
+---
+
+## Release 1.0.0
+
+Everything in this repository is available as a tagged release:
+
+| Asset | What it contains |
+| :--- | :--- |
+| `java-atlas-site-1.0.0.zip` | The complete static site, including posters and the demo GIF. |
+| `java-atlas-companion-1.0.0.zip` | README, license, changelog, and the 23 original companion lessons. |
+| `companion-examples-1.0.0.jar` | Compiled Java 17 examples and resources for the companion project. |
+| `SHA256SUMS` | Checksums for every asset. |
+
+**[Download release 1.0.0](https://github.com/M0-AR/YL/releases/tag/v1.0.0)** · **[View all releases](https://github.com/M0-AR/YL/releases)**
 
 ---
 
