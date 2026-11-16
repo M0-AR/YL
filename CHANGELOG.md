@@ -4,6 +4,26 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ## [Unreleased]
 
+### Added
+
+- Completed Chapter 14's remaining base exercises: 14.20 random arrow line, 14.27 detailed clock, and 14.29 bean machine.
+- Chapter 14 now covers all 29 base exercises.
+- Completed Chapter 15's remaining base exercises: 15.10 keyboard text display, 15.17 bounding rectangle, 15.21 draggable triangle angles, 15.23 resizable stop sign, 15.25 ball on a sine curve, 15.31 pendulum, 15.33 bean-machine animation, 15.34 self-avoiding walk, 15.35 animated self-avoiding walk, and 15.36 dead-end simulation.
+- Chapter 15 now covers all 36 base exercises.
+- Completed Chapter 17's remaining base exercises: 17.16 character frequencies, 17.17 `BitOutputStream`, 17.18 view bits, 17.19 view hex, 17.20 binary editor, and 17.21 hex editor.
+- Chapter 17 now covers all 21 base exercises.
+- Completed Chapter 18's remaining base exercises: 18.25 string permutation, 18.26 maze, 18.27 Koch snowflake, 18.28 nonrecursive directory size, 18.29 file count, 18.30 word search, 18.31 word replacement, 18.32 Knight's Tour, 18.33 animated Knight's Tour, 18.34 Eight Queens, 18.35 H-tree, 18.37 Hilbert curve, 18.38 recursive tree, and 18.39 draggable tree.
+- Chapter 18 now covers all 39 base exercises.
+- Completed Chapter 21's remaining base exercise: 21.05 Java syntax highlighter, which converts a source file to HTML with styled keywords, comments, and literals.
+- Chapter 21 now covers all 15 base exercises.
+
+### Changed
+
+- Increased the chapter code collection to **879 Java files**.
+- Updated the exercise audit to **602 of 825 public base exercises (73.0%)** and **58.7%** of all 1,026 public variants.
+- Updated the README, site statistics, and source tree counts to 879 Java files.
+- Documented that Chapter 19's 19.12–19.21 are instructor-only extra exercises rather than printed base exercises.
+
 ### Planned
 
 - Additional companion tests for collections and graph edge cases.

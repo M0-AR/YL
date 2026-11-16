@@ -13,12 +13,12 @@ This repository is a **chapter atlas and selective exercise companion**, not a c
 ## Result
 
 - **1,026 official exercise variants** are publicly listed for chapters 1–30: **825 base exercises + 201 Extra variants**.
-- **568 base exercises** have code in this repository: **68.8%** of the public base exercises and **55.4%** of all public 1–30 variants.
+- **602 base exercises** have code in this repository: **73.0%** of the public base exercises and **58.7%** of all public 1–30 variants.
 - **0 Extra variants** have code.
-- **257 base exercises and 201 Extra variants are missing** from chapters 1–30.
+- **223 base exercises and 201 Extra variants are missing** from chapters 1–30.
 - Chapters 31–43 expose **no public exercise dropdown** in CheckExercise, so their official counts cannot be verified without Pearson access. The repo has one numbered folder there (`34/_01`) and none elsewhere.
 
-Chapters 1–13 cover every **base** exercise. No chapter covers the `Extra` variants.
+Chapters 1–15, 17, 18, and 21 cover every **base** exercise. No chapter covers the `Extra` variants.
 
 ## Chapter detail
 
@@ -37,14 +37,14 @@ Chapters 1–13 cover every **base** exercise. No chapter covers the `Extra` var
 | 11 | 21 | 17 | 4 | 17 | 81.0% | — | 4 |
 | 12 | 41 | 33 | 8 | 33 | 80.5% | — | 8 |
 | 13 | 27 | 21 | 6 | 21 | 77.8% | — | 6 |
-| 14 | 42 | 29 | 13 | 26 | 61.9% | 20, 27, 29 | 13 |
-| 15 | 56 | 36 | 20 | 26 | 46.4% | 10, 17, 21, 23, 25, 31, 33–36 | 20 |
+| 14 | 42 | 29 | 13 | 29 | 69.0% | — | 13 |
+| 15 | 56 | 36 | 20 | 36 | 64.3% | — | 20 |
 | 16 | 57 | 40 | 17 | 24 | 42.1% | 11, 24, 27–40 | 17 |
-| 17 | 21 | 21 | 0 | 15 | 71.4% | 16–21 | 0 |
-| 18 | 44 | 39 | 5 | 25 | 56.8% | 25–35, 37–39 | 5 |
+| 17 | 21 | 21 | 0 | 21 | 100.0% | — | 0 |
+| 18 | 44 | 39 | 5 | 39 | 88.6% | — | 5 |
 | 19 | 21 | 21 | 0 | 11 | 52.4% | 12–21 | 0 |
 | 20 | 41 | 38 | 3 | 17 | 41.5% | 07, 15, 17, 19–20, 22, 24–38 | 3 |
-| 21 | 19 | 15 | 4 | 14 | 73.7% | 05 | 4 |
+| 21 | 19 | 15 | 4 | 15 | 78.9% | — | 4 |
 | 22 | 30 | 25 | 5 | 4 | 13.3% | 05–25 | 5 |
 | 23 | 26 | 25 | 1 | 10 | 38.5% | 10, 12–25 | 1 |
 | 24 | 28 | 26 | 2 | 5 | 17.9% | 03, 07–26 | 2 |
@@ -68,11 +68,13 @@ Chapters 1–13 cover every **base** exercise. No chapter covers the `Extra` var
 | 42 | n/a | n/a | n/a | 0 | unverified | n/a | n/a |
 | 43 | n/a | n/a | n/a | 0 | unverified | n/a | n/a |
 
+> **Chapter 19 note:** The 10e textbook prints 19.01–19.11 as the chapter's base exercises. The CheckExercise listing also exposes 19.12–19.21, which the textbook identifies as instructor-only extra exercises. They are counted as listed variants in the table and are not implemented.
+
 ## What this means
 
 - The 43-chapter claim is about **chapter coverage**: every chapter has runnable code and a place in the atlas.
-- The exercise claim is narrower: this repo now covers **568 of 825 public base exercises** (68.8%). Chapters 1–13 are complete; chapters 14–30 are partial.
-- Completing every official exercise would require implementing **257 missing base exercises and all 201 Extra variants**, and chapters 31–43 would still need an authoritative exercise list.
+- The exercise claim is narrower: this repo now covers **602 of 825 public base exercises** (73.0%). Chapters 1–15, 17, 18, and 21 are complete. Chapter 19 covers all 11 printed base exercises; 19.12–19.21 are instructor-only extras. Chapters 16, 20, and 22–30 are partial.
+- Completing every official exercise would require implementing **223 missing base exercises and all 201 Extra variants**, and chapters 31–43 would still need an authoritative exercise list.
 
 ## Sources
 

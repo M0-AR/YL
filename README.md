@@ -30,13 +30,13 @@ Most exercise repositories are a pile of files with a chapter number on top. Thi
 
 Java Atlas is an independent study companion built around the topic sequence of **Y. Daniel Liang's _Introduction to Java Programming, Comprehensive Version_ (10th Edition)**. It brings three kinds of material into one place:
 
-- **842 Java files** organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and 24 chapters include a focused `ChapterXX.java` demo.
+- **879 Java files** organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and 24 chapters include a focused `ChapterXX.java` demo.
 - **43 original lessons** — one for every chapter. Each lesson explains the idea in plain language, shows a worked example, and ends with a practice task and a checkpoint.
 - **Six interactive browser labs** — sorting, graph traversal, data structures, payroll, a quiz, and a 3D game — that run with no installation and make abstract ideas visible.
 
 The result is a complete 43-chapter route through Java: read the idea, run the code, move the controls, break the algorithm, and watch what happens.
 
-Exercise-level coverage is audited separately: this is a selective exercise companion, not a complete solution manual. The official CheckExercise lists **1,026 exercise variants for chapters 1–30**; **568 base exercises** have code here. See the **[Exercise Coverage Audit](EXERCISE-COVERAGE.md)** for the verified chapter-by-chapter numbers, including the 257 missing base exercises and 201 missing `Extra` variants.
+Exercise-level coverage is audited separately: this is a selective exercise companion, not a complete solution manual. The official CheckExercise lists **1,026 exercise variants for chapters 1–30**; **602 base exercises** have code here. See the **[Exercise Coverage Audit](EXERCISE-COVERAGE.md)** for the verified chapter-by-chapter numbers, including the 223 missing base exercises and 201 missing `Extra` variants.
 
 ### What this repository is not
 
@@ -233,7 +233,7 @@ If you see `Error: Could not find or load main class`, the usual causes are a mi
 
 ### 3. How to use this repository without drowning
 
-Do not open 842 files and start reading. Use the map:
+Do not open 879 files and start reading. Use the map:
 
 1. **Pick one chapter.** Start at chapter 1 if you are new. Read the lesson first when one exists.
 2. **Run one file.** Change one value. Break it on purpose. Read the error. Fix it. That loop teaches more than passive reading.
@@ -355,7 +355,7 @@ Then open `http://localhost:8123/`. There is no build step. The site is plain HT
 
 ```text
 YL/
-├── src/                        # 842 chapter-organized Java files
+├── src/                        # 879 chapter-organized Java files
 │   ├── Exercise_01 … 43/       # Worked solutions and chapter demos
 │   ├── BookExercise/           # Additional examples from study sessions
 │   └── image/                  # Assets used by GUI exercises
@@ -381,14 +381,14 @@ The site has no framework and no bundler. That is deliberate: you can view sourc
 
 ## Release 1.2.0
 
-Everything in this repository is available as a tagged release:
+The latest tagged snapshot is available as release 1.2.0. The `master` branch now includes thirty-four additional exercises across Chapters 14, 15, 17, 18, and 21 (879 files) that are not in the 1.2.0 archives.
 
 | Asset | What it contains |
 | :--- | :--- |
 | `java-atlas-site-1.2.0.zip` | The complete static site, including posters and the demo GIF. |
 | `java-atlas-companion-1.2.0.zip` | README, license, changelog, and the 43 original companion lessons. |
 | `java-atlas-chapter-demos-1.2.0.zip` | The 24 focused `ChapterXX.java` demos for the demo-backed chapters. |
-| `java-atlas-exercise-solutions-1.2.0.zip` | All 842 chapter-organized Java files, including the 224 adapted exercise solutions. |
+| `java-atlas-exercise-solutions-1.2.0.zip` | All 842 chapter-organized Java files in the 1.2.0 snapshot, including the 224 adapted exercise solutions. |
 | `companion-examples-1.2.0.jar` | Compiled Java 17 examples and resources for the companion project. |
 | `SHA256SUMS` | Checksums for every asset. |
 
