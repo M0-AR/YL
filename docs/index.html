@@ -5,11 +5,11 @@
 <script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Java Atlas — The Interactive Companion to Introduction to Java Programming</title>
-<meta name="description" content="An interactive Java engineering atlas: 842 worked Java files, 24 original companion lessons, six live browser labs, and a 3D concept game. Explore algorithms, data structures, payroll logic, and the full 43-chapter map.">
+<meta name="description" content="An interactive Java engineering atlas: 842 worked Java files, 43 original companion lessons, six live browser labs, and a 3D concept game. Explore algorithms, data structures, payroll logic, and the full 43-chapter map.">
 <meta name="theme-color" content="#05070f">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Java Atlas — Learn Java by touching it">
-<meta property="og:description" content="842 worked Java files, 24 companion lessons, six live labs, and a 3D game that builds a neural network from what you learn.">
+<meta property="og:description" content="842 worked Java files, 43 companion lessons, six live labs, and a 3D game that builds a neural network from what you learn.">
 <meta property="og:image" content="assets/screenshots/hero.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
@@ -91,7 +91,7 @@
     <div class="hero-copy">
       <div class="hero-badge"><b>10TH EDITION</b> A complete, interactive companion — all 43 chapters mapped</div>
       <h1>Java, from<br><span class="grad">first line</span> to<br><span class="grad-warm">full system.</span></h1>
-      <p class="lead">One atlas for the entire journey: 842 worked Java files, 24 original companion lessons, six live browser labs, and a 3D game that wires every concept into a network you can see — and hear.</p>
+      <p class="lead">One atlas for the entire journey: 842 worked Java files, 43 original companion lessons, six live browser labs, and a 3D game that wires every concept into a network you can see — and hear.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#labs"><svg aria-hidden="true"><use href="#i-play"/></svg> Launch the live demo</a>
         <a class="btn btn-ghost" href="#beginner"><svg aria-hidden="true"><use href="#i-book"/></svg> Start from zero</a>
@@ -129,7 +129,7 @@
     <div class="stats reveal" aria-label="Repository statistics">
       <div class="stat"><b data-count="842">842</b><span>Java files in the repository</span></div>
       <div class="stat"><b data-count="43">43</b><span>chapters mapped end to end</span></div>
-      <div class="stat"><b data-count="24">24</b><span>original companion lessons</span></div>
+      <div class="stat"><b data-count="43">43</b><span>original companion lessons</span></div>
       <div class="stat"><b data-count="6">6</b><span>live interactive labs</span></div>
       <div class="stat"><b>0</b><span>installs to explore the site</span></div>
     </div>
@@ -235,7 +235,7 @@
     <div class="section-head reveal">
       <span class="eyebrow">The route</span>
       <h2>Five phases. No skipped steps.</h2>
-      <p>The repository follows a deliberate progression. Each phase adds one kind of power, and each chapter in the atlas tells you whether the code lives in this repository or in the original companion curriculum.</p>
+      <p>The repository follows a deliberate progression. Each phase adds one kind of power, and every chapter in the atlas connects the idea, the worked code, and the original companion lesson.</p>
     </div>
     <div class="path-grid">
       <a class="path-card reveal" href="#chapters">
@@ -277,13 +277,13 @@
     <div class="section-head reveal">
       <span class="eyebrow">The atlas</span>
       <h2>Every chapter, accounted for.</h2>
-      <p>Green means worked Java code is in the repository. Violet means the topic is covered by an original companion lesson, with runnable examples and practice. Nothing is a dead end.</p>
+      <p>Every chapter has worked Java code in the repository and an original companion lesson. Each lesson gives you a plain-language explanation, a worked example, a practice task, and a checkpoint, so the green and violet dots meet on every chapter. Nothing is a dead end.</p>
     </div>
     <div class="atlas reveal" id="atlas" role="list" aria-label="Chapter map"></div>
     <div class="atlas-legend reveal">
       <span><i></i> Worked code in <code>src/</code></span>
-      <span><i></i> Original companion lesson</span>
-      <span>24 companion lessons · 43 chapters with code · 43 total</span>
+      <span><i class="lesson"></i> Original companion lesson</span>
+      <span>43 chapters with code · 43 companion lessons · 43 total</span>
     </div>
   </div>
 </section>
@@ -335,8 +335,8 @@
       </article>
       <article class="feature reveal reveal-delay-1">
         <div class="icon"><svg aria-hidden="true"><use href="#i-book"/></svg></div>
-        <h3>24 original companion lessons</h3>
-        <p>Chapters that benefit from a guided walkthrough get a plain-language lesson, a worked example, a practice task, and a checkpoint. Written for this repository — no textbook text reproduced.</p>
+        <h3>43 original companion lessons</h3>
+        <p>Every chapter gets a plain-language lesson, a worked example, a practice task, and a checkpoint. Written for this repository — no textbook text reproduced.</p>
       </article>
       <article class="feature reveal reveal-delay-2">
         <div class="icon"><svg aria-hidden="true"><use href="#i-chart"/></svg></div>
@@ -616,25 +616,25 @@
 
   const chapters = [
     [1, "Introduction to Java", "companion", "https://github.com/M0-AR/YL/blob/master/companion/foundations.md#chapter-1-how-java-runs"],
-    [2, "Elementary Programming", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_02"],
-    [3, "Selections", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_03"],
-    [4, "Math, Characters, Strings", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_04"],
-    [5, "Loops", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_05"],
-    [6, "Methods", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_06"],
-    [7, "Single-Dimensional Arrays", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_07"],
-    [8, "Multidimensional Arrays", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_08"],
-    [9, "Objects and Classes", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_09"],
-    [10, "Thinking in Objects", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_10"],
-    [11, "Inheritance and Polymorphism", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_11"],
-    [12, "Exception Handling and I/O", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_12"],
-    [13, "Abstract Classes and Interfaces", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_13"],
-    [14, "JavaFX Basics", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_14"],
+    [2, "Elementary Programming", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-2-elementary-programming"],
+    [3, "Selections", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-3-selections"],
+    [4, "Math, Characters, Strings", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-4-math-characters-strings"],
+    [5, "Loops", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-5-loops"],
+    [6, "Methods", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-6-methods"],
+    [7, "Single-Dimensional Arrays", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-7-single-dimensional-arrays"],
+    [8, "Multidimensional Arrays", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-8-multidimensional-arrays"],
+    [9, "Objects and Classes", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-9-objects-and-classes"],
+    [10, "Thinking in Objects", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-10-thinking-in-objects"],
+    [11, "Inheritance and Polymorphism", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-11-inheritance-and-polymorphism"],
+    [12, "Exception Handling and I/O", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-12-exception-handling-and-text-io"],
+    [13, "Abstract Classes and Interfaces", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-13-abstract-classes-and-interfaces"],
+    [14, "JavaFX Basics", "companion", "https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-14-javafx-basics"],
     [15, "Events and Animation", "companion", "https://github.com/M0-AR/YL/blob/master/companion/foundations.md#chapter-15-events-and-animation"],
     [16, "JavaFX Controls and Media", "companion", "https://github.com/M0-AR/YL/blob/master/companion/foundations.md#chapter-16-controls-layout-and-media"],
-    [17, "Binary I/O", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_17"],
-    [18, "Recursion", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_18"],
-    [19, "Generics", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_19"],
-    [20, "Lists, Stacks, Queues", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_20"],
+    [17, "Binary I/O", "companion", "https://github.com/M0-AR/YL/blob/master/companion/io-generics-graphs.md#chapter-17-binary-io"],
+    [18, "Recursion", "companion", "https://github.com/M0-AR/YL/blob/master/companion/io-generics-graphs.md#chapter-18-recursion"],
+    [19, "Generics", "companion", "https://github.com/M0-AR/YL/blob/master/companion/io-generics-graphs.md#chapter-19-generics"],
+    [20, "Lists, Stacks, Queues", "companion", "https://github.com/M0-AR/YL/blob/master/companion/io-generics-graphs.md#chapter-20-lists-stacks-queues"],
     [21, "Sets and Maps", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-21-sets-and-maps"],
     [22, "Efficient Algorithms", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-22-efficient-algorithms"],
     [23, "Sorting", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-23-sorting"],
@@ -642,13 +642,13 @@
     [25, "Binary Search Trees", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-25-binary-search-trees"],
     [26, "AVL Trees", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-26-avl-trees"],
     [27, "Hashing", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-27-hashing"],
-    [28, "Graphs", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_28"],
+    [28, "Graphs", "companion", "https://github.com/M0-AR/YL/blob/master/companion/io-generics-graphs.md#chapter-28-graphs"],
     [29, "Weighted Graphs", "companion", "https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-29-weighted-graphs"],
     [30, "Multithreading", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-30-multithreading-and-parallelism"],
     [31, "Networking", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-31-networking"],
     [32, "JDBC", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-32-jdbc"],
     [33, "JavaServer Faces", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-33-javaserver-faces"],
-    [34, "Advanced GUI", "code", "https://github.com/M0-AR/YL/tree/master/src/Exercise_34"],
+    [34, "Advanced GUI", "companion", "https://github.com/M0-AR/YL/blob/master/companion/advanced-gui.md#chapter-34-advanced-gui"],
     [35, "Advanced Databases", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-35-advanced-database-programming"],
     [36, "Internationalization", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-36-internationalization"],
     [37, "Servlets", "companion", "https://github.com/M0-AR/YL/blob/master/companion/enterprise.md#chapter-37-servlets"],
@@ -662,7 +662,9 @@
 
   const atlas = $("#atlas");
   atlas.innerHTML = chapters.map((c) => {
-    return '<a class="chip" role="listitem" data-kind="' + c[2] + '" href="' + c[3] + '" target="_blank" rel="noopener" title="Chapter ' + c[0] + ': ' + c[1] + '"><b>CH ' + String(c[0]).padStart(2, "0") + '</b><span>' + c[1] + '</span><i aria-hidden="true"></i></a>';
+    const hasLesson = c[2] === "companion";
+    const label = "Chapter " + c[0] + ": " + c[1] + (hasLesson ? " — code + companion lesson" : " — code");
+    return '<a class="chip" role="listitem" data-kind="' + c[2] + '" href="' + c[3] + '" target="_blank" rel="noopener" title="' + label + '"><b>CH ' + String(c[0]).padStart(2, "0") + '</b><span>' + c[1] + '</span><i class="code" aria-hidden="true"></i>' + (hasLesson ? '<i class="lesson" aria-hidden="true"></i>' : '') + '</a>';
   }).join("");
 
   const tabs = $$(".lab-tab");

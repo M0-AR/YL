@@ -5,7 +5,7 @@
 ### From first line to full system — an interactive companion to all 43 chapters
 
 [![Live site](https://img.shields.io/badge/live-site-22d3ee?style=flat-square)](https://m0-ar.github.io/YL/)
-[![Release](https://img.shields.io/github/v/release/M0-AR/YL?style=flat-square&color=8b5cf6)](https://github.com/M0-AR/YL/releases/tag/v1.1.0)
+[![Release](https://img.shields.io/github/v/release/M0-AR/YL?style=flat-square&color=8b5cf6)](https://github.com/M0-AR/YL/releases/tag/v1.2.0)
 [![License: MIT](https://img.shields.io/badge/license-MIT-34d399?style=flat-square)](LICENSE)
 [![Java 17](https://img.shields.io/badge/Java-17-fbbf24?style=flat-square)](companion/java/pom.xml)
 [![Chapters](https://img.shields.io/badge/chapters-43-8b5cf6?style=flat-square)](#the-43-chapter-atlas)
@@ -13,7 +13,7 @@
 
 **[Open the live atlas](https://m0-ar.github.io/YL/)** ·
 **[Preview page](https://m0-ar.github.io/YL/preview.html)** ·
-**[Release v1.1.0](https://github.com/M0-AR/YL/releases/tag/v1.1.0)** ·
+**[Release v1.2.0](https://github.com/M0-AR/YL/releases/tag/v1.2.0)** ·
 **[Beginner guide](#-beginner-guide--read-this-and-you-are-a-professional)** ·
 **[Companion lessons](companion/README.md)** ·
 **[All labs](https://m0-ar.github.io/YL/labs.html)**
@@ -30,8 +30,8 @@ Most exercise repositories are a pile of files with a chapter number on top. Thi
 
 Java Atlas is an independent study companion built around the topic sequence of **Y. Daniel Liang's _Introduction to Java Programming, Comprehensive Version_ (10th Edition)**. It brings three kinds of material into one place:
 
-- **842 Java files** organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and each lesson chapter includes a focused `ChapterXX.java` demo.
-- **24 original lessons** that explain the chapters where a guided walkthrough helps most. Each lesson explains the idea in plain language, shows a worked example, and ends with a practice task and a checkpoint.
+- **842 Java files** organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and 24 chapters include a focused `ChapterXX.java` demo.
+- **43 original lessons** — one for every chapter. Each lesson explains the idea in plain language, shows a worked example, and ends with a practice task and a checkpoint.
 - **Six interactive browser labs** — sorting, graph traversal, data structures, payroll, a quiz, and a 3D game — that run with no installation and make abstract ideas visible.
 
 The result is a complete 43-chapter route through Java: read the idea, run the code, move the controls, break the algorithm, and watch what happens.
@@ -101,36 +101,36 @@ These are teaching implementations: readable first, optimized second. Each one h
 
 ## The 43-chapter atlas
 
-**Code** means the chapter has worked files under `src/`, including a runnable `ChapterXX.java` demo for every lesson chapter. **Lesson** means the chapter also has an original companion lesson with an explanation, example, practice task, and checkpoint. Every chapter now has code; 24 also have a lesson.
+**Code** means the chapter has worked files under `src/`, including a runnable `ChapterXX.java` demo for the 24 demo-backed chapters. **Lesson** means the chapter also has an original companion lesson with an explanation, example, practice task, and checkpoint. Every chapter now has both code and a lesson.
 
 ### Foundations — chapters 1–8
 
 | Ch | Topic | Where to go |
 | :---: | :--- | :--- |
 | 01 | Introduction to Java | [Lesson](companion/foundations.md#chapter-1-how-java-runs) · [Demo](src/Exercise_01/Chapter01.java) |
-| 02 | Elementary Programming | [Code](src/Exercise_02) |
-| 03 | Selections | [Code](src/Exercise_03) |
-| 04 | Math, Characters, and Strings | [Code](src/Exercise_04) |
-| 05 | Loops | [Code](src/Exercise_05) |
-| 06 | Methods | [Code](src/Exercise_06) |
-| 07 | Single-Dimensional Arrays | [Code](src/Exercise_07) |
-| 08 | Multidimensional Arrays | [Code](src/Exercise_08) |
+| 02 | Elementary Programming | [Lesson](companion/core-language.md#chapter-2-elementary-programming) · [Code](src/Exercise_02) |
+| 03 | Selections | [Lesson](companion/core-language.md#chapter-3-selections) · [Code](src/Exercise_03) |
+| 04 | Math, Characters, and Strings | [Lesson](companion/core-language.md#chapter-4-math-characters-strings) · [Code](src/Exercise_04) |
+| 05 | Loops | [Lesson](companion/core-language.md#chapter-5-loops) · [Code](src/Exercise_05) |
+| 06 | Methods | [Lesson](companion/core-language.md#chapter-6-methods) · [Code](src/Exercise_06) |
+| 07 | Single-Dimensional Arrays | [Lesson](companion/core-language.md#chapter-7-single-dimensional-arrays) · [Code](src/Exercise_07) |
+| 08 | Multidimensional Arrays | [Lesson](companion/core-language.md#chapter-8-multidimensional-arrays) · [Code](src/Exercise_08) |
 
 ### Object-oriented design — chapters 9–13
 
 | Ch | Topic | Where to go |
 | :---: | :--- | :--- |
-| 09 | Objects and Classes | [Code](src/Exercise_09) |
-| 10 | Thinking in Objects | [Code](src/Exercise_10) |
-| 11 | Inheritance and Polymorphism | [Code](src/Exercise_11) |
-| 12 | Exception Handling and Text I/O | [Code](src/Exercise_12) |
-| 13 | Abstract Classes and Interfaces | [Code](src/Exercise_13) |
+| 09 | Objects and Classes | [Lesson](companion/core-language.md#chapter-9-objects-and-classes) · [Code](src/Exercise_09) |
+| 10 | Thinking in Objects | [Lesson](companion/core-language.md#chapter-10-thinking-in-objects) · [Code](src/Exercise_10) |
+| 11 | Inheritance and Polymorphism | [Lesson](companion/core-language.md#chapter-11-inheritance-and-polymorphism) · [Code](src/Exercise_11) |
+| 12 | Exception Handling and Text I/O | [Lesson](companion/core-language.md#chapter-12-exception-handling-and-text-io) · [Code](src/Exercise_12) |
+| 13 | Abstract Classes and Interfaces | [Lesson](companion/core-language.md#chapter-13-abstract-classes-and-interfaces) · [Code](src/Exercise_13) |
 
 ### Interfaces and interaction — chapters 14–16
 
 | Ch | Topic | Where to go |
 | :---: | :--- | :--- |
-| 14 | JavaFX Basics | [Code](src/Exercise_14) |
+| 14 | JavaFX Basics | [Lesson](companion/core-language.md#chapter-14-javafx-basics) · [Code](src/Exercise_14) |
 | 15 | Events and Animation | [Lesson](companion/foundations.md#chapter-15-events-and-animation) · [Demo](src/Exercise_15/Chapter15.java) |
 | 16 | JavaFX Controls, Layout, and Media | [Lesson](companion/foundations.md#chapter-16-controls-layout-and-media) · [Demo](src/Exercise_16/Chapter16.java) |
 
@@ -138,10 +138,10 @@ These are teaching implementations: readable first, optimized second. Each one h
 
 | Ch | Topic | Where to go |
 | :---: | :--- | :--- |
-| 17 | Binary I/O | [Code](src/Exercise_17) |
-| 18 | Recursion | [Code](src/Exercise_18) |
-| 19 | Generics | [Code](src/Exercise_19) |
-| 20 | Lists, Stacks, Queues, and Priority Queues | [Code](src/Exercise_20) |
+| 17 | Binary I/O | [Lesson](companion/io-generics-graphs.md#chapter-17-binary-io) · [Code](src/Exercise_17) |
+| 18 | Recursion | [Lesson](companion/io-generics-graphs.md#chapter-18-recursion) · [Code](src/Exercise_18) |
+| 19 | Generics | [Lesson](companion/io-generics-graphs.md#chapter-19-generics) · [Code](src/Exercise_19) |
+| 20 | Lists, Stacks, Queues, and Priority Queues | [Lesson](companion/io-generics-graphs.md#chapter-20-lists-stacks-queues) · [Code](src/Exercise_20) |
 | 21 | Sets and Maps | [Lesson](companion/collections-algorithms.md#chapter-21-sets-and-maps) · [Demo](src/Exercise_21/Chapter21.java) |
 | 22 | Efficient Algorithms | [Lesson](companion/collections-algorithms.md#chapter-22-efficient-algorithms) · [Demo](src/Exercise_22/Chapter22.java) |
 | 23 | Sorting | [Lesson](companion/collections-algorithms.md#chapter-23-sorting) · [Demo](src/Exercise_23/Chapter23.java) |
@@ -149,7 +149,7 @@ These are teaching implementations: readable first, optimized second. Each one h
 | 25 | Binary Search Trees | [Lesson](companion/collections-algorithms.md#chapter-25-binary-search-trees) · [Demo](src/Exercise_25/Chapter25.java) |
 | 26 | AVL Trees | [Lesson](companion/collections-algorithms.md#chapter-26-avl-trees) · [Demo](src/Exercise_26/Chapter26.java) |
 | 27 | Hashing | [Lesson](companion/collections-algorithms.md#chapter-27-hashing) · [Demo](src/Exercise_27/Chapter27.java) |
-| 28 | Graphs | [Code](src/Exercise_28) |
+| 28 | Graphs | [Lesson](companion/io-generics-graphs.md#chapter-28-graphs) · [Code](src/Exercise_28) |
 | 29 | Weighted Graphs | [Lesson](companion/collections-algorithms.md#chapter-29-weighted-graphs) · [Demo](src/Exercise_29/Chapter29.java) |
 
 ### Systems and professional practice — chapters 30–43
@@ -160,7 +160,7 @@ These are teaching implementations: readable first, optimized second. Each one h
 | 31 | Networking | [Lesson](companion/enterprise.md#chapter-31-networking) · [Demo](src/Exercise_31/Chapter31.java) |
 | 32 | JDBC | [Lesson](companion/enterprise.md#chapter-32-jdbc) · [Demo](src/Exercise_32/Chapter32.java) |
 | 33 | JavaServer Faces | [Lesson](companion/enterprise.md#chapter-33-javaserver-faces) · [Demo](src/Exercise_33/Chapter33.java) |
-| 34 | Advanced GUI | [Code](src/Exercise_34) |
+| 34 | Advanced GUI | [Lesson](companion/advanced-gui.md#chapter-34-advanced-gui) · [Code](src/Exercise_34) |
 | 35 | Advanced Database Programming | [Lesson](companion/enterprise.md#chapter-35-advanced-database-programming) · [Demo](src/Exercise_35/Chapter35.java) |
 | 36 | Internationalization | [Lesson](companion/enterprise.md#chapter-36-internationalization) · [Demo](src/Exercise_36/Chapter36.java) |
 | 37 | Servlets | [Lesson](companion/enterprise.md#chapter-37-servlets) · [Demo](src/Exercise_37/Chapter37.java) |
@@ -360,9 +360,12 @@ YL/
 │   ├── BookExercise/           # Additional examples from study sessions
 │   └── image/                  # Assets used by GUI exercises
 ├── companion/
-│   ├── README.md               # Curriculum for the 24 original lessons
+│   ├── README.md               # Curriculum for the 43 original lessons
+│   ├── core-language.md        # Chapters 2–14
 │   ├── foundations.md          # Chapters 1, 15, 16
+│   ├── io-generics-graphs.md   # Chapters 17–20, 28
 │   ├── collections-algorithms.md
+│   ├── advanced-gui.md         # Chapter 34
 │   ├── enterprise.md
 │   ├── advanced-trees-testing.md
 │   └── java/                   # Java 17 Maven project with JUnit 5 tests
@@ -376,20 +379,20 @@ The site has no framework and no bundler. That is deliberate: you can view sourc
 
 ---
 
-## Release 1.1.0
+## Release 1.2.0
 
 Everything in this repository is available as a tagged release:
 
 | Asset | What it contains |
 | :--- | :--- |
-| `java-atlas-site-1.1.0.zip` | The complete static site, including posters and the demo GIF. |
-| `java-atlas-companion-1.1.0.zip` | README, license, changelog, and the 24 original companion lessons. |
-| `java-atlas-chapter-demos-1.1.0.zip` | The 24 focused `ChapterXX.java` demos for lesson chapters. |
-| `java-atlas-exercise-solutions-1.1.0.zip` | All 842 chapter-organized Java files, including the 224 adapted exercise solutions. |
-| `companion-examples-1.1.0.jar` | Compiled Java 17 examples and resources for the companion project. |
+| `java-atlas-site-1.2.0.zip` | The complete static site, including posters and the demo GIF. |
+| `java-atlas-companion-1.2.0.zip` | README, license, changelog, and the 43 original companion lessons. |
+| `java-atlas-chapter-demos-1.2.0.zip` | The 24 focused `ChapterXX.java` demos for the demo-backed chapters. |
+| `java-atlas-exercise-solutions-1.2.0.zip` | All 842 chapter-organized Java files, including the 224 adapted exercise solutions. |
+| `companion-examples-1.2.0.jar` | Compiled Java 17 examples and resources for the companion project. |
 | `SHA256SUMS` | Checksums for every asset. |
 
-**[Download release 1.1.0](https://github.com/M0-AR/YL/releases/tag/v1.1.0)** · **[View all releases](https://github.com/M0-AR/YL/releases)**
+**[Download release 1.2.0](https://github.com/M0-AR/YL/releases/tag/v1.2.0)** · **[View all releases](https://github.com/M0-AR/YL/releases)**
 
 ---
 
@@ -427,7 +430,7 @@ The site itself is built for real use:
 | **Student** | A chapter map, runnable examples, and labs that make the lecture concrete. |
 | **Career switcher** | A ten-week route with checkpoints, not a 900-page reading list. |
 | **Working engineer** | Small, readable reference implementations of trees, hashing, sorting, and shortest paths. |
-| **Teacher** | Six ready-to-project labs and 24 original lessons that can be assigned without copying textbook text. |
+| **Teacher** | Six ready-to-project labs and 43 original lessons that can be assigned without copying textbook text. |
 | **Reviewer or researcher** | A reproducible teaching artifact with explicit provenance, tests, and a documented copyright boundary. |
 | **Business reader** | A concrete example of progressive tax, payroll deductions, and gross-to-net logic you can inspect. |
 

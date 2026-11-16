@@ -1115,7 +1115,8 @@ pre {
   box-shadow: 0 0 8px var(--green);
 }
 
-.chip[data-kind="companion"] i {
+.chip i.lesson {
+  right: 18px;
   background: var(--violet);
   box-shadow: 0 0 8px var(--violet);
 }
@@ -1142,7 +1143,7 @@ pre {
   background: var(--green);
 }
 
-.atlas-legend span:last-child i {
+.atlas-legend i.lesson {
   background: var(--violet);
 }
 

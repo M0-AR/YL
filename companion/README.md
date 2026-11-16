@@ -1,15 +1,18 @@
 # Companion Curriculum
 
-This folder is the original teaching companion for the 24 chapters that need a guided lesson alongside the code in `src/`. It is written for this repository. It does not reproduce chapter text, figures, or exercise statements from *Introduction to Java Programming*.
+This folder is the original teaching companion for all 43 chapters alongside the code in `src/`. It is written for this repository. It does not reproduce chapter text, figures, or exercise statements from *Introduction to Java Programming*.
 
-The goal is simple: every chapter in the 43-chapter map should lead somewhere useful. Sometimes that is 842 worked files. Sometimes it is a compact lesson, a runnable example, a practice task, and a checkpoint that tells you whether the idea actually landed.
+The goal is simple: every chapter in the 43-chapter map should lead somewhere useful. Every chapter now has both worked code and a compact lesson, a runnable example, a practice task, and a checkpoint that tells you whether the idea actually landed.
 
-## The four volumes
+## The seven volumes
 
 | Volume | Chapters | What it covers |
 | --- | --- | --- |
+| [Core Language](core-language.md) | 2–14 | Values, selections, strings, loops, methods, arrays, objects, inheritance, exceptions, abstract types, interfaces, and JavaFX basics |
 | [Foundations](foundations.md) | 1, 15, 16 | How Java runs, event-driven programming, animation, controls, layout, and media |
+| [I/O, Generics, and Graphs](io-generics-graphs.md) | 17–20, 28 | Binary I/O, recursion, generics, lists, stacks, queues, priority queues, and graph traversal |
 | [Collections and Algorithms](collections-algorithms.md) | 21–27, 29, 43 | Sets, maps, algorithm design, sorting, custom collections, BSTs, AVL trees, hashing, weighted graphs, and collection streams |
+| [Advanced GUI](advanced-gui.md) | 34 | Tables, menus, layout, bindings, dialogs, FXML, and the separation between view and model |
 | [Enterprise Java](enterprise.md) | 30–33, 35–39 | Threads, sockets, JDBC, JSF, advanced databases, internationalization, servlets, JSP, web services |
 | [Advanced Trees and Testing](advanced-trees-testing.md) | 40–42 | 2-4 trees, B-trees, red-black trees, and JUnit |
 
@@ -23,7 +26,7 @@ Each lesson follows the same rhythm:
 4. **Practice** — one change you can make and one question you can answer.
 5. **Checkpoint** — you are ready to move on when you can explain the answer without looking.
 
-Do not read four volumes in one day. Read one lesson, run one example, then close the tab and rebuild the idea from memory. That last step is where learning happens.
+Do not read seven volumes in one day. Read one lesson, run one example, then close the tab and rebuild the idea from memory. That last step is where learning happens.
 
 ## Runnable code
 

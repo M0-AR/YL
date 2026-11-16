@@ -145,32 +145,36 @@ def main() -> int:
             check_target(page, link)
 
     index = DOCS / "index.html"
-    chapter_rows = re.findall(
-        r'\[\d+,\s*"[^"]+",\s*"(?:code|companion)",\s*"([^"]+)"\]',
+    chapter_entries = re.findall(
+        r'\[\d+,\s*"[^"]+",\s*"(code|companion)",\s*"([^"]+)"\]',
         index.read_text(encoding="utf-8"),
     )
-    if len(chapter_rows) != 43:
-        problems.append(f"chapter map has {len(chapter_rows)} rows, expected 43")
-    for link in chapter_rows:
+    if len(chapter_entries) != 43:
+        problems.append(f"chapter map has {len(chapter_entries)} rows, expected 43")
+    for kind, link in chapter_entries:
         check_target(index, link)
+        if kind != "companion":
+            problems.append(f"chapter map entry is missing a companion lesson: {link}")
 
     companion_anchors = 0
     for markdown in (ROOT / "companion").glob("*.md"):
         companion_anchors += len(re.findall(r'<a\s+id="chapter-', markdown.read_text(encoding="utf-8")))
-    if companion_anchors != 24:
-        problems.append(f"found {companion_anchors} companion chapter anchors, expected 24")
+    if companion_anchors != 43:
+        problems.append(f"found {companion_anchors} companion chapter anchors, expected 43")
 
-    lesson_chapters = (1, 15, 16, *range(21, 28), *range(29, 34), *range(35, 44))
+    demo_chapters = (1, 15, 16, *range(21, 28), *range(29, 34), *range(35, 44))
     for number in range(1, 44):
         exercise = ROOT / "src" / f"Exercise_{number:02d}"
         if not exercise.is_dir() or not list(exercise.rglob("*.java")):
             problems.append(f"chapter {number:02d} has no Java source")
-        if number in lesson_chapters:
+        if number in demo_chapters:
             demo = exercise / f"Chapter{number:02d}.java"
             if not demo.exists():
                 problems.append(f"chapter {number:02d} is missing {demo.relative_to(ROOT)}")
 
     html = index.read_text(encoding="utf-8")
+    if 'i class="code"' not in html or 'i class="lesson"' not in html:
+        problems.append("chapter map is missing a code or lesson dot")
     java_files = len(list((ROOT / "src").rglob("*.java")))
     claimed_files = re.search(r"(\d+)\s+worked Java files", html)
     if claimed_files and int(claimed_files.group(1)) != java_files:
@@ -196,7 +200,7 @@ def main() -> int:
 
     print(
         f"Checked {len(pages)} pages, {checked_links} local links, "
-        f"{checked_fragments} fragments, {len(chapter_rows)} chapter rows, "
+        f"{checked_fragments} fragments, {len(chapter_entries)} chapter rows, "
         f"{companion_anchors} companion lessons, {java_files} Java files."
     )
     if problems:

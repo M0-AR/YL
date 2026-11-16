@@ -10,6 +10,25 @@ All notable changes to this project are documented here. The format follows [Kee
 - A printable one-page curriculum map.
 - More keyboard and screen-reader checks for the labs.
 
+## [1.2.0] — 2026-11-16
+
+### Added
+
+- 19 new original companion lessons covering chapters 2–14, 17–20, 28, and 34.
+- Three new companion volumes: `core-language.md`, `io-generics-graphs.md`, and `advanced-gui.md`.
+- The chapter map now renders both a code dot and a lesson dot for every chapter.
+
+### Changed
+
+- Expanded the companion curriculum from 24 lessons in four volumes to 43 lessons in seven volumes.
+- Updated the README, site statistics, curriculum tree, and integrity checker to the 43-lesson curriculum.
+- Prepared the 1.2.0 release metadata and assets.
+
+### Known gaps
+
+- Exercise coverage remains **568 of 825 public base exercises (68.8%)**; 257 base and 201 Extra variants remain missing.
+- Chapters 31–43 still have no public exercise dropdown, so their official exercise counts remain unverified.
+
 ## [1.1.0] — 2026-11-16
 
 ### Added
@@ -75,7 +94,8 @@ All notable changes to this project are documented here. The format follows [Kee
 - Added missing color tokens used by the quiz and payroll labs.
 - Made the game's hidden overlays stay out of the accessibility tree.
 
-[Unreleased]: https://github.com/M0-AR/YL/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/M0-AR/YL/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/M0-AR/YL/releases/tag/v1.2.0
 [1.1.0]: https://github.com/M0-AR/YL/releases/tag/v1.1.0
 [1.0.2]: https://github.com/M0-AR/YL/releases/tag/v1.0.2
 [1.0.1]: https://github.com/M0-AR/YL/releases/tag/v1.0.1
