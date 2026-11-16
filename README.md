@@ -5,7 +5,7 @@
 ### From first line to full system — an interactive companion to all 43 chapters
 
 [![Live site](https://img.shields.io/badge/live-site-22d3ee?style=flat-square)](https://m0-ar.github.io/YL/)
-[![Release](https://img.shields.io/github/v/release/M0-AR/YL?style=flat-square&color=8b5cf6)](https://github.com/M0-AR/YL/releases/tag/v1.0.2)
+[![Release](https://img.shields.io/github/v/release/M0-AR/YL?style=flat-square&color=8b5cf6)](https://github.com/M0-AR/YL/releases/tag/v1.1.0)
 [![License: MIT](https://img.shields.io/badge/license-MIT-34d399?style=flat-square)](LICENSE)
 [![Java 17](https://img.shields.io/badge/Java-17-fbbf24?style=flat-square)](companion/java/pom.xml)
 [![Chapters](https://img.shields.io/badge/chapters-43-8b5cf6?style=flat-square)](#the-43-chapter-atlas)
@@ -13,7 +13,7 @@
 
 **[Open the live atlas](https://m0-ar.github.io/YL/)** ·
 **[Preview page](https://m0-ar.github.io/YL/preview.html)** ·
-**[Release v1.0.2](https://github.com/M0-AR/YL/releases/tag/v1.0.2)** ·
+**[Release v1.1.0](https://github.com/M0-AR/YL/releases/tag/v1.1.0)** ·
 **[Beginner guide](#-beginner-guide--read-this-and-you-are-a-professional)** ·
 **[Companion lessons](companion/README.md)** ·
 **[All labs](https://m0-ar.github.io/YL/labs.html)**
@@ -30,13 +30,13 @@ Most exercise repositories are a pile of files with a chapter number on top. Thi
 
 Java Atlas is an independent study companion built around the topic sequence of **Y. Daniel Liang's _Introduction to Java Programming, Comprehensive Version_ (10th Edition)**. It brings three kinds of material into one place:
 
-- **463 Java files** organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and each lesson chapter includes a focused `ChapterXX.java` demo.
+- **842 Java files** organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and each lesson chapter includes a focused `ChapterXX.java` demo.
 - **24 original lessons** that explain the chapters where a guided walkthrough helps most. Each lesson explains the idea in plain language, shows a worked example, and ends with a practice task and a checkpoint.
 - **Six interactive browser labs** — sorting, graph traversal, data structures, payroll, a quiz, and a 3D game — that run with no installation and make abstract ideas visible.
 
 The result is a complete 43-chapter route through Java: read the idea, run the code, move the controls, break the algorithm, and watch what happens.
 
-Exercise-level coverage is audited separately: this is a selective exercise companion, not a complete solution manual. The official CheckExercise lists **1,026 exercise variants for chapters 1–30**; **344 base exercises** have code here. See the **[Exercise Coverage Audit](EXERCISE-COVERAGE.md)** for the verified chapter-by-chapter numbers, including the 481 missing base exercises and 201 missing `Extra` variants.
+Exercise-level coverage is audited separately: this is a selective exercise companion, not a complete solution manual. The official CheckExercise lists **1,026 exercise variants for chapters 1–30**; **568 base exercises** have code here. See the **[Exercise Coverage Audit](EXERCISE-COVERAGE.md)** for the verified chapter-by-chapter numbers, including the 257 missing base exercises and 201 missing `Extra` variants.
 
 ### What this repository is not
 
@@ -233,7 +233,7 @@ If you see `Error: Could not find or load main class`, the usual causes are a mi
 
 ### 3. How to use this repository without drowning
 
-Do not open 463 files and start reading. Use the map:
+Do not open 842 files and start reading. Use the map:
 
 1. **Pick one chapter.** Start at chapter 1 if you are new. Read the lesson first when one exists.
 2. **Run one file.** Change one value. Break it on purpose. Read the error. Fix it. That loop teaches more than passive reading.
@@ -355,7 +355,7 @@ Then open `http://localhost:8123/`. There is no build step. The site is plain HT
 
 ```text
 YL/
-├── src/                        # 463 chapter-organized Java files
+├── src/                        # 842 chapter-organized Java files
 │   ├── Exercise_01 … 43/       # Worked solutions and chapter demos
 │   ├── BookExercise/           # Additional examples from study sessions
 │   └── image/                  # Assets used by GUI exercises
@@ -376,19 +376,20 @@ The site has no framework and no bundler. That is deliberate: you can view sourc
 
 ---
 
-## Release 1.0.2
+## Release 1.1.0
 
 Everything in this repository is available as a tagged release:
 
 | Asset | What it contains |
 | :--- | :--- |
-| `java-atlas-site-1.0.2.zip` | The complete static site, including posters and the demo GIF. |
-| `java-atlas-companion-1.0.2.zip` | README, license, changelog, and the 24 original companion lessons. |
-| `java-atlas-chapter-demos-1.0.2.zip` | The 24 focused `ChapterXX.java` demos for lesson chapters. |
-| `companion-examples-1.0.2.jar` | Compiled Java 17 examples and resources for the companion project. |
+| `java-atlas-site-1.1.0.zip` | The complete static site, including posters and the demo GIF. |
+| `java-atlas-companion-1.1.0.zip` | README, license, changelog, and the 24 original companion lessons. |
+| `java-atlas-chapter-demos-1.1.0.zip` | The 24 focused `ChapterXX.java` demos for lesson chapters. |
+| `java-atlas-exercise-solutions-1.1.0.zip` | All 842 chapter-organized Java files, including the 224 adapted exercise solutions. |
+| `companion-examples-1.1.0.jar` | Compiled Java 17 examples and resources for the companion project. |
 | `SHA256SUMS` | Checksums for every asset. |
 
-**[Download release 1.0.2](https://github.com/M0-AR/YL/releases/tag/v1.0.2)** · **[View all releases](https://github.com/M0-AR/YL/releases)**
+**[Download release 1.1.0](https://github.com/M0-AR/YL/releases/tag/v1.1.0)** · **[View all releases](https://github.com/M0-AR/YL/releases)**
 
 ---
 

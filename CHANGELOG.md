@@ -10,6 +10,25 @@ All notable changes to this project are documented here. The format follows [Kee
 - A printable one-page curriculum map.
 - More keyboard and screen-reader checks for the labs.
 
+## [1.1.0] — 2026-11-16
+
+### Added
+
+- 224 exercise solutions adapted from MIT-licensed reference repositories: 222 from `jsquared21/Intro-to-Java-Programming` and 2 from `chill4Eng2Dev/IntroToJava`.
+- `THIRD_PARTY_NOTICES.md` with both upstream MIT notices.
+- Repaired 13 previously empty or incomplete exercises, including ISBN-10, monetary units, execution timing, the bank-failure simulation, polygon sub-areas, the string split method, the container, the smiley face, and the randomized capitals quiz.
+
+### Changed
+
+- Increased the chapter code collection to **842 Java files**.
+- Updated the exercise audit to **568 of 825 public base exercises (68.8%)** and **55.4%** of all 1,026 public variants; chapters 1–13 now cover every base exercise.
+- Updated the README, site, companion curriculum, checker expectations, and release metadata for 1.1.0.
+
+### Known gaps
+
+- **257 base exercises and 201 Extra variants** remain missing for chapters 1–30.
+- Chapters 31–43 still have no public exercise dropdown, so their official exercise counts remain unverified.
+
 ## [1.0.2] — 2026-11-16
 
 ### Added
@@ -56,7 +75,8 @@ All notable changes to this project are documented here. The format follows [Kee
 - Added missing color tokens used by the quiz and payroll labs.
 - Made the game's hidden overlays stay out of the accessibility tree.
 
-[Unreleased]: https://github.com/M0-AR/YL/compare/v1.0.2...HEAD
+[Unreleased]: https://github.com/M0-AR/YL/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/M0-AR/YL/releases/tag/v1.1.0
 [1.0.2]: https://github.com/M0-AR/YL/releases/tag/v1.0.2
 [1.0.1]: https://github.com/M0-AR/YL/releases/tag/v1.0.1
 [1.0.0]: https://github.com/M0-AR/YL/releases/tag/v1.0.0

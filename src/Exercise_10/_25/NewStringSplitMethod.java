@@ -1,45 +1,52 @@
 package Exercise_10._25;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-// TODO: not done yet.
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class NewStringSplitMethod {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(split("ab#12#453", "#")));   // ["ab", "#", "12", "#", "453"]
-        System.out.println(Arrays.toString(split("a?b?gf#e", "[?#]"))); // ["a", "?", "b", "?", "gf", "#", "e"]
+        System.out.println(Arrays.toString(split("ab#12#453", "#")));
+        System.out.println(Arrays.toString(split("a?b?gf#e", "[?#]")));
     }
 
     public static String[] split(String s, String regex) {
-        String[] result = new String[s.length()];
-        Arrays.fill(result, "");
+        Set<Character> delimiters = new HashSet<>();
 
-        char[] ch = new char[regex.length()];
-        for (int i = 0, j = 0; i < regex.length(); i++) {
-            if (regex.charAt(i) == '[' || regex.charAt(i) == ']') continue;
-            ch[j++] = regex.charAt(i);
-        }
-
-        if (regex.length() == 1) {
-            ch[0] = regex.charAt(0);
-        }
-
-        int k = 0;
-        boolean breakAllLoops = false;
-        for (int i = 0; i < s.length(); i++) { // Iterate 'i' throw regex characters.
-            for (int j = 0; j < s.length(); j++) {
-                while (!breakAllLoops) {
-                    if (s.charAt(k) == ch[i]) {
-                        result[++j] = s.charAt(k++) + "";
-                        j++;
-                        break;
-                    }
-                    result[j] += s.charAt(k++);
-                    if (k == s.length()) breakAllLoops = true;
-                }
-                if (breakAllLoops) break;
+        if (regex.length() >= 2
+                && regex.charAt(0) == '['
+                && regex.charAt(regex.length() - 1) == ']') {
+            for (int i = 1; i < regex.length() - 1; i++) {
+                delimiters.add(regex.charAt(i));
             }
-            if (breakAllLoops) break;
+        } else {
+            for (int i = 0; i < regex.length(); i++) {
+                delimiters.add(regex.charAt(i));
+            }
         }
 
-        return null;
+        List<String> parts = new ArrayList<>();
+        StringBuilder current = new StringBuilder();
+
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (delimiters.contains(ch)) {
+                if (current.length() > 0) {
+                    parts.add(current.toString());
+                    current.setLength(0);
+                }
+                parts.add(String.valueOf(ch));
+            } else {
+                current.append(ch);
+            }
+        }
+
+        if (current.length() > 0) {
+            parts.add(current.toString());
+        }
+
+        return parts.toArray(new String[0]);
     }
 }

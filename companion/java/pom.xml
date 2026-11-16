@@ -6,7 +6,7 @@
 
     <groupId>dev.javaatlas</groupId>
     <artifactId>companion-examples</artifactId>
-    <version>1.0.2</version>
+    <version>1.1.0</version>
     <name>Java Atlas Companion Examples</name>
     <description>Self-contained Java 17 examples and tests for the Java Atlas companion curriculum.</description>
 

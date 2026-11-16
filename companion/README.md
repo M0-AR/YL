@@ -2,7 +2,7 @@
 
 This folder is the original teaching companion for the 24 chapters that need a guided lesson alongside the code in `src/`. It is written for this repository. It does not reproduce chapter text, figures, or exercise statements from *Introduction to Java Programming*.
 
-The goal is simple: every chapter in the 43-chapter map should lead somewhere useful. Sometimes that is 463 worked files. Sometimes it is a compact lesson, a runnable example, a practice task, and a checkpoint that tells you whether the idea actually landed.
+The goal is simple: every chapter in the 43-chapter map should lead somewhere useful. Sometimes that is 842 worked files. Sometimes it is a compact lesson, a runnable example, a practice task, and a checkpoint that tells you whether the idea actually landed.
 
 ## The four volumes
 

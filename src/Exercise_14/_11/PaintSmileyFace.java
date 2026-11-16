@@ -1,8 +1,5 @@
 package Exercise_14._11;
-/*********************************************************************************
- * (Paint a smiley face) Write a program that paints a smiley face, as shown in   *
- * Figure 14.46a.                                                                 *
- *********************************************************************************/
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -23,7 +20,7 @@ public class PaintSmileyFace extends Application {
 
         // Create a pane
         Pane pane = new Pane(  );
-        stackPane2.setPadding(new Insets(40,40,40,40)); // todo drive debugging and see for what ...
+        stackPane2.setPadding(new Insets(40, 40, 40, 40));
 
 
         // create a circle and place it in a stack pane
@@ -117,5 +114,8 @@ public class PaintSmileyFace extends Application {
         return c;
     }
 
+    public static void main(String[] args) {
+        launch(args);
+    }
 
 }

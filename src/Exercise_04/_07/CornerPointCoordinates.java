@@ -1,19 +1,22 @@
 package Exercise_04._07;
 
+import java.util.Scanner;
+
 public class CornerPointCoordinates {
-    public static void main(String[] args) { //TODO need con
-        double perimeter = 100.52;
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        // Prompt the user to enter the radius of the bounding circle
-        System.out.print("The radius of the bounding circle: ");
+        System.out.print("Enter the radius of the bounding circle: ");
+        double radius = input.nextDouble();
 
-//        https://math.stackexchange.com/questions/1990504/how-to-find-the-coordinates-of-the-vertices-of-a-pentagon-centered-at-the-origin
-        // Compute the five angle of pentagon
-        double angleB = 90 - (360 / 5);
-        double angleC = angleB - 72;
-        double angleE = 90 - (-360 / 5);
-        double lengthOfSide = perimeter / 5;
+        System.out.println("The coordinates of five points on the pentagon are");
+        for (int i = 0; i < 5; i++) {
+            double angle = Math.toRadians(90 + i * 72);
+            double x = radius * Math.cos(angle);
+            double y = radius * Math.sin(angle);
+            System.out.printf("(%.2f, %.2f)%n", x, y);
+        }
 
-
+        input.close();
     }
 }
