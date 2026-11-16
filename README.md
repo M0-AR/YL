@@ -2,18 +2,18 @@
 
 # Java Atlas
 
-### From first line to full system — an interactive companion to all 42 chapters
+### From first line to full system — an interactive companion to all 43 chapters
 
 [![Live site](https://img.shields.io/badge/live-site-22d3ee?style=flat-square)](https://m0-ar.github.io/YL/)
-[![Release](https://img.shields.io/github/v/release/M0-AR/YL?style=flat-square&color=8b5cf6)](https://github.com/M0-AR/YL/releases/tag/v1.0.1)
+[![Release](https://img.shields.io/github/v/release/M0-AR/YL?style=flat-square&color=8b5cf6)](https://github.com/M0-AR/YL/releases/tag/v1.0.2)
 [![License: MIT](https://img.shields.io/badge/license-MIT-34d399?style=flat-square)](LICENSE)
 [![Java 17](https://img.shields.io/badge/Java-17-fbbf24?style=flat-square)](companion/java/pom.xml)
-[![Chapters](https://img.shields.io/badge/chapters-42-8b5cf6?style=flat-square)](#the-42-chapter-atlas)
+[![Chapters](https://img.shields.io/badge/chapters-43-8b5cf6?style=flat-square)](#the-43-chapter-atlas)
 [![Labs](https://img.shields.io/badge/browser_labs-6-f472b6?style=flat-square)](https://m0-ar.github.io/YL/labs.html)
 
 **[Open the live atlas](https://m0-ar.github.io/YL/)** ·
 **[Preview page](https://m0-ar.github.io/YL/preview.html)** ·
-**[Release v1.0.1](https://github.com/M0-AR/YL/releases/tag/v1.0.1)** ·
+**[Release v1.0.2](https://github.com/M0-AR/YL/releases/tag/v1.0.2)** ·
 **[Beginner guide](#-beginner-guide--read-this-and-you-are-a-professional)** ·
 **[Companion lessons](companion/README.md)** ·
 **[All labs](https://m0-ar.github.io/YL/labs.html)**
@@ -30,11 +30,11 @@ Most exercise repositories are a pile of files with a chapter number on top. Thi
 
 Java Atlas is an independent study companion built around the topic sequence of **Y. Daniel Liang's _Introduction to Java Programming, Comprehensive Version_ (10th Edition)**. It brings three kinds of material into one place:
 
-- **462 Java files** organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and each lesson chapter includes a focused `ChapterXX.java` demo.
-- **23 original lessons** that explain the chapters where a guided walkthrough helps most. Each lesson explains the idea in plain language, shows a worked example, and ends with a practice task and a checkpoint.
+- **463 Java files** organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and each lesson chapter includes a focused `ChapterXX.java` demo.
+- **24 original lessons** that explain the chapters where a guided walkthrough helps most. Each lesson explains the idea in plain language, shows a worked example, and ends with a practice task and a checkpoint.
 - **Six interactive browser labs** — sorting, graph traversal, data structures, payroll, a quiz, and a 3D game — that run with no installation and make abstract ideas visible.
 
-The result is a complete 42-chapter route through Java: read the idea, run the code, move the controls, break the algorithm, and watch what happens.
+The result is a complete 43-chapter route through Java: read the idea, run the code, move the controls, break the algorithm, and watch what happens.
 
 ### What this repository is not
 
@@ -51,7 +51,7 @@ The original chapter files are student work with varying style and completeness.
 | See what this is without installing anything | **[Live atlas](https://m0-ar.github.io/YL/)** |
 | Learn Java from zero | **[Beginner guide](#-beginner-guide--read-this-and-you-are-a-professional)** |
 | Watch an algorithm instead of reading about it | **[Sorting lab](https://m0-ar.github.io/YL/labs/sorting.html)** |
-| Find the material for one chapter | **[42-chapter atlas](#the-42-chapter-atlas)** |
+| Find the material for one chapter | **[43-chapter atlas](#the-43-chapter-atlas)** |
 | Run the tested examples | [`companion/java`](companion/java) |
 | Understand the copyright boundary | **[Copyright and attribution](#copyright-and-attribution)** |
 
@@ -97,9 +97,9 @@ These are teaching implementations: readable first, optimized second. Each one h
 
 ---
 
-## The 42-chapter atlas
+## The 43-chapter atlas
 
-**Code** means the chapter has worked files under `src/`, including a runnable `ChapterXX.java` demo for every lesson chapter. **Lesson** means the chapter also has an original companion lesson with an explanation, example, practice task, and checkpoint. Every chapter now has code; 23 also have a lesson.
+**Code** means the chapter has worked files under `src/`, including a runnable `ChapterXX.java` demo for every lesson chapter. **Lesson** means the chapter also has an original companion lesson with an explanation, example, practice task, and checkpoint. Every chapter now has code; 24 also have a lesson.
 
 ### Foundations — chapters 1–8
 
@@ -150,7 +150,7 @@ These are teaching implementations: readable first, optimized second. Each one h
 | 28 | Graphs | [Code](src/Exercise_28) |
 | 29 | Weighted Graphs | [Lesson](companion/collections-algorithms.md#chapter-29-weighted-graphs) · [Demo](src/Exercise_29/Chapter29.java) |
 
-### Systems and professional practice — chapters 30–42
+### Systems and professional practice — chapters 30–43
 
 | Ch | Topic | Where to go |
 | :---: | :--- | :--- |
@@ -167,6 +167,7 @@ These are teaching implementations: readable first, optimized second. Each one h
 | 40 | 2-4 Trees and B-Trees | [Lesson](companion/advanced-trees-testing.md#chapter-40-2-4-trees-and-b-trees) · [Demo](src/Exercise_40/Chapter40.java) |
 | 41 | Red-Black Trees | [Lesson](companion/advanced-trees-testing.md#chapter-41-red-black-trees) · [Demo](src/Exercise_41/Chapter41.java) |
 | 42 | Testing with JUnit | [Lesson](companion/advanced-trees-testing.md#chapter-42-testing-with-junit) · [Demo](src/Exercise_42/Chapter42.java) |
+| 43 | Aggregate Operations for Collection Streams | [Lesson](companion/collections-algorithms.md#chapter-43-aggregate-operations-for-collection-streams) · [Demo](src/Exercise_43/Chapter43.java) |
 
 ---
 
@@ -204,7 +205,7 @@ Create a file named exactly `Atlas.java`:
 public class Atlas {
     public static void main(String[] args) {
         String language = "Java";
-        int chapters = 42;
+        int chapters = 43;
         System.out.println(language + " in " + chapters + " chapters.");
     }
 }
@@ -222,7 +223,7 @@ What each part means:
 - `public class Atlas` declares a class named `Atlas`. A public class must live in a file with the same name, including capitalization.
 - `public static void main(String[] args)` is the entry point. `public` lets the launcher call it; `static` means no object is needed; `void` means it returns nothing; `String[] args` holds command-line arguments.
 - `String language = "Java";` creates a variable that refers to text.
-- `int chapters = 42;` creates a variable that holds a whole number.
+- `int chapters = 43;` creates a variable that holds a whole number.
 - `System.out.println(...)` prints one line. `+` joins text and values.
 - `java Atlas` names the **class**, not the file. Do not type `java Atlas.class`.
 
@@ -230,7 +231,7 @@ If you see `Error: Could not find or load main class`, the usual causes are a mi
 
 ### 3. How to use this repository without drowning
 
-Do not open 462 files and start reading. Use the map:
+Do not open 463 files and start reading. Use the map:
 
 1. **Pick one chapter.** Start at chapter 1 if you are new. Read the lesson first when one exists.
 2. **Run one file.** Change one value. Break it on purpose. Read the error. Fix it. That loop teaches more than passive reading.
@@ -255,7 +256,7 @@ This is a pace, not a race. Repeat a week if it has not clicked.
 | 7 | 21–24 | Sets, maps, efficiency, sorting, custom collections | Compare two sorting algorithms with real timings |
 | 8 | 25–27 | BSTs, AVL trees, hashing | Draw a tree after each insertion and explain each rotation |
 | 9 | 28–33 | Graphs, concurrency, networking, JDBC | Find a shortest path; run two threads safely |
-| 10 | 34–42 | Advanced GUI, databases, web, trees, testing | Write tests for one data structure you built |
+| 10 | 34–43 | Advanced GUI, databases, web, trees, testing, streams | Write tests for one data structure you built |
 
 The companion lessons link to tested code where the topic has one. When a lesson has no matching code file, write the example yourself. That is not a gap; it is the exercise.
 
@@ -352,12 +353,12 @@ Then open `http://localhost:8123/`. There is no build step. The site is plain HT
 
 ```text
 YL/
-├── src/                        # 462 chapter-organized Java files
-│   ├── Exercise_01 … 42/       # Worked solutions and chapter demos
+├── src/                        # 463 chapter-organized Java files
+│   ├── Exercise_01 … 43/       # Worked solutions and chapter demos
 │   ├── BookExercise/           # Additional examples from study sessions
 │   └── image/                  # Assets used by GUI exercises
 ├── companion/
-│   ├── README.md               # Curriculum for the 23 original lessons
+│   ├── README.md               # Curriculum for the 24 original lessons
 │   ├── foundations.md          # Chapters 1, 15, 16
 │   ├── collections-algorithms.md
 │   ├── enterprise.md
@@ -373,19 +374,19 @@ The site has no framework and no bundler. That is deliberate: you can view sourc
 
 ---
 
-## Release 1.0.1
+## Release 1.0.2
 
 Everything in this repository is available as a tagged release:
 
 | Asset | What it contains |
 | :--- | :--- |
-| `java-atlas-site-1.0.1.zip` | The complete static site, including posters and the demo GIF. |
-| `java-atlas-companion-1.0.1.zip` | README, license, changelog, and the 23 original companion lessons. |
-| `java-atlas-chapter-demos-1.0.1.zip` | The 23 focused `ChapterXX.java` demos for lesson chapters. |
-| `companion-examples-1.0.1.jar` | Compiled Java 17 examples and resources for the companion project. |
+| `java-atlas-site-1.0.2.zip` | The complete static site, including posters and the demo GIF. |
+| `java-atlas-companion-1.0.2.zip` | README, license, changelog, and the 24 original companion lessons. |
+| `java-atlas-chapter-demos-1.0.2.zip` | The 24 focused `ChapterXX.java` demos for lesson chapters. |
+| `companion-examples-1.0.2.jar` | Compiled Java 17 examples and resources for the companion project. |
 | `SHA256SUMS` | Checksums for every asset. |
 
-**[Download release 1.0.1](https://github.com/M0-AR/YL/releases/tag/v1.0.1)** · **[View all releases](https://github.com/M0-AR/YL/releases)**
+**[Download release 1.0.2](https://github.com/M0-AR/YL/releases/tag/v1.0.2)** · **[View all releases](https://github.com/M0-AR/YL/releases)**
 
 ---
 
@@ -394,7 +395,7 @@ Everything in this repository is available as a tagged release:
 The repository defines two quality gates:
 
 1. **Companion Java 17** — compiles all main and test sources, then runs the JUnit 5 suite with Maven.
-2. **Site integrity** — parses every page, resolves local links, verifies anchors into the companion lessons, checks that all 42 chapter rows point somewhere real, and confirms that the file counts claimed on the homepage match the repository.
+2. **Site integrity** — parses every page, resolves local links, verifies anchors into the companion lessons, checks that all 43 chapter rows point somewhere real, and confirms that the file counts claimed on the homepage match the repository.
 
 Run them locally:
 
@@ -423,7 +424,7 @@ The site itself is built for real use:
 | **Student** | A chapter map, runnable examples, and labs that make the lecture concrete. |
 | **Career switcher** | A ten-week route with checkpoints, not a 900-page reading list. |
 | **Working engineer** | Small, readable reference implementations of trees, hashing, sorting, and shortest paths. |
-| **Teacher** | Six ready-to-project labs and 23 original lessons that can be assigned without copying textbook text. |
+| **Teacher** | Six ready-to-project labs and 24 original lessons that can be assigned without copying textbook text. |
 | **Reviewer or researcher** | A reproducible teaching artifact with explicit provenance, tests, and a documented copyright boundary. |
 | **Business reader** | A concrete example of progressive tax, payroll deductions, and gross-to-net logic you can inspect. |
 

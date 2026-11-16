@@ -36,7 +36,7 @@ Install a JDK when you want to write and run Java. The exact vendor matters less
 public class Atlas {
     public static void main(String[] args) {
         String language = "Java";
-        int chapters = 42;
+        int chapters = 43;
         System.out.println(language + " in " + chapters + " chapters.");
     }
 }

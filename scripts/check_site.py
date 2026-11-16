@@ -149,19 +149,19 @@ def main() -> int:
         r'\[\d+,\s*"[^"]+",\s*"(?:code|companion)",\s*"([^"]+)"\]',
         index.read_text(encoding="utf-8"),
     )
-    if len(chapter_rows) != 42:
-        problems.append(f"chapter map has {len(chapter_rows)} rows, expected 42")
+    if len(chapter_rows) != 43:
+        problems.append(f"chapter map has {len(chapter_rows)} rows, expected 43")
     for link in chapter_rows:
         check_target(index, link)
 
     companion_anchors = 0
     for markdown in (ROOT / "companion").glob("*.md"):
         companion_anchors += len(re.findall(r'<a\s+id="chapter-', markdown.read_text(encoding="utf-8")))
-    if companion_anchors != 23:
-        problems.append(f"found {companion_anchors} companion chapter anchors, expected 23")
+    if companion_anchors != 24:
+        problems.append(f"found {companion_anchors} companion chapter anchors, expected 24")
 
-    lesson_chapters = (1, 15, 16, *range(21, 28), *range(29, 34), *range(35, 43))
-    for number in range(1, 43):
+    lesson_chapters = (1, 15, 16, *range(21, 28), *range(29, 34), *range(35, 44))
+    for number in range(1, 44):
         exercise = ROOT / "src" / f"Exercise_{number:02d}"
         if not exercise.is_dir() or not list(exercise.rglob("*.java")):
             problems.append(f"chapter {number:02d} has no Java source")
@@ -191,8 +191,8 @@ def main() -> int:
         for markdown_link in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", text):
             check_target(readme, markdown_link.split()[0].strip("<>"))
         demo_links = len(re.findall(r"\[Demo\]\(src/Exercise_\d\d/Chapter\d\d\.java\)", text))
-        if demo_links != 23:
-            problems.append(f"README has {demo_links} chapter demo links, expected 23")
+        if demo_links != 24:
+            problems.append(f"README has {demo_links} chapter demo links, expected 24")
 
     print(
         f"Checked {len(pages)} pages, {checked_links} local links, "

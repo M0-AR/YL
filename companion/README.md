@@ -1,15 +1,15 @@
 # Companion Curriculum
 
-This folder is the original teaching companion for the 23 chapters that do not have a dedicated exercise folder in `src/`. It is written for this repository. It does not reproduce chapter text, figures, or exercise statements from *Introduction to Java Programming*.
+This folder is the original teaching companion for the 24 chapters that need a guided lesson alongside the code in `src/`. It is written for this repository. It does not reproduce chapter text, figures, or exercise statements from *Introduction to Java Programming*.
 
-The goal is simple: every chapter in the 42-chapter map should lead somewhere useful. Sometimes that is 439 worked files. Sometimes it is a compact lesson, a runnable example, a practice task, and a checkpoint that tells you whether the idea actually landed.
+The goal is simple: every chapter in the 43-chapter map should lead somewhere useful. Sometimes that is 463 worked files. Sometimes it is a compact lesson, a runnable example, a practice task, and a checkpoint that tells you whether the idea actually landed.
 
 ## The four volumes
 
 | Volume | Chapters | What it covers |
 | --- | --- | --- |
 | [Foundations](foundations.md) | 1, 15, 16 | How Java runs, event-driven programming, animation, controls, layout, and media |
-| [Collections and Algorithms](collections-algorithms.md) | 21–27, 29 | Sets, maps, algorithm design, sorting, custom collections, BSTs, AVL trees, hashing, weighted graphs |
+| [Collections and Algorithms](collections-algorithms.md) | 21–27, 29, 43 | Sets, maps, algorithm design, sorting, custom collections, BSTs, AVL trees, hashing, weighted graphs, and collection streams |
 | [Enterprise Java](enterprise.md) | 30–33, 35–39 | Threads, sockets, JDBC, JSF, advanced databases, internationalization, servlets, JSP, web services |
 | [Advanced Trees and Testing](advanced-trees-testing.md) | 40–42 | 2-4 trees, B-trees, red-black trees, and JUnit |
 

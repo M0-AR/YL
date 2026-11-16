@@ -10,6 +10,7 @@ This volume covers the part of the curriculum where the question changes from �
 - [Chapter 26 — AVL Trees](#chapter-26-avl-trees)
 - [Chapter 27 — Hashing](#chapter-27-hashing)
 - [Chapter 29 — Weighted Graphs](#chapter-29-weighted-graphs)
+- [Chapter 43 — Aggregate Operations for Collection Streams](#chapter-43-aggregate-operations-for-collection-streams)
 
 ---
 
@@ -893,4 +894,83 @@ You are ready to move on when you can explain the relaxation step, why Dijkstra 
 
 ---
 
-The next volume moves from data structures to systems: threads, sockets, databases, web applications, and the testing discipline that keeps them honest.
+<a id="chapter-43-aggregate-operations-for-collection-streams"></a>
+<a name="chapter-43-aggregate-operations-for-collection-streams"></a>
+## Chapter 43 — Aggregate Operations for Collection Streams
+
+### The idea
+
+A stream is not a collection. A collection stores elements; a stream describes a pipeline that moves elements from a source through zero or more intermediate operations to one terminal operation.
+
+```text
+source → filter → map → sorted → collect
+```
+
+The source can be a collection, an array, a file, or a generator. Intermediate operations are lazy: they do not run until a terminal operation asks for a result. That laziness allows short-circuiting and fusion, and it is why a stream can process a large source without building intermediate collections.
+
+### The pipeline contract
+
+A stream pipeline has three parts:
+
+1. **A source** — `collection.stream()`, `Arrays.stream(values)`, or `Stream.of(...)`.
+2. **Intermediate operations** — `filter`, `map`, `flatMap`, `distinct`, `sorted`, `limit`, `skip`. Each returns another stream.
+3. **A terminal operation** — `collect`, `reduce`, `count`, `forEach`, `anyMatch`, `findFirst`. It consumes the pipeline and produces a value or a side effect.
+
+A stream is single-use. Once a terminal operation runs, the stream is consumed; create a new one for another pass. Streams also do not mutate the source. A `filter` creates a view of matching elements, not a new collection that replaces the original.
+
+### A worked example
+
+```java
+record Order(String customer, String category, int cents) {}
+
+List<Order> orders = List.of(
+    new Order("Ada", "books", 4200),
+    new Order("Grace", "tools", 1800),
+    new Order("Ada", "tools", 5200),
+    new Order("Linus", "books", 2600),
+    new Order("Grace", "books", 6100)
+);
+
+List<String> premium = orders.stream()
+    .filter(order -> order.cents() >= 4000)
+    .map(Order::customer)
+    .distinct()
+    .sorted()
+    .toList();
+
+Map<String, Long> byCategory = orders.stream()
+    .collect(Collectors.groupingBy(
+        Order::category,
+        TreeMap::new,
+        Collectors.counting()
+    ));
+
+IntSummaryStatistics totals = orders.stream()
+    .mapToInt(Order::cents)
+    .summaryStatistics();
+```
+
+The first pipeline keeps expensive orders, extracts customer names, removes duplicates, sorts them, and collects the result. The second groups orders by category and counts each group. The third converts the order amounts to an `IntStream` and produces count, sum, minimum, maximum, and average in one pass.
+
+### What to notice
+
+- **Laziness is the point.** Without a terminal operation, nothing happens. Adding `peek` does not make a pipeline eager; `peek` is for debugging, not business logic.
+- **`map` transforms one element; `flatMap` joins many.** Use `flatMap` when each element produces its own stream.
+- **Boxing has a cost.** `Stream<Integer>` boxes every value; `IntStream` and `summaryStatistics()` avoid that overhead.
+- **Duplicate keys break `toMap`.** Supply a merge function such as `(left, right) -> left + right` when the source can repeat a key.
+- **Parallel is not automatically faster.** Use `parallelStream()` only for large, CPU-bound, stateless work with associative operations. Measure before and after, and avoid shared mutable state.
+- **Encounter order matters.** `forEach` does not promise order on a parallel stream; `forEachOrdered` does, at a cost.
+
+### Practice
+
+1. Group orders by customer and compute each customer’s total in a `TreeMap`.
+2. Return the first order above a threshold as an `Optional<Order>`, or `Optional.empty()` when none matches.
+3. Rewrite a loop as a stream pipeline. If the stream version is harder to read or slower, keep the loop and explain why.
+
+### Checkpoint
+
+You are ready to move on when you can explain the difference between a collection and a stream, why intermediate operations are lazy, how a collector turns elements into a result, and when a parallel stream is a bad idea.
+
+---
+
+The next volume moves from collections and streams to systems: threads, sockets, databases, web applications, and the testing discipline that keeps them honest.

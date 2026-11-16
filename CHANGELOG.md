@@ -10,6 +10,18 @@ All notable changes to this project are documented here. The format follows [Kee
 - A printable one-page curriculum map.
 - More keyboard and screen-reader checks for the labs.
 
+## [1.0.2] — 2026-11-16
+
+### Added
+
+- Chapter 43, **Aggregate Operations for Collection Streams**, with an original companion lesson and a runnable `Chapter43.java` demo covering filter/map pipelines, grouping collectors, and summary statistics.
+- A verified 43-chapter atlas that matches the official comprehensive-edition table of contents.
+
+### Changed
+
+- Updated the README, site, companion curriculum, integrity checker, and repository statistics to 43 chapters, 24 lesson chapters, and 463 Java files.
+- Refreshed release metadata for 1.0.2.
+
 ## [1.0.1] — 2026-11-16
 
 ### Added
@@ -44,5 +56,7 @@ All notable changes to this project are documented here. The format follows [Kee
 - Added missing color tokens used by the quiz and payroll labs.
 - Made the game's hidden overlays stay out of the accessibility tree.
 
-[Unreleased]: https://github.com/M0-AR/YL/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/M0-AR/YL/compare/v1.0.2...HEAD
+[1.0.2]: https://github.com/M0-AR/YL/releases/tag/v1.0.2
+[1.0.1]: https://github.com/M0-AR/YL/releases/tag/v1.0.1
 [1.0.0]: https://github.com/M0-AR/YL/releases/tag/v1.0.0
