@@ -160,6 +160,16 @@ def main() -> int:
     if companion_anchors != 23:
         problems.append(f"found {companion_anchors} companion chapter anchors, expected 23")
 
+    lesson_chapters = (1, 15, 16, *range(21, 28), *range(29, 34), *range(35, 43))
+    for number in range(1, 43):
+        exercise = ROOT / "src" / f"Exercise_{number:02d}"
+        if not exercise.is_dir() or not list(exercise.rglob("*.java")):
+            problems.append(f"chapter {number:02d} has no Java source")
+        if number in lesson_chapters:
+            demo = exercise / f"Chapter{number:02d}.java"
+            if not demo.exists():
+                problems.append(f"chapter {number:02d} is missing {demo.relative_to(ROOT)}")
+
     html = index.read_text(encoding="utf-8")
     java_files = len(list((ROOT / "src").rglob("*.java")))
     claimed_files = re.search(r"(\d+)\s+worked Java files", html)
@@ -180,6 +190,9 @@ def main() -> int:
             check_target(readme, link)
         for markdown_link in re.findall(r"!?\[[^\]]*\]\(([^)]+)\)", text):
             check_target(readme, markdown_link.split()[0].strip("<>"))
+        demo_links = len(re.findall(r"\[Demo\]\(src/Exercise_\d\d/Chapter\d\d\.java\)", text))
+        if demo_links != 23:
+            problems.append(f"README has {demo_links} chapter demo links, expected 23")
 
     print(
         f"Checked {len(pages)} pages, {checked_links} local links, "

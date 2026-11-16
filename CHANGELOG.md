@@ -10,6 +10,17 @@ All notable changes to this project are documented here. The format follows [Kee
 - A printable one-page curriculum map.
 - More keyboard and screen-reader checks for the labs.
 
+## [1.0.1] — 2026-11-16
+
+### Added
+
+- A runnable `ChapterXX.java` demo for each of the 23 lesson chapters, covering networking, JDBC, JSF, database joins, internationalization, servlets, JSP, JSON, B-trees, red-black trees, and JUnit-style assertions.
+- Integrity checks that every one of the 42 chapter directories contains Java source and that all 23 lesson-chapter demos exist.
+
+### Changed
+
+- Updated the atlas, README, site, and repository statistics to 462 Java files with code coverage for all 42 chapters.
+
 ## [1.0.0] — 2026-11-16
 
 ### Added
