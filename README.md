@@ -4,7 +4,6 @@
 
 ### From first line to full system — an interactive companion to all 42 chapters
 
-[![CI](https://github.com/M0-AR/YL/actions/workflows/ci.yml/badge.svg)](https://github.com/M0-AR/YL/actions/workflows/ci.yml)
 [![Live site](https://img.shields.io/badge/live-site-22d3ee?style=flat-square)](https://m0-ar.github.io/YL/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-34d399?style=flat-square)](LICENSE)
 [![Java 17](https://img.shields.io/badge/Java-17-fbbf24?style=flat-square)](companion/java/pom.xml)
@@ -374,10 +373,19 @@ The site has no framework and no bundler. That is deliberate: you can view sourc
 
 ## Quality gates
 
-Every push runs two jobs:
+The repository defines two quality gates:
 
 1. **Companion Java 17** — compiles all main and test sources, then runs the JUnit 5 suite with Maven.
 2. **Site integrity** — parses every page, resolves local links, verifies anchors into the companion lessons, checks that all 42 chapter rows point somewhere real, and confirms that the file counts claimed on the homepage match the repository.
+
+Run them locally:
+
+```bash
+cd companion/java
+mvn -B test
+cd ../..
+python3 scripts/check_site.py
+```
 
 The site itself is built for real use:
 
