@@ -36,6 +36,8 @@ Java Atlas is an independent study companion built around the topic sequence of 
 
 The result is a complete 43-chapter route through Java: read the idea, run the code, move the controls, break the algorithm, and watch what happens.
 
+Exercise-level coverage is audited separately: this is a selective exercise companion, not a complete solution manual. The official CheckExercise lists **1,026 exercise variants for chapters 1–30**; **344 base exercises** have code here. See the **[Exercise Coverage Audit](EXERCISE-COVERAGE.md)** for the verified chapter-by-chapter numbers, including the 481 missing base exercises and 201 missing `Extra` variants.
+
 ### What this repository is not
 
 This is **not** the textbook, and it does not contain or redistribute the book's chapter text, figures, or exercise statements. Chapter numbers are used only to map topics. Every companion lesson is original prose written for this project. The textbook remains the work of its author and publisher.
