@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 16 Studio: JavaFX UI Controls and Multimedia — Java Atlas</title>
+<meta name="description" content="Controls are small state machines; a form is a layout of those machines plus one place that reads their values.">
+<meta name="theme-color" content="#05070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<a class="studio-skip" href="#main">Skip to content</a>
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas · Chapter Studio</b><span>Chapter 16 · Part 3 · GUI programming</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill cyan"><i></i> Interactive</span>
+    <a class="btn btn-sm btn-ghost" href="index.html">All studios</a>
+  </div>
+</header>
+<main id="main" class="studio-wrap">
+  <header class="studio-hero">
+    <p class="studio-eyebrow">Part 3 · GUI programming · Chapter 16</p>
+    <h1 class="studio-title">JavaFX UI Controls and Multimedia</h1>
+    <p class="studio-tagline">Controls are small state machines; a form is a layout of those machines plus one place that reads their values.</p>
+    <div class="studio-meta"><span>~50 min</span><span>Layout lab</span><span>3 objectives</span><span>5 subgoals</span></div>
+    <ul class="studio-objectives"><li>Select controls that match the shape of the data being collected.</li><li>Lay out a form with labels, inputs, and actions without relying on absolute positions.</li><li>Read control values at submit time and explain why live listeners are a different design.</li></ul>
+  </header>
+  <div class="studio-layout">
+    <div class="studio-column">
+      <section class="studio-section" id="lesson"><h2><span class="studio-kicker">Lesson</span>Subgoals</h2><p class="studio-prose">Read the subgoals first. Each one is a small, checkable idea that the worked example and the playground will use.</p><ol class="studio-steps"><li class="studio-step"><h3>Controls expose properties, not strings</h3><p>A <code>TextField</code> has a <code>text</code> property. A <code>CheckBox</code> has <code>selected</code>. Read the typed property instead of parsing a rendered label.</p></li><li class="studio-step"><h3>Choose by cardinality</h3><p>One line of text: TextField. One choice from a short list: ComboBox or radio buttons. Many choices: ListView. Boolean: CheckBox.</p></li><li class="studio-step"><h3>Labels are instructions</h3><p>A visible label connected to its control tells every user what the field means. Placeholder text disappears and is not a label.</p></li><li class="studio-step"><h3>Validation belongs at the boundary</h3><p>Convert and validate when the form is submitted. Keep the raw control value until the conversion succeeds.</p></li><li class="studio-step"><h3>Media has a lifecycle</h3><p>A <code>MediaPlayer</code> can play, pause, and stop. Release it when the view closes; a player holds native resources.</p></li></ol></section>
+      <section class="studio-section" id="example"><h2><span class="studio-kicker">Worked example</span>ProfileForm: three controls, one read</h2><p class="studio-prose">The form does not react on every keystroke. It reads all controls in one place when the user submits.</p><div class="studio-code-wrap"><button class="btn btn-sm btn-ghost studio-copy" type="button" data-copy>Copy</button><pre class="studio-code" tabindex="0"><code>public class ProfileForm extends Application {
+    @Override
+    public void start(Stage stage) {
+        TextField name = new TextField();
+        CheckBox notify = new CheckBox(&quot;Email me&quot;);
+        ComboBox&lt;String&gt; plan = new ComboBox&lt;&gt;();
+        plan.getItems().addAll(&quot;Free&quot;, &quot;Pro&quot;, &quot;Team&quot;);
+        plan.setValue(&quot;Free&quot;);
+        Button save = new Button(&quot;Save&quot;);
+        Label result = new Label();
+        save.setOnAction(event -&gt; {
+            String message = name.getText().trim()
+                + &quot; / &quot; + plan.getValue()
+                + &quot; / notify=&quot; + notify.isSelected();
+            result.setText(message);
+        });
+        GridPane grid = new GridPane();
+        grid.setHgap(8);
+        grid.setVgap(8);
+        grid.addRow(0, new Label(&quot;Name&quot;), name);
+        grid.addRow(1, new Label(&quot;Plan&quot;), plan);
+        grid.add(notify, 0, 2, 2, 1);
+        grid.addRow(3, save, result);
+        stage.setScene(new Scene(grid, 380, 200));
+        stage.show();
+    }
+}</code></pre></div><ol class="studio-steps"><li class="studio-step"><h3>Create the controls</h3><p>Each control is created with its own type. The compiler now helps: <code>plan.getValue()</code> is a String, not an Object.</p></li><li class="studio-step"><h3>Seed defaults</h3><p>A ComboBox with a selected value cannot return null on the first submit. Defaults are part of the form contract.</p></li><li class="studio-step"><h3>Attach the action</h3><p>Save is the only handler. It reads the three controls together, which keeps the snapshot consistent.</p></li><li class="studio-step"><h3>Normalize input</h3><p><code>trim()</code> removes accidental surrounding spaces. Validation would happen next, before the value reaches storage.</p></li><li class="studio-step"><h3>Lay out by role</h3><p><code>addRow</code> keeps label and field aligned. The checkbox spans both columns because it has no separate visible label.</p></li></ol><details class="studio-details"><summary>Predict, then observe</summary><div><p><strong>Before you step:</strong> What does <code>plan.getValue()</code> return if the ComboBox is cleared with <code>getItems().clear()</code>?</p><p>It can return null. A cleared selection is not the same as the default value, so submit code must handle null before using the string.</p></div></details></section>
+      <section class="studio-section" id="practice"><h2><span class="studio-kicker">Practice</span>Rebuild the program</h2><p class="studio-prose">A Parsons problem: the lines are correct, but the order is not. Rearrange them until the program would compile and behave as described.</p><div class="studio-island" data-engine="parsons"><noscript><p class="studio-noscript">JavaScript is off, so the drag-and-drop practice is hidden. Read the worked example and write the lines in a file instead.</p></noscript></div></section>
+      <section class="studio-section" id="mastery"><h2><span class="studio-kicker">Mastery check</span>Three questions</h2><form class="studio-quiz" data-quiz><fieldset class="quiz-question" data-answer="1" data-why="A CheckBox has a boolean selected property, which matches a binary choice."><legend>Which control best represents a yes-or-no preference?</legend><div class="quiz-options"><label for="ch16-q1-o0"><input type="radio" id="ch16-q1-o0" name="ch16-q1" value="0"><span>TextField</span></label><label for="ch16-q1-o1"><input type="radio" id="ch16-q1-o1" name="ch16-q1" value="1"><span>CheckBox</span></label><label for="ch16-q1-o2"><input type="radio" id="ch16-q1-o2" name="ch16-q1" value="2"><span>ListView</span></label><label for="ch16-q1-o3"><input type="radio" id="ch16-q1-o3" name="ch16-q1" value="3"><span>Slider</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="A label remains visible and can be associated with the control for assistive technology."><legend>Why is placeholder text a poor substitute for a visible label?</legend><div class="quiz-options"><label for="ch16-q2-o0"><input type="radio" id="ch16-q2-o0" name="ch16-q2" value="0"><span>It is rendered too slowly</span></label><label for="ch16-q2-o1"><input type="radio" id="ch16-q2-o1" name="ch16-q2" value="1"><span>It disappears after typing and may not be announced</span></label><label for="ch16-q2-o2"><input type="radio" id="ch16-q2-o2" name="ch16-q2" value="2"><span>JavaFX does not support placeholders</span></label><label for="ch16-q2-o3"><input type="radio" id="ch16-q2-o3" name="ch16-q2" value="3"><span>It cannot contain spaces</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="A control can have no selection, so null handling is part of the form boundary."><legend>What should submit code do before using <code>plan.getValue()</code>?</legend><div class="quiz-options"><label for="ch16-q3-o0"><input type="radio" id="ch16-q3-o0" name="ch16-q3" value="0"><span>Convert it to an int</span></label><label for="ch16-q3-o1"><input type="radio" id="ch16-q3-o1" name="ch16-q3" value="1"><span>Check for null and validate the selection</span></label><label for="ch16-q3-o2"><input type="radio" id="ch16-q3-o2" name="ch16-q3" value="2"><span>Call <code>show()</code> again</span></label><label for="ch16-q3-o3"><input type="radio" id="ch16-q3-o3" name="ch16-q3" value="3"><span>Clear the combo box</span></label></div><p class="quiz-feedback"></p></fieldset><div class="studio-quiz-actions"><button class="btn btn-sm btn-primary" type="submit">Check answers</button><p class="studio-quiz-score" role="status" aria-live="polite"></p></div></form></section>
+      <section class="studio-section" id="artifact"><h2><span class="studio-kicker">Signature artifact</span>SettingsForm.java</h2><p class="studio-prose">A settings form with a name field, a plan choice, and a notifications checkbox. Validate that the name is not blank before showing the summary.</p><div class="studio-artifact"><a class="btn btn-sm" data-artifact href="https://github.com/M0-AR/YL/tree/master/src/Exercise_16" download>Download SettingsForm.java</a><span class="studio-artifact-note">Original code, MIT licensed. No textbook text.</span></div></section>
+      <section class="studio-section" id="reflection"><h2><span class="studio-kicker">Reflection</span>Make it yours</h2><p class="studio-prose">Name one control in a form you use often that stores the wrong type for its job. Explain what type would be a better match and why.</p><label class="studio-hint" for="notes-ch16">Notes (saved in this browser)</label><textarea class="studio-notes" id="notes-ch16" data-notes></textarea><p class="studio-notes-status" data-notes-status>Notes stay in this browser.</p><div class="studio-complete"><p data-complete-label>Progress is stored in this browser only.</p><button class="btn btn-sm" type="button" data-complete data-chapter="16" aria-pressed="false">Mark chapter complete</button></div></section>
+      <nav class="studio-pager" aria-label="Chapter navigation"><a href="ch15.html">← Chapter 15: Event-Driven Programming and Animations</a><a href="ch17.html">Chapter 17: Binary I/O →</a></nav>
+    </div>
+    <aside class="studio-column" aria-label="Interactive playground and connections">
+      <section class="studio-section" id="studio"><h2><span class="studio-kicker">Playground</span>Form layout stress test</h2><p class="studio-prose">Five children stand in for a form. Try each layout manager and decide which one keeps the label-field relationship legible.</p><div class="studio-island" data-engine="layout"><noscript><p class="studio-noscript">JavaScript is off. The written lesson, worked example, answers, and artifact still work. Turn on JavaScript for the interactive playground.</p></noscript></div></section>
+      <section class="studio-section" id="links"><h2>How this connects</h2><p class="studio-prose">The studio is the third pass: the companion lesson explains the idea, the repository gives you runnable Java, and this page lets you manipulate the mechanism.</p><p class="studio-prose"><a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/blob/master/companion/foundations.md#chapter-16-controls-layout-and-media" target="_blank" rel="noopener">Companion lesson</a> <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/tree/master/src/Exercise_16" target="_blank" rel="noopener">Java sources</a></p></section>
+    </aside>
+  </div>
+</main>
+<footer class="lab-foot">
+  <span>Java Atlas · an independent MIT-licensed companion. Textbook text, figures, and exercise statements are not reproduced here.</span>
+  <a href="../index.html">Home</a>
+</footer>
+<script type="application/json" id="studio-data">{"n":16,"title":"JavaFX UI Controls and Multimedia","spec":{"hint":"Change the manager and the gaps. A form that reads well in GridPane can fall apart in FlowPane when the window narrows.","mode":"grid","children":["Name","Plan","Notify","Save","Result"],"gap":8,"padding":16},"parsons":{"prompt":"Rebuild the form so one action reads all three controls.","lines":["TextField name = new TextField();","CheckBox notify = new CheckBox(\"Email me\");","ComboBox\u003cString> plan = new ComboBox\u003c>();","plan.getItems().addAll(\"Free\", \"Pro\", \"Team\");","plan.setValue(\"Free\");","Button save = new Button(\"Save\");","save.setOnAction(event -> {","    String message = name.getText().trim() + \" / \" + plan.getValue();","    System.out.println(message + \" / notify=\" + notify.isSelected());","});"],"solution":[0,1,2,3,4,5,6,7,8,9],"seed":16,"why":"All controls exist and have defaults before the handler that reads them is registered."},"artifact":{"name":"SettingsForm.java","description":"A settings form with a name field, a plan choice, and a notifications checkbox. Validate that the name is not blank before showing the summary.","code":"import javafx.application.Application;\nimport javafx.scene.Scene;\nimport javafx.scene.control.Button;\nimport javafx.scene.control.CheckBox;\nimport javafx.scene.control.ComboBox;\nimport javafx.scene.control.Label;\nimport javafx.scene.control.TextField;\nimport javafx.scene.layout.GridPane;\nimport javafx.stage.Stage;\n\npublic class SettingsForm extends Application {\n    @Override\n    public void start(Stage stage) {\n        TextField name = new TextField();\n        ComboBox\u003cString> plan = new ComboBox\u003c>();\n        plan.getItems().addAll(\"Free\", \"Pro\", \"Team\");\n        plan.setValue(\"Free\");\n        CheckBox notify = new CheckBox(\"Email me\");\n        Button save = new Button(\"Save\");\n        Label result = new Label(\"Not saved\");\n\n        save.setOnAction(event -> {\n            String candidate = name.getText().trim();\n            // TODO: reject a blank candidate and show a useful message instead.\n            result.setText(candidate + \" / \" + plan.getValue() + \" / notify=\" + notify.isSelected());\n        });\n\n        GridPane grid = new GridPane();\n        grid.setHgap(8);\n        grid.setVgap(8);\n        grid.addRow(0, new Label(\"Name\"), name);\n        grid.addRow(1, new Label(\"Plan\"), plan);\n        grid.add(notify, 0, 2, 2, 1);\n        grid.addRow(3, save, result);\n\n        stage.setScene(new Scene(grid, 380, 200));\n        stage.show();\n    }\n\n    public static void main(String[] args) {\n        launch(args);\n    }\n}\n","href":"https://github.com/M0-AR/YL/tree/master/src/Exercise_16"}}</script>
+<script type="module" src="studio.js"></script>
+</body>
+</html>

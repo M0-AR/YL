@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 23 Studio: Sorting — Java Atlas</title>
+<meta name="description" content="Sorting is the art of maintaining an invariant while the data is still moving.">
+<meta name="theme-color" content="#05070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<a class="studio-skip" href="#main">Skip to content</a>
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas · Chapter Studio</b><span>Chapter 23 · Part 4 · Algorithms and structures</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill cyan"><i></i> Interactive</span>
+    <a class="btn btn-sm btn-ghost" href="index.html">All studios</a>
+  </div>
+</header>
+<main id="main" class="studio-wrap">
+  <header class="studio-hero">
+    <p class="studio-eyebrow">Part 4 · Algorithms and structures · Chapter 23</p>
+    <h1 class="studio-title">Sorting</h1>
+    <p class="studio-tagline">Sorting is the art of maintaining an invariant while the data is still moving.</p>
+    <div class="studio-meta"><span>~45 min</span><span>Sorting lab</span><span>3 objectives</span><span>7 subgoals</span></div>
+    <ul class="studio-objectives"><li>Explain the invariant that each sorting algorithm protects.</li><li>Compare quadratic and linearithmic growth using recorded comparisons.</li><li>Choose a stable algorithm when equal keys must keep their original order.</li></ul>
+  </header>
+  <div class="studio-layout">
+    <div class="studio-column">
+      <section class="studio-section" id="lesson"><h2><span class="studio-kicker">Lesson</span>Subgoals</h2><p class="studio-prose">Read the subgoals first. Each one is a small, checkable idea that the worked example and the playground will use.</p><ol class="studio-steps"><li class="studio-step"><h3>An invariant is a promise that stays true</h3><p>Bubble sort promises the largest remaining values are already at the end. Selection sort promises the prefix is final. Insertion sort promises the prefix is sorted but not necessarily final.</p></li><li class="studio-step"><h3>Comparisons and swaps are different costs</h3><p>A comparison reads two values. A swap writes two slots. Algorithms with the same comparison count can have very different write costs.</p></li><li class="studio-step"><h3>Bubble sort moves large values right</h3><p>Each pass compares adjacent pairs and swaps when they are out of order. After pass k, the last k values are final.</p></li><li class="studio-step"><h3>Selection sort minimizes swaps</h3><p>Find the minimum of the unsorted suffix, then place it once. It always performs about n²/2 comparisons but at most n - 1 swaps.</p></li><li class="studio-step"><h3>Insertion sort is excellent on nearly sorted data</h3><p>Shift only while the left neighbor is larger. On an already sorted array the inner loop never runs, so the pass is linear.</p></li><li class="studio-step"><h3>Merge sort divides before it conquers</h3><p>Split until ranges have one element, then merge two sorted ranges by repeatedly taking the smaller front value. The merge step is linear in the combined range.</p></li><li class="studio-step"><h3>Stability is a property, not a speed</h3><p>A stable sort preserves the relative order of equal keys. Merge sort is stable when the merge takes from the left range on ties; selection sort is not.</p></li></ol></section>
+      <section class="studio-section" id="example"><h2><span class="studio-kicker">Worked example</span>SortTrace: insertion sort with visible passes</h2><p class="studio-prose">The program prints the array after each insertion. The printed snapshots are the same states the playground shows.</p><div class="studio-code-wrap"><button class="btn btn-sm btn-ghost studio-copy" type="button" data-copy>Copy</button><pre class="studio-code" tabindex="0"><code>import java.util.Arrays;
+
+public class SortTrace {
+    public static void main(String[] args) {
+        int[] values = {42, 17, 93, 8, 61, 24};
+        for (int i = 1; i &lt; values.length; i++) {
+            int key = values[i];
+            int j = i - 1;
+            while (j &gt;= 0 &amp;&amp; values[j] &gt; key) {
+                values[j + 1] = values[j];
+                j--;
+            }
+            values[j + 1] = key;
+            System.out.println(Arrays.toString(values));
+        }
+    }
+}</code></pre></div><ol class="studio-steps"><li class="studio-step"><h3>Start at the second element</h3><p>A single element is already sorted, so index 0 is the initial sorted prefix.</p></li><li class="studio-step"><h3>Save the key</h3><p>The value at index i will be overwritten during shifting, so it must be stored first.</p></li><li class="studio-step"><h3>Shift larger values right</h3><p>The loop stops at a smaller value or at the beginning. Both conditions are required to avoid reading index -1.</p></li><li class="studio-step"><h3>Insert into the gap</h3><p>After the shifts, j + 1 is the first position whose left neighbor is not larger. That is where the key belongs.</p></li><li class="studio-step"><h3>Print after every pass</h3><p>The prefix grows by one sorted element per outer iteration. The suffix is untouched but not yet sorted.</p></li></ol><details class="studio-details"><summary>Predict, then observe</summary><div><p><strong>Before you step:</strong> How many shifts happen when the input is already sorted, such as <code>{1, 2, 3, 4}</code>?</p><p>Zero. The while condition is false immediately at every pass, so insertion sort runs in linear time on sorted input.</p></div></details></section>
+      <section class="studio-section" id="practice"><h2><span class="studio-kicker">Practice</span>Rebuild the program</h2><p class="studio-prose">A Parsons problem: the lines are correct, but the order is not. Rearrange them until the program would compile and behave as described.</p><div class="studio-island" data-engine="parsons"><noscript><p class="studio-noscript">JavaScript is off, so the drag-and-drop practice is hidden. Read the worked example and write the lines in a file instead.</p></noscript></div></section>
+      <section class="studio-section" id="mastery"><h2><span class="studio-kicker">Mastery check</span>Three questions</h2><form class="studio-quiz" data-quiz><fieldset class="quiz-question" data-answer="2" data-why="Taking the left value first preserves the original order of equal keys, which is the definition of stability."><legend>Which algorithm is stable when the merge prefers the left range on ties?</legend><div class="quiz-options"><label for="ch23-q1-o0"><input type="radio" id="ch23-q1-o0" name="ch23-q1" value="0"><span>Selection sort</span></label><label for="ch23-q1-o1"><input type="radio" id="ch23-q1-o1" name="ch23-q1" value="1"><span>Bubble sort</span></label><label for="ch23-q1-o2"><input type="radio" id="ch23-q1-o2" name="ch23-q1" value="2"><span>Merge sort</span></label><label for="ch23-q1-o3"><input type="radio" id="ch23-q1-o3" name="ch23-q1" value="3"><span>None of them</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="2" data-why="The nested passes compare roughly n(n - 1)/2 pairs, which is quadratic."><legend>What is the worst-case number of comparisons for bubble sort on n elements?</legend><div class="quiz-options"><label for="ch23-q2-o0"><input type="radio" id="ch23-q2-o0" name="ch23-q2" value="0"><span>n</span></label><label for="ch23-q2-o1"><input type="radio" id="ch23-q2-o1" name="ch23-q2" value="1"><span>n log n</span></label><label for="ch23-q2-o2"><input type="radio" id="ch23-q2-o2" name="ch23-q2" value="2"><span>n²</span></label><label for="ch23-q2-o3"><input type="radio" id="ch23-q2-o3" name="ch23-q2" value="3"><span>2ⁿ</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="Each element is already close to its place, so few shifts are needed even though the worst case is quadratic."><legend>Why can insertion sort beat merge sort on nearly sorted data?</legend><div class="quiz-options"><label for="ch23-q3-o0"><input type="radio" id="ch23-q3-o0" name="ch23-q3" value="0"><span>It uses more memory</span></label><label for="ch23-q3-o1"><input type="radio" id="ch23-q3-o1" name="ch23-q3" value="1"><span>Its inner loop rarely runs, so the passes approach linear time</span></label><label for="ch23-q3-o2"><input type="radio" id="ch23-q3-o2" name="ch23-q3" value="2"><span>It skips comparisons entirely</span></label><label for="ch23-q3-o3"><input type="radio" id="ch23-q3-o3" name="ch23-q3" value="3"><span>It sorts without moving values</span></label></div><p class="quiz-feedback"></p></fieldset><div class="studio-quiz-actions"><button class="btn btn-sm btn-primary" type="submit">Check answers</button><p class="studio-quiz-score" role="status" aria-live="polite"></p></div></form></section>
+      <section class="studio-section" id="artifact"><h2><span class="studio-kicker">Signature artifact</span>SortTrace.java</h2><p class="studio-prose">The insertion-sort trace from the worked example, with a TODO that records the number of comparisons and shifts.</p><div class="studio-artifact"><a class="btn btn-sm" data-artifact href="https://github.com/M0-AR/YL/tree/master/src/Exercise_23" download>Download SortTrace.java</a><span class="studio-artifact-note">Original code, MIT licensed. No textbook text.</span></div></section>
+      <section class="studio-section" id="reflection"><h2><span class="studio-kicker">Reflection</span>Make it yours</h2><p class="studio-prose">Pick one algorithm from the playground. State its invariant in one sentence, then explain which state in the timeline first proves the invariant holds.</p><label class="studio-hint" for="notes-ch23">Notes (saved in this browser)</label><textarea class="studio-notes" id="notes-ch23" data-notes></textarea><p class="studio-notes-status" data-notes-status>Notes stay in this browser.</p><div class="studio-complete"><p data-complete-label>Progress is stored in this browser only.</p><button class="btn btn-sm" type="button" data-complete data-chapter="23" aria-pressed="false">Mark chapter complete</button></div></section>
+      <nav class="studio-pager" aria-label="Chapter navigation"><a href="ch22.html">← Chapter 22: Developing Efficient Algorithms</a><a href="ch24.html">Chapter 24: Implementing Lists, Stacks, Queues, and Priority Queues →</a></nav>
+    </div>
+    <aside class="studio-column" aria-label="Interactive playground and connections">
+      <section class="studio-section" id="studio"><h2><span class="studio-kicker">Playground</span>Sorting laboratory</h2><p class="studio-prose">Four algorithms, one input. Step slowly through the first pass, then jump to the end and compare the number of recorded states.</p><div class="studio-island" data-engine="sort"><noscript><p class="studio-noscript">JavaScript is off. The written lesson, worked example, answers, and artifact still work. Turn on JavaScript for the interactive playground.</p></noscript></div></section>
+      <section class="studio-section" id="links"><h2>How this connects</h2><p class="studio-prose">The studio is the third pass: the companion lesson explains the idea, the repository gives you runnable Java, and this page lets you manipulate the mechanism.</p><p class="studio-prose"><a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-23-sorting" target="_blank" rel="noopener">Companion lesson</a> <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/tree/master/src/Exercise_23" target="_blank" rel="noopener">Java sources</a></p></section>
+    </aside>
+  </div>
+</main>
+<footer class="lab-foot">
+  <span>Java Atlas · an independent MIT-licensed companion. Textbook text, figures, and exercise statements are not reproduced here.</span>
+  <a href="../index.html">Home</a>
+</footer>
+<script type="application/json" id="studio-data">{"n":23,"title":"Sorting","spec":{"hint":"Switch algorithms on the same input. Compare how much movement each one needs.","algorithms":["bubble","selection","insertion","merge"],"input":[42,17,93,8,61,24]},"parsons":{"prompt":"Rebuild selection sort. It should place the minimum of the remaining suffix at index i.","lines":["for (int i = 0; i \u003c values.length - 1; i++) {","    int min = i;","    for (int j = i + 1; j \u003c values.length; j++) {","        if (values[j] \u003c values[min]) {","            min = j;","        }","    }","    int temp = values[i];","    values[i] = values[min];","    values[min] = temp;","}"],"solution":[0,1,2,3,4,5,6,7,8,9,10],"seed":29,"why":"The outer loop ends one early because the last element is forced into place. The inner loop searches the suffix, then one swap places the minimum."},"artifact":{"name":"SortTrace.java","description":"The insertion-sort trace from the worked example, with a TODO that records the number of comparisons and shifts.","code":"import java.util.Arrays;\n\npublic class SortTrace {\n    public static void main(String[] args) {\n        int[] values = {42, 17, 93, 8, 61, 24};\n        int shifts = 0;\n\n        for (int i = 1; i \u003c values.length; i++) {\n            int key = values[i];\n            int j = i - 1;\n            while (j >= 0 && values[j] > key) {\n                values[j + 1] = values[j];\n                j--;\n                shifts++; // TODO: also count comparisons.\n            }\n            values[j + 1] = key;\n            System.out.println(Arrays.toString(values));\n        }\n        System.out.println(\"shifts=\" + shifts);\n    }\n}\n","href":"https://github.com/M0-AR/YL/tree/master/src/Exercise_23"}}</script>
+<script type="module" src="studio.js"></script>
+</body>
+</html>

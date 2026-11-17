@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 22 Studio: Developing Efficient Algorithms — Java Atlas</title>
+<meta name="description" content="Efficiency is a claim about growth, not a stopwatch reading: how does the work increase when the input doubles?">
+<meta name="theme-color" content="#05070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<a class="studio-skip" href="#main">Skip to content</a>
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas · Chapter Studio</b><span>Chapter 22 · Part 4 · Algorithms and structures</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill cyan"><i></i> Interactive</span>
+    <a class="btn btn-sm btn-ghost" href="index.html">All studios</a>
+  </div>
+</header>
+<main id="main" class="studio-wrap">
+  <header class="studio-hero">
+    <p class="studio-eyebrow">Part 4 · Algorithms and structures · Chapter 22</p>
+    <h1 class="studio-title">Developing Efficient Algorithms</h1>
+    <p class="studio-tagline">Efficiency is a claim about growth, not a stopwatch reading: how does the work increase when the input doubles?</p>
+    <div class="studio-meta"><span>~50 min</span><span>Growth chart</span><span>3 objectives</span><span>5 subgoals</span></div>
+    <ul class="studio-objectives"><li>Classify a simple loop or search by its asymptotic growth.</li><li>Explain why binary search requires sorted input and halves the range.</li><li>Separate algorithmic growth from constant-factor tuning.</li></ul>
+  </header>
+  <div class="studio-layout">
+    <div class="studio-column">
+      <section class="studio-section" id="lesson"><h2><span class="studio-kicker">Lesson</span>Subgoals</h2><p class="studio-prose">Read the subgoals first. Each one is a small, checkable idea that the worked example and the playground will use.</p><ol class="studio-steps"><li class="studio-step"><h3>Count the dominant operation</h3><p>A single loop over n elements is O(n). A loop inside a loop over the same n is O(n²). Constants and smaller terms are dropped.</p></li><li class="studio-step"><h3>Halving gives a logarithm</h3><p>Binary search removes half the remaining range each step, so the number of steps is about log₂ n.</p></li><li class="studio-step"><h3>Preconditions are part of the algorithm</h3><p>Binary search is only correct on sorted data. The sort may cost O(n log n), which can dominate a single search.</p></li><li class="studio-step"><h3>Worst case is the promise</h3><p>Big-O usually describes an upper bound on the worst case. Two algorithms with the same bound can still differ by a large constant.</p></li><li class="studio-step"><h3>Measure to confirm, not to define</h3><p>A benchmark on one machine cannot replace a growth argument. Use timing to detect constant factors and cache effects.</p></li></ol></section>
+      <section class="studio-section" id="example"><h2><span class="studio-kicker">Worked example</span>Two searches, one sorted array</h2><p class="studio-prose">Linear search may get lucky early. Binary search keeps halving, so its worst case is far smaller.</p><div class="studio-code-wrap"><button class="btn btn-sm btn-ghost studio-copy" type="button" data-copy>Copy</button><pre class="studio-code" tabindex="0"><code>public static int linear(int[] data, int target) {
+    for (int i = 0; i &lt; data.length; i++) {
+        if (data[i] == target) return i;
+    }
+    return -1;
+}
+
+public static int binary(int[] data, int target) {
+    int low = 0, high = data.length - 1;
+    while (low &lt;= high) {
+        int mid = low + (high - low) / 2;
+        if (data[mid] == target) return mid;
+        if (data[mid] &lt; target) low = mid + 1;
+        else high = mid - 1;
+    }
+    return -1;
+}</code></pre></div><ol class="studio-steps"><li class="studio-step"><h3>Linear scan</h3><p>Every element is examined in the worst case. The loop is O(n).</p></li><li class="studio-step"><h3>Sorted precondition</h3><p>Binary search assumes ascending order. Without it, the comparison at mid points the wrong way.</p></li><li class="studio-step"><h3>Compute mid safely</h3><p><code>low + (high - low) / 2</code> avoids overflow that <code>(low + high) / 2</code> can cause for very large indexes.</p></li><li class="studio-step"><h3>Discard half</h3><p>One comparison eliminates half the range. After k steps the range is about n / 2^k.</p></li><li class="studio-step"><h3>Stop on equality or empty range</h3><p>The loop ends when the target is found or <code>low</code> passes <code>high</code>. Either way the result is correct for sorted input.</p></li></ol><details class="studio-details"><summary>Predict, then observe</summary><div><p><strong>Before you step:</strong> How many comparisons does binary search need, at most, for one million sorted elements?</p><p>About 20, because 2²⁰ is slightly more than one million. Linear search could need one million.</p></div></details></section>
+      <section class="studio-section" id="practice"><h2><span class="studio-kicker">Practice</span>Rebuild the program</h2><p class="studio-prose">A Parsons problem: the lines are correct, but the order is not. Rearrange them until the program would compile and behave as described.</p><div class="studio-island" data-engine="parsons"><noscript><p class="studio-noscript">JavaScript is off, so the drag-and-drop practice is hidden. Read the worked example and write the lines in a file instead.</p></noscript></div></section>
+      <section class="studio-section" id="mastery"><h2><span class="studio-kicker">Mastery check</span>Three questions</h2><form class="studio-quiz" data-quiz><fieldset class="quiz-question" data-answer="2" data-why="The work is proportional to the number of elements."><legend>What is the worst-case growth of one loop that visits every element?</legend><div class="quiz-options"><label for="ch22-q1-o0"><input type="radio" id="ch22-q1-o0" name="ch22-q1" value="0"><span>O(1)</span></label><label for="ch22-q1-o1"><input type="radio" id="ch22-q1-o1" name="ch22-q1" value="1"><span>O(log n)</span></label><label for="ch22-q1-o2"><input type="radio" id="ch22-q1-o2" name="ch22-q1" value="2"><span>O(n)</span></label><label for="ch22-q1-o3"><input type="radio" id="ch22-q1-o3" name="ch22-q1" value="3"><span>O(n²)</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="The discard step is only valid if order guarantees the target cannot be in the other half."><legend>Why must the input be sorted for binary search?</legend><div class="quiz-options"><label for="ch22-q2-o0"><input type="radio" id="ch22-q2-o0" name="ch22-q2" value="0"><span>Sorting makes the array smaller</span></label><label for="ch22-q2-o1"><input type="radio" id="ch22-q2-o1" name="ch22-q2" value="1"><span>The comparison decides which half can be discarded</span></label><label for="ch22-q2-o2"><input type="radio" id="ch22-q2-o2" name="ch22-q2" value="2"><span>Unsorted arrays cannot be indexed</span></label><label for="ch22-q2-o3"><input type="radio" id="ch22-q2-o3" name="ch22-q2" value="3"><span>The midpoint formula needs sorted values</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="Sorting costs O(n log n); for a single small search, a linear scan may be cheaper overall."><legend>When can sorting before binary search be slower than one linear search?</legend><div class="quiz-options"><label for="ch22-q3-o0"><input type="radio" id="ch22-q3-o0" name="ch22-q3" value="0"><span>Never</span></label><label for="ch22-q3-o1"><input type="radio" id="ch22-q3-o1" name="ch22-q3" value="1"><span>When only one search is performed on a small array</span></label><label for="ch22-q3-o2"><input type="radio" id="ch22-q3-o2" name="ch22-q3" value="2"><span>When the array is already sorted</span></label><label for="ch22-q3-o3"><input type="radio" id="ch22-q3-o3" name="ch22-q3" value="3"><span>When the target is at index 0</span></label></div><p class="quiz-feedback"></p></fieldset><div class="studio-quiz-actions"><button class="btn btn-sm btn-primary" type="submit">Check answers</button><p class="studio-quiz-score" role="status" aria-live="polite"></p></div></form></section>
+      <section class="studio-section" id="artifact"><h2><span class="studio-kicker">Signature artifact</span>GrowthLab.java</h2><p class="studio-prose">Instrument linear and binary search. Count comparisons for several input sizes and print the growth pattern.</p><div class="studio-artifact"><a class="btn btn-sm" data-artifact href="https://github.com/M0-AR/YL/tree/master/src/Exercise_22" download>Download GrowthLab.java</a><span class="studio-artifact-note">Original code, MIT licensed. No textbook text.</span></div></section>
+      <section class="studio-section" id="reflection"><h2><span class="studio-kicker">Reflection</span>Make it yours</h2><p class="studio-prose">A teammate says an optimization made the program twice as fast. Ask two questions that distinguish a constant-factor win from an asymptotic improvement.</p><label class="studio-hint" for="notes-ch22">Notes (saved in this browser)</label><textarea class="studio-notes" id="notes-ch22" data-notes></textarea><p class="studio-notes-status" data-notes-status>Notes stay in this browser.</p><div class="studio-complete"><p data-complete-label>Progress is stored in this browser only.</p><button class="btn btn-sm" type="button" data-complete data-chapter="22" aria-pressed="false">Mark chapter complete</button></div></section>
+      <nav class="studio-pager" aria-label="Chapter navigation"><a href="ch21.html">← Chapter 21: Sets and Maps</a><a href="ch23.html">Chapter 23: Sorting →</a></nav>
+    </div>
+    <aside class="studio-column" aria-label="Interactive playground and connections">
+      <section class="studio-section" id="studio"><h2><span class="studio-kicker">Playground</span>Growth curve</h2><p class="studio-prose">The chart compares four growth classes. Toggle the logarithmic scale to see why a line on a log plot still hides huge differences.</p><div class="studio-island" data-engine="growth"><noscript><p class="studio-noscript">JavaScript is off. The written lesson, worked example, answers, and artifact still work. Turn on JavaScript for the interactive playground.</p></noscript></div></section>
+      <section class="studio-section" id="links"><h2>How this connects</h2><p class="studio-prose">The studio is the third pass: the companion lesson explains the idea, the repository gives you runnable Java, and this page lets you manipulate the mechanism.</p><p class="studio-prose"><a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/blob/master/companion/collections-algorithms.md#chapter-22-efficient-algorithms" target="_blank" rel="noopener">Companion lesson</a> <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/tree/master/src/Exercise_22" target="_blank" rel="noopener">Java sources</a></p></section>
+    </aside>
+  </div>
+</main>
+<footer class="lab-foot">
+  <span>Java Atlas · an independent MIT-licensed companion. Textbook text, figures, and exercise statements are not reproduced here.</span>
+  <a href="../index.html">Home</a>
+</footer>
+<script type="application/json" id="studio-data">{"n":22,"title":"Developing Efficient Algorithms","spec":{"hint":"Toggle the logarithmic scale. The straight line is linear work; the steep curve is quadratic work.","series":[{"key":"log","tone":"cyan"},{"key":"n","tone":"emerald"},{"key":"nlogn","tone":"violet"},{"key":"square","tone":"amber"}],"nMax":64,"logScale":true},"parsons":{"prompt":"Rebuild the binary search loop with a safe midpoint.","lines":["int low = 0, high = data.length - 1;","while (low \u003c= high) {","    int mid = low + (high - low) / 2;","    if (data[mid] == target) return mid;","    if (data[mid] \u003c target) low = mid + 1;","    else high = mid - 1;","}","return -1;"],"solution":[0,1,2,3,4,5,6,7],"seed":22,"why":"The bounds start at the ends, each comparison discards one half, and the loop ends when the range is empty."},"artifact":{"name":"GrowthLab.java","description":"Instrument linear and binary search. Count comparisons for several input sizes and print the growth pattern.","code":"public class GrowthLab {\n    public static void main(String[] args) {\n        for (int n = 8; n \u003c= 1024; n *= 2) {\n            int[] data = new int[n];\n            for (int i = 0; i \u003c n; i++) {\n                data[i] = i * 2;\n            }\n            int target = n * 2 - 2;\n            System.out.println(n + \" linear=\" + linearComparisons(data, target));\n            System.out.println(n + \" binary=\" + binaryComparisons(data, target));\n        }\n    }\n\n    static int linearComparisons(int[] data, int target) {\n        int count = 0;\n        for (int value : data) {\n            count++;\n            if (value == target) return count;\n        }\n        return count;\n    }\n\n    static int binaryComparisons(int[] data, int target) {\n        // TODO: count each midpoint comparison and return the total.\n        return 0;\n    }\n}\n","href":"https://github.com/M0-AR/YL/tree/master/src/Exercise_22"}}</script>
+<script type="module" src="studio.js"></script>
+</body>
+</html>

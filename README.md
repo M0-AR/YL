@@ -10,8 +10,10 @@
 [![Java 17](https://img.shields.io/badge/Java-17-fbbf24?style=flat-square)](companion/java/pom.xml)
 [![Chapters](https://img.shields.io/badge/chapters-43-8b5cf6?style=flat-square)](#the-43-chapter-atlas)
 [![Labs](https://img.shields.io/badge/browser_labs-6-f472b6?style=flat-square)](https://m0-ar.github.io/YL/labs.html)
+[![Chapter Studios](https://img.shields.io/badge/chapter_studios-43-22d3ee?style=flat-square)](https://m0-ar.github.io/YL/studios/index.html)
 
 **[Open the live atlas](https://m0-ar.github.io/YL/)** ·
+**[43 Chapter Studios](https://m0-ar.github.io/YL/studios/index.html)** ·
 **[Preview page](https://m0-ar.github.io/YL/preview.html)** ·
 **[Release v1.2.0](https://github.com/M0-AR/YL/releases/tag/v1.2.0)** ·
 **[Beginner guide](#-beginner-guide--read-this-and-you-are-a-professional)** ·
@@ -30,13 +32,13 @@ Most exercise repositories are a pile of files with a chapter number on top. Thi
 
 Java Atlas is an independent study companion built around the topic sequence of **Y. Daniel Liang's _Introduction to Java Programming, Comprehensive Version_ (10th Edition)**. It brings three kinds of material into one place:
 
-- **879 Java files** organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and 24 chapters include a focused `ChapterXX.java` demo.
+- **1,389 Java files** across `src/` (1,166) and `extra11e/src/` (223), organized by chapter, from elementary programming to graphs and database connectivity. Every chapter has runnable code, and 24 chapters include a focused `ChapterXX.java` demo.
 - **43 original lessons** — one for every chapter. Each lesson explains the idea in plain language, shows a worked example, and ends with a practice task and a checkpoint.
-- **Six interactive browser labs** — sorting, graph traversal, data structures, payroll, a quiz, and a 3D game — that run with no installation and make abstract ideas visible.
+- **43 Chapter Studios and six interactive browser labs** — one original studio for every chapter (worked examples, predict–observe–explain, Parsons practice, mastery checks, downloadable artifacts) plus sorting, graph traversal, data structures, payroll, a quiz, and a 3D game. All run with no installation.
 
 The result is a complete 43-chapter route through Java: read the idea, run the code, move the controls, break the algorithm, and watch what happens.
 
-Exercise-level coverage is audited separately: this is a selective exercise companion, not a complete solution manual. The official CheckExercise lists **1,026 exercise variants for chapters 1–30**; **602 base exercises** have code here. See the **[Exercise Coverage Audit](EXERCISE-COVERAGE.md)** for the verified chapter-by-chapter numbers, including the 223 missing base exercises and 201 missing `Extra` variants.
+Exercise-level coverage is audited separately: this is a selective exercise companion, not an official solution manual. The official CheckExercise lists **1,026 exercise variants for chapters 1–30**; **1,026 of 1,026 (100.0%)** have code here — **825 base + 201 Extra**. **86 base exercises and 23 Extra exercises are inferred** because their prompts are instructor-only. All 201 10e Extra names are matched under `extra11e/`; **12 additional 11e Extras** are outside the 10e count. See the **[Exercise Coverage Audit](EXERCISE-COVERAGE.md)** for the verified chapter-by-chapter numbers and the inferred-exercise ranges.
 
 ### What this repository is not
 
@@ -63,14 +65,15 @@ No build step, account, tracker, or package install is required for the site. Op
 
 ## What is inside
 
-### Six browser labs
+### 43 Chapter Studios and six browser labs
 
-Each lab is a self-contained teaching instrument, not a video or a screenshot. Change the input, step through the algorithm, and read the explanation beside the result.
+Each lab is a self-contained teaching instrument, not a video or a screenshot. Change the input, step through the algorithm, and read the explanation beside the result. The Chapter Studios apply that principle at chapter scale: every page is an original lesson with a manipulable model, a Parsons problem, and a three-question mastery check.
 
 ![The sorting lab running a live quick sort](docs/assets/demo.gif)
 
 | Lab | What you can do | Open it |
 | :--- | :--- | :--- |
+| **Chapter Studios** | 43 pages, one per chapter: subgoal-labelled worked example, predict–observe–explain, Parsons practice, mastery check, and a downloadable Java artifact. | [Live](https://m0-ar.github.io/YL/studios/index.html) · [Source](docs/studios/index.html) |
 | **Sorting** | Race insertion, selection, bubble, merge, quick, and heap sort. Compare comparisons, writes, and elapsed time. | [Live](https://m0-ar.github.io/YL/labs/sorting.html) · [Source](docs/labs/sorting.html) |
 | **Graphs** | Drag nodes, pick a start and target, and step through BFS, DFS, and Dijkstra. Watch the frontier and the shortest-path tree change. | [Live](https://m0-ar.github.io/YL/labs/graph.html) · [Source](docs/labs/graph.html) |
 | **Data structures** | Push, pop, enqueue, insert, search, and delete across a stack, queue, linked list, binary search tree, and hash table. | [Live](https://m0-ar.github.io/YL/labs/structures.html) · [Source](docs/labs/structures.html) |
@@ -233,7 +236,7 @@ If you see `Error: Could not find or load main class`, the usual causes are a mi
 
 ### 3. How to use this repository without drowning
 
-Do not open 879 files and start reading. Use the map:
+Do not open 1,389 files and start reading. Use the map:
 
 1. **Pick one chapter.** Start at chapter 1 if you are new. Read the lesson first when one exists.
 2. **Run one file.** Change one value. Break it on purpose. Read the error. Fix it. That loop teaches more than passive reading.
@@ -355,10 +358,11 @@ Then open `http://localhost:8123/`. There is no build step. The site is plain HT
 
 ```text
 YL/
-├── src/                        # 879 chapter-organized Java files
+├── src/                        # 1,166 chapter-organized Java files
 │   ├── Exercise_01 … 43/       # Worked solutions and chapter demos
 │   ├── BookExercise/           # Additional examples from study sessions
 │   └── image/                  # Assets used by GUI exercises
+├── extra11e/                   # 223 11e Extra files (213 exercises + 10 helpers)
 ├── companion/
 │   ├── README.md               # Curriculum for the 43 original lessons
 │   ├── core-language.md        # Chapters 2–14
@@ -369,7 +373,7 @@ YL/
 │   ├── enterprise.md
 │   ├── advanced-trees-testing.md
 │   └── java/                   # Java 17 Maven project with JUnit 5 tests
-├── docs/                       # Static site: homepage, six labs, assets
+├── docs/                       # Static site: homepage, 43 studios, six labs, assets
 ├── scripts/check_site.py       # Link, anchor, chapter-map, and asset checks
 ├── .github/workflows/ci.yml    # Java tests + site integrity on every push
 └── README.md
@@ -381,7 +385,7 @@ The site has no framework and no bundler. That is deliberate: you can view sourc
 
 ## Release 1.2.0
 
-The latest tagged snapshot is available as release 1.2.0. The `master` branch now includes thirty-four additional exercises across Chapters 14, 15, 17, 18, and 21 (879 files) that are not in the 1.2.0 archives.
+The latest tagged snapshot is available as release 1.2.0. The `master` branch now includes the newer Chapter 14–18 and 20–30 exercises, the 109 inferred base and Extra exercises, plus the 11e Extra set (1,166 `src/` files and 223 `extra11e/src/` files), that are not in the 1.2.0 archives.
 
 | Asset | What it contains |
 | :--- | :--- |
@@ -430,7 +434,7 @@ The site itself is built for real use:
 | **Student** | A chapter map, runnable examples, and labs that make the lecture concrete. |
 | **Career switcher** | A ten-week route with checkpoints, not a 900-page reading list. |
 | **Working engineer** | Small, readable reference implementations of trees, hashing, sorting, and shortest paths. |
-| **Teacher** | Six ready-to-project labs and 43 original lessons that can be assigned without copying textbook text. |
+| **Teacher** | Six ready-to-project labs, 43 chapter studios, and 43 original lessons that can be assigned without copying textbook text. |
 | **Reviewer or researcher** | A reproducible teaching artifact with explicit provenance, tests, and a documented copyright boundary. |
 | **Business reader** | A concrete example of progressive tax, payroll deductions, and gross-to-net logic you can inspect. |
 
@@ -465,7 +469,7 @@ Some are exploratory study files or depend on JavaFX, a database, or a local env
 <details>
 <summary><b>Can I use a lab in a class or workshop?</b></summary>
 
-Yes. The labs are plain HTML, CSS, and JavaScript under the MIT license. Keep the attribution and link back to this repository. Do not present the textbook's material as your own.
+Yes. The studios and labs are plain HTML, CSS, and JavaScript under the MIT license. Keep the attribution and link back to this repository. Do not present the textbook's material as your own.
 </details>
 
 <details>
@@ -482,7 +486,7 @@ This is an independent companion project. It is not affiliated with, endorsed by
 
 - The textbook's chapter text, figures, and exercise statements are **not** included or redistributed here.
 - Chapter numbers and topic names are used only to organize original study material and to help readers navigate a shared curriculum.
-- The companion lessons are original prose. The labs and the 3D game are original interactive works.
+- The companion lessons are original prose. The 43 Chapter Studios, the labs, and the 3D game are original interactive works.
 - The Java files under `src/` are student solutions and study notes. They are provided for learning, without warranty.
 - "Java" is a trademark of Oracle and/or its affiliates. Other product names remain the property of their respective owners.
 

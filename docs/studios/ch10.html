@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 10 Studio: Thinking in Objects — Java Atlas</title>
+<meta name="description" content="Encapsulation is not secrecy for its own sake; it is a small surface that can keep its promises.">
+<meta name="theme-color" content="#05070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<a class="studio-skip" href="#main">Skip to content</a>
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas · Chapter Studio</b><span>Chapter 10 · Part 2 · Core language</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill cyan"><i></i> Interactive</span>
+    <a class="btn btn-sm btn-ghost" href="index.html">All studios</a>
+  </div>
+</header>
+<main id="main" class="studio-wrap">
+  <header class="studio-hero">
+    <p class="studio-eyebrow">Part 2 · Core language · Chapter 10</p>
+    <h1 class="studio-title">Thinking in Objects</h1>
+    <p class="studio-tagline">Encapsulation is not secrecy for its own sake; it is a small surface that can keep its promises.</p>
+    <div class="studio-meta"><span>~35 min</span><span>Contract tester</span><span>3 objectives</span><span>5 subgoals</span></div>
+    <ul class="studio-objectives"><li>Design a class boundary that protects an invariant.</li><li>Explain why returning a mutable field breaks encapsulation.</li><li>Choose composition when one object owns another.</li></ul>
+  </header>
+  <div class="studio-layout">
+    <div class="studio-column">
+      <section class="studio-section" id="lesson"><h2><span class="studio-kicker">Lesson</span>Subgoals</h2><p class="studio-prose">Read the subgoals first. Each one is a small, checkable idea that the worked example and the playground will use.</p><ol class="studio-steps"><li class="studio-step"><h3>Keep fields private by default</h3><p>A private field can only change through class methods, which is where the invariant checks live.</p></li><li class="studio-step"><h3>Getters should not leak mutable internals</h3><p>Returning an internal array lets a caller change the object without passing through any guard.</p></li><li class="studio-step"><h3>Composition means has-a</h3><p>An <code>Invoice</code> has a <code>Customer</code>. The contained object keeps its own identity and invariants.</p></li><li class="studio-step"><h3>Copy on the boundary</h3><p>If a caller must receive internal data, return a copy. If a caller supplies data, copy it on the way in when ownership matters.</p></li><li class="studio-step"><h3>Invariants are never optional</h3><p>Every public method is an opportunity to break an invariant. Either prevent the change or reject it before applying it.</p></li></ol></section>
+      <section class="studio-section" id="example"><h2><span class="studio-kicker">Worked example</span>ScoreBoard: a private array with a safe view</h2><p class="studio-prose">The class owns its array. Callers can read a copy, but they cannot mutate the internal storage accidentally.</p><div class="studio-code-wrap"><button class="btn btn-sm btn-ghost studio-copy" type="button" data-copy>Copy</button><pre class="studio-code" tabindex="0"><code>import java.util.Arrays;
+
+public class ScoreBoard {
+    private final int[] scores;
+
+    public ScoreBoard(int[] scores) {
+        this.scores = scores.clone();
+    }
+
+    public int[] snapshot() {
+        return scores.clone();
+    }
+
+    public int total() {
+        int sum = 0;
+        for (int score : scores) sum += score;
+        return sum;
+    }
+}</code></pre></div><ol class="studio-steps"><li class="studio-step"><h3>Final field</h3><p>The reference cannot be reassigned after construction; the array contents still can change internally.</p></li><li class="studio-step"><h3>Defensive copy in</h3><p>The caller's array is cloned, so later changes to it do not affect the board.</p></li><li class="studio-step"><h3>Defensive copy out</h3><p>The snapshot is also a clone, so callers cannot mutate the internal array.</p></li><li class="studio-step"><h3>Behavior on the inside</h3><p>The total is computed from the owned data, not from a caller-supplied array.</p></li></ol><details class="studio-details"><summary>Predict, then observe</summary><div><p><strong>Before you step:</strong> If the constructor stored the caller's array directly, what could a caller do after construction?</p><p>It could change any score by writing to its own array reference, silently breaking the board's total.</p></div></details></section>
+      <section class="studio-section" id="practice"><h2><span class="studio-kicker">Practice</span>Rebuild the program</h2><p class="studio-prose">A Parsons problem: the lines are correct, but the order is not. Rearrange them until the program would compile and behave as described.</p><div class="studio-island" data-engine="parsons"><noscript><p class="studio-noscript">JavaScript is off, so the drag-and-drop practice is hidden. Read the worked example and write the lines in a file instead.</p></noscript></div></section>
+      <section class="studio-section" id="mastery"><h2><span class="studio-kicker">Mastery check</span>Three questions</h2><form class="studio-quiz" data-quiz><fieldset class="quiz-question" data-answer="1" data-why="The reference gives direct write access, bypassing the class&#x27;s methods and invariants."><legend>Why is returning an internal mutable array dangerous?</legend><div class="quiz-options"><label for="ch10-q1-o0"><input type="radio" id="ch10-q1-o0" name="ch10-q1" value="0"><span>It uses too much memory</span></label><label for="ch10-q1-o1"><input type="radio" id="ch10-q1-o1" name="ch10-q1" value="1"><span>The caller can mutate the object&#x27;s state without checks</span></label><label for="ch10-q1-o2"><input type="radio" id="ch10-q1-o2" name="ch10-q1" value="2"><span>Arrays cannot be returned</span></label><label for="ch10-q1-o3"><input type="radio" id="ch10-q1-o3" name="ch10-q1" value="3"><span>It makes the class final</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="An object owns or contains another object."><legend>Composition describes which relationship?</legend><div class="quiz-options"><label for="ch10-q2-o0"><input type="radio" id="ch10-q2-o0" name="ch10-q2" value="0"><span>is-a</span></label><label for="ch10-q2-o1"><input type="radio" id="ch10-q2-o1" name="ch10-q2" value="1"><span>has-a</span></label><label for="ch10-q2-o2"><input type="radio" id="ch10-q2-o2" name="ch10-q2" value="2"><span>uses-a</span></label><label for="ch10-q2-o3"><input type="radio" id="ch10-q2-o3" name="ch10-q2" value="3"><span>was-a</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="Ownership requires isolation from later caller mutations."><legend>When should a constructor copy an incoming mutable argument?</legend><div class="quiz-options"><label for="ch10-q3-o0"><input type="radio" id="ch10-q3-o0" name="ch10-q3" value="0"><span>Never</span></label><label for="ch10-q3-o1"><input type="radio" id="ch10-q3-o1" name="ch10-q3" value="1"><span>When the class intends to own the data</span></label><label for="ch10-q3-o2"><input type="radio" id="ch10-q3-o2" name="ch10-q3" value="2"><span>Only for strings</span></label><label for="ch10-q3-o3"><input type="radio" id="ch10-q3-o3" name="ch10-q3" value="3"><span>Only in main</span></label></div><p class="quiz-feedback"></p></fieldset><div class="studio-quiz-actions"><button class="btn btn-sm btn-primary" type="submit">Check answers</button><p class="studio-quiz-score" role="status" aria-live="polite"></p></div></form></section>
+      <section class="studio-section" id="artifact"><h2><span class="studio-kicker">Signature artifact</span>ScoreBoard.java</h2><p class="studio-prose">The encapsulated board with a TODO that adds a safe method for the highest score.</p><div class="studio-artifact"><a class="btn btn-sm" data-artifact href="https://github.com/M0-AR/YL/tree/master/src/Exercise_10" download>Download ScoreBoard.java</a><span class="studio-artifact-note">Original code, MIT licensed. No textbook text.</span></div></section>
+      <section class="studio-section" id="reflection"><h2><span class="studio-kicker">Reflection</span>Make it yours</h2><p class="studio-prose">Find one getter in your own code that returns a mutable object. Decide whether it needs a copy, a read-only view, or neither.</p><label class="studio-hint" for="notes-ch10">Notes (saved in this browser)</label><textarea class="studio-notes" id="notes-ch10" data-notes></textarea><p class="studio-notes-status" data-notes-status>Notes stay in this browser.</p><div class="studio-complete"><p data-complete-label>Progress is stored in this browser only.</p><button class="btn btn-sm" type="button" data-complete data-chapter="10" aria-pressed="false">Mark chapter complete</button></div></section>
+      <nav class="studio-pager" aria-label="Chapter navigation"><a href="ch09.html">← Chapter 9: Objects and Classes</a><a href="ch11.html">Chapter 11: Inheritance and Polymorphism →</a></nav>
+    </div>
+    <aside class="studio-column" aria-label="Interactive playground and connections">
+      <section class="studio-section" id="studio"><h2><span class="studio-kicker">Playground</span>Invariant tester</h2><p class="studio-prose">The contract is the class's standing promise. Step through the cases and identify which boundary was crossed.</p><div class="studio-island" data-engine="contract"><noscript><p class="studio-noscript">JavaScript is off. The written lesson, worked example, answers, and artifact still work. Turn on JavaScript for the interactive playground.</p></noscript></div></section>
+      <section class="studio-section" id="links"><h2>How this connects</h2><p class="studio-prose">The studio is the third pass: the companion lesson explains the idea, the repository gives you runnable Java, and this page lets you manipulate the mechanism.</p><p class="studio-prose"><a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-10-thinking-in-objects" target="_blank" rel="noopener">Companion lesson</a> <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/tree/master/src/Exercise_10" target="_blank" rel="noopener">Java sources</a></p></section>
+    </aside>
+  </div>
+</main>
+<footer class="lab-foot">
+  <span>Java Atlas · an independent MIT-licensed companion. Textbook text, figures, and exercise statements are not reproduced here.</span>
+  <a href="../index.html">Home</a>
+</footer>
+<script type="application/json" id="studio-data">{"n":10,"title":"Thinking in Objects","spec":{"hint":"The invariant is the class's standing promise. Check which case breaks it.","signature":"public ScoreBoard(int[] scores)","clauses":[{"kind":"pre","text":"scores != null","check":{"type":"nonnull","field":"scores"}},{"kind":"pre","text":"scores.length >= 1","check":{"type":"length","field":"scores","min":1}},{"kind":"invariant","text":"all scores >= 0","check":{"type":"manual","field":"allNonnegative","ok":true}},{"kind":"post","text":"total >= 0","check":{"type":"nonneg","field":"total"}}],"cases":[{"label":"Valid board","inputs":{"scores":[70,85,90],"allNonnegative":true,"total":245},"expected":true,"note":"Every clause holds."},{"label":"Null array","inputs":{"scores":null,"allNonnegative":false,"total":0},"expected":false,"note":"The constructor should reject null before cloning."},{"label":"Empty array","inputs":{"scores":[],"allNonnegative":true,"total":0},"expected":false,"note":"An empty board cannot satisfy the length precondition."},{"label":"Negative score","inputs":{"scores":[70,-5],"allNonnegative":false,"total":65},"expected":false,"note":"The invariant rejects the invalid element even though the total is positive."}]},"parsons":{"prompt":"Build the defensive-copy constructor and snapshot method.","lines":["public class ScoreBoard {","    private final int[] scores;","    public ScoreBoard(int[] scores) {","        this.scores = scores.clone();","    }","    public int[] snapshot() {","        return scores.clone();","    }","}"],"solution":[0,1,2,3,4,5,6,7,8],"seed":61,"why":"Both boundaries clone: one to keep the caller from changing the internals, one to keep the caller from mutating the returned array."},"artifact":{"name":"ScoreBoard.java","description":"The encapsulated board with a TODO that adds a safe method for the highest score.","code":"public class ScoreBoard {\n    private final int[] scores;\n\n    public ScoreBoard(int[] scores) {\n        if (scores == null || scores.length == 0) {\n            throw new IllegalArgumentException();\n        }\n        this.scores = scores.clone();\n    }\n\n    public int[] snapshot() {\n        return scores.clone();\n    }\n\n    public int total() {\n        int sum = 0;\n        for (int score : scores) sum += score;\n        return sum;\n    }\n\n    // TODO: add highScore() without exposing the internal array.\n}\n","href":"https://github.com/M0-AR/YL/tree/master/src/Exercise_10"}}</script>
+<script type="module" src="studio.js"></script>
+</body>
+</html>

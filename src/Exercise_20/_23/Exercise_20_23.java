@@ -1,142 +1,80 @@
-// Adapted from jsquared21/Intro-to-Java-Programming (MIT License, Copyright (c) 2017 Jabari H James).
 package Exercise_20._23;
 
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Deque;
+import java.util.Scanner;
 
 public class Exercise_20_23 {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter an expression: ");
+        String expression = input.nextLine();
+        System.out.println(expression + " = " + evaluate(expression));
+    }
 
-		Scanner input = new Scanner(System.in);
+    public static double evaluate(String expression) {
+        Deque<Double> values = new ArrayDeque<>();
+        Deque<Character> operators = new ArrayDeque<>();
+        char[] tokens = expression.toCharArray();
+        for (int i = 0; i < tokens.length; i++) {
+            char token = tokens[i];
+            if (token == ' ') {
+                continue;
+            }
+            if (Character.isDigit(token) || token == '.') {
+                StringBuilder number = new StringBuilder();
+                while (i < tokens.length
+                        && (Character.isDigit(tokens[i]) || tokens[i] == '.')) {
+                    number.append(tokens[i++]);
+                }
+                i--;
+                values.push(Double.parseDouble(number.toString()));
+            } else if (token == '(') {
+                operators.push(token);
+            } else if (token == ')') {
+                while (operators.peek() != '(') {
+                    apply(values, operators.pop());
+                }
+                operators.pop();
+            } else if (isOperator(token)) {
+                while (!operators.isEmpty() && operators.peek() != '('
+                        && precedence(operators.peek()) >= precedence(token)) {
+                    apply(values, operators.pop());
+                }
+                operators.push(token);
+            }
+        }
+        while (!operators.isEmpty()) {
+            apply(values, operators.pop());
+        }
+        return values.pop();
+    }
 
+    private static boolean isOperator(char token) {
+        return token == '+' || token == '-' || token == '*' || token == '/'
+                || token == '%' || token == '^';
+    }
 
-		System.out.print("Enter an expression: ");
-		String expression = input.nextLine();
+    private static int precedence(char operator) {
+        return switch (operator) {
+            case '^' -> 3;
+            case '*', '/', '%' -> 2;
+            default -> 1;
+        };
+    }
 
-		try {
-			System.out.println(expression + " = " +
-				evaluateExpression(expression));
-		}
-		catch (Exception ex) {
-			System.out.println("Wrong expression: " + expression);
-		}
-	}
-
-
-	public static int evaluateExpression(String expression) {
-
-		Stack<Integer> operandStack = new Stack<>();
-
-
-		Stack<Character> operatorStack = new Stack<>();
-
-
-		expression = insertBlanks(expression);
-
-
-		String[] tokens = expression.split(" ");
-
-
-		for (String token: tokens) {
-		 	if (token.length() == 0)
-		 		continue;
-		 	else if (token.charAt(0) == '+' || token.charAt(0) == '-') {
-
-		 		while (!operatorStack.isEmpty() &&
-		 			(operatorStack.peek() == '+' ||
-		 			 operatorStack.peek() == '-' ||
-		 			 operatorStack.peek() == '*' ||
-		 			 operatorStack.peek() == '/' ||
-		 			 operatorStack.peek() == '^' ||
-		 			 operatorStack.peek() == '%')) {
-		 			processAnOperator(operandStack, operatorStack);
-		 		}
-
-
-		 		operatorStack.push(token.charAt(0));
-		 	}
-		 	else if (token.charAt(0) == '*' ||
-		 				token.charAt(0) == '/' || token.charAt(0) == '%') {
-
-		 		while (!operatorStack.isEmpty() &&
-		 			(operatorStack.peek() == '*' ||
-		 			 operatorStack.peek() == '/' ||
-		 			 operatorStack.peek() == '%' )) {
-		 			processAnOperator(operandStack, operatorStack);
-		 		}
-
-
-		 		operatorStack.push(token.charAt(0));
-		 	}
-		 	else if (token.charAt(0) == '^') {
-
-		 		while (!operatorStack.isEmpty() &&
-		 				  operatorStack.peek() == '^') {
-		 			processAnOperator(operandStack, operatorStack);
-		 		}
-
-
-		 		operatorStack.push(token.charAt(0));
-		 	}
-		 	else if (token.trim().charAt(0) == '(') {
-		 		operatorStack.push('(');
-		 	}
-		 	else if (token.trim().charAt(0) == ')') {
-
-		 		while (operatorStack.peek() != '(') {
-		 			processAnOperator(operandStack, operatorStack);
-		 		}
-
-		 		operatorStack.pop();
-		 	}
-		 	else {
-
-		 		operandStack.push(Integer.parseInt(token));
-		 	}
-		}
-
-
-		while (!operatorStack.isEmpty()) {
-			processAnOperator(operandStack, operatorStack);
-		}
-
-
-		return operandStack.pop();
-	}
-
-
-
-	public static void processAnOperator(
-			Stack<Integer> operandStack, Stack<Character> operatorStack) {
-		char op = operatorStack.pop();
-		int op1 = operandStack.pop();
-		int op2 = operandStack.pop();
-		if (op == '+')
-			operandStack.push(op2 + op1);
-		else if (op == '-')
-			operandStack.push(op2 - op1);
-		else if (op == '*')
-			operandStack.push(op2 * op1);
-		else if (op == '/')
-			operandStack.push(op2 / op1);
-		else if (op == '^')
-			operandStack.push((int)Math.pow(op2, op1));
-		else if (op == '%')
-			operandStack.push(op2 % op1);
-	}
-
-	public static String insertBlanks(String s) {
-		String result = "";
-
-		for (int i = 0; i < s.length(); i++) {
-			if (s.charAt(i) == '(' || s.charAt(i) == ')' ||
-				 s.charAt(i) == '+' || s.charAt(i) == '-' ||
-				 s.charAt(i) == '*' || s.charAt(i) == '/' ||
-				 s.charAt(i) == '^' || s.charAt(i) == '%')
-				result += " " + s.charAt(i) + " ";
-			else
-				result += s.charAt(i);
-		}
-
-		return result;
-	}
+    private static void apply(Deque<Double> values, char operator) {
+        double second = values.pop();
+        double first = values.pop();
+        double result = switch (operator) {
+            case '+' -> first + second;
+            case '-' -> first - second;
+            case '*' -> first * second;
+            case '/' -> first / second;
+            case '%' -> first % second;
+            case '^' -> Math.pow(first, second);
+            default -> throw new IllegalArgumentException("Unknown operator " + operator);
+        };
+        values.push(result);
+    }
 }

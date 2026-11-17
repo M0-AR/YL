@@ -6,6 +6,11 @@ All notable changes to this project are documented here. The format follows [Kee
 
 ### Added
 
+- Completed 10e Extra coverage under `extra11e/src`: all **201 10e Extra names** now have code, including **23 newly inferred Extras** (05.17, 12.08, 15.21, 16.16, 16.17, 18.08, 20.01, 20.03, 20.04, 21.05–21.07, 22.05, 25.04, 25.05, 27.02–27.04, 28.19, 28.20, 29.04, 29.05, and 30.01). The tree now has **223 Java files**: **213 exercise classes + 10 shared helpers**. The full Extra build compiles with `-Xlint:all` and zero warnings.
+- Added the Chapter 26 `MyBST`/`isAVLTree` checker gap at `src/Exercise_26/_07/Exercise_26_07.java`; balanced, chain, and near-AVL sample inputs produce `true`, `false`, and `true`.
+- Completed every printed exercise in Chapters 16, 20, and 22–30, including 16.11, 16.24, 16.27–16.31, 20.7, 20.15, 20.17, 24.3, 24.7–24.16, 28.24, and all of Chapters 29 and 30. Chapters 1–30 now have code for every printed exercise.
+- Added **43 original Chapter Studios**, one for every chapter, generated from structured Python definitions and shipped as static, dependency-free HTML/CSS/JS. Each studio includes subgoal-labelled worked examples, predict–observe–explain steps, Parsons practice, a three-question mastery check with feedback, a downloadable Java artifact, reflection prompts, and local-only progress and notes.
+- Added 11 reusable studio engines: state, expression, trace, structure, sorting, graph, growth, data, contract, layout, and Parsons, with keyboard and screen-reader support.
 - Completed Chapter 14's remaining base exercises: 14.20 random arrow line, 14.27 detailed clock, and 14.29 bean machine.
 - Chapter 14 now covers all 29 base exercises.
 - Completed Chapter 15's remaining base exercises: 15.10 keyboard text display, 15.17 bounding rectangle, 15.21 draggable triangle angles, 15.23 resizable stop sign, 15.25 ball on a sine curve, 15.31 pendulum, 15.33 bean-machine animation, 15.34 self-avoiding walk, 15.35 animated self-avoiding walk, and 15.36 dead-end simulation.
@@ -16,13 +21,19 @@ All notable changes to this project are documented here. The format follows [Kee
 - Chapter 18 now covers all 39 base exercises.
 - Completed Chapter 21's remaining base exercise: 21.05 Java syntax highlighter, which converts a source file to HTML with styled keywords, comments, and literals.
 - Chapter 21 now covers all 15 base exercises.
+- Completed Chapter 25's remaining base exercises: 25.08 bidirectional iterator, 25.11 horizontal tree view, 25.12 BST test program, 25.13 BST animation buttons, 25.15 parent links and leaf paths, 25.16 Huffman frequency table, 25.17 Huffman animation, 25.18 file compression, 25.19 file decompression, 25.20 first-fit bin packing, 25.21 smallest-first bin packing, 25.22 largest-first bin packing, and 25.23 optimal bin packing.
+- Chapter 25 now covers all 23 base exercises.
+- Completed the 86 remaining public base exercises: 16.32–16.40, 19.12–19.21, 20.24–20.38, 23.21–23.25, 24.17–24.26, 26.08–26.25, and 27.12–27.30. Exact prompts are instructor-only, so these implementations are inferred from chapter topics and marked as inferred in the coverage audit.
+- All 86 inferred exercises compile and pass deterministic `main` smoke tests; the full base build compiles 1,155 sources, excluding 11 legacy JUnit 4 files.
 
 ### Changed
 
-- Increased the chapter code collection to **879 Java files**.
-- Updated the exercise audit to **602 of 825 public base exercises (73.0%)** and **58.7%** of all 1,026 public variants.
-- Updated the README, site statistics, and source tree counts to 879 Java files.
-- Documented that Chapter 19's 19.12–19.21 are instructor-only extra exercises rather than printed base exercises.
+- Expanded site navigation, the labs index, and the README to feature the 43 Chapter Studios; updated homepage statistics.
+- Added `scripts/build_studios.py` and `scripts/validate_studios.py`, 18 unit tests, and 92 Playwright checks (46 per desktop and mobile project) covering every generated chapter, axe WCAG 2.2 AA rules, mobile overflow, artifact downloads, saved notes, and Parsons keyboard operation.
+- Increased the chapter code collection to **1,166 `src/` Java files** and **223 `extra11e/src/` Java files**, for **1,389 Java files** in the working tree.
+- Updated the exercise audit to **1,026 of 1,026 public 10e variants (100.0%)**: **825 base + 201 Extra**, with **86 base and 23 Extra inferred** because their prompts are instructor-only, and **12 extra11e-only Extras** outside the 10e count.
+- Updated the README, site statistics, and source tree counts to reflect the `src/` and `extra11e/` split.
+- Documented that Chapter 19's 19.12–19.21 are instructor-only extra exercises rather than printed base exercises; they are now implemented from inferred specs.
 
 ### Planned
 

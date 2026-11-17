@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 03 Studio: Selections — Java Atlas</title>
+<meta name="description" content="A branch is a guard: it decides whether the next statement belongs to this path or another one.">
+<meta name="theme-color" content="#05070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<a class="studio-skip" href="#main">Skip to content</a>
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas · Chapter Studio</b><span>Chapter 03 · Part 2 · Core language</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill cyan"><i></i> Interactive</span>
+    <a class="btn btn-sm btn-ghost" href="index.html">All studios</a>
+  </div>
+</header>
+<main id="main" class="studio-wrap">
+  <header class="studio-hero">
+    <p class="studio-eyebrow">Part 2 · Core language · Chapter 03</p>
+    <h1 class="studio-title">Selections</h1>
+    <p class="studio-tagline">A branch is a guard: it decides whether the next statement belongs to this path or another one.</p>
+    <div class="studio-meta"><span>~35 min</span><span>Execution trace</span><span>3 objectives</span><span>5 subgoals</span></div>
+    <ul class="studio-objectives"><li>Trace which branch executes for a given input.</li><li>Explain short-circuit evaluation and why operand order matters.</li><li>Avoid the classic assignment-versus-comparison mistake.</li></ul>
+  </header>
+  <div class="studio-layout">
+    <div class="studio-column">
+      <section class="studio-section" id="lesson"><h2><span class="studio-kicker">Lesson</span>Subgoals</h2><p class="studio-prose">Read the subgoals first. Each one is a small, checkable idea that the worked example and the playground will use.</p><ol class="studio-steps"><li class="studio-step"><h3>A condition is a boolean expression</h3><p>Comparisons such as <code>score >= 90</code> produce a boolean. Java does not accept an int where a boolean is required.</p></li><li class="studio-step"><h3>Branches are checked in order</h3><p>The first true branch wins and the rest are skipped. Ordering the tests from most specific to least specific is a design decision.</p></li><li class="studio-step"><h3>else binds to the nearest if</h3><p>Indentation is for humans. Braces are the only reliable way to show which <code>else</code> belongs to which <code>if</code>.</p></li><li class="studio-step"><h3>Short-circuit evaluation skips work</h3><p>In <code>a &amp;&amp; b</code>, if <code>a</code> is false, <code>b</code> is not evaluated. In <code>a || b</code>, if <code>a</code> is true, <code>b</code> is skipped.</p></li><li class="studio-step"><h3>= assigns; == compares</h3><p><code>if (x = 3)</code> is a compile error for ints, but the distinction still matters when the types differ. Read conditions as questions, not assignments.</p></li></ol></section>
+      <section class="studio-section" id="example"><h2><span class="studio-kicker">Worked example</span>GradeGate: first match wins</h2><p class="studio-prose">The score is 78. Only one branch should assign a grade, and every later test should be irrelevant.</p><div class="studio-code-wrap"><button class="btn btn-sm btn-ghost studio-copy" type="button" data-copy>Copy</button><pre class="studio-code" tabindex="0"><code>int score = 78;
+char grade;
+if (score &gt;= 90) {
+    grade = &#x27;A&#x27;;
+} else if (score &gt;= 80) {
+    grade = &#x27;B&#x27;;
+} else if (score &gt;= 70) {
+    grade = &#x27;C&#x27;;
+} else {
+    grade = &#x27;F&#x27;;
+}
+System.out.println(grade);</code></pre></div><ol class="studio-steps"><li class="studio-step"><h3>First test fails</h3><p>78 is not at least 90, so the A branch is skipped.</p></li><li class="studio-step"><h3>Second test fails</h3><p>78 is not at least 80 either.</p></li><li class="studio-step"><h3>Third test passes</h3><p>78 is at least 70. The C branch runs and every later branch is skipped.</p></li><li class="studio-step"><h3>Output</h3><p>The variable is assigned exactly once, so printing it cannot produce an uninitialized-value error.</p></li></ol><details class="studio-details"><summary>Predict, then observe</summary><div><p><strong>Before you step:</strong> If the tests were reordered with the lowest threshold first, what would a score of 95 receive?</p><p>It would receive F, because the first test would succeed and every later branch would be skipped. Order carries meaning.</p></div></details></section>
+      <section class="studio-section" id="practice"><h2><span class="studio-kicker">Practice</span>Rebuild the program</h2><p class="studio-prose">A Parsons problem: the lines are correct, but the order is not. Rearrange them until the program would compile and behave as described.</p><div class="studio-island" data-engine="parsons"><noscript><p class="studio-noscript">JavaScript is off, so the drag-and-drop practice is hidden. Read the worked example and write the lines in a file instead.</p></noscript></div></section>
+      <section class="studio-section" id="mastery"><h2><span class="studio-kicker">Mastery check</span>Three questions</h2><form class="studio-quiz" data-quiz><fieldset class="quiz-question" data-answer="1" data-why="Short-circuit evaluation skips b when the left side already decides the result."><legend>In a &amp;&amp; b, when is b evaluated?</legend><div class="quiz-options"><label for="ch03-q1-o0"><input type="radio" id="ch03-q1-o0" name="ch03-q1" value="0"><span>Always</span></label><label for="ch03-q1-o1"><input type="radio" id="ch03-q1-o1" name="ch03-q1" value="1"><span>Only when a is true</span></label><label for="ch03-q1-o2"><input type="radio" id="ch03-q1-o2" name="ch03-q1" value="2"><span>Only when a is false</span></label><label for="ch03-q1-o3"><input type="radio" id="ch03-q1-o3" name="ch03-q1" value="3"><span>Never</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="== is equality; = is assignment."><legend>Which operator compares two values?</legend><div class="quiz-options"><label for="ch03-q2-o0"><input type="radio" id="ch03-q2-o0" name="ch03-q2" value="0"><span>=</span></label><label for="ch03-q2-o1"><input type="radio" id="ch03-q2-o1" name="ch03-q2" value="1"><span>==</span></label><label for="ch03-q2-o2"><input type="radio" id="ch03-q2-o2" name="ch03-q2" value="2"><span>=&gt;</span></label><label for="ch03-q2-o3"><input type="radio" id="ch03-q2-o3" name="ch03-q2" value="3"><span>::</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="The ladder is exclusive: one path is selected."><legend>What happens after the first true branch in an if/else-if ladder?</legend><div class="quiz-options"><label for="ch03-q3-o0"><input type="radio" id="ch03-q3-o0" name="ch03-q3" value="0"><span>Every later branch also runs</span></label><label for="ch03-q3-o1"><input type="radio" id="ch03-q3-o1" name="ch03-q3" value="1"><span>The remaining branches are skipped</span></label><label for="ch03-q3-o2"><input type="radio" id="ch03-q3-o2" name="ch03-q3" value="2"><span>The program restarts</span></label><label for="ch03-q3-o3"><input type="radio" id="ch03-q3-o3" name="ch03-q3" value="3"><span>The condition is re-evaluated</span></label></div><p class="quiz-feedback"></p></fieldset><div class="studio-quiz-actions"><button class="btn btn-sm btn-primary" type="submit">Check answers</button><p class="studio-quiz-score" role="status" aria-live="polite"></p></div></form></section>
+      <section class="studio-section" id="artifact"><h2><span class="studio-kicker">Signature artifact</span>GradeGate.java</h2><p class="studio-prose">A starter that reads an integer score and assigns a letter grade, with a TODO for validating scores outside 0-100.</p><div class="studio-artifact"><a class="btn btn-sm" data-artifact href="https://github.com/M0-AR/YL/tree/master/src/Exercise_03" download>Download GradeGate.java</a><span class="studio-artifact-note">Original code, MIT licensed. No textbook text.</span></div></section>
+      <section class="studio-section" id="reflection"><h2><span class="studio-kicker">Reflection</span>Make it yours</h2><p class="studio-prose">Describe one input that would expose a bug in a branch ladder whose tests are in the wrong order.</p><label class="studio-hint" for="notes-ch03">Notes (saved in this browser)</label><textarea class="studio-notes" id="notes-ch03" data-notes></textarea><p class="studio-notes-status" data-notes-status>Notes stay in this browser.</p><div class="studio-complete"><p data-complete-label>Progress is stored in this browser only.</p><button class="btn btn-sm" type="button" data-complete data-chapter="3" aria-pressed="false">Mark chapter complete</button></div></section>
+      <nav class="studio-pager" aria-label="Chapter navigation"><a href="ch02.html">← Chapter 2: Elementary Programming</a><a href="ch04.html">Chapter 4: Math, Characters, Strings →</a></nav>
+    </div>
+    <aside class="studio-column" aria-label="Interactive playground and connections">
+      <section class="studio-section" id="studio"><h2><span class="studio-kicker">Playground</span>Branch tracer</h2><p class="studio-prose">Step through the conditions. The output stays empty until the chosen branch assigns a grade.</p><div class="studio-island" data-engine="trace"><noscript><p class="studio-noscript">JavaScript is off. The written lesson, worked example, answers, and artifact still work. Turn on JavaScript for the interactive playground.</p></noscript></div></section>
+      <section class="studio-section" id="links"><h2>How this connects</h2><p class="studio-prose">The studio is the third pass: the companion lesson explains the idea, the repository gives you runnable Java, and this page lets you manipulate the mechanism.</p><p class="studio-prose"><a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-3-selections" target="_blank" rel="noopener">Companion lesson</a> <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/tree/master/src/Exercise_03" target="_blank" rel="noopener">Java sources</a></p></section>
+    </aside>
+  </div>
+</main>
+<footer class="lab-foot">
+  <span>Java Atlas · an independent MIT-licensed companion. Textbook text, figures, and exercise statements are not reproduced here.</span>
+  <a href="../index.html">Home</a>
+</footer>
+<script type="application/json" id="studio-data">{"n":3,"title":"Selections","spec":{"hint":"Follow the highlighted condition and watch the call stack variables update.","code":["int score = 78;","char grade;","if (score >= 90) {","    grade = 'A';","} else if (score >= 80) {","    grade = 'B';","} else if (score >= 70) {","    grade = 'C';","} else {","    grade = 'F';","}","System.out.println(grade);"],"steps":[{"line":0,"note":"Initialize the score.","stack":[{"name":"main","vars":{"score":78,"grade":"?"}}]},{"line":2,"note":"78 >= 90 is false.","stack":[{"name":"main","vars":{"score":78,"grade":"?"}}]},{"line":4,"note":"78 >= 80 is false.","stack":[{"name":"main","vars":{"score":78,"grade":"?"}}]},{"line":6,"note":"78 >= 70 is true; enter this branch.","stack":[{"name":"main","vars":{"score":78,"grade":"?"}}]},{"line":7,"note":"Assign C. The remaining branches are skipped.","stack":[{"name":"main","vars":{"score":78,"grade":"C"}}]},{"line":11,"note":"Print the assigned grade.","stack":[{"name":"main","vars":{"score":78,"grade":"C"}}],"output":"C"}]},"parsons":{"prompt":"Rebuild the branching ladder so 78 prints C.","lines":["int score = 78;","if (score >= 90) {","    System.out.println(\"A\");","} else if (score >= 80) {","    System.out.println(\"B\");","} else if (score >= 70) {","    System.out.println(\"C\");","} else {","    System.out.println(\"F\");","}"],"solution":[0,1,2,3,4,5,6,7,8,9],"seed":37,"why":"The tests descend by threshold; moving the 70 test earlier would capture values that belong to higher grades."},"artifact":{"name":"GradeGate.java","description":"A starter that reads an integer score and assigns a letter grade, with a TODO for validating scores outside 0-100.","code":"public class GradeGate {\n    public static void main(String[] args) {\n        int score = Integer.parseInt(args[0]);\n        char grade;\n\n        if (score >= 90) {\n            grade = 'A';\n        } else if (score >= 80) {\n            grade = 'B';\n        } else if (score >= 70) {\n            grade = 'C';\n        } else {\n            grade = 'F';\n        }\n\n        // TODO: reject scores below 0 or above 100 before grading.\n\n        System.out.println(grade);\n    }\n}\n","href":"https://github.com/M0-AR/YL/tree/master/src/Exercise_03"}}</script>
+<script type="module" src="studio.js"></script>
+</body>
+</html>

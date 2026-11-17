@@ -1,0 +1,18 @@
+{
+  "name": "yl-chapter-studios",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Interactive chapter studios for the Java Atlas companion.",
+  "scripts": {
+    "build:studios": "python3 scripts/build_studios.py",
+    "validate:studios": "python3 scripts/validate_studios.py",
+    "check:site": "python3 scripts/check_site.py",
+    "test": "node --test tests/studio-core.test.mjs",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.2",
+    "@playwright/test": "^1.65.1"
+  }
+}

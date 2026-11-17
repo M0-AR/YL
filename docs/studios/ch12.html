@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 12 Studio: Exception Handling and Text I/O — Java Atlas</title>
+<meta name="description" content="An exception is a control path with a destination; catch only what you can actually handle.">
+<meta name="theme-color" content="#05070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<a class="studio-skip" href="#main">Skip to content</a>
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas · Chapter Studio</b><span>Chapter 12 · Part 2 · Core language</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill cyan"><i></i> Interactive</span>
+    <a class="btn btn-sm btn-ghost" href="index.html">All studios</a>
+  </div>
+</header>
+<main id="main" class="studio-wrap">
+  <header class="studio-hero">
+    <p class="studio-eyebrow">Part 2 · Core language · Chapter 12</p>
+    <h1 class="studio-title">Exception Handling and Text I/O</h1>
+    <p class="studio-tagline">An exception is a control path with a destination; catch only what you can actually handle.</p>
+    <div class="studio-meta"><span>~40 min</span><span>State machine</span><span>3 objectives</span><span>5 subgoals</span></div>
+    <ul class="studio-objectives"><li>Trace a thrown exception from the failure point to the matching catch block.</li><li>Distinguish checked from unchecked exceptions.</li><li>Use try-with-resources to guarantee cleanup.</li></ul>
+  </header>
+  <div class="studio-layout">
+    <div class="studio-column">
+      <section class="studio-section" id="lesson"><h2><span class="studio-kicker">Lesson</span>Subgoals</h2><p class="studio-prose">Read the subgoals first. Each one is a small, checkable idea that the worked example and the playground will use.</p><ol class="studio-steps"><li class="studio-step"><h3>Throw unwinds the stack</h3><p>The JVM abandons the current frame and looks for a matching catch in each caller. Frames without a handler disappear.</p></li><li class="studio-step"><h3>Catch by type</h3><p>A catch for a superclass accepts subclasses. Order specific catches before general ones or the general one shadows them.</p></li><li class="studio-step"><h3>Checked exceptions are part of the signature</h3><p>The compiler requires callers to catch or declare them. Unchecked exceptions usually indicate programming errors.</p></li><li class="studio-step"><h3>finally always runs</h3><p>Use it for cleanup that must happen whether the try succeeds, throws, or returns early.</p></li><li class="studio-step"><h3>Fail with context</h3><p>Wrap a low-level exception in a domain exception when the caller needs to know what operation failed, not just which library threw.</p></li></ol></section>
+      <section class="studio-section" id="example"><h2><span class="studio-kicker">Worked example</span>ParseGuard: recover from bad text</h2><p class="studio-prose">The first parse succeeds; the second throws, is caught, and the program continues with a fallback value.</p><div class="studio-code-wrap"><button class="btn btn-sm btn-ghost studio-copy" type="button" data-copy>Copy</button><pre class="studio-code" tabindex="0"><code>public class ParseGuard {
+    static int parse(String text, int fallback) {
+        try {
+            return Integer.parseInt(text);
+        } catch (NumberFormatException ex) {
+            return fallback;
+        }
+    }
+    public static void main(String[] args) {
+        System.out.println(parse(&quot;42&quot;, -1));
+        System.out.println(parse(&quot;4o&quot;, -1));
+    }
+}</code></pre></div><ol class="studio-steps"><li class="studio-step"><h3>Valid parse</h3><p>"42" becomes 42 and the method returns normally.</p></li><li class="studio-step"><h3>Invalid parse</h3><p>"4o" cannot be converted. <code>parseInt</code> throws a NumberFormatException.</p></li><li class="studio-step"><h3>Matching catch</h3><p>The catch in <code>parse</code> handles the exception, so the caller never sees it.</p></li><li class="studio-step"><h3>Recovery</h3><p>The fallback -1 is returned instead of crashing the program.</p></li></ol><details class="studio-details"><summary>Predict, then observe</summary><div><p><strong>Before you step:</strong> What would happen if the catch block were removed?</p><p>The exception would propagate out of <code>parse</code>. Because it is unchecked, the program would terminate with a stack trace unless a caller caught it.</p></div></details></section>
+      <section class="studio-section" id="practice"><h2><span class="studio-kicker">Practice</span>Rebuild the program</h2><p class="studio-prose">A Parsons problem: the lines are correct, but the order is not. Rearrange them until the program would compile and behave as described.</p><div class="studio-island" data-engine="parsons"><noscript><p class="studio-noscript">JavaScript is off, so the drag-and-drop practice is hidden. Read the worked example and write the lines in a file instead.</p></noscript></div></section>
+      <section class="studio-section" id="mastery"><h2><span class="studio-kicker">Mastery check</span>Three questions</h2><form class="studio-quiz" data-quiz><fieldset class="quiz-question" data-answer="1" data-why="An uncaught exception ends the thread and usually the program."><legend>What happens when an exception is thrown and no frame handles it?</legend><div class="quiz-options"><label for="ch12-q1-o0"><input type="radio" id="ch12-q1-o0" name="ch12-q1" value="0"><span>The program continues</span></label><label for="ch12-q1-o1"><input type="radio" id="ch12-q1-o1" name="ch12-q1" value="1"><span>The JVM terminates the program</span></label><label for="ch12-q1-o2"><input type="radio" id="ch12-q1-o2" name="ch12-q1" value="2"><span>The exception becomes a warning</span></label><label for="ch12-q1-o3"><input type="radio" id="ch12-q1-o3" name="ch12-q1" value="3"><span>The method returns null</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="finally is the cleanup path."><legend>Which block always runs, even after a return in try?</legend><div class="quiz-options"><label for="ch12-q2-o0"><input type="radio" id="ch12-q2-o0" name="ch12-q2" value="0"><span>catch</span></label><label for="ch12-q2-o1"><input type="radio" id="ch12-q2-o1" name="ch12-q2" value="1"><span>finally</span></label><label for="ch12-q2-o2"><input type="radio" id="ch12-q2-o2" name="ch12-q2" value="2"><span>else</span></label><label for="ch12-q2-o3"><input type="radio" id="ch12-q2-o3" name="ch12-q2" value="3"><span>static</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="Specific catches keep recovery honest and let unexpected failures surface."><legend>Why catch NumberFormatException specifically?</legend><div class="quiz-options"><label for="ch12-q3-o0"><input type="radio" id="ch12-q3-o0" name="ch12-q3" value="0"><span>It is faster</span></label><label for="ch12-q3-o1"><input type="radio" id="ch12-q3-o1" name="ch12-q3" value="1"><span>To handle the actual failure instead of hiding every exception</span></label><label for="ch12-q3-o2"><input type="radio" id="ch12-q3-o2" name="ch12-q3" value="2"><span>Because it is checked</span></label><label for="ch12-q3-o3"><input type="radio" id="ch12-q3-o3" name="ch12-q3" value="3"><span>To avoid importing Integer</span></label></div><p class="quiz-feedback"></p></fieldset><div class="studio-quiz-actions"><button class="btn btn-sm btn-primary" type="submit">Check answers</button><p class="studio-quiz-score" role="status" aria-live="polite"></p></div></form></section>
+      <section class="studio-section" id="artifact"><h2><span class="studio-kicker">Signature artifact</span>ParseGuard.java</h2><p class="studio-prose">The parse-with-fallback example plus a TODO that reports the bad text when the fallback is used.</p><div class="studio-artifact"><a class="btn btn-sm" data-artifact href="https://github.com/M0-AR/YL/tree/master/src/Exercise_12" download>Download ParseGuard.java</a><span class="studio-artifact-note">Original code, MIT licensed. No textbook text.</span></div></section>
+      <section class="studio-section" id="reflection"><h2><span class="studio-kicker">Reflection</span>Make it yours</h2><p class="studio-prose">Describe a situation where catching an exception is worse than letting it propagate. What information would the caller lose?</p><label class="studio-hint" for="notes-ch12">Notes (saved in this browser)</label><textarea class="studio-notes" id="notes-ch12" data-notes></textarea><p class="studio-notes-status" data-notes-status>Notes stay in this browser.</p><div class="studio-complete"><p data-complete-label>Progress is stored in this browser only.</p><button class="btn btn-sm" type="button" data-complete data-chapter="12" aria-pressed="false">Mark chapter complete</button></div></section>
+      <nav class="studio-pager" aria-label="Chapter navigation"><a href="ch11.html">← Chapter 11: Inheritance and Polymorphism</a><a href="ch13.html">Chapter 13: Abstract Classes and Interfaces →</a></nav>
+    </div>
+    <aside class="studio-column" aria-label="Interactive playground and connections">
+      <section class="studio-section" id="studio"><h2><span class="studio-kicker">Playground</span>Exception state machine</h2><p class="studio-prose">The flow variable shows the transition from try to throw to catch. The value box shows when the assignment finally happens.</p><div class="studio-island" data-engine="state"><noscript><p class="studio-noscript">JavaScript is off. The written lesson, worked example, answers, and artifact still work. Turn on JavaScript for the interactive playground.</p></noscript></div></section>
+      <section class="studio-section" id="links"><h2>How this connects</h2><p class="studio-prose">The studio is the third pass: the companion lesson explains the idea, the repository gives you runnable Java, and this page lets you manipulate the mechanism.</p><p class="studio-prose"><a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-12-exception-handling-and-text-io" target="_blank" rel="noopener">Companion lesson</a> <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/tree/master/src/Exercise_12" target="_blank" rel="noopener">Java sources</a></p></section>
+    </aside>
+  </div>
+</main>
+<footer class="lab-foot">
+  <span>Java Atlas · an independent MIT-licensed companion. Textbook text, figures, and exercise statements are not reproduced here.</span>
+  <a href="../index.html">Home</a>
+</footer>
+<script type="application/json" id="studio-data">{"n":12,"title":"Exception Handling and Text I/O","spec":{"hint":"Follow text through the try and the catch. The output only appears when the method returns.","code":["String text = \"4o\";","int value;","try {","    value = Integer.parseInt(text);","} catch (NumberFormatException ex) {","    value = -1;","}","System.out.println(value);"],"vars":["text","value","flow"],"steps":[{"line":0,"vars":{"text":"\"4o\"","value":"—","flow":"try"},"note":"The input is not a valid integer."},{"line":3,"vars":{"text":"\"4o\"","value":"—","flow":"throwing"},"note":"parseInt throws; the assignment never completes."},{"line":5,"vars":{"text":"\"4o\"","value":"-1","flow":"catch"},"note":"The matching catch catches NumberFormatException and assigns the fallback."},{"line":7,"vars":{"text":"\"4o\"","value":"-1","flow":"after"},"note":"Execution continues after the try/catch. The program did not terminate."}]},"parsons":{"prompt":"Build a method that returns a fallback when parsing fails.","lines":["static int parse(String text, int fallback) {","    try {","        return Integer.parseInt(text);","    } catch (NumberFormatException ex) {","        return fallback;","    }","}"],"solution":[0,1,2,3,4,5,6],"seed":71,"why":"The risky operation is inside try; the matching catch supplies a value on every failure path."},"artifact":{"name":"ParseGuard.java","description":"The parse-with-fallback example plus a TODO that reports the bad text when the fallback is used.","code":"public class ParseGuard {\n    static int parse(String text, int fallback) {\n        try {\n            return Integer.parseInt(text);\n        } catch (NumberFormatException ex) {\n            // TODO: report which text failed without printing a stack trace.\n            return fallback;\n        }\n    }\n\n    public static void main(String[] args) {\n        System.out.println(parse(\"42\", -1));\n        System.out.println(parse(\"4o\", -1));\n    }\n}\n","href":"https://github.com/M0-AR/YL/tree/master/src/Exercise_12"}}</script>
+<script type="module" src="studio.js"></script>
+</body>
+</html>

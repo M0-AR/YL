@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 08 Studio: Multidimensional Arrays — Java Atlas</title>
+<meta name="description" content="A 2D array is an array of arrays: rows are references, and each row can have a different length.">
+<meta name="theme-color" content="#05070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<a class="studio-skip" href="#main">Skip to content</a>
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas · Chapter Studio</b><span>Chapter 08 · Part 2 · Core language</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill cyan"><i></i> Interactive</span>
+    <a class="btn btn-sm btn-ghost" href="index.html">All studios</a>
+  </div>
+</header>
+<main id="main" class="studio-wrap">
+  <header class="studio-hero">
+    <p class="studio-eyebrow">Part 2 · Core language · Chapter 08</p>
+    <h1 class="studio-title">Multidimensional Arrays</h1>
+    <p class="studio-tagline">A 2D array is an array of arrays: rows are references, and each row can have a different length.</p>
+    <div class="studio-meta"><span>~40 min</span><span>Structure viewer</span><span>3 objectives</span><span>5 subgoals</span></div>
+    <ul class="studio-objectives"><li>Allocate a rectangular 2D array and a ragged one.</li><li>Traverse a grid by rows and by columns without swapping indexes.</li><li>Explain why <code>grid.length</code> is the number of rows, not the number of cells.</li></ul>
+  </header>
+  <div class="studio-layout">
+    <div class="studio-column">
+      <section class="studio-section" id="lesson"><h2><span class="studio-kicker">Lesson</span>Subgoals</h2><p class="studio-prose">Read the subgoals first. Each one is a small, checkable idea that the worked example and the playground will use.</p><ol class="studio-steps"><li class="studio-step"><h3>Rows first, columns second</h3><p><code>grid[row][column]</code> is the convention. Swapping the indexes compiles but reads the transpose.</p></li><li class="studio-step"><h3>length is per dimension</h3><p><code>grid.length</code> is the number of rows. <code>grid[0].length</code> is the length of the first row.</p></li><li class="studio-step"><h3>Ragged arrays are legal</h3><p>Each row is a separate array object, so rows can have different lengths. A rectangular traversal must use each row's own length.</p></li><li class="studio-step"><h3>A grid is an array of references</h3><p>The outer array stores references to row arrays. Copying the outer reference does not copy the rows.</p></li><li class="studio-step"><h3>Row-major traversal is cache-friendly</h3><p>Visiting a whole row before moving to the next matches how the data is laid out and how most loops are written.</p></li></ol></section>
+      <section class="studio-section" id="example"><h2><span class="studio-kicker">Worked example</span>GridAudit: row sums and a column probe</h2><p class="studio-prose">The nested loop visits every cell once. The inner loop uses the current row's length, so the same code would survive a ragged grid.</p><div class="studio-code-wrap"><button class="btn btn-sm btn-ghost studio-copy" type="button" data-copy>Copy</button><pre class="studio-code" tabindex="0"><code>public class GridAudit {
+    public static void main(String[] args) {
+        int[][] grid = {
+            {3, 5, 7},
+            {2, 4, 6},
+            {9, 1, 8}
+        };
+        for (int row = 0; row &lt; grid.length; row++) {
+            int rowSum = 0;
+            for (int col = 0; col &lt; grid[row].length; col++) {
+                rowSum += grid[row][col];
+            }
+            System.out.println(&quot;row &quot; + row + &quot; = &quot; + rowSum);
+        }
+    }
+}</code></pre></div><ol class="studio-steps"><li class="studio-step"><h3>Outer array</h3><p>Three row references are created. The outer length is 3.</p></li><li class="studio-step"><h3>Row objects</h3><p>Each brace pair creates a row array. All three rows happen to have length 3 here.</p></li><li class="studio-step"><h3>Outer loop</h3><p><code>row</code> selects one row reference at a time.</p></li><li class="studio-step"><h3>Inner loop</h3><p><code>col</code> indexes within that row. The guard uses <code>grid[row].length</code>, not a hard-coded 3.</p></li><li class="studio-step"><h3>Report</h3><p>Each row sum is printed before the next row starts. No cell is visited twice.</p></li></ol><details class="studio-details"><summary>Predict, then observe</summary><div><p><strong>Before you step:</strong> What would <code>grid[1][0]</code> print for this grid?</p><p>2. The first index selects the second row; the second index selects its first element.</p></div></details></section>
+      <section class="studio-section" id="practice"><h2><span class="studio-kicker">Practice</span>Rebuild the program</h2><p class="studio-prose">A Parsons problem: the lines are correct, but the order is not. Rearrange them until the program would compile and behave as described.</p><div class="studio-island" data-engine="parsons"><noscript><p class="studio-noscript">JavaScript is off, so the drag-and-drop practice is hidden. Read the worked example and write the lines in a file instead.</p></noscript></div></section>
+      <section class="studio-section" id="mastery"><h2><span class="studio-kicker">Mastery check</span>Three questions</h2><form class="studio-quiz" data-quiz><fieldset class="quiz-question" data-answer="1" data-why="The outer array has one element per row, so length is the row count."><legend>What does grid.length return for a 3-by-4 array?</legend><div class="quiz-options"><label for="ch08-q1-o0"><input type="radio" id="ch08-q1-o0" name="ch08-q1" value="0"><span>12</span></label><label for="ch08-q1-o1"><input type="radio" id="ch08-q1-o1" name="ch08-q1" value="1"><span>3</span></label><label for="ch08-q1-o2"><input type="radio" id="ch08-q1-o2" name="ch08-q1" value="2"><span>4</span></label><label for="ch08-q1-o3"><input type="radio" id="ch08-q1-o3" name="ch08-q1" value="3"><span>7</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="Java uses separate bracket pairs, row first."><legend>Which expression reads row 2, column 3?</legend><div class="quiz-options"><label for="ch08-q2-o0"><input type="radio" id="ch08-q2-o0" name="ch08-q2" value="0"><span>grid[3][2]</span></label><label for="ch08-q2-o1"><input type="radio" id="ch08-q2-o1" name="ch08-q2" value="1"><span>grid[2][3]</span></label><label for="ch08-q2-o2"><input type="radio" id="ch08-q2-o2" name="ch08-q2" value="2"><span>grid(2)(3)</span></label><label for="ch08-q2-o3"><input type="radio" id="ch08-q2-o3" name="ch08-q2" value="3"><span>grid[2,3]</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="Reading the current row&#x27;s length keeps the loop correct for every row shape."><legend>Why is grid[0].length used instead of a constant?</legend><div class="quiz-options"><label for="ch08-q3-o0"><input type="radio" id="ch08-q3-o0" name="ch08-q3" value="0"><span>It is faster</span></label><label for="ch08-q3-o1"><input type="radio" id="ch08-q3-o1" name="ch08-q3" value="1"><span>It survives a ragged or resized row</span></label><label for="ch08-q3-o2"><input type="radio" id="ch08-q3-o2" name="ch08-q3" value="2"><span>It changes the array</span></label><label for="ch08-q3-o3"><input type="radio" id="ch08-q3-o3" name="ch08-q3" value="3"><span>It is required by the compiler</span></label></div><p class="quiz-feedback"></p></fieldset><div class="studio-quiz-actions"><button class="btn btn-sm btn-primary" type="submit">Check answers</button><p class="studio-quiz-score" role="status" aria-live="polite"></p></div></form></section>
+      <section class="studio-section" id="artifact"><h2><span class="studio-kicker">Signature artifact</span>GridAudit.java</h2><p class="studio-prose">The row-sum example with a TODO that computes and prints the sum of the main diagonal.</p><div class="studio-artifact"><a class="btn btn-sm" data-artifact href="https://github.com/M0-AR/YL/tree/master/src/Exercise_08" download>Download GridAudit.java</a><span class="studio-artifact-note">Original code, MIT licensed. No textbook text.</span></div></section>
+      <section class="studio-section" id="reflection"><h2><span class="studio-kicker">Reflection</span>Make it yours</h2><p class="studio-prose">Sketch a ragged grid and write a traversal that never reads past the end of any row.</p><label class="studio-hint" for="notes-ch08">Notes (saved in this browser)</label><textarea class="studio-notes" id="notes-ch08" data-notes></textarea><p class="studio-notes-status" data-notes-status>Notes stay in this browser.</p><div class="studio-complete"><p data-complete-label>Progress is stored in this browser only.</p><button class="btn btn-sm" type="button" data-complete data-chapter="8" aria-pressed="false">Mark chapter complete</button></div></section>
+      <nav class="studio-pager" aria-label="Chapter navigation"><a href="ch07.html">← Chapter 7: Single-Dimensional Arrays</a><a href="ch09.html">Chapter 9: Objects and Classes →</a></nav>
+    </div>
+    <aside class="studio-column" aria-label="Interactive playground and connections">
+      <section class="studio-section" id="studio"><h2><span class="studio-kicker">Playground</span>Grid viewer</h2><p class="studio-prose">The row and column labels stay fixed while the highlight moves. Use the search box to locate a value by its flat index.</p><div class="studio-island" data-engine="structure"><noscript><p class="studio-noscript">JavaScript is off. The written lesson, worked example, answers, and artifact still work. Turn on JavaScript for the interactive playground.</p></noscript></div></section>
+      <section class="studio-section" id="links"><h2>How this connects</h2><p class="studio-prose">The studio is the third pass: the companion lesson explains the idea, the repository gives you runnable Java, and this page lets you manipulate the mechanism.</p><p class="studio-prose"><a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-8-multidimensional-arrays" target="_blank" rel="noopener">Companion lesson</a> <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/tree/master/src/Exercise_08" target="_blank" rel="noopener">Java sources</a></p></section>
+    </aside>
+  </div>
+</main>
+<footer class="lab-foot">
+  <span>Java Atlas · an independent MIT-licensed companion. Textbook text, figures, and exercise statements are not reproduced here.</span>
+  <a href="../index.html">Home</a>
+</footer>
+<script type="application/json" id="studio-data">{"n":8,"title":"Multidimensional Arrays","spec":{"hint":"Step through creation, a single-cell read, and both traversal directions. Highlighted cells are the ones currently inspected.","mode":"grid","frames":[{"label":"Grid created","rows":[["3","5","7"],["2","4","6"],["9","1","8"]],"highlight":[],"note":"Three rows, three columns. grid.length is 3 and grid[0].length is 3."},{"label":"Read grid[1][0]","rows":[["3","5","7"],["2","4","6"],["9","1","8"]],"highlight":[[1,0]],"note":"Row 1, column 0 holds 2. The first index is always the row."},{"label":"Row-major traversal","rows":[["3","5","7"],["2","4","6"],["9","1","8"]],"highlight":[[0,0],[0,1],[0,2],[1,0],[1,1],[1,2],[2,0],[2,1],[2,2]],"note":"Every row is finished before the next row begins. Each cell is visited once."},{"label":"Column probe","rows":[["3","5","7"],["2","4","6"],["9","1","8"]],"highlight":[[0,1],[1,1],[2,1]],"note":"Keeping the column fixed and varying the row walks down a column."},{"label":"Update a cell","rows":[["3","5","7"],["2","4","99"],["9","1","8"]],"highlight":[[1,2]],"note":"Assignment replaces one cell. The outer array and other rows are untouched."}]},"parsons":{"prompt":"Build a nested loop that sums every cell in a rectangular grid.","lines":["int total = 0;","for (int row = 0; row \u003c grid.length; row++) {","    for (int col = 0; col \u003c grid[row].length; col++) {","        total += grid[row][col];","    }","}","System.out.println(\"total=\" + total);"],"solution":[0,1,2,3,4,5,6],"seed":53,"why":"The accumulator starts at zero, the outer loop selects a row, and the inner loop uses that row's own length."},"artifact":{"name":"GridAudit.java","description":"The row-sum example with a TODO that computes and prints the sum of the main diagonal.","code":"public class GridAudit {\n    public static void main(String[] args) {\n        int[][] grid = {\n            {3, 5, 7},\n            {2, 4, 6},\n            {9, 1, 8}\n        };\n\n        for (int row = 0; row \u003c grid.length; row++) {\n            int rowSum = 0;\n            for (int col = 0; col \u003c grid[row].length; col++) {\n                rowSum += grid[row][col];\n            }\n            System.out.println(\"row \" + row + \" = \" + rowSum);\n        }\n\n        // TODO: print the sum of grid[0][0], grid[1][1], grid[2][2].\n    }\n}\n","href":"https://github.com/M0-AR/YL/tree/master/src/Exercise_08"}}</script>
+<script type="module" src="studio.js"></script>
+</body>
+</html>

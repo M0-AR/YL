@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 09 Studio: Objects and Classes — Java Atlas</title>
+<meta name="description" content="A class defines a contract; an object is one running instance with its own state.">
+<meta name="theme-color" content="#05070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<a class="studio-skip" href="#main">Skip to content</a>
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas · Chapter Studio</b><span>Chapter 09 · Part 2 · Core language</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill cyan"><i></i> Interactive</span>
+    <a class="btn btn-sm btn-ghost" href="index.html">All studios</a>
+  </div>
+</header>
+<main id="main" class="studio-wrap">
+  <header class="studio-hero">
+    <p class="studio-eyebrow">Part 2 · Core language · Chapter 09</p>
+    <h1 class="studio-title">Objects and Classes</h1>
+    <p class="studio-tagline">A class defines a contract; an object is one running instance with its own state.</p>
+    <div class="studio-meta"><span>~40 min</span><span>Contract tester</span><span>3 objectives</span><span>5 subgoals</span></div>
+    <ul class="studio-objectives"><li>Write a constructor that establishes every invariant immediately.</li><li>Distinguish a reference from the object it points to.</li><li>State preconditions and postconditions for a mutating method.</li></ul>
+  </header>
+  <div class="studio-layout">
+    <div class="studio-column">
+      <section class="studio-section" id="lesson"><h2><span class="studio-kicker">Lesson</span>Subgoals</h2><p class="studio-prose">Read the subgoals first. Each one is a small, checkable idea that the worked example and the playground will use.</p><ol class="studio-steps"><li class="studio-step"><h3>The constructor must leave a valid object</h3><p>After <code>new</code> returns, every field should satisfy the class invariant. A half-built object is a bug waiting to escape.</p></li><li class="studio-step"><h3>Fields hold state; methods define behavior</h3><p>Fields describe what an object knows. Methods decide what it can do and which state changes are legal.</p></li><li class="studio-step"><h3>A reference can be shared</h3><p>Two variables can point to the same object. Mutating through one reference is visible through the other.</p></li><li class="studio-step"><h3>this names the current object</h3><p><code>this.balance</code> disambiguates a field from a parameter with the same name.</p></li><li class="studio-step"><h3>Preconditions are the caller&#x27;s job</h3><p>If a method requires a nonnegative amount, the caller must supply one. The class can also check and throw to fail fast.</p></li></ol></section>
+      <section class="studio-section" id="example"><h2><span class="studio-kicker">Worked example</span>Account: a constructor and a guarded withdrawal</h2><p class="studio-prose">The constructor creates a valid balance. <code>withdraw</code> promises the balance never goes negative.</p><div class="studio-code-wrap"><button class="btn btn-sm btn-ghost studio-copy" type="button" data-copy>Copy</button><pre class="studio-code" tabindex="0"><code>public class Account {
+    private int balance;
+
+    public Account(int initial) {
+        if (initial &lt; 0) throw new IllegalArgumentException();
+        this.balance = initial;
+    }
+
+    public void withdraw(int amount) {
+        if (amount &lt;= 0 || amount &gt; balance) {
+            throw new IllegalArgumentException();
+        }
+        balance -= amount;
+    }
+
+    public int getBalance() { return balance; }
+}</code></pre></div><ol class="studio-steps"><li class="studio-step"><h3>Private field</h3><p>Only the class can change <code>balance</code> directly.</p></li><li class="studio-step"><h3>Precondition on construction</h3><p>A negative initial balance is rejected before the object exists.</p></li><li class="studio-step"><h3>Postcondition</h3><p>After construction, <code>balance == initial</code>.</p></li><li class="studio-step"><h3>Guard before mutation</h3><p>The withdrawal rejects nonpositive amounts and overdrafts before touching the field.</p></li><li class="studio-step"><h3>Valid mutation</h3><p>The subtraction preserves the invariant <code>balance &gt;= 0</code>.</p></li></ol><details class="studio-details"><summary>Predict, then observe</summary><div><p><strong>Before you step:</strong> What happens if <code>withdraw(120)</code> is called on an account with 100?</p><p>The guard fails and throws <code>IllegalArgumentException</code>. The balance remains 100.</p></div></details></section>
+      <section class="studio-section" id="practice"><h2><span class="studio-kicker">Practice</span>Rebuild the program</h2><p class="studio-prose">A Parsons problem: the lines are correct, but the order is not. Rearrange them until the program would compile and behave as described.</p><div class="studio-island" data-engine="parsons"><noscript><p class="studio-noscript">JavaScript is off, so the drag-and-drop practice is hidden. Read the worked example and write the lines in a file instead.</p></noscript></div></section>
+      <section class="studio-section" id="mastery"><h2><span class="studio-kicker">Mastery check</span>Three questions</h2><form class="studio-quiz" data-quiz><fieldset class="quiz-question" data-answer="1" data-why="A well-designed constructor leaves the object in a valid state."><legend>What does a constructor guarantee when it returns?</legend><div class="quiz-options"><label for="ch09-q1-o0"><input type="radio" id="ch09-q1-o0" name="ch09-q1" value="0"><span>The object is garbage collected</span></label><label for="ch09-q1-o1"><input type="radio" id="ch09-q1-o1" name="ch09-q1" value="1"><span>The object satisfies its invariants</span></label><label for="ch09-q1-o2"><input type="radio" id="ch09-q1-o2" name="ch09-q1" value="2"><span>Every method has run</span></label><label for="ch09-q1-o3"><input type="radio" id="ch09-q1-o3" name="ch09-q1" value="3"><span>The fields are public</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="Both variables hold the same reference."><legend>If two variables reference the same object, what does mutating through one do?</legend><div class="quiz-options"><label for="ch09-q2-o0"><input type="radio" id="ch09-q2-o0" name="ch09-q2" value="0"><span>Nothing</span></label><label for="ch09-q2-o1"><input type="radio" id="ch09-q2-o1" name="ch09-q2" value="1"><span>The change is visible through both</span></label><label for="ch09-q2-o2"><input type="radio" id="ch09-q2-o2" name="ch09-q2" value="2"><span>It copies the object</span></label><label for="ch09-q2-o3"><input type="radio" id="ch09-q2-o3" name="ch09-q2" value="3"><span>It throws</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="this is the receiver of the current call."><legend>What does this.balance refer to inside a method?</legend><div class="quiz-options"><label for="ch09-q3-o0"><input type="radio" id="ch09-q3-o0" name="ch09-q3" value="0"><span>A local variable</span></label><label for="ch09-q3-o1"><input type="radio" id="ch09-q3-o1" name="ch09-q3" value="1"><span>The current object&#x27;s field</span></label><label for="ch09-q3-o2"><input type="radio" id="ch09-q3-o2" name="ch09-q3" value="2"><span>A static field</span></label><label for="ch09-q3-o3"><input type="radio" id="ch09-q3-o3" name="ch09-q3" value="3"><span>The superclass</span></label></div><p class="quiz-feedback"></p></fieldset><div class="studio-quiz-actions"><button class="btn btn-sm btn-primary" type="submit">Check answers</button><p class="studio-quiz-score" role="status" aria-live="polite"></p></div></form></section>
+      <section class="studio-section" id="artifact"><h2><span class="studio-kicker">Signature artifact</span>Account.java</h2><p class="studio-prose">The guarded account class with a TODO that adds a deposit method and states its precondition.</p><div class="studio-artifact"><a class="btn btn-sm" data-artifact href="https://github.com/M0-AR/YL/tree/master/src/Exercise_09" download>Download Account.java</a><span class="studio-artifact-note">Original code, MIT licensed. No textbook text.</span></div></section>
+      <section class="studio-section" id="reflection"><h2><span class="studio-kicker">Reflection</span>Make it yours</h2><p class="studio-prose">Write one precondition and one postcondition for a method you use often. Which one is the caller responsible for?</p><label class="studio-hint" for="notes-ch09">Notes (saved in this browser)</label><textarea class="studio-notes" id="notes-ch09" data-notes></textarea><p class="studio-notes-status" data-notes-status>Notes stay in this browser.</p><div class="studio-complete"><p data-complete-label>Progress is stored in this browser only.</p><button class="btn btn-sm" type="button" data-complete data-chapter="9" aria-pressed="false">Mark chapter complete</button></div></section>
+      <nav class="studio-pager" aria-label="Chapter navigation"><a href="ch08.html">← Chapter 8: Multidimensional Arrays</a><a href="ch10.html">Chapter 10: Thinking in Objects →</a></nav>
+    </div>
+    <aside class="studio-column" aria-label="Interactive playground and connections">
+      <section class="studio-section" id="studio"><h2><span class="studio-kicker">Playground</span>Contract tester</h2><p class="studio-prose">Choose a case and read every clause. The table at the bottom shows whether the contract held across all cases.</p><div class="studio-island" data-engine="contract"><noscript><p class="studio-noscript">JavaScript is off. The written lesson, worked example, answers, and artifact still work. Turn on JavaScript for the interactive playground.</p></noscript></div></section>
+      <section class="studio-section" id="links"><h2>How this connects</h2><p class="studio-prose">The studio is the third pass: the companion lesson explains the idea, the repository gives you runnable Java, and this page lets you manipulate the mechanism.</p><p class="studio-prose"><a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-9-objects-and-classes" target="_blank" rel="noopener">Companion lesson</a> <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/tree/master/src/Exercise_09" target="_blank" rel="noopener">Java sources</a></p></section>
+    </aside>
+  </div>
+</main>
+<footer class="lab-foot">
+  <span>Java Atlas · an independent MIT-licensed companion. Textbook text, figures, and exercise statements are not reproduced here.</span>
+  <a href="../index.html">Home</a>
+</footer>
+<script type="application/json" id="studio-data">{"n":9,"title":"Objects and Classes","spec":{"hint":"Select a case. The clause list shows exactly which precondition or postcondition failed.","signature":"public void withdraw(int amount)","clauses":[{"kind":"pre","text":"initial >= 0","check":{"type":"nonneg","field":"initial"}},{"kind":"pre","text":"amount > 0","check":{"type":"positive","field":"amount"}},{"kind":"post","text":"balance >= 0","check":{"type":"nonneg","field":"balance"}}],"cases":[{"label":"Valid withdrawal","inputs":{"initial":100,"amount":30,"balance":70},"expected":true,"note":"Both preconditions hold and the postcondition is preserved."},{"label":"Negative opening balance","inputs":{"initial":-5,"amount":10,"balance":-15},"expected":false,"note":"The constructor rejects the object before any withdrawal."},{"label":"Zero withdrawal","inputs":{"initial":100,"amount":0,"balance":100},"expected":false,"note":"Zero is not a meaningful withdrawal; reject it explicitly."},{"label":"Overdraft","inputs":{"initial":50,"amount":80,"balance":-30},"expected":false,"note":"The postcondition catches the broken balance."}]},"parsons":{"prompt":"Build a class with a private field and a constructor that rejects negative values.","lines":["public class Counter {","    private int value;","    public Counter(int start) {","        if (start \u003c 0) throw new IllegalArgumentException();","        this.value = start;","    }","    public int getValue() { return value; }","}"],"solution":[0,1,2,3,4,5,6,7],"seed":59,"why":"Declare the field, validate the parameter, assign the field, then expose a read-only accessor."},"artifact":{"name":"Account.java","description":"The guarded account class with a TODO that adds a deposit method and states its precondition.","code":"public class Account {\n    private int balance;\n\n    public Account(int initial) {\n        if (initial \u003c 0) throw new IllegalArgumentException();\n        this.balance = initial;\n    }\n\n    public void withdraw(int amount) {\n        if (amount \u003c= 0 || amount > balance) {\n            throw new IllegalArgumentException();\n        }\n        balance -= amount;\n    }\n\n    // TODO: add deposit(int amount) with a positive-amount precondition.\n\n    public int getBalance() { return balance; }\n}\n","href":"https://github.com/M0-AR/YL/tree/master/src/Exercise_09"}}</script>
+<script type="module" src="studio.js"></script>
+</body>
+</html>

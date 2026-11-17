@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chapter 02 Studio: Elementary Programming — Java Atlas</title>
+<meta name="description" content="Operators have precedence, types have rules, and the order of evaluation is not a suggestion.">
+<meta name="theme-color" content="#05070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070b14'/%3E%3Cpath d='M22 18h20M32 18v20c0 8-5 12-12 12' stroke='%2322d3ee' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='45' cy='44' r='4' fill='%238b5cf6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/lab.css">
+<link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<a class="studio-skip" href="#main">Skip to content</a>
+<header class="lab-top">
+  <div class="lab-brand">
+    <a class="lab-back" href="../index.html" aria-label="Back to Java Atlas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <div class="lab-titles"><b>Java Atlas · Chapter Studio</b><span>Chapter 02 · Part 2 · Core language</span></div>
+  </div>
+  <div class="lab-top-actions">
+    <span class="pill cyan"><i></i> Interactive</span>
+    <a class="btn btn-sm btn-ghost" href="index.html">All studios</a>
+  </div>
+</header>
+<main id="main" class="studio-wrap">
+  <header class="studio-hero">
+    <p class="studio-eyebrow">Part 2 · Core language · Chapter 02</p>
+    <h1 class="studio-title">Elementary Programming</h1>
+    <p class="studio-tagline">Operators have precedence, types have rules, and the order of evaluation is not a suggestion.</p>
+    <div class="studio-meta"><span>~35 min</span><span>Expression lab</span><span>3 objectives</span><span>5 subgoals</span></div>
+    <ul class="studio-objectives"><li>Evaluate a mixed arithmetic expression using Java precedence.</li><li>Distinguish integer division from floating-point division.</li><li>Predict when concatenation changes an expression from arithmetic to text.</li></ul>
+  </header>
+  <div class="studio-layout">
+    <div class="studio-column">
+      <section class="studio-section" id="lesson"><h2><span class="studio-kicker">Lesson</span>Subgoals</h2><p class="studio-prose">Read the subgoals first. Each one is a small, checkable idea that the worked example and the playground will use.</p><ol class="studio-steps"><li class="studio-step"><h3>Multiplication binds tighter than addition</h3><p><code>2 + 3 * 4</code> is 14, not 20. Parentheses are the only way to override precedence.</p></li><li class="studio-step"><h3>Same-type arithmetic returns that type</h3><p>Two ints produce an int. <code>7 / 2</code> is 3 because the fractional part is discarded, not rounded.</p></li><li class="studio-step"><h3>A cast changes the operation</h3><p><code>(double) 7 / 2</code> promotes the left operand, so the division becomes floating point.</p></li><li class="studio-step"><h3>The plus sign is overloaded</h3><p>With two numbers it adds. With a string on either side it concatenates and converts the other operand to text.</p></li><li class="studio-step"><h3>Assignment is right-associative</h3><p><code>a = b = 5</code> stores 5 in <code>b</code>, then stores that value in <code>a</code>. The expression itself has a value.</p></li></ol></section>
+      <section class="studio-section" id="example"><h2><span class="studio-kicker">Worked example</span>PrecedenceLedger: one expression, three traps</h2><p class="studio-prose">The program prints four values. Only one of them is the result of doing everything left to right.</p><div class="studio-code-wrap"><button class="btn btn-sm btn-ghost studio-copy" type="button" data-copy>Copy</button><pre class="studio-code" tabindex="0"><code>public class PrecedenceLedger {
+    public static void main(String[] args) {
+        int a = 2 + 3 * 4;
+        int b = (2 + 3) * 4;
+        int c = 7 / 2;
+        double d = (double) 7 / 2;
+        System.out.println(a + &quot; &quot; + b + &quot; &quot; + c + &quot; &quot; + d);
+    }
+}</code></pre></div><ol class="studio-steps"><li class="studio-step"><h3>Precedence</h3><p><code>3 * 4</code> runs first, so <code>a</code> is 14.</p></li><li class="studio-step"><h3>Parentheses</h3><p>The parentheses force addition first, so <code>b</code> is 20.</p></li><li class="studio-step"><h3>Integer division</h3><p>Both operands are int, so the result is 3 and the remainder is discarded.</p></li><li class="studio-step"><h3>Cast</h3><p>The cast applies to 7 before the division, producing 3.5.</p></li><li class="studio-step"><h3>Concatenation</h3><p>The first <code>+</code> sees a string, so every later number is converted to text.</p></li></ol><details class="studio-details"><summary>Predict, then observe</summary><div><p><strong>Before you step:</strong> What would <code>1 + 2 + "A"</code> print, and why is it different from <code>"A" + 1 + 2</code>?</p><p>The first prints <code>3A</code> because the numeric additions happen before the string appears; the second prints <code>A12</code> because concatenation starts immediately.</p></div></details></section>
+      <section class="studio-section" id="practice"><h2><span class="studio-kicker">Practice</span>Rebuild the program</h2><p class="studio-prose">A Parsons problem: the lines are correct, but the order is not. Rearrange them until the program would compile and behave as described.</p><div class="studio-island" data-engine="parsons"><noscript><p class="studio-noscript">JavaScript is off, so the drag-and-drop practice is hidden. Read the worked example and write the lines in a file instead.</p></noscript></div></section>
+      <section class="studio-section" id="mastery"><h2><span class="studio-kicker">Mastery check</span>Three questions</h2><form class="studio-quiz" data-quiz><fieldset class="quiz-question" data-answer="1" data-why="Both operands are int, so the fractional part is discarded."><legend>What is the value of 9 / 4 in Java?</legend><div class="quiz-options"><label for="ch02-q1-o0"><input type="radio" id="ch02-q1-o0" name="ch02-q1" value="0"><span>2.25</span></label><label for="ch02-q1-o1"><input type="radio" id="ch02-q1-o1" name="ch02-q1" value="1"><span>2</span></label><label for="ch02-q1-o2"><input type="radio" id="ch02-q1-o2" name="ch02-q1" value="2"><span>3</span></label><label for="ch02-q1-o3"><input type="radio" id="ch02-q1-o3" name="ch02-q1" value="3"><span>A compile error</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="0" data-why="Evaluation is left to right; the string appears first, so both numbers are concatenated as text."><legend>Which expression prints A12?</legend><div class="quiz-options"><label for="ch02-q2-o0"><input type="radio" id="ch02-q2-o0" name="ch02-q2" value="0"><span>&quot;A&quot; + 1 + 2</span></label><label for="ch02-q2-o1"><input type="radio" id="ch02-q2-o1" name="ch02-q2" value="1"><span>1 + 2 + &quot;A&quot;</span></label><label for="ch02-q2-o2"><input type="radio" id="ch02-q2-o2" name="ch02-q2" value="2"><span>&quot;A&quot; + (1 + 2)</span></label><label for="ch02-q2-o3"><input type="radio" id="ch02-q2-o3" name="ch02-q2" value="3"><span>1 + (2 + &quot;A&quot;)</span></label></div><p class="quiz-feedback"></p></fieldset><fieldset class="quiz-question" data-answer="1" data-why="Multiplication runs first: 3 * 4 is 12, then 2 + 12 is 14."><legend>What does 2 + 3 * 4 evaluate to?</legend><div class="quiz-options"><label for="ch02-q3-o0"><input type="radio" id="ch02-q3-o0" name="ch02-q3" value="0"><span>20</span></label><label for="ch02-q3-o1"><input type="radio" id="ch02-q3-o1" name="ch02-q3" value="1"><span>14</span></label><label for="ch02-q3-o2"><input type="radio" id="ch02-q3-o2" name="ch02-q3" value="2"><span>24</span></label><label for="ch02-q3-o3"><input type="radio" id="ch02-q3-o3" name="ch02-q3" value="3"><span>9</span></label></div><p class="quiz-feedback"></p></fieldset><div class="studio-quiz-actions"><button class="btn btn-sm btn-primary" type="submit">Check answers</button><p class="studio-quiz-score" role="status" aria-live="polite"></p></div></form></section>
+      <section class="studio-section" id="artifact"><h2><span class="studio-kicker">Signature artifact</span>PrecedenceLedger.java</h2><p class="studio-prose">The worked example with a TODO that adds two more expressions: one integer division and one concatenation trap.</p><div class="studio-artifact"><a class="btn btn-sm" data-artifact href="https://github.com/M0-AR/YL/tree/master/src/Exercise_02" download>Download PrecedenceLedger.java</a><span class="studio-artifact-note">Original code, MIT licensed. No textbook text.</span></div></section>
+      <section class="studio-section" id="reflection"><h2><span class="studio-kicker">Reflection</span>Make it yours</h2><p class="studio-prose">Write two expressions that look similar but produce different types. Explain the exact rule that separates them.</p><label class="studio-hint" for="notes-ch02">Notes (saved in this browser)</label><textarea class="studio-notes" id="notes-ch02" data-notes></textarea><p class="studio-notes-status" data-notes-status>Notes stay in this browser.</p><div class="studio-complete"><p data-complete-label>Progress is stored in this browser only.</p><button class="btn btn-sm" type="button" data-complete data-chapter="2" aria-pressed="false">Mark chapter complete</button></div></section>
+      <nav class="studio-pager" aria-label="Chapter navigation"><a href="ch01.html">← Chapter 1: Introduction to Java</a><a href="ch03.html">Chapter 3: Selections →</a></nav>
+    </div>
+    <aside class="studio-column" aria-label="Interactive playground and connections">
+      <section class="studio-section" id="studio"><h2><span class="studio-kicker">Playground</span>Expression reducer</h2><p class="studio-prose">The playground shows the replacement order. Try to predict the next line before pressing Next.</p><div class="studio-island" data-engine="expr"><noscript><p class="studio-noscript">JavaScript is off. The written lesson, worked example, answers, and artifact still work. Turn on JavaScript for the interactive playground.</p></noscript></div></section>
+      <section class="studio-section" id="links"><h2>How this connects</h2><p class="studio-prose">The studio is the third pass: the companion lesson explains the idea, the repository gives you runnable Java, and this page lets you manipulate the mechanism.</p><p class="studio-prose"><a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/blob/master/companion/core-language.md#chapter-2-elementary-programming" target="_blank" rel="noopener">Companion lesson</a> <a class="btn btn-sm btn-ghost" href="https://github.com/M0-AR/YL/tree/master/src/Exercise_02" target="_blank" rel="noopener">Java sources</a></p></section>
+    </aside>
+  </div>
+</main>
+<footer class="lab-foot">
+  <span>Java Atlas · an independent MIT-licensed companion. Textbook text, figures, and exercise statements are not reproduced here.</span>
+  <a href="../index.html">Home</a>
+</footer>
+<script type="application/json" id="studio-data">{"n":2,"title":"Elementary Programming","spec":{"hint":"Reduce the expression one operation at a time. Precedence is visible in the order.","expression":"int total = 2 + 3 * 4;","steps":[{"fragment":"3 * 4","value":"12","result":"int total = 2 + 12;","note":"Multiplication binds tighter than addition."},{"fragment":"2 + 12","value":"14","result":"int total = 14;","note":"Addition is evaluated after the product."},{"fragment":"int total = 14","value":"14","result":"total holds 14","note":"The assignment stores the final value in the variable."}],"types":["2 + 3 * 4        -> int 14","7 / 2            -> int 3","7.0 / 2          -> double 3.5","(double) 7 / 2   -> double 3.5"]},"parsons":{"prompt":"Build a program that computes the average of 7 and 2 without losing the fraction.","lines":["public class Average {","    public static void main(String[] args) {","        int sum = 7 + 2;","        double average = (double) sum / 2;","        System.out.println(\"average=\" + average);","    }","}"],"solution":[0,1,2,3,4,5,6],"seed":31,"why":"The cast must happen before the division; casting the finished int result would be too late."},"artifact":{"name":"PrecedenceLedger.java","description":"The worked example with a TODO that adds two more expressions: one integer division and one concatenation trap.","code":"public class PrecedenceLedger {\n    public static void main(String[] args) {\n        int a = 2 + 3 * 4;\n        int b = (2 + 3) * 4;\n        int c = 7 / 2;\n        double d = (double) 7 / 2;\n\n        // TODO: add one expression where precedence changes the answer,\n        // and one where integer division changes the answer.\n\n        System.out.println(a + \" \" + b + \" \" + c + \" \" + d);\n    }\n}\n","href":"https://github.com/M0-AR/YL/tree/master/src/Exercise_02"}}</script>
+<script type="module" src="studio.js"></script>
+</body>
+</html>
